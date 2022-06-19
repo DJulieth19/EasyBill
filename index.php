@@ -22,9 +22,9 @@
 		      <label for="username">Usuario</label>
 		      <input type="text" name="user" placeholder="Ingrese el usuario">
 		      <label for="password">Contraseña</label>
-		      <input type="password" name="contra" placeholder="Ingrese la contrasela">
+		      <input type="password" name="contra" placeholder="Ingrese la contraseña">
 		      <br><br>
-		      <input type="submit" value="Log In">
+		      <input type="submit" value="Ingresa">
 		    </form>
 		  </div>		
 	</header>
