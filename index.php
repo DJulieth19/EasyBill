@@ -34,7 +34,7 @@
 
 <?php
 
-require_once 'database.php';
+require_once 'Database.php';
 
 session_start();
 $usuario = $_POST['usuario'];
@@ -45,7 +45,7 @@ $consulta = pg_query($conexion, $query);
 $cantidad = pg_num_rows($consulta);
 
 if ($cantidad > 0) {
-	header("location: ../Administradores/index.php");
+	header("location: ../Administrador/index.php");
 } else {
 	//
 	header("location: login.php");
