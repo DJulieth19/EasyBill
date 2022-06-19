@@ -30,3 +30,23 @@
 	</header>
 </body>
 </html>
+
+
+<?php
+
+require_once 'database.php';
+
+session_start();
+$usuario = $_POST['usuario'];
+$clave = $_POST['clave'];
+
+$query = "SELECT * FROM usuarios WHERE usuario ='$usuario' AND contraseña = '$clave'";
+$consulta = pg_query($conexion, $query);
+$cantidad = pg_num_rows($consulta);
+
+if ($cantidad > 0) {
+	header("location: ../Administradores/index.php");
+} else {
+	//
+	header("location: login.php");
+};
