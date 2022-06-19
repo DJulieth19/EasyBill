@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/css/logi.css">
+	<link rel="stylesheet" href="./logi.css">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
 	<link rel="shortcut icon" href="./img/icon.png" type="image/png">
@@ -16,7 +16,7 @@
 <body>
 	<header>
 	 	<div class="login-box">
-		    <img src="./assets/img/logol.png" class="avatar" alt="Avatar Image">
+		    <img src="./logol.png" class="avatar" alt="Avatar Image">
 		    <h1>Login</h1>
 		    <form action = "sesion.php" method = "POST">
 		      <label for="username">Usuario</label>
