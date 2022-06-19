@@ -8,7 +8,12 @@
     
     <body> 
         <h1 align="center" >Mi Primera pagina web </h1> 
-        <hr> <p>pagina de los 3d wdf</p>         
+        <hr> <p>pagina de los 3d wdf</p> 
+        <?php
+      	require_once "FuncionesCrudReparto.php";
+				$users = get();
+				$nomb =$_GET['nomb'];
+        ?>        
 				<thead>
 					<tr>
 						<th><h1>ID USUARIO</h1></th>
