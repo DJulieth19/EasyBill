@@ -12,7 +12,6 @@
         <?php
       	require_once "FuncionesCrud.php";
 				$users = get();
-				$nomb =$_GET['nomb'];
         ?>        
 				<thead>
 					<tr>
