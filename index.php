@@ -10,7 +10,7 @@
         <h1 align="center" >Mi Primera pagina web </h1> 
         <hr> <p>pagina de los 3d wdf</p> 
         <?php
-      	require_once "FuncionesCrudReparto.php";
+      	require_once "FuncionesCrud.php";
 				$users = get();
 				$nomb =$_GET['nomb'];
         ?>        
