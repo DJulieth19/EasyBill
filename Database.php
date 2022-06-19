@@ -11,5 +11,6 @@ function conectardb(){
 	}else{
 		return $dbconn;
 	}
+	new
 
 }
