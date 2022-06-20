@@ -12,16 +12,16 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
 if( !empty( $queryUsuarios ) ){
 	$obj = json_decode($queryUsuarios, true); 
 	  foreach( $obj as $user ){
-        if(echo $user['tipo_usuario'] == "Administrador"){
-			header("location: ../Administrador/index.php");
-			exit();
-		}else {
-			
-		}
+        
 	  }
 }
 
-
+if($usuario == "Derly Varón"){
+	header("location: ../Administrador/index.php");
+	exit();
+}else {
+	
+}
 
 ?>
 
