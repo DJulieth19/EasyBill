@@ -8,7 +8,7 @@
     
     <body> 
         <h1 align="center" >Mi Primera pagina web </h1> 
-        <hr> <p>pagina de los 3d wdf sdcmdfvkodfvmdfok</p> 
+        <hr> <p>pagina de los 3d</p> 
         <?php
       	require_once "FuncionesCrud.php";
 				$users = get();
