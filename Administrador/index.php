@@ -13,8 +13,7 @@
       	require_once "FuncionesCrud.php";
 				$users = get();
         ?>        
-				<table class="container">
-				<td><?php echo $users['id_usuario'] ?></td>			
+				<table class="container">			
         <div class="conb">  
         	<div class="spaceb1"></div>      	
         	<button role="boton1" class="boton1" onclick="location.href='añadirReparto.php?nomb=<?php echo $nomb ?>'">Añadir Reparto</button>
