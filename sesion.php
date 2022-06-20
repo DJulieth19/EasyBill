@@ -6,7 +6,7 @@ $conn = conectardb();
 $usuario = $_POST['user'];
 $contraseña = $_POST['contra'];
 
-$queryUsuarios = "SELECT * from usuarios WHERE nombre_usuario = '$usuario' AND contrasenia = '$contraseña'";
+$queryUsuarios = "SELECT tipo_usuario from usuarios WHERE nombre_usuario = '$usuario' AND contrasenia = '$contraseña'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $id= pg_fetch_array($consultaUsuarios);
 $idU=$id['id_usu'];
