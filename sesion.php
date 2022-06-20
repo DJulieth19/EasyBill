@@ -47,7 +47,7 @@ if(pg_num_rows($consultaUsuarios) > 0){
 		      <input type="password" name="contra" placeholder="Ingrese la contraseña">
 		      <br><br>
 		      <input type="submit" value="Ingresa">
-  		      <li style="text-align:center><a href="https://example.com">Olvidé mi contraseña</a></li>
+  		      <ul><a href="https://example.com">Olvidé mi contraseña</a></ul>
 		    </form>
 		  </div>		
 	</header>
