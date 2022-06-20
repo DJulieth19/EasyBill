@@ -37,10 +37,10 @@
 require_once 'Database.php';
 
 session_start();
-$usuario = $_POST['usuario'];
-$clave = $_POST['clave'];
+$usuario = $_POST['user'];
+$clave = $_POST['contra'];
 
-$query = "SELECT * FROM usuarios WHERE usuario ='$usuario' AND contraseña = '$clave'";
+$query = "SELECT * FROM usuarios WHERE nombre_usuario ='$usuario' AND contrasenia = '$clave'";
 $consulta = pg_query($conexion, $query);
 $cantidad = pg_num_rows($consulta);
 
