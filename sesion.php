@@ -11,7 +11,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $id= pg_fetch_array($consultaUsuarios);
 $idU=$id['id_usu'];
 
-if(pg_num_rows($consultaUsuarios) > 0){
+if($consultaUsuarios == "Administrador"){
 	header("location: ../Administrador/index.php");
 	exit();
 }else {
