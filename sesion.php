@@ -12,7 +12,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
 if( !empty( $queryUsuarios ) ){
 	$obj = json_decode($queryUsuarios, true); 
 	  foreach( $obj as $user ){
-        $Tipo = echo $user['tipo_usuario'];
+        
 	  }
 }
 
