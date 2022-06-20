@@ -8,8 +8,6 @@ $contraseña = $_POST['contra'];
 
 $queryUsuarios = "SELECT * from usuarios WHERE nombre_usuario = '$usuario' AND contrasenia = '$contraseña'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
-$id= pg_fetch_array($consultaUsuarios);
-
 
 if(pg_num_rows($consultaUsuarios) > 0){
 	header("location: ../Administrador/index.php");
