@@ -2,7 +2,6 @@
 
 require_once 'Database.php';
 
-session_start();
 $usuario = $_POST['user'];
 $clave = $_POST['contra'];
 
