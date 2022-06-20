@@ -14,5 +14,5 @@ if ($cantidad > 0) {
 	header("location: ../Administrador/index.php");
 } else {
 	//
-	header("location: login.php");
+	header("location: index.php");
 };
