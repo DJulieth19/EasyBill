@@ -1,5 +1,5 @@
 <?php
-require_once("Database.php");
+require_once("../Database.php");
 	//insertamos usuarios en una tabla con postgreSql
 	function save($obj){
 		try{
