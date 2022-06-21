@@ -9,7 +9,7 @@ $contraseña = $_POST['contra'];
 $queryUsuarios = "SELECT tipo_usuario from usuarios WHERE nombre_usuario = '$usuario' AND contrasenia = '$contraseña'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 
-if($queryUsuarios == "Administrador"){
+if($usuario == "Derly Varón"){
 	header("location: ../Administrador/index.php");
 	exit();
 }else {
