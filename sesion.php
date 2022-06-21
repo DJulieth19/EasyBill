@@ -9,13 +9,6 @@ $contraseña = $_POST['contra'];
 $queryUsuarios = "SELECT tipo_usuario from usuarios WHERE nombre_usuario = '$usuario' AND contrasenia = '$contraseña'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 
-if( !empty( $queryUsuarios ) ){
-	$obj = json_decode($queryUsuarios, true); 
-	  foreach( $obj as $user ){
-        
-	  }
-}
-
 if($queryUsuarios == "Administrador"){
 	header("location: ../Administrador/index.php");
 	exit();
