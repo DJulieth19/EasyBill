@@ -15,7 +15,10 @@ if($tipoU == "Administrador"){
 	header("location: ../Administrador/index.php");
 	exit();
 }else {
-	
+	if($tipoU == "Empleado"){
+		header("location: ../Administrador/index.php");
+		exit();
+	}
 }
 
 ?>
