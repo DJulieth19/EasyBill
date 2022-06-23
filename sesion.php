@@ -8,12 +8,17 @@ $contraseña = $_POST['contra'];
 
 $queryUsuarios = "SELECT tipo_usuario from usuarios WHERE nombre_usuario = '$usuario' AND contrasenia = '$contraseña'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
+$tipo= pg_fetch_array($consultaUsuarios);
+$tipoU=$tipo['tipo_usuario'];
 
-if($queryUsuarios == "Administrador"){
+if($tipoU == "Administrador"){
 	header("location: ../Administrador/index.php");
 	exit();
 }else {
-	
+	if($tipoU == "Empleado"){
+		header("location: ../Administrador/index.php");
+		exit();
+	}
 }
 
 ?>
