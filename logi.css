@@ -26,6 +26,9 @@ body {
 	background: url(../FondoEasyBill.png) no-repeat center top;
 	background-size:cover;
 	font-family: 'Open Sans', sans-serif;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  
 }
 
 .contenedor {
