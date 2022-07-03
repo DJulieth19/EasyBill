@@ -128,7 +128,7 @@ color: var(--light-azure);
 /*-------------login--------------------------*/
 
 .login-box {
-  border-radius: 40px;
+  
   background: #000;
   color: #fff;
   top: 50%;
@@ -137,7 +137,9 @@ color: var(--light-azure);
   transform: translate(-50%, -50%);
   box-sizing: border-box;
   padding: 70px 30px;
-
+  border: 1px solid white;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .login-box .avatar {
