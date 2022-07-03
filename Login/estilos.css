@@ -23,7 +23,7 @@
 }
 
 body {
-	background: url(../fondo.png) no-repeat center top;
+	background: url(../Imagenes/fondo.png) no-repeat center top;
 	background-size:cover;
 	font-family: 'Open Sans', sans-serif;
 }
