@@ -16,7 +16,7 @@
 <body>
 	<header>
 	 	<div class="login-box">
-		    <img src="../Imagenes/logol.png" class="avatar" alt="Avatar Image">
+		    <img src="../../Imagenes/logol.png" class="avatar" alt="Avatar Image">
 		    <h1>Recuperación de contraseña</h1>
 		    <form>
 		      <label for="username">Usuario</label>
