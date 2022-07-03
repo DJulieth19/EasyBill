@@ -20,12 +20,12 @@
 		    <h1>Recuperación de contraseña</h1>
 		    <form>
 		      <label for="username">Usuario</label>
-		      <input type="text" name="user">
-		      <label for="preguntas">Contraseña</label>
+		      <input type="text" name="user" placeholder="Ingrese su usuario">
+		      <label for="preguntas">Pregunta 1</label>
 		      <input type="text" name="texto" placeholder="Ingrese su respuesta">
-           <label for="preguntas">Contraseña</label>
+           		<label for="preguntas">Pregunta 2</label>
 		      <input type="text" name="texto" placeholder="Ingrese su respuesta">
-           <label for="preguntas">Contraseña</label>
+           		<label for="preguntas">Pregunta 3</label>
 		      <input type="text" name="texto" placeholder="Ingrese su respuesta">
 		      <br><br>
 		      <input type="submit" value="Validar">
