@@ -50,7 +50,7 @@ if($tipoU == "Administrador"){
 		      <input type="password" name="contra" placeholder="Ingrese la contraseña">
 		      <br><br>
 		      <input type="submit" value="Ingresa">
-  		      <ul class="center" ><a href="../Login/restaurarContraseña.php">Olvidé mi contraseña</a></ul>
+  		      <ul class="center" ><a href="/Login/restaurarContraseña.php">Olvidé mi contraseña</a></ul>
 		    </form>
 		  </div>		
 	</header>
