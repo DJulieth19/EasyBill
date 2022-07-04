@@ -1,4 +1,6 @@
-
+<?php
+ $Usuario = $_POST['nombre'] 
+?>
 <!doctype html>
 <html lang="en">
   <head>
