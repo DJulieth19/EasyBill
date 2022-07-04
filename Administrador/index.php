@@ -25,9 +25,10 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
+           <div class="ml-auto">
           <div class="nav-bar  justify-content-right">
           <form class="d-flex" role="search">
-             <div class="ml-auto">
+            
               <thead>
                   <th>
                     <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp Nombre</td> 
