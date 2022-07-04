@@ -1,11 +1,3 @@
-<?php
-require_once "Database.php";
-$nombreUsuario=$_POST['nombre']
-
-
-
-?>
-
 
 <!doctype html>
 <html lang="en">
@@ -41,7 +33,7 @@ $nombreUsuario=$_POST['nombre']
             
               <thead>
                   <th>
-                    <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp <?php echo $nombreUsuario ?></td> 
+                    <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp </td> 
                   </th>
               </thead>
               <a class="btn btn-custom" href="../index.php">Cerrar sesión</a>
