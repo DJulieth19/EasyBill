@@ -1,8 +1,8 @@
 <?php
-require_once "location: ../Database.php";
+require_once "Database.php";
 $conn = conectardb();
 $nombreUsuario=$_POST['nombre']
-$query = "SELECT * FROM usuarios WHERE usuario='$nombreUsuario'";
+$query = "SELECT * FROM usuarios WHERE nombre_usuario='$nombreUsuario'";
 $consulta = pg_query($conn, $query);	  			
 $usuario = pg_fetch_array($consulta);
 
