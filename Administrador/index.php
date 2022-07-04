@@ -1,5 +1,5 @@
 <?php
-require_once "../Database.php";
+require_once "location: ../Database.php";
 $conn = conectardb();
 $nombreUsuario=$_POST['nombre']
 $query = "SELECT * FROM usuarios WHERE usuario='$nombreUsuario'";
