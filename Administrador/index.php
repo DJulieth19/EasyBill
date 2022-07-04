@@ -1,4 +1,13 @@
+<?php
+require_once("Database.php");
+$conn = conectardb();
+$Usuario = $_POST['nombre']
+$queryUsuarios = "SELECT * from usuarios WHERE tipo_usuario = '$Usuario'";
+$consultaUsuarios = pg_query($conn, $queryUsuarios);
+$tipo= pg_fetch_array($consultaUsuarios);
 
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -33,7 +42,7 @@
             
               <thead>
                   <th>
-                    <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp <?php echo $_POST['nombre'] ?> </td> 
+                    <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp <?php echo $tipo['tipo_usuario'] ?> </td> 
                   </th>
               </thead>
               <a class="btn btn-custom" href="../index.php">Cerrar sesión</a>
