@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,6 +20,9 @@
   <body>
     
 <header>
+<?php
+		$usuario = $_GET['nombre']
+	?>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Home</a>
@@ -33,7 +37,7 @@
             
               <thead>
                   <th>
-                    <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp </td> 
+                    <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp <?php echo $usuario ?> </td> 
                   </th>
               </thead>
               <a class="btn btn-custom" href="../index.php">Cerrar sesión</a>
