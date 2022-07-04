@@ -35,7 +35,7 @@
             
               <thead>
                   <th>
-                    <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp </td> 
+                    <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp <?php echo $Usuario ?> </td> 
                   </th>
               </thead>
               <a class="btn btn-custom" href="../index.php">Cerrar sesión</a>
