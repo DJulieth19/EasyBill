@@ -75,7 +75,7 @@ header{
   }
 }
  
-@media screen and (min-width:5px) and (max-width:900px) { 
+@media screen and (min-width:5px) and (max-width:1400px) { 
   .slide1{
     display:none;
   }
