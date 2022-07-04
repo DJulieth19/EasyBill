@@ -93,7 +93,10 @@ header{
   .carousel-inner{
     width: 300px;
     margin: auto;
-  } 
+  }
+   .nav-bar-toggler{
+    align-items: right;
+  }
 }
 
 
