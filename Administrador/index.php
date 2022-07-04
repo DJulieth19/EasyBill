@@ -93,7 +93,7 @@
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <a href="https://example.com/">
-          <img src="../../Imagenes/usuarios.png" href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+          <img src="../../Imagenes/actividad.png" href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
         </a> 
         <h3 class="fw-normal">Consulta de Actividad</h3>
       </div><!-- /.col-lg-4 -->
@@ -112,13 +112,15 @@
       </div><!-- /.col-lg-4 -->
       
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        <h3 class="fw-normal">Administrar Menú</h3>
+        <a href="https://example.com/">
+          <img src="../../Imagenes/menu.png" href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+        </a>  <h3 class="fw-normal">Administrar Menú</h3>
          </div><!-- /.col-lg-4 -->
       
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        <h3 class="fw-normal">Reportes Administrativos</h3>
+        <a href="https://example.com/">
+          <img src="../../Imagenes/reportes.png" href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+        </a>   <h3 class="fw-normal">Reportes Administrativos</h3>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
