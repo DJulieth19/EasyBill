@@ -1,10 +1,7 @@
 <?php
 require_once "Database.php";
-$conn = conectardb();
 $nombreUsuario=$_POST['nombre']
-$query = "SELECT * FROM usuarios WHERE nombre_usuario='$nombreUsuario'";
-$consulta = pg_query($conn, $query);	  			
-$usuario = pg_fetch_array($consulta);
+
 
 
 ?>
@@ -44,7 +41,7 @@ $usuario = pg_fetch_array($consulta);
             
               <thead>
                   <th>
-                    <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp <?php echo $usuario['nombre_usuario'] ?></td> 
+                    <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp <?php echo $nombreUsuario ?></td> 
                   </th>
               </thead>
               <a class="btn btn-custom" href="../index.php">Cerrar sesión</a>
