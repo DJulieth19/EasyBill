@@ -1,7 +1,11 @@
+  .slide2{
+    display: none;
+  }
 
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  background-color: black;
 }
 
 header{
@@ -23,11 +27,12 @@ header{
   height: 320px;
 }
 
-.slide{
+.slide1{
   margin-top: 50px;
   margin-left: 250px;
   margin-right: 250px;
 }
+
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -53,6 +58,7 @@ header{
 -------------------------------------------------- */
 
 @media (min-width: 40em) {
+
   .carousel-caption p {
     margin-bottom: 1.25rem;
     font-size: 1.25rem;
@@ -69,6 +75,29 @@ header{
     margin-top: 7rem;
   }
 }
+ 
+@media screen and (min-width:5px) and (max-width:1371px) { 
+  .slide1{
+    display:none;
+  }
+  
+  .slide2{
+    display: initial;
+
+  }
+  .carousel-item {
+    width: 290px;
+    height: 200px;
+    margin: auto;
+    padding: 5%;
+  }
+  .carousel-inner{
+    width: 300px;
+    margin: auto;
+  } 
+}
+
+
 
 /*******************************/
 /********* General CSS *********/
@@ -151,4 +180,5 @@ a {
   background: #5a5a5a;
   box-shadow: inset 200px 0 0 0 rgb(46, 160, 241);
 }
+
 
