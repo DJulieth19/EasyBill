@@ -41,7 +41,7 @@
                   </th>
               </thead>
               <a class="btn btn-custom" href="../index.php">Cerrar sesión</a>
-              <li class="nav-item dropdown">
+           
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <button type="button" class="btn btn-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" color="white" width="25" height="25" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
@@ -54,7 +54,7 @@
                     <li><a class="dropdown-item" href="#">Another action</a></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
-              </li>
+           
           </div>
           </form>
         </div>
