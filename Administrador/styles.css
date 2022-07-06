@@ -90,14 +90,13 @@ header{
   .carousel-item {
     width: 290px;
     height: 200px;
-    margin-left: 8%;
-    margin-right: 12%;
+
     padding: 5%;
   }
   .carousel-inner{
     width: 300px;
     margin: auto;
-    margin-right: 9%;
+
   } 
   .marketing img{
     width:100px ;
