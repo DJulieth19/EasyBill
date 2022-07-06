@@ -24,16 +24,11 @@ header{
 .carousel-item {
   width: 1000px;
   height: 320px;
-}
-
-.carousel-inner{
   margin: auto;
+  padding: 5%;
 }
 
-.slide1{
-  margin-top: 50px;
-  margin :auto;
-}
+
 
 
 /* MARKETING CONTENT
