@@ -25,11 +25,8 @@ header{
   width: 1000px;
   height: 320px;
   margin: auto;
-  padding: 5%;
+  align-items: center;
 }
-
-
-
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -178,4 +175,6 @@ a {
   box-shadow: inset 200px 0 0 0 rgb(46, 160, 241);
 }
 
-
+.nav-bar-collapse{
+  align-self: flex-end;
+}
