@@ -26,14 +26,9 @@ header{
   height: 320px;
 }
 
-.carousel-inner{
-  margin: auto;
-}
-
 .slide1{
   margin-top: 50px;
-  margin-left: 250px;
-  margin-right: 250px;
+  margin :auto;
 }
 
 
