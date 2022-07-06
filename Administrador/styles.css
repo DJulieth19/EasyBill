@@ -99,8 +99,11 @@ header{
     margin: auto;
   } 
   .marketing img{
-    width:80px ;
+    width:100px ;
     height:100px;
+  }
+  .marketing{
+    font-size: small;
   }
 }
 
