@@ -29,11 +29,10 @@
         <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        
+        <div class="ml-auto">
             <div class="collapse navbar-collapse " id="navbarCollapse">
               <div class="nav-bar">
               <form class="d-flex" role="search">
-              <div class="ml-auto">
                   <thead>
                       <th>
                         <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp <?php echo $usuario ?> </td> 
