@@ -45,9 +45,9 @@
                             </svg>
                             <div class="btn-group">
                               <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Herramientas</span>
+                              <span class="visually-hidden">Toggle Dropdown</span>
                               </button>
-                              <ul class="dropdown-menu">
+                              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
