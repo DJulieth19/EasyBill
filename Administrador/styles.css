@@ -172,7 +172,8 @@ a {
 }
 
 .nav-bar .btn.btn-danger{
-  background: white;
+  background: rgba(0, 0, 0, .3);
+  border-color: rgba(0, 0, 0, .3);
 }
 
 .nav-bar  .btn:hover {
