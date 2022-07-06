@@ -97,6 +97,7 @@ header{
   .carousel-inner{
     width: 300px;
     margin: auto;
+    margin-right: 15%;
   } 
   .marketing img{
     width:100px ;
