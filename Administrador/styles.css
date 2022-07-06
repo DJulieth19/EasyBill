@@ -171,11 +171,6 @@ a {
   box-shadow: inset 0 0 0 0 #202C45;
 }
 
-.nav-bar .btn.btn-danger{
-  background: #28242c;
-  border-color: #28242c;
-}
-
 .nav-bar  .btn:hover {
   color: #ffffff;
   background: #5a5a5a;
