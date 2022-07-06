@@ -30,7 +30,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="ml-auto">
-            <div class="collapse navbar-collapse-end " id="navbarCollapse">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
               <div class="nav-bar">
               <form class="d-flex" role="search">
                   <thead>
