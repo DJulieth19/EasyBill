@@ -24,7 +24,7 @@ header{
 .carousel-item {
   width: 1000px;
   height: 320px;
-  margin: auto;
+  margin-left: 20%;
   align-items: center;
 }
 
