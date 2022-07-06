@@ -171,11 +171,7 @@ a {
   box-shadow: inset 0 0 0 0 #202C45;
 }
 
-.nav-bar  .btn:hover {
-  color: #ffffff;
-  background: #5a5a5a;
-  box-shadow: inset 200px 0 0 0 rgb(46, 160, 241);
-}
+
 
 .nav-bar-icons {
   margin-top: 40px;
