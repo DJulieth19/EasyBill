@@ -38,7 +38,7 @@
                         <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp <?php echo $usuario ?> </td> 
                       </th>
                   </thead>
-                  <a class="btn btn-custom" href="../index.php">Cerrar sesión</a>
+                  <a class="btn btn-custom boton-closeSesion" href="../index.php">Cerrar sesión</a>
                   <a type="button" class="nav-bar-icons">
                             <div class="dropdown">
                               <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
