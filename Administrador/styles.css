@@ -16,11 +16,11 @@ header{
 }
 
 .carousel-control-prev {
-  left: 10;
+  margin-left: 15%;
 }
 
 .carousel-control-next {
-  left: 10;
+  margin-right: 15%;
 }
 
 /* Since positioning the image, we need to help out the caption */
