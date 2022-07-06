@@ -47,9 +47,9 @@
                                 </svg>
                               </a>
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Cambiar contraseña</a></li>
+                                <li><a class="dropdown-item" href="#">Editar nombre</a></li>
+                                <li><a class="dropdown-item" href="#">Añadir logo empresarial</a></li>
                               </ul>
                             </div>
                     <svg xmlns="http://www.w3.org/2000/svg" color="white" width="25" height="25" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
