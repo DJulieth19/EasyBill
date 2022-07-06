@@ -83,7 +83,8 @@ header{
   .carousel-item {
     width: 290px;
     height: 200px;
-    margin: auto;
+    margin-left: 10%;
+    margin-right: 10%;
     padding: 5%;
   }
   .carousel-inner{
