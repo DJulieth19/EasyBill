@@ -124,8 +124,7 @@ a {
 .nav-bar {
   position: relative;
   background: rgba(33,37,41,255) ;
-  margin-right: 15px;
-
+  align-items: right;
 }
 
 .nav-bar.nav-sticky {

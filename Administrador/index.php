@@ -30,8 +30,8 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="row w-100 align-items-right">
-            <div class="collapse navbar-collapse align-items-right" id="navbarCollapse">
-              <div class="nav-bar align-items-right">
+            <div class="collapse navbar-collapse " id="navbarCollapse">
+              <div class="nav-bar">
               <form class="d-flex" role="search">
                   <thead>
                       <th>
