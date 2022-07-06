@@ -16,7 +16,7 @@ header{
 }
 
 .carousel-control-prev {
-  margin-left: 10%;
+  margin-left: 12%;
 }
 
 .carousel-control-next {
@@ -182,6 +182,6 @@ a {
 
 }
 
-.dropdown-menu{
+.dropdown .dropdown-menu{
   margin-right: 40%;
 }
