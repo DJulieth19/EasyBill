@@ -54,7 +54,7 @@
 </header>
 
 <main>
-  <div class="ml-auto">
+
     <div id="myCarousel" class="carousel slide1" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -81,7 +81,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-  </div>
+
   
   <div id="Carousel2" class="carousel slide2 " data-bs-ride="carousel" >
     <div class="carousel-indicators ">
