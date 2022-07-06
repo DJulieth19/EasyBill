@@ -13,8 +13,16 @@ header{
 /* Carousel base class */
 .carousel {
   margin-bottom: 5rem;
-
 }
+
+.carousel-control-prev {
+  left: 10;
+}
+
+.carousel-control-next {
+  left: 10;
+}
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   bottom: 3rem;
