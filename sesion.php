@@ -12,7 +12,7 @@ $tipo= pg_fetch_array($consultaUsuarios);
 $tipoU=$tipo['tipo_usuario'];
 $nombreU=$tipo['nombre_usuario'];
 if($tipoU == "Administrador"){
-	header("location: ../Administrador/index.php?rowS1=<?php echo $nombreU?>&rowS2=<?php echo $tipo_usuario?> );
+	header("location: ../Administrador/index.php?nombre=$nombreU&tipoUsuario=$tipoU");
 	exit();
 }else {
 	if($tipoU == "Empleado"){
