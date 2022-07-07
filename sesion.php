@@ -16,7 +16,7 @@ if($tipoU == "Administrador"){
 	exit();
 }else {
 	if($tipoU == "Empleado"){
-		header("location: ../Administrador/index.php?nombre=$nombreU");
+		header("location: ../Empleado/index.php?nombre=$nombreU");
 		exit();
 	}
 }
