@@ -106,9 +106,8 @@ header{
     font-size: small;
     text-align: center;
   }
-  .nav-bar .NombreUser{
+  .nav-bar .NombreUser {
     visibility: hidden;
-
   }
   
 }
