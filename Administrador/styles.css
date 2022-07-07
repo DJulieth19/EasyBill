@@ -87,8 +87,6 @@ header{
     display: initial;
 
   }
-
-
   .carousel-item {
     width: 290px;
     height: 200px;
@@ -107,6 +105,10 @@ header{
   .marketing .col-lg-4 {
     font-size: small;
     text-align: center;
+  }
+  .nav-bar .NombreUser{
+    visibility: hidden;
+
   }
   
 }
