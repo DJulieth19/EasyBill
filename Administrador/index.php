@@ -33,11 +33,12 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <div class="nav-bar">
               <form class="contanier-fluid" role="search">
-                  <thead>
+                  
+                  <a><thead>
                       <th>
                         <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp <?php echo $usuario ?> </td> 
                       </th>
-                  </thead>
+                  </thead></a>
                   <a class="btn btn-custom " href="../index.php">Cerrar sesión</a>
                   <a type="button" class="nav-bar-icons">
                             <div class="dropdown">
