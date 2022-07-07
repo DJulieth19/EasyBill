@@ -32,7 +32,7 @@
         <div class="ml-auto">
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <div class="nav-bar">
-              <form class="d-flex" role="search">
+              <form class="contanier-fluid" role="search">
                   <thead>
                       <th>
                         <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp <?php echo $usuario ?> </td> 
@@ -52,7 +52,6 @@
                                 <li><a class="dropdown-item" href="#">Añadir logo empresarial</a></li>
                               </ul>
                             </div>
-
                   </a>
               </form>
               </div>
