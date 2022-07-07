@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.98.0">
     <?php
-		  $tipoUsuario = $_GET['tipo_usuario']
+		  $tipoUsuario = $_GET['tipoUsuario']
 	  ?>
     <title>Administrador <?php echo $tipoUsuario ?> </title>
 
