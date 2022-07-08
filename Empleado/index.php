@@ -132,7 +132,7 @@
       <div class="col-lg-4">
         <a href="https://example.com/" class="functions-img">
           <img class="img" src="../Imagenes/historial1.png" href= class="bd-placeholder-img rounded-circle" width="180" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
-          <img class="img" src="../Imagenes/historial1.png" href= class="bd-placeholder-img rounded-circle" width="180" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+          <img class="img" src="../Imagenes/historial2.png" href= class="bd-placeholder-img rounded-circle" width="180" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
         </a> 
         <h3 class="fw-normal">Historial de pedidos</h3>
       </div><!-- /.col-lg-4 -->
