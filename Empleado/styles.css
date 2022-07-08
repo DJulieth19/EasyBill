@@ -45,6 +45,17 @@ header{
   text-align: center;
 }
 
+/*Cambio de imagenes con clic */
+.a_functions-img img:last-child{
+  display: none;
+}
+a.a_functions-img:hover img:last-child{
+  display: block;
+}
+
+a.a_functions-img:hover img:first-child{
+  display: none;
+}
 /* Featurettes
 ------------------------- */
 
