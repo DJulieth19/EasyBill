@@ -127,6 +127,23 @@
         <a data-toggle="modal" data-target="#exampleModalCenter">
           <img src="../../Imagenes/RegistrarPedido.png"  href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
         </a> 
+        <div class="modal" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Modal body text goes here.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div><!-- /.col-lg-4 -->
 
       <div class="col-lg-4">
@@ -144,7 +161,9 @@
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
+    <script src="../assets/dist/js/jquery.min.js"></script>
+    <script src="../assets/dist/js/popper.js"></script>
+    <script src="../assets/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/dist/js/main.js"></script>      
   </body>
 </html>
