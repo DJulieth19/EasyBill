@@ -46,14 +46,14 @@ header{
 }
 
 /*Cambio de imagenes con clic */
-.a_functions-img img:last-child{
+.a_functions img:last-child{
   display: none;
 }
-.a_functions-img:hover img:last-child{
+.a_functions:hover img:last-child{
   display: block;
 }
 
-.a_functions-img:hover img:first-child{
+.a_functions:hover img:first-child{
   display: none;
 }
 /* Featurettes
