@@ -124,17 +124,19 @@
     <!-- Funciones para administrador -->
     <div class="row">
       <div class="col-lg-4">
-        <a href="https://example.com/">
-          <img data-toggle="modal" data-target="#exampleModalCenter" href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+        <a data-toggle="modal" data-target="#exampleModalCenter">
+          <img src="../../Imagenes/RegistrarPedido.png"  href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
         </a> 
         <h3 class="fw-normal">Registrar Pedido</h3>
       </div><!-- /.col-lg-4 -->
+      <!-- Button trigger modal -->
+
       <!-- Modal -->
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Datos del cliente</h5>
+              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -149,7 +151,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="col-lg-4">
         <a href="https://example.com/">
           <img src="../Imagenes/historial.png" href= class="bd-placeholder-img rounded-circle" width="180" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
