@@ -131,7 +131,7 @@
         <!-- Modal -->
         <div class="modal bg-secondary py-5" tabindex="-1"  id="staticBackdrop">
           <div class="modal-dialog">
-            <div class="modal-content rounded-4 shadow">
+            <div class="modal-content rounded-4 ">
               <div class="modal-header p-5 pb-4 border-bottom-0">
                 <!-- <h5 class="modal-title">Modal title</h5> -->
                 <h2 class="fw-bold mb-0">Datos del cliente</h2>
@@ -147,8 +147,10 @@
                     <input type="number" class="form-control rounded-3" id="id" placeholder="Identificación">
                     <label for="id">Identificacion</label>
                   </div>
-                  <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Continuar</button>
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <div class="modal-footer">
+                    <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Continuar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 </div>
                 </form>
               </div>
             </div>
