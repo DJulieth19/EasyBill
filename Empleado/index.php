@@ -133,11 +133,14 @@
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Datos del cliente</h5>
+                <h5 class="modal-title text-align-center" id="staticBackdropLabel">Datos del cliente</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
-                ...
+                <div class="modal-body">
+                  <label for="nombreCliente">Nombre del cliente</label>
+                  <input type="text" name="nombreCliente">
+                  <label for="idCliente">Identificación</label>
+                  <input type="text" name="idCliente">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -150,7 +153,7 @@
 
       <div class="col-lg-4">
         <a href="https://example.com/" class="functions">
-          <img  src="../Imagenes/historial1.png" onmouseover="this.src='../Imagenes/historial2.png';" onmouseout="this.src='../Imagenes/historial1.png';" width="180" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+          <img  src="../Imagenes/historial1.png" onMouseOver="this.src='../Imagenes/historial2.png';" onMouseOut="this.src='../Imagenes/historial1.png';" width="180" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
          </a> 
         <h3 class="fw-normal">Historial de pedidos</h3>
       </div><!-- /.col-lg-4 -->
