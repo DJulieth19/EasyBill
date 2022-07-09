@@ -124,9 +124,10 @@
     <!-- Funciones para administrador -->
     <div class="row">
       <div class="col-lg-4">
-        <a  class="functions" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <a  href="" class="functions" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
           <img src="../../Imagenes/RegistrarPedido.png"  href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
         </a> 
+        <h3 class="fw-normal">Registrar Pedido</h3>
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
