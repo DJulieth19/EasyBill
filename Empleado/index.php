@@ -132,12 +132,12 @@
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-sm modal-dialog-centered">
             <div class="modal-content">
-              <div class="modal-header  bg-primary text-white ">
+              <div class="modal-header text-center bg-primary text-white ">
                 <h5 class="modal-title" id="staticBackdropLabel">Datos del cliente</h5>
                </div>
                 <div class="modal-body">
                   <div class="d-flex flex-column">                 
-                    <label for="idCliente" margin-letf=0px>Identificación *</label>
+                    <label for="idCliente">Nombre *</label>
                     <input type="text" name="nombreCliente">
                     <label for="idCliente">Identificación *</label>
                     <input type="text" name="idCliente">
