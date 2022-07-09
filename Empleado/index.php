@@ -134,13 +134,12 @@
             <div class="modal-content">
               <div class="modal-header  bg-primary text-white ">
                 <h5 class="modal-title" id="staticBackdropLabel">Datos del cliente</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
+               </div>
                 <div class="modal-body">
                   <div class="d-flex flex-column">                 
-                    <p class="text-left">Nombre</p>
+                    <label for="idCliente" margin-letf=0px>Identificación *</label>
                     <input type="text" name="nombreCliente">
-                    <label for="idCliente">Identificación</label>
+                    <label for="idCliente">Identificación *</label>
                     <input type="text" name="idCliente">
                   </div>
               </div>
