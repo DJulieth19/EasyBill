@@ -129,27 +129,31 @@
         </a> 
         <h3 class="fw-normal">Registrar Pedido</h3>
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-sm modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header text-center bg-primary text-white ">
-                <h5 class="modal-title" id="staticBackdropLabel">Datos del cliente</h5>
-               </div>
-                <div class="modal-body">
-                  <div class="d-flex flex-column">                 
-                    <label for="idCliente">Nombre *</label>
-                    <input type="text" name="nombreCliente">
-                    <label for="idCliente">Identificación *</label>
-                    <input type="text" name="idCliente">
-                  </div>
+        <div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+              <div class="modal-header p-5 pb-4 border-bottom-0">
+                <!-- <h5 class="modal-title">Modal title</h5> -->
+                <h2 class="fw-bold mb-0">Datos del cliente</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Continuar</button>
+
+              <div class="modal-body p-5 pt-0">
+                <form class="">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control rounded-3" id="Nombre" placeholder="Nombre">
+                    <label for="Nombre">Nombre</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="number" class="form-control rounded-3" id="id" placeholder="Identificación">
+                    <label for="id">Identificacion</label>
+                  </div>
+                  <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Continuar</button>
+                </form>
               </div>
             </div>
           </div>
-        </div>
+      </div>
       </div><!-- /.col-lg-4 -->
 
       <div class="col-lg-4">
