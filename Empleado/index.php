@@ -132,15 +132,17 @@
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title text-align-center" id="staticBackdropLabel">Datos del cliente</h5>
+              <div class="modal-header  text-align-center">
+                <h5 class="modal-title" id="staticBackdropLabel">Datos del cliente</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
                 <div class="modal-body">
-                  <label for="nombreCliente">Nombre del cliente</label>
-                  <input type="text" name="nombreCliente">
-                  <label for="idCliente">Identificación</label>
-                  <input type="text" name="idCliente">
+                  <div class="d-flex flex-column">                 
+                    <label for="nombreCliente">Nombre del cliente</label>
+                    <input type="text" name="nombreCliente">
+                    <label for="idCliente">Identificación</label>
+                    <input type="text" name="idCliente">
+                  </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
