@@ -138,8 +138,7 @@
               </div>
                 <div class="modal-body">
                   <div class="d-flex flex-column">                 
-                    <label for="nombreCliente">Nombre</label>
-                    <h1 class="text-left ">Nombre </h1>
+                    <p class="text-left">Nombre</p>
                     <input type="text" name="nombreCliente">
                     <label for="idCliente">Identificación</label>
                     <input type="text" name="idCliente">
