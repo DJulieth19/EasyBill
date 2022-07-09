@@ -129,7 +129,7 @@
         </a> 
         <h3 class="fw-normal">Registrar Pedido</h3>
         <!-- Modal -->
-        <div class="modal py-5" tabindex="-1"  id="staticBackdrop">
+        <div class="modal modal-sm py-5" tabindex="-1"  id="staticBackdrop">
           <div class="modal-dialog">
             <div class="modal-content rounded-4 ">
               <div class="modal-header p-5 pb-4 border-bottom-0">
@@ -149,7 +149,7 @@
                   </div>
                   <div class="modal-footer">
                     <button class="btn rounded-3 btn-primary" type="submit">Continuar</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                  </div>
                 </form>
               </div>
