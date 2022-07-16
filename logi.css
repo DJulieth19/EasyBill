@@ -23,7 +23,7 @@
 }
 
 body {
-	background: url(../Imagenes/FondoEasyBill.png) no-repeat center top;
+	background:white;
 	background-size:cover;
 	font-family: 'Open Sans', sans-serif;
 }
