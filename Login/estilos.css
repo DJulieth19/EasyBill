@@ -212,5 +212,14 @@ color: var(--light-azure);
   color: #fff;
 }
 
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width:720px) { 
+  body {
+    background-color:white;
+  }
+ 
+}
 
 
