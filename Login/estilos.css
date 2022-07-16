@@ -33,22 +33,7 @@ body {
 	margin: auto;
 }
 
-.space1{
-	padding: 10px 0;
-	background: var(--negro);
-}
-.space2{
-	padding: 20px 0;
-	background: var(--negro);
-}
-.space3{
-	padding: 50px 0;
-	background: var(--negro);
-}
-.spaceb1{
-	padding: 40px 0;
-	background: var(--blanco);
-}
+
 .titulos{
   font-size: 30px;
   font-weight: 50px;

@@ -23,7 +23,8 @@
 }
 
 body {
-	background: url(../Imagenes/FondoEasyBill.png) no-repeat center top;
+  flex-wrap: wrap;
+	background: url(../FondoEasyBill.png) no-repeat center top;
 	background-size:cover;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -127,7 +128,8 @@ color: var(--light-azure);
 
 /*-------------login--------------------------*/
 
-.login-box { 
+.login-box {
+
   background: #000;
   color: #fff;
   top: 50%;
@@ -136,9 +138,7 @@ color: var(--light-azure);
   transform: translate(-50%, -50%);
   box-sizing: border-box;
   padding: 70px 30px;
-  border: 1px solid white;
-  border-radius: 10%;
-  overflow: hidden;
+
 }
 
 .login-box .avatar {
@@ -214,25 +214,6 @@ color: var(--light-azure);
   color: #fff;
 }
 
-/* RESPONSIVE CSS
--------------------------------------------------- */
-@media only screen and (max-width: 600px) { 
-	body { 
-    background: rgb(13,7,105);
-    background: linear-gradient(0deg, rgba(13,7,105,1) 10%, rgba(62,62,254,1) 49%, rgba(0,212,255,1) 80%);
-    background-repeat: no-repeat;
-  }  
 
-  .login-box { 
-    background: #000;
-    color: #fff;
-    margin-top: 30%;
-    margin-left: 10%;
-    margin-right: 10%;
-    box-sizing: border-box;
-    padding: 70px 30px;
-    border: 1px solid white;
-    border-radius: 10%;
-    overflow: hidden;
-  } 
-}
+
+
