@@ -14,7 +14,7 @@
 			</div>
 			<div class="col">
 				<div class="text-end">
-					<img src="./logol.png" width="48" alt="">
+					<img src="./reportes.png" width="48" alt="">
 				</div>
 				<h2 class="fw-bold text.center">Bienvenido</h2>
 			</div>	
