@@ -170,7 +170,7 @@
         </a>   <h3 class="fw-normal">Reportes Administrativos</h3>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
 
       
   </body>
