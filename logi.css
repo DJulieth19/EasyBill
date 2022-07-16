@@ -219,6 +219,7 @@ color: var(--light-azure);
 -------------------------------------------------- */
 @media only screen and (max-width: 600px) { 
 	body { 
-		background-image: url(../Imagenes/1FondoEasyBill.png); 
+		background: rgb(13,7,105);
+    background: linear-gradient(0deg, rgba(13,7,105,1) 0%, rgba(62,62,254,1) 50%, rgba(0,212,255,1) 100%);
 	}   
 }
