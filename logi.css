@@ -215,6 +215,13 @@ color: var(--light-azure);
   color: #fff;
 }
 
+/* RESPONSIVE CSS
+-------------------------------------------------- */
 
+@media screen and (min-width:5px) and (max-width:1400px) { 
+  body {
+    background: blue;
 
-
+  }
+ 
+}

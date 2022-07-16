@@ -14,7 +14,7 @@
 	<title>EasyBill</title>
 </head>
 <body>
-	<header>
+	
 	 	<div class="login-box">
 		    <img src="./logol.png" class="avatar" alt="Avatar Image">
 		    <h1>Login</h1>
@@ -27,7 +27,7 @@
 		      <input type="submit" value="Ingresa">
 		    </form>
 		  </div>		
-	</header>
+	
 </body>
 </html>
 
