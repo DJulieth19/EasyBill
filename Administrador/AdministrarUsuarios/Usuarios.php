@@ -68,7 +68,109 @@
 
 <main>
 
-    
+<div id="myCarousel" class="carousel slide1" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../../Imagenes/first.png" class="d-block w-100" alt="Bienvenida" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/>
+        </div>
+        <div class="carousel-item">
+          <img src="../../Imagenes/second.png" class="d-block w-100" alt="Bienvenida" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/>
+        </div>
+        <div class="carousel-item">
+          <img src="../../Imagenes/tres.png" class="d-block w-100" alt="Bienvenida" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  
+  <div id="Carousel2" class="carousel slide2 " data-bs-ride="carousel" >
+    <div class="carousel-indicators ">
+      <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../Imagenes/1.png" class="d-block w-100 text-center" alt="Bienvenida" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/>
+      </div>
+      <div class="carousel-item">
+        <img src="../../Imagenes/2.png"  class="d-block w-100 text-center" alt="Bienvenida" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#Carousel2" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#Carousel2" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Funciones para administrador -->
+    <div class="row">
+      <div class="col-lg-4">
+        <a href="../Administrador/AdministrarUsuarios/Usuarios.php">
+          <img src="../../Imagenes/usuarios.png" href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+        </a> 
+        <h3 class="fw-normal">Administrar Usuarios</h3>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <a href="https://example.com/">
+          <img src="../Imagenes/actividad.png" href= class="bd-placeholder-img rounded-circle" width="180" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+        </a> 
+        <h3 class="fw-normal">Consulta de Actividad</h3>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <a href="https://example.com/">
+          <img src="../../Imagenes/ventas.png" href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+        </a> 
+        <h3 class="fw-normal">Consulta de Ventas</h3>
+      </div><!-- /.col-lg-4 -->
+      
+      <div class="col-lg-4">
+        <a href="https://example.com/">
+          <img src="../../Imagenes/historial2.png" href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+        </a> 
+        <h3 class="fw-normal">Historial de Pedidos</h3>
+      </div><!-- /.col-lg-4 -->
+      
+      <div class="col-lg-4">
+        <a href="https://example.com/">
+          <img src="../../Imagenes/menu2.png" href= class="bd-placeholder-img rounded-circle" width="165" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+        </a>  <h3 class="fw-normal">Administrar Menú</h3>
+         </div><!-- /.col-lg-4 -->
+      
+      <div class="col-lg-4">
+        <a href="https://example.com/">
+          <img src="../../Imagenes/reportes.png" href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+        </a>   <h3 class="fw-normal">Reportes Administrativos</h3>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>    
 
       
   </body>
