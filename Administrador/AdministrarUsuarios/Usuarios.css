@@ -1,0 +1,199 @@
+.slide2{
+    display: none;
+  }
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+header{
+  color: white;
+}
+/* Carousel base class */
+.carousel {
+  margin-bottom: 5rem;
+}
+
+.carousel-control-prev {
+  margin-left: 12%;
+}
+
+.carousel-control-next {
+  margin-right: 18%;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  width: 1000px;
+  height: 320px;
+  margin-left: 18%;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+ 
+@media screen and (min-width:5px) and (max-width:1400px) { 
+  .slide1{
+    display:none;
+  }
+  
+  .slide2{
+    display: initial;
+
+  }
+  .carousel-item {
+    width: 290px;
+    height: 200px;
+    margin-left: 0%;
+    padding: 5%;
+  }
+  .carousel-inner{
+    width: 300px;
+    margin: auto;
+
+  } 
+  .marketing img{
+    width:100px ;
+    height:100px;
+  }
+  .marketing .col-lg-4 {
+    font-size: small;
+    text-align: center;
+  }
+  .nav-bar .NombreUser {
+    visibility: hidden;
+  }
+  
+}
+
+
+
+/*******************************/
+/********* General CSS *********/
+/*******************************/
+
+a {
+  color: #202C45;
+  transition: .3s;
+}
+
+
+.btn.btn-custom {
+  padding: 10px 30px 12px 30px;
+  text-align: center; 
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  border: none;
+  border-radius: 60px;
+  box-shadow: inset 0 0 0 0 #202C45;
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+}
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.nav-bar {
+  position: relative;
+  background: rgba(33,37,41,255) ;
+  align-items: right;
+}
+
+.nav-bar.nav-sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+  z-index: 999;
+  
+}
+
+.nav-bar .navbar {
+  padding: 20px 0;
+  background: #202C45 !important;
+  transition: .3s;
+}
+
+.nav-bar.nav-sticky .navbar {
+  padding: 5px 0;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffffff;
+  padding: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  
+}
+
+.nav-bar .btn.btn-custom {
+  color: #5a5a5a;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 0 #202C45;
+}
+
+.nav-bar  .btn:hover {
+  color: #ffffff;
+  background: #5a5a5a;
+  box-shadow: inset 200px 0 0 0 rgb(46, 160, 241);
+}
+
+.nav-bar-icons {
+  margin-top: 27px;
+
+}
+
+.dropdown .dropdown-menu{
+  margin-right: 40%;
+}
