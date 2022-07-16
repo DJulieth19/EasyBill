@@ -16,7 +16,7 @@
 				<div class="text-end">
 					<img src="./logol.png" width="48" alt="">
 				</div>
-				<h2>Bienvenido</h2>
+				<h2 class="fw-bold text.center">Bienvenido</h2>
 			</div>	
 	</div>
 
