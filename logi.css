@@ -220,7 +220,7 @@ color: var(--light-azure);
 
 @media (max-width:720px) { 
   body {
-    background:white;
+    background-color:white;
   }
  
 }
