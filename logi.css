@@ -127,8 +127,7 @@ color: var(--light-azure);
 
 /*-------------login--------------------------*/
 
-.login-box {
-  
+.login-box { 
   background: #000;
   color: #fff;
   top: 50%;
@@ -219,7 +218,21 @@ color: var(--light-azure);
 -------------------------------------------------- */
 @media only screen and (max-width: 600px) { 
 	body { 
-		background: rgb(13,7,105);
-    background: linear-gradient(0deg, rgba(13,7,105,1) 0%, rgba(62,62,254,1) 50%, rgba(0,212,255,1) 100%);
-	}   
+    background: rgb(13,7,105);
+    background: linear-gradient(0deg, rgba(13,7,105,1) 10%, rgba(62,62,254,1) 49%, rgba(0,212,255,1) 80%);
+    background-repeat: no-repeat;
+  }  
+
+  .login-box { 
+    background: #000;
+    color: #fff;
+    margin-top: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border: 1px solid white;
+    border-radius: 10%;
+    overflow: hidden;
+  } 
 }
