@@ -217,10 +217,8 @@ color: var(--light-azure);
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-
-@media (max-width:720px) { 
-  .body {
-    background-color:white;
-  }
- 
+@media only screen and (max-width: 600px) { 
+	body { 
+		background-image: url(../Imagenes/1FondoEasyBill.png); 
+	}   
 }
