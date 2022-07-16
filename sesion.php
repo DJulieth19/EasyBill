@@ -39,7 +39,6 @@ if($tipoU == "Administrador"){
 	<title>EasyBill</title>
 </head>
 <body>
-	<header>
 	 	<div class="login-box">
 		    <img src="./logol.png" class="avatar" alt="Avatar Image">
 		    <h1>Login</h1>
@@ -53,6 +52,5 @@ if($tipoU == "Administrador"){
   		      <ul class="center" ><a href="/Login/restaurarContraseña.php">Olvidé mi contraseña</a></ul>
 		    </form>
 		  </div>		
-	</header>
 </body>
 </html>

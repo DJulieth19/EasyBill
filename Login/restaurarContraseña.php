@@ -14,7 +14,6 @@
 	<title>EasyBill</title>
 </head>
 <body>
-	<header>
 	 	<div class="login-box">
 		    <img src="../../Imagenes/logol.png" class="avatar" alt="Avatar Image">
 		    <h1>Recuperación de contraseña</h1>
@@ -31,7 +30,6 @@
 		      <input type="submit" value="Validar">
 		    </form>
 		  </div>		
-	</header>
 </body>
 </html>
 
