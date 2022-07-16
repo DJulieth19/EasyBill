@@ -218,7 +218,7 @@ color: var(--light-azure);
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media screen and (min-width:5px) and (max-width:900px) { 
+@media (max-width:720px) { 
   body {
     background:white;
   }
