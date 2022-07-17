@@ -17,7 +17,7 @@
 </style>
 </head>
   <body>
-    <div class="container w-75 bg-light mt-auto rounded shadow">
+    <div class="container w-75 bg-light pt-5 rounded shadow">
 		<div class="row aling-items-stretch">
 			<div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
 			</div>
