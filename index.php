@@ -17,7 +17,7 @@
 </style>
 </head>
   <body>
-    <div class="container w-75 mt-5" bgcolor: #01A5F7>
+    <div class="container w-75 bg-info mt-5">
 		<div class="row">
 			<div class="col bg">
 			</div>
@@ -25,7 +25,7 @@
 				<div class="text-end">
 					<img src="./img/logo.png" width="48" alt=""> 
 				</div>
-				<h2 class="fw-bold text-center py-5">Bienvenido</h2>
+				<h2 class="fw-bold text-center py-5">Bienvenido..</h2>
 
 				<!-- LOGIN -->
 
