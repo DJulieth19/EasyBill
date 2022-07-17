@@ -8,7 +8,7 @@
 <style>
 	body{
 		background: #ffee23;
-		background: linear-gradient(to right, #00B2FA, #00D594);
+		background: linear-gradient(to right, #00D594, #00B2FA);
 	}
 	.bg{
 		background-image: url(./img/imagen.png);
@@ -17,7 +17,7 @@
 </style>
 </head>
   <body>
-    <div class="container w-75 bg-gradient-info mt-5">
+    <div class="container w-75 bg-info mt-5">
 		<div class="row">
 			<div class="col bg">
 			</div>
@@ -25,7 +25,7 @@
 				<div class="text-end">
 					<img src="./img/logo.png" width="48" alt=""> 
 				</div>
-				<h2 class="fw-bold text-center py-5">Bienvenido.</h2>
+				<h2 class="fw-bold text-center py-5">Bienvenido..</h2>
 
 				<!-- LOGIN -->
 
