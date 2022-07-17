@@ -19,8 +19,8 @@
     
 <header>
 <?php
-		$usuario = $_GET['nombre']
-    $tipo = $_GET['tipoUsuario']
+		$usuario = $_GET['nombre'];
+    $tipo = $_GET['tipoUsuario'];
 	?>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
