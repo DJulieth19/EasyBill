@@ -20,6 +20,7 @@
 <header>
 <?php
 		$usuario = $_GET['nombre']
+    $tipo = $_GET['tipoUsuario']
 	?>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
@@ -39,7 +40,7 @@
                       </th>
                   </thead>
                 </div>
-                  <a class="btn btn-custom " href="../index.php">Volver</a>
+                  <a class="btn btn-custom " href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Volver</a>
                   <a type="button" class="nav-bar-icons">
                             <div class="dropdown">
                             <a class="btn btn-dark" href="#" role="button">
