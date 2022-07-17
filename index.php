@@ -17,7 +17,7 @@
 </style>
 </head>
   <body>
-    <div class="container w-75 bgcolor: #01A5F7 mt-5">
+    <div class="container w-75 mt-5" bgcolor: #01A5F7>
 		<div class="row">
 			<div class="col bg">
 			</div>
