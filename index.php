@@ -25,7 +25,7 @@
 				<div class="text-end">
 					<img src="./img/logo.png" width="48" alt=""> 
 				</div>
-				<h2 class="fw-bold text-center py-5">Bienvenido..</h2>
+				<h2 class="fw-bold text-center py-5">Bienvenido.</h2>
 
 				<!-- LOGIN -->
 
