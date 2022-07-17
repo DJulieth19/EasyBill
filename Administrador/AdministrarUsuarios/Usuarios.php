@@ -23,8 +23,8 @@
 	?>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <h4>&nbsp</h4>
-        <h4>Administrar Usuarios</h4>
+        <h4>&nbsp &nbsp</h4>
+        <h3>Administrar Usuarios</h3>
         <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
