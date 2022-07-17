@@ -11,7 +11,7 @@
 		background: linear-gradient(to right, #00D594, #00B2FA);
 	}
 	.bg{
-		background-image: url(./img/imagen.png) class="img-fluid";
+		background-image: url(./img/imagen.png);
 		background-position: center center;
 	}
 </style>
@@ -23,7 +23,7 @@
 			</div>
 			<div class="col bg-white p-5 rounded-end">
 				<div class="text-center">
-					<img src="./img/logo.png" class="rounded mx-auto d-block" width="80">
+					<img src="./img/logo.png" class="rounded mx-auto d-block" alt="">
 				</div>
 				<h2 class="fw-bold text-center py-2">Bienvenido.</h2>
 
