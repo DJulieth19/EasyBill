@@ -9,6 +9,7 @@
 	body{
 		background: #ffee23;
 		background: linear-gradient(to right, #9F70DC, #6211F0);
+	}
 	.bg{
 		background-image: url(./img/fondo.png);
 		background-position: center center;
