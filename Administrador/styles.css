@@ -108,6 +108,7 @@ header{
   }
   .nav-bar .NombreUser {
     visibility: hidden;
+    color: #ffffff;
   }
   
 }
