@@ -67,7 +67,7 @@ if($tipoU == "Administrador"){
 						<button type="submit" class="btn btn-primary">Iniciar sesión</button>
 					</div>
 					<div= class="my-3">
-						<span><a href="./login/restaurarContraseña.php">¿Olvidaste tu contraseña?</a></span>
+						<span><a href="./Login/restaurarContraseña.php">¿Olvidaste tu contraseña?</a></span>
 					</div>
 				</form>
 			</div>	
