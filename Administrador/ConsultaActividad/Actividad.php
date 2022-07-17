@@ -12,6 +12,7 @@
     
     <!-- Custom styles for this template -->
     <link href="Usuarios.css" rel="stylesheet">
+    
   </head>
   <body>
     
@@ -63,7 +64,36 @@
     </div>
   </nav>
 </header>
-
+                <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Campo</th>
+                    <th scope="col">Comando</th>
+                    <th scope="col">Fecha y hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                </tbody>
+                </table>        
+                 
 <main>
 
     
