@@ -16,7 +16,17 @@
 				<div class="text-end">
 					<img src="./img/logo.png" width="48" alt=""> 
 				</div>
-				<h2 class="fw-bold text.center">Bienvenido</h2>
+				<h2 class="fw-bold text.center py-5">Bienvenido</h2>
+
+				<!-- LOGIN -->
+
+				<form action="#">
+					<div class="mb-4"></div>
+						<label for="usuario" class="form-label">Nombre de Usuario</label>
+						<input type="text" class="form-control" name="usuario" placeholder="Ingrese el usuario">
+					<div class="mb-4"></div>
+					<div class="mb-4"></div>
+				</form>
 			</div>	
 	</div>
 
