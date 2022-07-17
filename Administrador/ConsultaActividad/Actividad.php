@@ -15,9 +15,8 @@
     <!-- Custom styles for this template -->
     <link href="../styles.css" rel="stylesheet">
   </head>
-  <body>
-    
-        <header>
+      
+  <header>
         <?php
             $usuario = $_GET['nombre']
           ?>
@@ -54,8 +53,8 @@
                 </div>
             </div>
           </nav>
-        </header>
-
+  </header>
+  <body>
     <table class="table-responsive">
       <thead>
         <tr>
