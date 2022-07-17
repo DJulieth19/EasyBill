@@ -23,14 +23,14 @@
 			</div>
 			<div class="col bg-white p-5 rounded-end">
 				<div class="text-center">
-					<img src="./img/logo.png" width="100" alt=""> 
+					<img src="./img/logo.png" width="100" alt="50"> 
 				</div>
-				<h2 class="fw-bold text-center py-5">Bienvenido.</h2>
+				<h2 class="fw-bold text-center py-2">Bienvenido.</h2>
 
 				<!-- LOGIN -->
 
 				<form action="sesion.php" method="POST">
-					<div class="mb-4">
+					<div class="mb-5">
 						<label for="username" class="form-label">Nombre de Usuario</label>
 						<input type="text" class="form-control" name="usuario" placeholder="">	
 					</div>
