@@ -56,7 +56,7 @@
   </header>
   <main>
     <body>
-      <table class="table-responsive">
+      <table class="table-responsive col-md-3 offset-md-3">
         <thead>
           <tr>
             <th scope="col">#</th>
