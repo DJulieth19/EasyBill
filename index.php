@@ -17,7 +17,7 @@
 </style>
 </head>
   <body>
-    <div class="container">
+    <div class="container w-75 bg-primary mt-5">
 		<div class="row">
 			<div class="col bg">
 			</div>
