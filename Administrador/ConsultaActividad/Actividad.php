@@ -14,9 +14,7 @@
     <link href="Usuarios.css" rel="stylesheet">
     
   </head>
-  <body>
-    
-<header>
+  <header>
 <?php
 		$usuario = $_GET['nombre']
 	?>
@@ -64,6 +62,7 @@
     </div>
   </nav>
 </header>
+  <body>
                 <table class="table">
                 <thead>
                     <tr>
