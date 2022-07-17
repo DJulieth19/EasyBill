@@ -23,7 +23,7 @@
 			</div>
 			<div class="col bg-white p-5 rounded-end">
 				<div class="text-center">
-					<img src="./img/logo.png" width="50" height="50">
+					<img src="./img/logo.png" width="100" height="150">
 				</div>
 				<h2 class="fw-bold text-center py-2">Bienvenido.</h2>
 
