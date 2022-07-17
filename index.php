@@ -17,9 +17,9 @@
 </style>
 </head>
   <body>
-    <div class="container w-75 bg-info mt-5">
-		<div class="row">
-			<div class="col bg">
+    <div class="container w-75 bg-light mt-5 rounded shadow">
+		<div class="row aling-items-stretch">
+			<div class="col bg d-none d-lg-block">
 			</div>
 			<div class="col">
 				<div class="text-end">
@@ -38,7 +38,7 @@
 						<label for="password" class="form-label">Contraseña</label>
 						<input type="password" class="form-control" name="contraseña" placeholder="">						
 					</div>
-					<div class="d-grid">
+					<div class="d-grid py-4">
 						<button type="submit" class="btn btn-primary">Iniciar sesión</button>
 					</div>
 
