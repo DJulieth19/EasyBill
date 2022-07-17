@@ -35,7 +35,7 @@
                 <div class="NombreUser">
                   <thead>
                       <th>
-                        <td ><?php echo $tipo ?><br><?php echo $usuario ?></td> 
+                        <td ><?php echo $tipo ?> &nbsp &nbsp<br>&nbsp &nbsp <?php echo $usuario ?></td> 
                       </th>
                   </thead>
                 </div>
