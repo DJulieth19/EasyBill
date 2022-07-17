@@ -20,9 +20,9 @@
 
 				<!-- LOGIN -->
 
-				<form action="sesion.php" method ="POST">>
+				<form action="sesion.php" method="POST">
 					<div class="mb-4">
-						<label for="email" class="form-label">Nombre de Usuario</label>
+						<label for="username" class="form-label">Nombre de Usuario</label>
 						<input type="text" class="form-control" name="usuario" placeholder="">	
 					</div>
 					<div class="mb-4">
