@@ -17,11 +17,11 @@
 </style>
 </head>
   <body>
-    <div class="container w-10 mt-5 rounded-lg shadow-lg">
+    <div class="container w-75 mt-5 rounded-lg">
 		<div class="row aling-items-stretch">
-			<div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-lg">
+			<div class="col-4 bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-lg">
 			</div>
-			<div class="col bg-white p-5 rounded-end">
+			<div class="col-3 bg-white p-5 rounded-end">
 				<div class="text-center">
 					<img src="./img/logo.png" width="250" alt="">
 				</div>
