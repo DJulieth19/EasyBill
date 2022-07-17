@@ -21,7 +21,7 @@
 		<div class="row aling-items-stretch">
 			<div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-lg">
 			</div>
-			<div class="col">
+			<div class="col bg-white p-5 rounded-end">
 				<div class="text-end">
 					<img src="./img/logo.png" width="48" alt=""> 
 				</div>
