@@ -57,7 +57,7 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <table class="table-responsive col-md-6 offset-md-3 t-5">
+      <table class="table-info-responsive table-striped table-hover col-md-6">
         <thead>
           <tr>
             <th scope="col">#</th>
