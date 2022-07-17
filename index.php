@@ -11,7 +11,7 @@
 		background: linear-gradient(to right, #00B2FA, #00D594);
 	}
 	.bg{
-		background-image: url(./img/fondo.png);
+		background-image: url(./img/imagen.png);
 		background-position: center center;
 	}
 </style>
