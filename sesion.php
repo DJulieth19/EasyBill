@@ -3,8 +3,8 @@
 require_once("Database.php");
 $conn = conectardb();
 
-$usuario = $_POST['user'];
-$contraseña = $_POST['contra'];
+$usuario = $_POST['usuario'];
+$contraseña = $_POST['contraseña'];
 
 $queryUsuarios = "SELECT * from usuarios WHERE nombre_usuario = '$usuario' AND contrasenia = '$contraseña'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
