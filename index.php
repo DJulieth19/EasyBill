@@ -22,9 +22,11 @@
 
 				<form action="#">
 					<div class="mb-4"></div>
-						<label for="usuario" class="form-label">Nombre de Usuario</label>
-						<input type="text" class="form-control" name="usuario" placeholder="Ingrese el usuario">
+						<label for="email" class="form-label">Nombre de Usuario</label>
+						<input type="text" class="form-control" name="usuario" placeholder="">
 					<div class="mb-4"></div>
+						<label for="password" class="form-label">Contraseña</label>
+						<input type="password" class="form-control" name="contraseña" placeholder="">
 					<div class="mb-4"></div>
 				</form>
 			</div>	
