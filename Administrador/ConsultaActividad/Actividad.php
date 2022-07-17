@@ -35,7 +35,7 @@
                       </th>
                   </thead>
                 </div>
-                  <a class="btn btn-custom " href="../index.php">Cerrar sesión</a>
+                  <a class="btn btn-custom " href="../index.php">Volver</a>
                   <a type="button" class="nav-bar-icons">
                             <div class="dropdown">
                               <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
