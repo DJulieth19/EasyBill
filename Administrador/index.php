@@ -23,7 +23,7 @@
 	?>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Home<?php echo $usuario ?></a>
+        <a class="navbar-brand" href="#">Home</a>
         <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,7 +34,7 @@
                 <div class="NombreUser">
                   <thead>
                       <th>
-                        <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp <?php echo $usuario ?> </td> 
+                        <td >Administrador  <br><?php echo $usuario ?></td> 
                       </th>
                   </thead>
                 </div>
