@@ -21,13 +21,18 @@
 				<!-- LOGIN -->
 
 				<form action="#">
-					<div class="mb-4"></div>
+					<div class="mb-4">
 						<label for="email" class="form-label">Nombre de Usuario</label>
-						<input type="text" class="form-control" name="usuario" placeholder="">
-					<div class="mb-4"></div>
+						<input type="text" class="form-control" name="usuario" placeholder="">	
+					</div>
+					<div class="mb-4">
 						<label for="password" class="form-label">Contraseña</label>
-						<input type="password" class="form-control" name="contraseña" placeholder="">
-					<div class="mb-4"></div>
+						<input type="password" class="form-control" name="contraseña" placeholder="">						
+					</div>
+					<div class="d-grid">
+						<button type="submit" class="btn btn-primary">Iniciar sesión</button>
+					</div>
+
 				</form>
 			</div>	
 	</div>
