@@ -22,8 +22,8 @@
 			<div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-lg">
 			</div>
 			<div class="col bg-white p-5 rounded-end">
-				<div class="text-center">
-					<img src="./img/logo.png" class="rounded mx-auto d-block" width="100" alt="">
+				<div class="text-center" style="width: 100px; height: 200px">
+					<img src="./img/logo.png">
 				</div>
 				<h2 class="fw-bold text-center py-2">Bienvenido.</h2>
 
