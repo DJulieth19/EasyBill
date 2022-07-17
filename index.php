@@ -23,9 +23,9 @@
 			</div>
 			<div class="col bg-white p-5 rounded-end">
 				<div class="text-center">
-					<img src="./img/logo.png" w-50 h-50> 
+					<img src="./img/logo.png" w-20 h-20> 
 				</div>
-				<h2 class="fw-bold text-center py-2">Bienvenido</h2>
+				<h2 class="fw-bold text-center py-2">Bienvenido.</h2>
 
 				<!-- LOGIN -->
 
