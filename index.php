@@ -8,7 +8,7 @@
 <style>
 	body{
 		background: #ffee23;
-		background: linear-gradient(to right, #9F70DC, #6211F0);
+		background: linear-gradient(to right, #00B2FA, #00D594);
 	}
 	.bg{
 		background-image: url(./img/fondo.png);
