@@ -25,10 +25,10 @@
             $tipo = $_GET['tipoUsuario'];
           ?>
                   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark row justify-content-end">
-                      <div class="col-6">
+                      <div class="col-4">
                         <h3>Consulta de Actividad</h3>
                       </div>
-                      <div class="col-4 float-right">
+                      <div class="col-2">
                       <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
