@@ -61,7 +61,6 @@
       <h1> &nbsp </h1>
 
       <div class="table-responsive table-striped table-bordered ">
-        <div class="row content-center" width:40%>
           <table class="table table-hover" style="white-space: nowrap; overflow-x: auto;">
             <thead class="table-primary">
               <tr class="d-flex">
@@ -102,8 +101,7 @@
                 </tr>
             </tfoot>
           </table>
-        </div>
-        
+
     </div>
     
 
