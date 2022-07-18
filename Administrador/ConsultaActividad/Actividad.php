@@ -60,7 +60,7 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <div class="col-md-12">
+      <div class="col-md-8">
 
       <div class="table-responsive table-sm ">
         <table class="table table-hover">
