@@ -25,10 +25,10 @@
             $tipo = $_GET['tipoUsuario'];
           ?>
                   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark row justify-content-end">
-                      <div class="col-6">
+                      <div class="col-6 justify-content-center">
                         <h3>Consulta de Actividad</h3>
                       </div>
-                      <div class="col-4">
+                      <div class="col-4 justify-content-end">
                       <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
@@ -67,18 +67,18 @@
           <table class="table table-hover">
             <thead class ="table-primary">
               <tr class="d-flex">
-                <th class="col-3 text-center">Usuario</th>
-                <th class="col-3 text-center">Campo</th>
-                <th class="col-3 text-center">Comando</th>
-                <th class="col-3 text-center">Fecha y hora</th>
+                <th class="col-1 text-center">Usuario</th>
+                <th class="col-1 text-center">Campo</th>
+                <th class="col-1 text-center">Comando</th>
+                <th class="col-1 text-center">Fecha y hora</th>
               </tr>
             </thead>
             <tbody>
                 <tr class="d-flex">
-                    <td class="col-3" scope="row">user</td>
-                    <td class="col-3">Nissan</td>
-                    <td class="col-3">Qasqai</td>
-                    <td class="col-3">2017</td>
+                    <td class="col-1" scope="row">user</td>
+                    <td class="col-1">Nissan</td>
+                    <td class="col-1">Qasqai</td>
+                    <td class="col-1">2017</td>
                 </tr>
             </tbody>
           </table>
