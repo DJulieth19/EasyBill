@@ -60,7 +60,7 @@
       <h1> &nbsp </h1>
 
       <div class="table-responsive table-striped table-bordered ">
-        <div class="row y justify-content-center">
+        <div class="row y justify-content-center" width:40%>
           <table class="table table-hover">
             <thead class="table-primary">
                 <tr>
