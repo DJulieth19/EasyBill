@@ -58,12 +58,12 @@
             </div>
           </nav>
   </header>
-  <main>
+  
     <body>
       <h1> &nbsp </h1>
       <div class="table-responsive">
-        <table class="table-primary">
-            <thead>
+        <table">
+            <thead  class="table-primary">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Marca</th>
