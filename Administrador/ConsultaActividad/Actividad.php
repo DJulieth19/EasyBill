@@ -62,28 +62,34 @@
   <main>
     <body>
       <h1> &nbsp </h1>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="table-responsive table-striped table-bordered">
+            <table class="table table-hover">
+              <thead class ="table-primary">
+                <div class="col-3">
+                  <tr class="d-flex">
+                    <th class="text-center">Usuario</th>
+                    <th class="text-center">Campo</th>
+                    <th class="text-center">Comando</th>
+                    <th class="text-center">Fecha y hora</th>
+                  </tr>
+                </div>
+              </thead>
+              <tbody>
+                 <div class="col-3">
+                    <tr class="d-flex">
+                        <td class="col-1" scope="row">user</td>
+                        <td class="col-1">Nissan</td>
+                        <td class="col-1">Qasqai</td>
+                        <td class="col-3">2017</td>
+                    </tr>
+                  </div>
+              </tbody>
+            </table>
+          </div>
+      </div>
 
-      <div class="table-responsive table-striped table-bordered">
-          <table class="table table-hover">
-            <thead class ="table-primary">
-              <tr class="d-flex">
-                <th class="col-1 text-center">Usuario</th>
-                <th class="col-1 text-center">Campo</th>
-                <th class="col-1 text-center">Comando</th>
-                <th class="col-3 text-center">Fecha y hora</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr class="d-flex">
-                    <td class="col-1" scope="row">user</td>
-                    <td class="col-1">Nissan</td>
-                    <td class="col-1">Qasqai</td>
-                    <td class="col-3">2017</td>
-                </tr>
-            </tbody>
-          </table>
-
-    </div>
       <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
     </body>
   </main>
