@@ -68,7 +68,7 @@
             <table class="table table-hover">
               <thead class ="table-primary">
                 <div class="col-3">
-                  <tr class="d-flex">
+                  <tr>
                     <th class="text-center">Usuario</th>
                     <th class="text-center">Campo</th>
                     <th class="text-center">Comando</th>
@@ -78,7 +78,7 @@
               </thead>
               <tbody>
                  <div class="col-3">
-                    <tr class="d-flex">
+                    <tr>
                         <td scope="row">user</td>
                         <td>Nissan</td>
                         <td>Qasqai</td>
