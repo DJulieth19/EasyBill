@@ -60,7 +60,9 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <div class="table-responsive table-sm">
+      <div class="col-md-12">
+
+      <div class="table-responsive table-sm ">
         <table class="table table-hover">
             <thead class="table-primary">
                 <tr>
@@ -102,7 +104,7 @@
             </tfoot>
         </table>
     </div>
-
+    </div>
 
 
       <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
