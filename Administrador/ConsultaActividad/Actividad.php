@@ -25,7 +25,7 @@
             $tipo = $_GET['tipoUsuario'];
           ?>
                   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark row justify-content-end">
-                      <div class="col-6 mx-auto">
+                      <div class="col-6">
                         <h3>Consulta de Actividad</h3>
                       </div>
                       <div class="col-4 float-right">
@@ -70,7 +70,7 @@
                 <th class="col-1 text-center">Usuario</th>
                 <th class="col-1 text-center">Campo</th>
                 <th class="col-1 text-center">Comando</th>
-                <th class="col-1 text-center">Fecha y hora</th>
+                <th class="col-3 text-center">Fecha y hora</th>
               </tr>
             </thead>
             <tbody>
@@ -78,15 +78,12 @@
                     <td class="col-1" scope="row">user</td>
                     <td class="col-1">Nissan</td>
                     <td class="col-1">Qasqai</td>
-                    <td class="col-1">2017</td>
+                    <td class="col-3">2017</td>
                 </tr>
             </tbody>
           </table>
 
     </div>
-    
-
-
       <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
     </body>
   </main>
