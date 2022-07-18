@@ -196,3 +196,13 @@ a {
 .dropdown .dropdown-menu{
   margin-right: 40%;
 }
+
+/**********************************/
+/*********** Tablas CSS **********/
+/**********************************/
+
+
+table{
+  margin-left: 10%;
+  margin-right: 10%;
+}
