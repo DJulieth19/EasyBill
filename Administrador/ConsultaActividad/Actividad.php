@@ -60,8 +60,6 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <div class="row justify-content-center justify-content-md-start">
-
       <div class="table-responsive">
         <table class="table table-hover">
             <thead class="table-primary">
@@ -104,8 +102,7 @@
             </tfoot>
         </table>
     </div>
-    ...
-</div>
+
 
 
       <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
