@@ -22,7 +22,8 @@
     
 <header>
 <?php
-		$usuario = $_GET['nombre']
+		$usuario = $_GET['nombre'];
+    $tipo = $_GET['tipoUsuario'];
 	?>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
@@ -37,7 +38,7 @@
                 <div class="NombreUser">
                   <thead>
                       <th>
-                        <td >Empleado &nbsp &nbsp <br>&nbsp &nbsp <?php echo $usuario ?> </td> 
+                        <td ><?php echo $tipo ?> &nbsp &nbsp <br>&nbsp &nbsp <?php echo $usuario ?> </td> 
                       </th>
                   </thead>
                 </div>

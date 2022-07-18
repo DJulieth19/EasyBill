@@ -19,7 +19,8 @@
     
 <header>
 <?php
-		$usuario = $_GET['nombre']
+		$usuario = $_GET['nombre'];
+    $tipo = $_GET['tipoUsuario'];
 	?>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
@@ -34,7 +35,7 @@
                 <div class="NombreUser">
                   <thead>
                       <th>
-                        <td >Administrador &nbsp &nbsp <br>&nbsp &nbsp <?php echo $usuario ?> </td> 
+                        <td ><?php echo $tipo ?> &nbsp &nbsp<br>&nbsp &nbsp <?php echo $usuario ?></td> 
                       </th>
                   </thead>
                 </div>
@@ -133,19 +134,19 @@
     <!-- Funciones para administrador -->
     <div class="row">
       <div class="col-lg-4">
-        <a href="../Administrador/AdministrarUsuarios/Usuarios.php">
+        <a href="../Administrador/AdministrarUsuarios/Usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
           <img src="../../Imagenes/usuarios.png" href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
         </a> 
         <h3 class="fw-normal">Administrar Usuarios</h3>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <a href="../Administrador/ConsultaActividad/Actividad.php">
+        <a href="../Administrador/ConsultaActividad/Actividad.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
           <img src="../Imagenes/actividad.png" href= class="bd-placeholder-img rounded-circle" width="180" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
         </a> 
         <h3 class="fw-normal">Consulta de Actividad</h3>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <a href="../Administrador/ConsultaActividad/Actividad.php">
+        <a href="../Administrador/ConsultaActividad/Actividad.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
           <img src="../../Imagenes/ventas.png" href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
         </a> 
         <h3 class="fw-normal">Consulta de Ventas</h3>
