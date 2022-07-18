@@ -64,29 +64,29 @@
         <table class="table table-hover">
             <thead class="table-primary">
                 <tr class="col-md-4" >
-                    <th scope="col">#</th>
-                    <th scope="col">Marca</th>
-                    <th scope="col">Modelo</th>
-                    <th scope="col" class="text-center">Año</th>
-                    <th scope="col" class="text-right">Precio</th>
+                    <th class="col-1" scope="col">#</th>
+                    <th class="col-1" scope="col">Marca</th>
+                    <th class="col-1" scope="col">Modelo</th>
+                    <th class="col-1" scope="col" class="text-center">Año</th>
+                    <th class="col-1" scope="col" class="text-right">Precio</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="col-md-4">
+                <tr>
                     <td scope="row">1</td>
                     <td>Nissan</td>
                     <td>Qasqai</td>
                     <td class="text-center">2017</td>
                     <td class="text-right">18.560€</td>
                 </tr>
-                <tr class="col-md-4">
+                <tr>
                     <td scope="row">2</td>
                     <td>Seat</td>
                     <td>Ibiza</td>
                     <td class="text-center">2005</td>
                     <td class="text-right">4.500€</td>
                 </tr>
-                <tr class="col-md-4">
+                <tr>
                     <td scope="row">3</td>
                     <td>Citroen</td>
                     <td>Saxo</td>
