@@ -64,13 +64,13 @@
         <div class="row content-center" width:40%>
           <table class="table table-hover" style="white-space: nowrap; overflow-x: auto;">
             <thead class="table-primary">
-                <tr>
-                    <th  scope="col">#</th>
-                    <th  scope="col">Marca</th>
-                    <th  scope="col">Modelo</th>
-                    <th  scope="col" class="text-center">Año</th>
-                    <th  scope="col" class="text-right">Precio</th>
-                </tr>
+              <tr class="d-flex">
+                  <th class="col-1">Columna 1</th>
+                  <th class="col-3">Columna 2</th>
+                  <th class="col-5">Columna 2</th>
+                  <th class="col-5">Columna 2</th>
+                  <th class="col-5">Columna 2</th>
+              </tr>
             </thead>
             <tbody>
                 <tr>
