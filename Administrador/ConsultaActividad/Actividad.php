@@ -67,32 +67,32 @@
               <tr class="d-flex">
                   <th class="col-1">Columna 1</th>
                   <th class="col-3">Columna 2</th>
-                  <th class="col-5">Columna 2</th>
-                  <th class="col-5">Columna 2</th>
-                  <th class="col-5">Columna 2</th>
+                  <th class="col-3">Columna 3</th>
+                  <th class="col-3">Columna 4</th>
+                  <th class="col-3">Columna 5</th>
               </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td scope="row">1</td>
-                    <td>Nissan</td>
-                    <td>Qasqai</td>
-                    <td class="text-center">2017</td>
-                    <td class="text-right">18.560€</td>
+                    <td class="col-1" scope="row">1</td>
+                    <td class="col-3">Nissan</td>
+                    <td class="col-3">Qasqai</td>
+                    <td class="text-center col-3">2017</td>
+                    <td class="text-right col-3">18.560€</td>
                 </tr>
                 <tr>
-                    <td scope="row">2</td>
-                    <td>Seat</td>
-                    <td>Ibiza</td>
-                    <td class="text-center">2005</td>
-                    <td class="text-right">4.500€</td>
+                    <td class="col-1" scope="row">2</td>
+                    <td class="col-3">Seat</td>
+                    <td class="col-3">Ibiza</td>
+                    <td class="text-center col-3">2005</td>
+                    <td class="text-right col-3">4.500€</td>
                 </tr>
                 <tr>
-                    <td scope="row">3</td>
-                    <td>Citroen</td>
-                    <td>Saxo</td>
-                    <td class="text-center">2001</td>
-                    <td class="text-right">1.850€</td>
+                    <td class="col-1" scope="row">3</td>
+                    <td class="col-3">Citroen</td>
+                    <td class="col-3">Saxo</td>
+                    <td class="text-center col-3">2001</td>
+                    <td class="text-right col-3">1.850€</td>
                 </tr>
             </tbody>
             <tfoot>
