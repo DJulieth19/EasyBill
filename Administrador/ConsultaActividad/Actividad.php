@@ -62,7 +62,7 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <div class="container">
+      <div class="container-sm">
         <div class="row justify-content-md-center">
           <div class="table-responsive table-striped table-bordered">
             <table class="table table-hover">
