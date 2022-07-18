@@ -75,17 +75,14 @@
                     <th class="col-3 text-center">Comando</th>
                     <th class="col-4 text-center">Fecha y hora</th>
                   </tr>
-              
               </thead>
               <tbody>
-    
                     <tr>
                         <td class="col-4" scope="row">user</td>
                         <td class="col-2">Nissan</td>
                         <td class="col-3">Qasqai</td>
                         <td class="col-4">2017</td>
                     </tr>
-                
               </tbody>
             </table>
           </div>
