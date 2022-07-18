@@ -60,7 +60,6 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <div class=" row justify-content-center"> </div>
       <div class="col-md-8">
       <div class="table-responsive table-striped table-bordered ">
         <table class="table table-hover">
