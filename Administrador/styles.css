@@ -144,7 +144,6 @@ a {
 /**********************************/
 .nav-bar {
   position: relative;
-  color: black;
   align-items: right;
 }
 
@@ -171,7 +170,7 @@ a {
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #ffffff;
+  color: black;
   padding: 15px;
   font-weight: 500;
   letter-spacing: 1px;
