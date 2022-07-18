@@ -60,15 +60,14 @@
     <body>
       <h1> &nbsp </h1>
 
-      <div class="table-responsive table-striped table-bordered ">
-          <table class="table table-hover" style="white-space: nowrap; overflow-x: auto;">
-            <thead class="table-primary">
-              <tr class="d-flex">
-                  <th class="col-1">Columna 1</th>
-                  <th class="col-3">Columna 2</th>
-                  <th class="col-3">Columna 3</th>
-                  <th class="col-3">Columna 4</th>
-                  <th class="col-3">Columna 5</th>
+      <div class="table-responsive table-striped table-bordered table-condensed ">
+          <table class="table table-hover">
+            <thead class ="table-primary">
+              <tr>
+                <th class="col-lg-3 text-center">Usuario</th>
+                <th class="col-lg-2 text-center">Campo</th>
+                <th class="col-lg-1 text-center">Comando</th>
+                <th class="col-lg-1 text-center">Fecha y hora</th>
               </tr>
             </thead>
             <tbody>
@@ -94,12 +93,6 @@
                     <td class="text-right col-3">1.850€</td>
                 </tr>
             </tbody>
-            <tfoot>
-                <tr class="col-md-4">
-                    <td colspan="4"><strong>Total</strong></td>
-                    <td class="text-right"><strong>24.910€</strong></td>
-                </tr>
-            </tfoot>
           </table>
 
     </div>
