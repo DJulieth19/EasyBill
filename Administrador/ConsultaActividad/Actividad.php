@@ -26,7 +26,6 @@
           ?>
           <nav class="navbar navbar-expand-md fixed-top bg-dark">
             <div class="container-fluid">
-                <h3> &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  </h3>
                 <h3>Consulta de Actividad</h3>
                 <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -42,7 +41,7 @@
                               </th>
                           </thead>
                         </div>
-                          <a class="btn btn-custom btn-primary " href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Volver</a>
+                          <a class="btn btn-custom" href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Volver</a>
                           <a type="button" class="nav-bar-icons">
                                     <div class="dropdown">
                                     <a class="btn btn-dark" href="#" role="button">
