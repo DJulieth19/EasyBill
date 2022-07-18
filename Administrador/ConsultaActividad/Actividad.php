@@ -28,8 +28,7 @@
       <div class="col-md-4">
         <h3>&nbsp &nbsp</h3>
       </div>
-
-        <h3>Consultar Actividad</h3>
+        <h2>Consulta de actividad</h2>
         <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
