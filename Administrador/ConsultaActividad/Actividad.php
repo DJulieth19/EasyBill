@@ -62,12 +62,12 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <div class="container-sm">
+      <div class="container">
         <div class="row justify-content-md-center">
           <div class="table-responsive table-striped table-bordered">
             <table class="table table-hover">
               <thead class ="table-primary">
-                <div class="col-3">
+                <div class="col-1">
                   <tr>
                     <th class="text-center">Usuario</th>
                     <th class="text-center">Campo</th>
@@ -77,7 +77,7 @@
                 </div>
               </thead>
               <tbody>
-                 <div class="col-3">
+                 <div class="col-1">
                     <tr>
                         <td scope="row">user</td>
                         <td>Nissan</td>
