@@ -71,7 +71,7 @@
               <thead class ="table-primary">
                 <div class="col-1">
                   <tr>
-                    <th class="col-3 text-center">Usuario</th>
+                    <th class="col-6 text-center">Usuario</th>
                     <th class="text-center">Campo</th>
                     <th class="text-center">Comando</th>
                     <th class="text-center">Fecha y hora</th>
@@ -81,7 +81,7 @@
               <tbody>
                  <div class="col-1">
                     <tr>
-                        <td class="col-3 " scope="row">user</td>
+                        <td class="col-6 " scope="row">user</td>
                         <td>Nissan</td>
                         <td>Qasqai</td>
                         <td>2017</td>
