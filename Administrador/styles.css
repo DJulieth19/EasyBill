@@ -77,6 +77,12 @@ header{
     margin-top: 7rem;
   }
 }
+
+@media screen and (min-width:1000px) {
+  .container{
+    width: 60%;
+  }
+}
  
 @media screen and (min-width:5px) and (max-width:1400px) { 
   .slide1{
@@ -105,9 +111,6 @@ header{
   .marketing .col-lg-4 {
     font-size: small;
     text-align: center;
-  }
-  .container{
-    width: 100%;
   }
   
 }
@@ -194,11 +197,4 @@ a {
 
 .dropdown .dropdown-menu{
   margin-right: 40%;
-}
-
-/**********************************/
-/*********** Tablas CSS **********/
-/**********************************/
-.container{
-  width: 50%;
 }
