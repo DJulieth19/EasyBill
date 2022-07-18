@@ -25,16 +25,18 @@
             $tipo = $_GET['tipoUsuario'];
           ?>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <div class="container-fluid">
-              
-              <h3>Consulta de Actividad</h3>
+          <div class="row justify-content-end">
+              <div class="col-4">
+                <h3>Consulta de Actividad</h3>
+              </div>
+              <div class="col-4">
               <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="ml-auto">
                   <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="nav-bar">
-                      <form class="d-flex" role="search">
+                      <form class="d-flex">
                         <div class="NombreUser">
                           <thead>
                               <th>
@@ -53,6 +55,7 @@
                     </div>
                   </div>
               </div>
+              </div>
           </div>
         </nav>
   </header>
@@ -63,7 +66,7 @@
       <div class="table-responsive table-striped table-bordered table-condensed ">
           <table class="table table-hover">
             <thead class ="table-primary">
-              <tr>
+              <tr class="d-flex">
                 <th class="col-3 text-center">Usuario</th>
                 <th class="col-3 text-center">Campo</th>
                 <th class="col-3 text-center">Comando</th>
