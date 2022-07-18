@@ -62,7 +62,7 @@
     <body>
       <h1> &nbsp </h1>
       <div class="table-responsive">
-        <table class="table">
+        <table class="table table-hover">
             <thead class="table-primary">
                 <tr>
                     <th scope="col">#</th>

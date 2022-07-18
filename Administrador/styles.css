@@ -144,7 +144,7 @@ a {
 /**********************************/
 .nav-bar {
   position: relative;
-  background: rgba(33,37,41,255) ;
+  background: rgba(0, 0, 0, .3) ;
   align-items: right;
 }
 
