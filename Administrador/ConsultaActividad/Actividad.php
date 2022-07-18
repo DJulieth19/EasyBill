@@ -64,10 +64,10 @@
           <table class="table table-hover">
             <thead class ="table-primary">
               <tr>
-                <th class="col-lg-3 text-center">Usuario</th>
-                <th class="col-lg-2 text-center">Campo</th>
-                <th class="col-lg-1 text-center">Comando</th>
-                <th class="col-lg-1 text-center">Fecha y hora</th>
+                <th class="col-3 text-center">Usuario</th>
+                <th class="col-3 text-center">Campo</th>
+                <th class="col-3 text-center">Comando</th>
+                <th class="col-3 text-center">Fecha y hora</th>
               </tr>
             </thead>
             <tbody>
@@ -76,21 +76,6 @@
                     <td class="col-3">Nissan</td>
                     <td class="col-3">Qasqai</td>
                     <td class="text-center col-3">2017</td>
-                    <td class="text-right col-3">18.560€</td>
-                </tr>
-                <tr class="d-flex">
-                    <td class="col-1" scope="row">2</td>
-                    <td class="col-3">Seat</td>
-                    <td class="col-3">Ibiza</td>
-                    <td class="text-center col-3">2005</td>
-                    <td class="text-right col-3">4.500€</td>
-                </tr>
-                <tr class="d-flex">
-                    <td class="col-1" scope="row">3</td>
-                    <td class="col-3">Citroen</td>
-                    <td class="col-3">Saxo</td>
-                    <td class="text-center col-3">2001</td>
-                    <td class="text-right col-3">1.850€</td>
                 </tr>
             </tbody>
           </table>
