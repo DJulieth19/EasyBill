@@ -63,7 +63,7 @@
       <div class="table-responsive">
         <table class="table table-hover">
             <thead class="table-primary">
-                <tr>
+                <tr class="col-md-4" >
                     <th scope="col">#</th>
                     <th scope="col">Marca</th>
                     <th scope="col">Modelo</th>
@@ -72,21 +72,21 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="col-md-4">
                     <td scope="row">1</td>
                     <td>Nissan</td>
                     <td>Qasqai</td>
                     <td class="text-center">2017</td>
                     <td class="text-right">18.560€</td>
                 </tr>
-                <tr>
+                <tr class="col-md-4">
                     <td scope="row">2</td>
                     <td>Seat</td>
                     <td>Ibiza</td>
                     <td class="text-center">2005</td>
                     <td class="text-right">4.500€</td>
                 </tr>
-                <tr>
+                <tr class="col-md-4">
                     <td scope="row">3</td>
                     <td>Citroen</td>
                     <td>Saxo</td>
@@ -95,7 +95,7 @@
                 </tr>
             </tbody>
             <tfoot>
-                <tr>
+                <tr class="col-md-4">
                     <td colspan="4"><strong>Total</strong></td>
                     <td class="text-right"><strong>24.910€</strong></td>
                 </tr>
