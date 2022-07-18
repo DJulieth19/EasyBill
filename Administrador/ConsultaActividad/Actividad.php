@@ -24,8 +24,8 @@
             $usuario = $_GET['nombre'];
             $tipo = $_GET['tipoUsuario'];
           ?>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <div class="row justify-content-end">
+          <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
               <div class="col-4">
                 <h3>Consulta de Actividad</h3>
               </div>
@@ -75,10 +75,10 @@
             </thead>
             <tbody>
                 <tr class="d-flex">
-                    <td class="col-1" scope="row">1</td>
+                    <td class="col-3" scope="row">user</td>
                     <td class="col-3">Nissan</td>
                     <td class="col-3">Qasqai</td>
-                    <td class="text-center col-3">2017</td>
+                    <td class="col-3">2017</td>
                 </tr>
             </tbody>
           </table>
