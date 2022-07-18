@@ -25,7 +25,7 @@
 	?>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <div class="col-md-8">
+      <div class="col-md-4">
         <h3>&nbsp &nbsp</h3>
       </div>
 
