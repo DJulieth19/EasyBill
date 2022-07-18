@@ -73,21 +73,21 @@
               </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="d-flex">
                     <td class="col-1" scope="row">1</td>
                     <td class="col-3">Nissan</td>
                     <td class="col-3">Qasqai</td>
                     <td class="text-center col-3">2017</td>
                     <td class="text-right col-3">18.560€</td>
                 </tr>
-                <tr>
+                <tr class="d-flex">
                     <td class="col-1" scope="row">2</td>
                     <td class="col-3">Seat</td>
                     <td class="col-3">Ibiza</td>
                     <td class="text-center col-3">2005</td>
                     <td class="text-right col-3">4.500€</td>
                 </tr>
-                <tr>
+                <tr class="d-flex">
                     <td class="col-1" scope="row">3</td>
                     <td class="col-3">Citroen</td>
                     <td class="col-3">Saxo</td>
