@@ -61,35 +61,48 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <table class="table-responsive table-hover col-sm ">
-        <thead class="table-info">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table-primary">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col" class="text-center">Año</th>
+                    <th scope="col" class="text-right">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td>Nissan</td>
+                    <td>Qasqai</td>
+                    <td class="text-center">2017</td>
+                    <td class="text-right">18.560€</td>
+                </tr>
+                <tr>
+                    <td scope="row">2</td>
+                    <td>Seat</td>
+                    <td>Ibiza</td>
+                    <td class="text-center">2005</td>
+                    <td class="text-right">4.500€</td>
+                </tr>
+                <tr>
+                    <td scope="row">3</td>
+                    <td>Citroen</td>
+                    <td>Saxo</td>
+                    <td class="text-center">2001</td>
+                    <td class="text-right">1.850€</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4"><strong>Total</strong></td>
+                    <td class="text-right"><strong>24.910€</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 
 
       <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
