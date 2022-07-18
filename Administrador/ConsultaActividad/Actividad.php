@@ -79,10 +79,10 @@
               <tbody>
                  <div class="col-3">
                     <tr class="d-flex">
-                        <td class="col-1" scope="row">user</td>
-                        <td class="col-1">Nissan</td>
-                        <td class="col-1">Qasqai</td>
-                        <td class="col-3">2017</td>
+                        <td scope="row">user</td>
+                        <td>Nissan</td>
+                        <td>Qasqai</td>
+                        <td>2017</td>
                     </tr>
                   </div>
               </tbody>
