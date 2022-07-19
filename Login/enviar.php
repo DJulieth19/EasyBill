@@ -6,8 +6,7 @@ $correo=$_POST['correo'];
 $usuario =$_GET['nombre'];
 $contraseña =$_GET['contraseña'];
 $mensaje="La contraseña del usuario $usuario es: $contraseña";
-
-//mail($correo,"RECUPERACION DE CONTRASEÑA EASYBILL", $mensaje);
+mail($correo,"RECUPERACION DE CONTRASEÑA EASYBILL", $mensaje);
 ?>
 
 <!doctype html>
@@ -46,7 +45,7 @@ $mensaje="La contraseña del usuario $usuario es: $contraseña";
 
 				<form action="./enviar.php?nombre=<?php echo $usuario?>&contraseña=<?php echo $contraseña ?>" method="POST">
 					<div class="mb-1">
-						<label for="text" class="form-label">La informacion solicitada ya fue enviada</label>
+						<label for="email" class="form-label">La informacion solicitada </label>
 					</div>
 					<div class="d-grid py-2">
 						<div class="row">
