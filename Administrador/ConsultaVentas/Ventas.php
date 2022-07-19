@@ -104,7 +104,7 @@
           </div>
       </div>
 
- 	<div class="container mt-12">
+ 	<div class="container">
 	    <div class="row justify-content-md-center">
 	      <form class="d-flex" role="search">
 		<h5> Total de ventas &nbsp </h5> 
