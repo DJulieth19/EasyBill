@@ -84,7 +84,6 @@
 </style>
 
 <main>
-
     <body>
         <div class="container">
             <div class="row justify-content-md-center">
@@ -93,7 +92,7 @@
                     <button type="button" class="btn btn-outline-primary">Hoy</button>
                     <button type="button" class="btn btn-outline-primary">Semana</button>
                     <button type="button" class="btn btn-outline-primary">Mes</button>
-                    <h4 class="text-white col-md-2">space </h4>
+                    
                     <a>
                         <svg xmlns="http://www.w3.org/2000/svg" color="blue" width="25" height="25" fill="currentColor"
                             class="bi bi-calendar-date" viewBox="0 0 16 16">
