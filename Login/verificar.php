@@ -12,6 +12,7 @@ $queryVerificar = "select u.contrasenia from usuarios u,recuperacion r where u.n
 $consultaVerificar = pg_query($conn, $queryVerificar);
 $contraseña= pg_fetch_array($consultaVerificar);
 $contrasenia=$contraseña['contrasenia'];
+echo $contrasenia;
 $queryUsuarios = "SELECT * from usuarios WHERE nombre_usuario = '$usuario' AND contrasenia = '$contrasenia'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $tipo= pg_fetch_array($consultaUsuarios);
