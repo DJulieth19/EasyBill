@@ -72,8 +72,11 @@
     </nav>
 </header>
 <style>
-body {
-    margin-top: 30%;
+@media screen and (max-width:400px) {
+    body {
+        margin-top: 30%;
+    }
+    
 }
 </style>
 
