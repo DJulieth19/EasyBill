@@ -73,7 +73,7 @@
 </header>
 <style>
     body {
-        margin-top: 10%;
+        margin-top: 5%;
     }
 @media screen and (max-width:400px) {
     body {
@@ -92,7 +92,7 @@
                     <button type="button" class="btn btn-outline-primary">Hoy</button>
                     <button type="button" class="btn btn-outline-primary">Semana</button>
                     <button type="button" class="btn btn-outline-primary">Mes</button>
-                    
+                    <h4 class="text-white col-md-1">space </h4>
                     <a>
                         <svg xmlns="http://www.w3.org/2000/svg" color="blue" width="25" height="25" fill="currentColor"
                             class="bi bi-calendar-date" viewBox="0 0 16 16">
