@@ -10,13 +10,6 @@ $mensaje="La contraseña del usuario $usuario es: $contraseña";
 //mail($correo,"RECUPERACION DE CONTRASEÑA EASYBILL", $mensaje);
 ?>
 
-<?php 
-require_once("Database.php");
-$conn = conectardb();
-$usuario =$_GET['nombre'];
-$contraseña =$_GET['contraseña'];
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
