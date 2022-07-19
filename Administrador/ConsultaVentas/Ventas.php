@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.98.0">
-    <title>ConsultarActividad</title>
+    <title>ConsultarVentas</title>
 
     <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -28,7 +28,7 @@
       <div class="col-md-4">
         <h3>&nbsp &nbsp</h3>
       </div>
-        <h2>Consulta de Actividad</h2>
+        <h2>Consulta de Ventas</h2>
         <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -69,18 +69,16 @@
             <table class="table table-hover">
               <thead class ="table-primary">
                   <tr>
-                    <th class="col-4 text-center">Usuario</th>
-                    <th class="col-2 text-center">Campo</th>
-                    <th class="col-3 text-center">Comando</th>
-                    <th class="col-4 text-center">Fecha y hora</th>
+                    <th class="col-4 text-center">Producto</th>
+                    <th class="col-1 text-center">Cantidad</th>
+                    <th class="col-3 text-center">Total</th>
                   </tr>
               </thead>
               <tbody>
                     <tr>
-                        <td class="col-4" scope="row">user</td>
-                        <td class="col-2">Nissan</td>
-                        <td class="col-3">Qasqai</td>
-                        <td class="col-4">2017</td>
+                        <td class="col-4" scope="row">Arroz con pollo</td>
+                        <td class="col-2">2</td>
+                        <td class="col-3">24.000</td>
                     </tr>
               </tbody>
             </table>
