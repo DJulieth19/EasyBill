@@ -18,7 +18,7 @@
   position: absolute;
 }
 
-.btn {
+.btn-days {
   width: 180px;
   height: 60px;
   cursor: pointer;
@@ -35,16 +35,16 @@ svg {
   transition: 1s ease-in-out;
 }
 
-.btn:hover {
+.btn-days:hover {
   transition: 1s ease-in-out;
   background: #4F95DA;
 }
 
-.btn:hover svg {
+.btn-days:hover svg {
   stroke-dashoffset: -480;
 }
 
-.btn span {
+.btn-days span {
   color:black;
   font-size: 18px;
   font-weight: 100;
