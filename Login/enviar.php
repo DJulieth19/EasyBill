@@ -7,7 +7,7 @@ $usuario =$_GET['nombre'];
 $contraseña =$_GET['contraseña'];
 $mensaje="La contraseña del usuario $usuario es: $contraseña";
 
-mail($correo,"RECUPERACION DE CONTRASEÑA EASYBILL", $mensaje);
+//mail($correo,"RECUPERACION DE CONTRASEÑA EASYBILL", $mensaje);
 ?>
 
 <?php 
