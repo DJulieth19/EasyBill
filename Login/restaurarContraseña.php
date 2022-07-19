@@ -34,7 +34,7 @@
 
 				<form action="verificar.php" method="POST">
 					<div class="mb-1">
-						<label for="username" class="form-label">Nombre de Usuario</label>
+						<label for="username" class="form-label">Nombre de Usuario.</label>
 						<input type="text" class="form-control" name="usuario" placeholder="">	
 					</div>
 					<div class="mb-1">
