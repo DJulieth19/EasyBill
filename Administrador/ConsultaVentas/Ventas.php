@@ -65,8 +65,7 @@
     <body>
       <h1> &nbsp </h1>
         <div class="container-sm">
-          <div class="mx-auto" >
-            <div class="btn-group" role="group"  aria-label="Basic radio toggle button group">
+            <div class="btn-group">
               <input type="radio" class="btn-check" name="btnradio" autocomplete="off" checked>
               <label class="btn btn-outline-primary" >Hoy</label>
 
@@ -76,7 +75,6 @@
               <input type="radio" class="btn-check" name="btnradio" autocomplete="off">
               <label class="btn btn-outline-primary" >Mes</label>
             </div>
-          </div>
       </div>
 
       <div class="container">
