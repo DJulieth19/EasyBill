@@ -1,13 +1,4 @@
-<?php 
-require_once("Database.php");
-$conn = conectardb();
-$remitente="dacostaojeda2000@gmail.com";
-$correo=$_POST['correo'];
-$usuario =$_GET['nombre'];
-$contraseña =$_GET['contraseña'];
-$mensaje="La contraseña del usuario $usuario es: $contraseña";
-mail($correo,"RECUPERACION DE CONTRASEÑA EASYBILL", $mensaje);
-?>
+
 
 <!doctype html>
 <html lang="en">
