@@ -12,16 +12,15 @@ $tipo= pg_fetch_array($consultaUsuarios);
 $tipoU=$tipo['tipo_usuario'];
 $nombreU=$tipo['nombre_usuario'];
 if($tipoU == "Administrador"){
-	header("location: ../Administrador/index.php?nombre=$nombreU&tipoUsuario=$tipoU");
+	header("location: ./Administrador/index.php?nombre=$nombreU&tipoUsuario=$tipoU");
 	exit();
 }else {
 	if($tipoU == "Empleado"){
-		header("location: ../Empleado/index.php?nombre=$nombreU&tipoUsuario=$tipoU");
+		header("location: ./Empleado/index.php?nombre=$nombreU&tipoUsuario=$tipoU");
 		exit();
 	}
 }
-header("location: ../sesion.php");
-		exit();
+
 ?>
 
 <!doctype html>
