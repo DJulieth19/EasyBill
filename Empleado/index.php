@@ -140,11 +140,11 @@
               <div class="modal-body p-5 pt-0">
                 <form class="">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control rounded-3" id="Nombre" placeholder="Nombre">
+                    <input type="text" class="form-control rounded-3" id="Nombre" placeholder="Nombre" required>
                     <label for="Nombre">Nombre</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="number" class="form-control rounded-3" id="id" placeholder="Identificación">
+                    <input type="number" class="form-control rounded-3" id="id" placeholder="Identificación" required maxlength="10" minlength="8">
                     <label for="id">Identificación</label>
                   </div>
                   <div class="modal-footer">
