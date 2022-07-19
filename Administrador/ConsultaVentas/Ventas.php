@@ -64,6 +64,9 @@
   <main>
     <body>
       <h1> &nbsp </h1>
+      <div class="col-md-6">
+         <label class="btn btn-outline-primary" >Mes</label><label class="btn btn-outline-primary" >Mes</label>
+      </div>
         <div class="container-sm">
             <div class="btn-group">
               <input type="radio" class="btn-check" name="btnradio" autocomplete="off" checked>
