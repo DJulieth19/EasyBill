@@ -38,15 +38,15 @@
 						<input type="text" class="form-control" name="usuario" placeholder="">	
 					</div>
 					<div class="mb-1">
-						<label for="pregunta" class="form-label">Pregunta 1</label>
+						<label for="pregunta" class="form-label">Numero de cedula</label>
 						<input type="text" class="form-control" name="pregunta1" placeholder="">						
 					</div>
 					<div class="mb-1">
-						<label for="pregunta" class="form-label">Pregunta 2</label>
-						<input type="text" class="form-control" name="pregunta2" placeholder="">	
+						<label for="pregunta" class="form-label">Fecha de expedicion de su cedula</label>
+						<input type="date" class="form-control" name="pregunta2" value="2022-01-01" placeholder="">	
 					</div>
 					<div class="mb-3">
-						<label for="pregunta" class="form-label">Pregunta 3</label>
+						<label for="pregunta" class="form-label">Numero de celular</label>
 						<input type="text" class="form-control" name="pregunta3" placeholder="">	
 					</div>
 					<div class="d-grid py-2">
