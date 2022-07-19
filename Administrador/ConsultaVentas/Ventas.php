@@ -103,6 +103,13 @@
           </div>
       </div>
 
+ 	<div class="container mt-6">
+	    <div class="row justify-content-md-center">
+		<h4> Total de ventas </h4> 
+		<label> total </label>
+            </div>
+	</div>
+
       <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
     </body>
   </main>
