@@ -38,14 +38,14 @@
 						<input type="text" class="form-control" name="usuario" placeholder="" required >	
 					</div>
 					<div class="mb-1">
-						<label for="pregunta" class="form-label" >Numero de cedula</label>
+						<label for="pregunta" class="form-label" >Número de cédula</label>
 						<input type="num" class="form-control" name="pregunta1" placeholder="" required maxlength="10" minlength="8">						
 					</div>
 					<div class="mb-1">
 						<input type="date" class="form-control" name="pregunta2" value="2022-01-01" placeholder="">	
 					</div>
 					<div class="mb-3">
-						<label for="pregunta" class="form-label">Numero de celular</label>
+						<label for="pregunta" class="form-label">Número de celular</label>
 						<input type="num" class="form-control" name="pregunta3" placeholder="" required maxlength="10">	
 					</div>
 					<div class="d-grid py-2">
