@@ -67,14 +67,15 @@
 
       <div class="container-botones">
         <div class="center">
-         <button class="btn-days">
+          <button class="btn-botones">
             <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
               <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
               <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
             </svg>
-            <span>Hoy</span>
+            <span>HOVER ME</span>
           </button>
         </div>
+      </div>
 
       </div>
 
