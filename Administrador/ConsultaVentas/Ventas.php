@@ -68,6 +68,7 @@
         <div class="row justify-content-md-center">
 		<div class="btn-group" role="group">
 		  <h4 class="text-white col-md-3">space </h4> 
+      <h4 class="text-white col-md-3">space </h4>
 		  <button type="button" class="btn btn-outline-primary">Hoy</button>
 		  <button type="button" class="btn btn-outline-primary">Semana</button>
 		  <button type="button" class="btn btn-outline-primary">Mes</button>
