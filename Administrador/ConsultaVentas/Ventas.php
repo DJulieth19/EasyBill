@@ -66,15 +66,12 @@
       <h1> &nbsp </h1>
       <div class="container">
         <div class="row justify-content-md-center">
-          <div class="col col-lg-2 ml-8">
-            <button type="button" class="btn btn-outline-primary">Hoy</button>
-          </div>
-          <div class="col col-lg-2 ">
-            <button type="button" class="btn btn-outline-primary">Semana</button>
-          </div>
-          <div class="col col-lg-3">
-            <button type="button" class="btn btn-outline-primary">Mes</button>
-          </div>
+		<div class="btn-group" role="group" aria-label="Basic example">
+		  <button type="button" class="btn btn-primary">Hoy</button>
+		  <button type="button" class="btn btn-primary">Semana</button>
+		  <button type="button" class="btn btn-primary">Mes</button>
+		</div>
+
           <div class="col col-lg-1 mt-1 ">
             <a>
               <svg xmlns="http://www.w3.org/2000/svg" color="blue" width="25" height="25" fill="currentColor" class="bi bi-calendar-date" viewBox="0 0 16 16">
