@@ -8,7 +8,7 @@ $cedula=$_POST['pregunta1'];
 $fexpedicion = $_POST['pregunta2'];
 $celular = $_POST['pregunta3'];
 
-$queryVerificar = "select u.contrasenia from usuarios u,recuperacion r where u.nombre_usuario='$usuario' and r.cedula='$cedula' and r.fexpedicion='$fexpedicion' and r.celular='$fexpedicion' and u.id_usuario=r.id_usuario";
+$queryVerificar = "select u.contrasenia from usuarios u,recuperacion r where u.nombre_usuario='$usuario' and r.cedula='$cedula' and r.fexpedicion='$fexpedicion' and r.celular='$celular' and u.id_usuario=r.id_usuario";
 $consultaVerificar = pg_query($conn, $queryVerificar);
 $contraseña= pg_fetch_array($consultaVerificar);
 $contrasenia=$contraseña['contrasenia'];
