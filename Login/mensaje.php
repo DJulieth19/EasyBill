@@ -1,27 +1,8 @@
 <?php 
-
-require_once("Database.php");
+require_once("../Database.php");
 $conn = conectardb();
-
-$usuario = $_POST['usuario'];
-$contraseña = $_POST['contraseña'];
-
-$queryUsuarios = "SELECT * from usuarios WHERE nombre_usuario = '$usuario' AND contrasenia = '$contraseña'";
-$consultaUsuarios = pg_query($conn, $queryUsuarios);
-$tipo= pg_fetch_array($consultaUsuarios);
-$tipoU=$tipo['tipo_usuario'];
-$nombreU=$tipo['nombre_usuario'];
-if($tipoU == "Administrador"){
-	header("location: ../Administrador/index.php?nombre=$nombreU&tipoUsuario=$tipoU");
-	exit();
-}else {
-	if($tipoU == "Empleado"){
-		header("location: ../Empleado/index.php?nombre=$nombreU&tipoUsuario=$tipoU");
-		exit();
-	}
-}
-header("location: ../sesion.php");
-		exit();
+$usuario =$_GET['nombre'];
+$contraseña =$_GET['contraseña'];
 ?>
 
 <!doctype html>
@@ -54,25 +35,26 @@ header("location: ../sesion.php");
 				<div class="text-center d-block d-sm-none rounded-lg w-12">
 					<img src="./img/logo.png" width="100" alt="">
 				</div>
-				<h2 class="fw-bold text-center py-2">Bienvenido</h2>
+				<h2 class="fw-bold text-center py-2">Hola <?php echo $usuario?></h2>
 
 				<!-- LOGIN -->
 
-				<form action="sesion.php" method="POST">
-					<div class="mb-4">
-						<label for="username" class="form-label">Nombre de Usuario</label>
-						<input type="text" class="form-control" name="usuario" placeholder="" required>	
+				<form action="./enviar.php?nombre=<?php echo $usuario?>&contraseña=<?php echo $contraseña ?>" method="POST">
+					<div class="mb-1">
+						<label for="email" class="form-label">Por favor ingresa una direccion de correo electronico para enviarte la información solicitada:</label>
+						<input type="email" class="form-control" name="correo" placeholder="" required >	
 					</div>
-					<div class="mb-4">
-						<label for="password" class="form-label">Contraseña</label>
-						<input type="password" class="form-control" name="contraseña" placeholder="" required>						
+					<div class="d-grid py-2">
+						<div class="row">
+							<div class="col d-grid">
+								<button type="button" class="btn btn-primary" onclick="location.href='./restaurarContraseña.php'">Volver</button>
+							</div>
+							<div class="col d-grid">
+								<button type="submit" class="btn btn-primary">Enviar</button>
+							</div>
+						</div>
 					</div>
-					<div class="d-grid py-4">
-						<button type="submit" class="btn btn-primary">Iniciar sesión</button>
-					</div>
-					<div= class="my-3">
-						<span><a href="./Login/restaurarContraseña.php">¿Olvidaste tu contraseña?</a></span>
-					</div>
+
 				</form>
 			</div>	
 	</div>
