@@ -17,7 +17,7 @@
 
     <!-- Custom styles for this template -->
     <link href="../styles.css" rel="stylesheet">
-    <link href="/stylesButton" rel="stylesheet">
+    <link href="/stylesButton.css" rel="stylesheet">
   </head>
   <header>
 <?php
