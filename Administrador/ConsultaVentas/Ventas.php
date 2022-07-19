@@ -65,14 +65,11 @@
     <body>
       <h1> &nbsp </h1>
       <div class="col-md-4">
-         <label class="btn btn-outline-primary" >Hoy</label><label class="btn btn-outline-primary" >Mes</label>
+         <label class="btn btn-outline-primary" >Hoy</label>
+         <label class="btn btn-outline-primary" >Mes</label>
+         <label class="btn btn-outline-primary" >Mes</label>
       </div>
-      <div class="col-md-4">
-         <label class="btn btn-outline-primary" >Semana</label><label class="btn btn-outline-primary" >Mes</label>
-      </div>
-      <div class="col-md-4">
-         <label class="btn btn-outline-primary" >Mes</label><label class="btn btn-outline-primary" >Mes</label>
-      </div>
+ 
 
       <div class="container">
         <div class="row justify-content-md-center">
