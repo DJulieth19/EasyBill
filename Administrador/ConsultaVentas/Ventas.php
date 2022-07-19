@@ -64,11 +64,17 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <div class="col-md-12">
-        <div class="container-fluid">
-         <label class="btn btn-outline-primary col-md-4" >Hoy</label>
-         <label class="btn btn-outline-primary col-md-4" >Mes</label>
-         <label class="btn btn-outline-primary col-md-4 " >Mes</label>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col col-lg-2">
+            1 of 3
+          </div>
+          <div class="col-md-auto">
+            Variable width content
+          </div>
+          <div class="col col-lg-2">
+            3 of 3
+          </div>
         </div>
       </div>
       <div class="container">
