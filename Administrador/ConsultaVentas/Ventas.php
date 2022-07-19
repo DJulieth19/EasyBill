@@ -84,7 +84,7 @@
 
 <main>
     <body>
-    <div class="container">
+
             <div class="row justify-content-md-center">
                 <div class="btn-group" role="group">
                     <h4 class="text-white col-md-3 space">space </h4>
@@ -105,7 +105,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+
 
         <div class="container mt-4">
             <div class="row justify-content-md-center">
