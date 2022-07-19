@@ -146,7 +146,7 @@
         <h3 class="fw-normal">Consulta de Actividad</h3>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <a href="../Administrador/ConsultaActividad/Actividad.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+        <a href="../Administrador/ConsultaActividad/Ventas.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
           <img src="../../Imagenes/ventas.png" href= class="bd-placeholder-img rounded-circle" width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
         </a> 
         <h3 class="fw-normal">Consulta de Ventas</h3>
