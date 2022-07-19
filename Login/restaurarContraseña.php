@@ -46,7 +46,7 @@
 					</div>
 					<div class="mb-3">
 						<label for="pregunta" class="form-label">Número de celular</label>
-						<input type="num" class="form-control" name="pregunta3" placeholder="" required maxlength="10">	
+						<input type="number" class="form-control" name="pregunta3" placeholder="" required maxlength="10">	
 					</div>
 					<div class="d-grid py-2">
 						<button type="submit" class="btn btn-primary">Iniciar sesión</button>
