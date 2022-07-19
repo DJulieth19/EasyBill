@@ -36,7 +36,7 @@
         <div class="ml-auto">
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <div class="nav-bar">
-           
+              <form class="d-flex" role="search">
                 <div class="NombreUser">
                   <thead>
                       <th>
@@ -53,7 +53,7 @@
                             </svg>
                             </a>
                   </a>
-      
+              </form>
               </div>
             </div>
         </div>
