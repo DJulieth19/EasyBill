@@ -66,13 +66,13 @@
       <h1> &nbsp </h1>
       <div class="container">
         <div class="row justify-content-md-center">
-          <div class="col col-lg-3">
+          <div class="col col-lg-2">
             <button type="button" class="btn btn-outline-primary">Hoy</button>
           </div>
           <div class="col col-lg-2">
             <button type="button" class="btn btn-outline-primary">Semana</button>
           </div>
-          <div class="col col-lg-2">
+          <div class="col col-lg-2 mr-2">
             <button type="button" class="btn btn-outline-primary">Mes</button>
           </div>
           <div class="col col-lg-1">
