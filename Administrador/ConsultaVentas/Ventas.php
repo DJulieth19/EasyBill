@@ -64,19 +64,20 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <div class="container">
+      <div class="container ml-2">
         <div class="row justify-content-md-center">
           <div class="col col-lg-2">
-            1 of 3
-          </div>
-          <div class="col-md-auto">
-            Variable width content
+            <button type="button" class="btn btn-outline-primary">Hoy</button>
           </div>
           <div class="col col-lg-2">
-            3 of 3
+            <button type="button" class="btn btn-outline-primary">Semana</button>
+          </div>
+          <div class="col col-lg-2">
+            <button type="button" class="btn btn-outline-primary">Mes</button>
           </div>
         </div>
       </div>
+
       <div class="container">
         <div class="row justify-content-md-center">
           <div class="table-responsive table-striped table-bordered">
