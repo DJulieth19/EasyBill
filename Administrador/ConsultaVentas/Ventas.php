@@ -64,17 +64,19 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <div class="container-sm justify-content-center">
-        <div class="btn-group" role="group"  aria-label="Basic radio toggle button group">
-          <input type="radio" class="btn-check" name="btnradio" autocomplete="off" checked>
-          <label class="btn btn-outline-primary" >Hoy</label>
+      <div class="mx-auto" >
+          <div class="container-sm">
+            <div class="btn-group" role="group"  aria-label="Basic radio toggle button group">
+              <input type="radio" class="btn-check" name="btnradio" autocomplete="off" checked>
+              <label class="btn btn-outline-primary" >Hoy</label>
 
-          <input type="radio" class="btn-check" name="btnradio" autocomplete="off">
-          <label class="btn btn-outline-primary" >Semana</label>
+              <input type="radio" class="btn-check" name="btnradio" autocomplete="off">
+              <label class="btn btn-outline-primary" >Semana</label>
 
-          <input type="radio" class="btn-check" name="btnradio" autocomplete="off">
-          <label class="btn btn-outline-primary" >Mes</label>
-        </div>
+              <input type="radio" class="btn-check" name="btnradio" autocomplete="off">
+              <label class="btn btn-outline-primary" >Mes</label>
+            </div>
+          </div>
       </div>
 
       <div class="container">
