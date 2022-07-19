@@ -64,13 +64,13 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <div class="col-md-4">
+      <div class="col-md-12">
+        <div class="container-fluid">
          <label class="btn btn-outline-primary" >Hoy</label>
          <label class="btn btn-outline-primary" >Mes</label>
          <label class="btn btn-outline-primary" >Mes</label>
+        </div>
       </div>
- 
-
       <div class="container">
         <div class="row justify-content-md-center">
           <div class="table-responsive table-striped table-bordered">
