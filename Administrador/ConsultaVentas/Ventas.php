@@ -72,6 +72,9 @@
     </nav>
 </header>
 <style>
+    body {
+        margin-top: 10%;
+    }
 @media screen and (max-width:400px) {
     body {
         margin-top: 30%;
@@ -83,7 +86,7 @@
 <main>
 
     <body>
-        <div class="container mt-8">
+        <div class="container">
             <div class="row justify-content-md-center">
                 <div class="btn-group" role="group">
                     <h4 class="text-white col-md-3 space">space </h4>
