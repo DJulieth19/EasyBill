@@ -66,9 +66,9 @@
       <h1> &nbsp </h1>
       <div class="col-md-12">
         <div class="container-fluid">
-         <label class="btn btn-outline-primary" >Hoy</label>
-         <label class="btn btn-outline-primary" >Mes</label>
-         <label class="btn btn-outline-primary" >Mes</label>
+         <label class="btn btn-outline-primary col-md-4" >Hoy</label>
+         <label class="btn btn-outline-primary col-md-4" >Mes</label>
+         <label class="btn btn-outline-primary col-md-4 " >Mes</label>
         </div>
       </div>
       <div class="container">
