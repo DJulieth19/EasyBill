@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template -->
     <link href="../styles.css" rel="stylesheet">
+    <link href="/stylesButton" rel="stylesheet">
   </head>
   <header>
 <?php
@@ -63,6 +64,17 @@
   <main>
     <body>
       <h1> &nbsp </h1>
+
+      <div class="container-botones">
+          <button class="btn-dark">
+            <svg width="90px" height="30px" viewBox="0 0 180 60" class="border">
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+            </svg>
+            <span>Hoy</span>
+          </button>
+      </div>
+
       <div class="container">
         <div class="row justify-content-md-center">
           <div class="table-responsive table-striped table-bordered">
@@ -77,8 +89,8 @@
               <tbody>
                     <tr>
                         <td class="col-4" scope="row">Arroz con pollo</td>
-                        <td class="col-2">2</td>
-                        <td class="col-3">24.000</td>
+                        <td class="col-2 text-center">2</td>
+                        <td class="col-3 text-center">24.000</td>
                     </tr>
               </tbody>
             </table>
