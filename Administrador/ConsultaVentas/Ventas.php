@@ -29,7 +29,7 @@
       <div class="col-md-4 space-blank">
         <h3>&nbsp &nbsp</h3>
       </div>
-        <h2>Consulta de Ventas</h2>
+        <h2>Consulta de Ventasssss</h2>
         <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
