@@ -47,8 +47,11 @@ if($tipoU == "Administrador"){
 			<div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-lg">
 			</div>
 			<div class="col bg-white p-5 rounded-end">
-				<div class="text-center">
-					<img src="./img/logo.png" width="150" alt="">
+				<div class="text-center d-none d-sm-block rounded-lg w-12">
+					<img src="./img/logo.png" width="250" alt="">
+				</div>
+				<div class="text-center d-block d-sm-none rounded-lg w-12">
+					<img src="./img/logo.png" width="100" alt="">
 				</div>
 				<h2 class="fw-bold text-center py-2">Bienvenido</h2>
 
