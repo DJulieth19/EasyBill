@@ -60,11 +60,11 @@ if($tipoU == "Administrador"){
 				<form action="sesion.php" method="POST">
 					<div class="mb-4">
 						<label for="username" class="form-label">Nombre de Usuario</label>
-						<input type="text" class="form-control" name="usuario" placeholder="">	
+						<input type="text" class="form-control" name="usuario" placeholder="" required>	
 					</div>
 					<div class="mb-4">
 						<label for="password" class="form-label">Contraseña</label>
-						<input type="password" class="form-control" name="contraseña" placeholder="">						
+						<input type="password" class="form-control" name="contraseña" placeholder="" required>						
 					</div>
 					<div class="d-grid py-4">
 						<button type="submit" class="btn btn-primary">Iniciar sesión</button>

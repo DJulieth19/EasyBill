@@ -39,7 +39,7 @@
 					</div>
 					<div class="mb-1">
 						<label for="pregunta" class="form-label" >Número de cédula</label>
-						<input type="num" class="form-control" name="pregunta1" placeholder="" required maxlength="10" minlength="8">						
+						<input type="number" class="form-control" name="pregunta1" placeholder="" required maxlength="10" minlength="8">						
 					</div>
 					<div class="mb-1">
 						<input type="date" class="form-control" name="pregunta2" value="2022-01-01" placeholder="">	
@@ -49,7 +49,14 @@
 						<input type="number" class="form-control" name="pregunta3" placeholder="" required maxlength="10">	
 					</div>
 					<div class="d-grid py-2">
-						<button type="submit" class="btn btn-primary">Iniciar sesión</button>
+						<div class="row">
+							<div class="col d-grid">
+								<button type="button" class="btn btn-primary" onclick="location.href='../sesion.php'">Volver</button>
+							</div>
+							<div class="col d-grid">
+								<button type="submit" class="btn btn-primary">Iniciar sesión</button>
+							</div>
+						</div>
 					</div>
 
 				</form>
