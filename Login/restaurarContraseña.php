@@ -35,31 +35,30 @@
 				<form action="verificar.php" method="POST">
 					<div class="mb-1">
 						<label for="username" class="form-label">Nombre de Usuario</label>
-						<input type="text" class="form-control" name="usuario" placeholder="" required >	
+						<input type="text" class="form-control" name="usuario" placeholder="" required>	
 					</div>
 					<div class="mb-1">
-						<label for="pregunta" class="form-label" >Número de cédula</label>
-						<input type="number" class="form-control" name="pregunta1" placeholder="" required maxlength="10" minlength="8">						
+						<label for="pregunta" class="form-label">Numero de cedula</label>
+						<input type="number" class="form-control" name="pregunta1" placeholder="" required>						
 					</div>
 					<div class="mb-1">
-						<label for="pregunta" class="form-label" >Fecha de expedición de cedula</label>
+						<label for="pregunta" class="form-label">Fecha de expedicion de su cedula</label>
 						<input type="date" class="form-control" name="pregunta2" value="2022-01-01" placeholder="" required>	
 					</div>
 					<div class="mb-3">
-						<label for="pregunta" class="form-label">Número de celular</label>
-						<input type="number" class="form-control" name="pregunta3" placeholder="" required maxlength="10">	
+						<label for="pregunta" class="form-label">Numero de celular</label>
+						<input type="number" class="form-control" name="pregunta3" placeholder="" required>	
 					</div>
 					<div class="d-grid py-2">
 						<div class="row">
 							<div class="col d-grid">
-								<button type="button" class="btn btn-primary" onclick="location.href='../sesion.php'">Volver</button>
+								<button type="button" class="btn btn-primary">Volver</button>
 							</div>
 							<div class="col d-grid">
 								<button type="submit" class="btn btn-primary">Iniciar sesión</button>
 							</div>
 						</div>
 					</div>
-
 				</form>
 			</div>	
 	</div>
