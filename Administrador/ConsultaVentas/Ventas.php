@@ -81,7 +81,7 @@
         </div>
       </div>
 
-      <div class="container mt-2">
+      <div class="container mt-4">
         <div class="row justify-content-md-center">
           <div class="table-responsive table-striped table-bordered">
             <table class="table table-hover">
