@@ -97,7 +97,7 @@
     </div>
 
   
-  <div id="Carousel2" class="carousel slide2 " data-bs-ride="carousel" >
+  <div id="Carousel2" class="carousel slide2 mt-4 " data-bs-ride="carousel" >
     <div class="carousel-indicators ">
       <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#Carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
