@@ -107,8 +107,8 @@
  	<div class="container mt-6">
 	    <div class="row justify-content-md-center">
 	      <form class="d-flex" role="search">
-		<h6> Total de ventas </h6> 
-		<label> total </label>
+		<h5> Total de ventas &nbsp </h5> 
+		<span class="border">Total</span>
               </form>
             </div>
 	</div>
