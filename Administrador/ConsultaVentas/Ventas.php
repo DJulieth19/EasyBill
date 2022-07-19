@@ -36,7 +36,7 @@
             <div class="col-md-4">
                 <h3>&nbsp &nbsp</h3>
             </div>
-            <h2>Consulta de Actividad</h2>
+            <h2>Consulta de Ventas &nbsp</h2>
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -72,8 +72,11 @@
     </nav>
 </header>
 <style>
-body {
-    margin-top: 30%;
+@media screen and (max-width:400px) {
+    body {
+        margin-top: 30%;
+    }
+
 }
 </style>
 
@@ -87,7 +90,7 @@ body {
                     <button type="button" class="btn btn-outline-primary">Hoy</button>
                     <button type="button" class="btn btn-outline-primary">Semana</button>
                     <button type="button" class="btn btn-outline-primary">Mes</button>
-                    <h4 class="text-white col-md-3">space </h4>
+                    <h4 class="text-white col-md-2">space </h4>
                     <a>
                         <svg xmlns="http://www.w3.org/2000/svg" color="blue" width="25" height="25" fill="currentColor"
                             class="bi bi-calendar-date" viewBox="0 0 16 16">
