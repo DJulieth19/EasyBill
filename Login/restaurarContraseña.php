@@ -42,7 +42,8 @@
 						<input type="number" class="form-control" name="pregunta1" placeholder="" required maxlength="10" minlength="8">						
 					</div>
 					<div class="mb-1">
-						<input type="date" class="form-control" name="pregunta2" value="2022-01-01" placeholder="">	
+						<label for="pregunta" class="form-label" >Fecha de expedición de cedula</label>
+						<input type="date" class="form-control" name="pregunta2" value="2022-01-01" placeholder="" required>	
 					</div>
 					<div class="mb-3">
 						<label for="pregunta" class="form-label">Número de celular</label>
