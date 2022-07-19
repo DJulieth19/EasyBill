@@ -1,5 +1,5 @@
 <?php 
-require_once("Database.php");
+require_once("../Database.php");
 $conn = conectardb();
 $remitente="dacostaojeda2000@gmail.com";
 $correo=$_POST['correo'];
