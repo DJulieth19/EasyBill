@@ -35,12 +35,8 @@
                 <div class="NombreUser">
                   <thead>
                       <th>
-			  <div class="container">
-				  <div class="row">
-				    <div class="col align-self-center"><?php echo $tipo ?> </div>
-				    <div class="col align-self-center"><?php echo $usuario ?></div>
-				  </div>
-				</div>
+                        <td ><?php echo $tipo ?> &nbsp &nbsp<br>&nbsp &nbsp <?php echo $usuario ?></td>
+			  
                       </th>
                   </thead>
                 </div>
