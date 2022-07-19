@@ -59,10 +59,14 @@
     </div>
   </nav>
 </header>
+<style>
+  body{
+    margin: top 20px;
+  }
+</style>
 
 <main>
     <body>
-
       <div class="container mt-4">
         <div class="row justify-content-md-center">
           <div class="table-responsive table-striped table-bordered">
