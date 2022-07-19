@@ -34,19 +34,19 @@
 
 				<form action="verificar.php" method="POST">
 					<div class="mb-1">
-						<label for="username" class="form-label" required >Nombre de Usuario</label>
-						<input type="text" class="form-control" name="usuario" placeholder="">	
+						<label for="username" class="form-label">Nombre de Usuario</label>
+						<input type="text" class="form-control" name="usuario" placeholder=""  required >	
 					</div>
 					<div class="mb-1">
-						<label for="pregunta" class="form-label" maxlength="10" minlength="8">Numero de cedula</label>
-						<input type="num" class="form-control" name="pregunta1" placeholder="">						
+						<label for="pregunta" class="form-label" >Numero de cedula</label>
+						<input type="num" class="form-control" name="pregunta1" placeholder="" maxlength="10" minlength="8">						
 					</div>
 					<div class="mb-1">
 						<input type="date" class="form-control" name="pregunta2" value="2022-01-01" placeholder="">	
 					</div>
 					<div class="mb-3">
-						<label for="pregunta" class="form-label" maxlength="10" >Numero de celular</label>
-						<input type="num" class="form-control" name="pregunta3" placeholder="">	
+						<label for="pregunta" class="form-label">Numero de celular</label>
+						<input type="num" class="form-control" name="pregunta3" placeholder="" maxlength="10">	
 					</div>
 					<div class="d-grid py-2">
 						<button type="submit" class="btn btn-primary">Iniciar sesión</button>
