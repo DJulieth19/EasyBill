@@ -37,8 +37,8 @@
                       <th>
 			  <div class="container">
 				  <div class="row">
-				    <div class="col align-self-start"><?php echo $tipo ?> </div>
-				    <div class="col align-self-start"><?php echo $usuario ?></div>
+				    <div class="col align-self-center"><?php echo $tipo ?> </div>
+				    <div class="col align-self-center"><?php echo $usuario ?></div>
 				  </div>
 				</div>
                       </th>
