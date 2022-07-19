@@ -116,13 +116,12 @@
 
 
 
-  <!-- Marketing messaging and featurettes
+  <!-- Funciones
   ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
 
   <div class="container marketing">
 
-    <!-- Funciones para administrador -->
+    <!-- Funciones para empleado -->
     <div class="row">
       <div class="col-lg-4">
         <a  href="" class="functions" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -146,7 +145,7 @@
                   </div>
                   <div class="form-floating mb-3">
                     <input type="number" class="form-control rounded-3" id="id" placeholder="Identificación">
-                    <label for="id">Identificacion</label>
+                    <label for="id">Identificación</label>
                   </div>
                   <div class="modal-footer">
                     <button class="btn rounded-3 btn-primary" type="submit">Continuar</button>
