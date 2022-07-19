@@ -17,7 +17,7 @@
 
     <!-- Custom styles for this template -->
     <link href="../styles.css" rel="stylesheet">
-    <link href="stylesButton.css" rel="stylesheet">
+
   </head>
   <header>
 <?php
@@ -64,21 +64,13 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-
-      <div class="container-botones">
-        <div class="center">
-          <button class="btn-botones">
-            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-            </svg>
-            <span>HOVER ME</span>
-          </button>
+      <div class="col-md-12">
+        <div class="container-fluid">
+         <label class="btn btn-outline-primary" >Hoy</label>
+         <label class="btn btn-outline-primary" >Mes</label>
+         <label class="btn btn-outline-primary" >Mes</label>
         </div>
       </div>
-
-      </div>
-
       <div class="container">
         <div class="row justify-content-md-center">
           <div class="table-responsive table-striped table-bordered">
