@@ -64,20 +64,14 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <div class="col-md-6">
-         <label class="btn btn-outline-primary" >Mes</label><label class="btn btn-outline-primary" >Mes</label>
+      <div class="col-md-4">
+         <label class="btn btn-outline-primary" >Hoy</label><label class="btn btn-outline-primary" >Mes</label>
       </div>
-        <div class="container-sm">
-            <div class="btn-group">
-              <input type="radio" class="btn-check" name="btnradio" autocomplete="off" checked>
-              <label class="btn btn-outline-primary" >Hoy</label>
-
-              <input type="radio" class="btn-check" name="btnradio" autocomplete="off">
-              <label class="btn btn-outline-primary" >Semana</label>
-
-              <input type="radio" class="btn-check" name="btnradio" autocomplete="off">
-              <label class="btn btn-outline-primary" >Mes</label>
-            </div>
+      <div class="col-md-4">
+         <label class="btn btn-outline-primary" >Semana</label><label class="btn btn-outline-primary" >Mes</label>
+      </div>
+      <div class="col-md-4">
+         <label class="btn btn-outline-primary" >Mes</label><label class="btn btn-outline-primary" >Mes</label>
       </div>
 
       <div class="container">
