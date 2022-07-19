@@ -26,7 +26,7 @@
 	?>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <div class="col-md-4">
+      <div class="col-md-4 space-blank">
         <h3>&nbsp &nbsp</h3>
       </div>
         <h2>Consulta de Ventas</h2>
