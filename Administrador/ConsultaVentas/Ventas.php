@@ -64,7 +64,7 @@
   <main>
     <body>
       <h1> &nbsp </h1>
-      <div class="container ml-2">
+      <div class="container">
         <div class="row justify-content-md-center">
           <div class="col col-lg-2">
             <button type="button" class="btn btn-outline-primary">Hoy</button>
@@ -78,7 +78,7 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container mt-2">
         <div class="row justify-content-md-center">
           <div class="table-responsive table-striped table-bordered">
             <table class="table table-hover">
