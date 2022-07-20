@@ -112,7 +112,7 @@ body {
 <main>
 
     <body>
-        <div class="container container-1">
+        <div class="container-sm container-1">
             <div class="row justify-content-md-center">
                 <div class="btn-group" role="group">
                     <h4 class="text-white col-md-3 space">space </h4>
