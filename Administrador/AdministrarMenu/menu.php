@@ -70,6 +70,10 @@
             <div class="container">
                 <div class="row justify-content-md-center">
                     <div class="container marketing">
+                        <?php
+                        $array = array(1, 2, 3, 4, 5);
+                        foreach ($array) {
+                        ?>
                         <!-- Contenedor de platos -->
                         <div class="row">
                             <div class="col-lg-4">
@@ -104,7 +108,9 @@
                                     </button>
                                 </div>
                             </div><!-- /.col-lg-4 -->
-
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
