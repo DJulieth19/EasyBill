@@ -5,10 +5,9 @@ $nombreProducto =$_POST['nombreProducto'];
 $Precio=$_POST['Precio'];
 $imagen=false;
 
-$queryPlatos = "INSERT INTO productos (nombreProducto,Precio,imagen) 
-values ('$nombreProducto','$Precio','$imagen');";
+$queryPlatos = "INSERT INTO productos (nombreproducto,precio,imagen)  values ('$nombreProducto','$Precio','$imagen');";
 $insertarPlatos = pg_query($conn, $queryPlatos);
 
-echo $nombreProducto;
-echo $Precio;
+header("location: ./menu.php");
+exit();
 ?>
