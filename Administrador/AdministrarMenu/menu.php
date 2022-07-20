@@ -69,7 +69,7 @@
             <h1> &nbsp </h1>
             <div class="container">
                 <div class="row justify-content-md-center">
-                    <div class="container marketing">
+                    <div class="container-bg">
                         <!-- Contenedor de platos -->
                         <div class="row">
                         <?php
