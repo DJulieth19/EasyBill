@@ -1,3 +1,7 @@
+<?php
+    $usuario = $_GET['nombre'];
+    $tipo = $_GET['tipoUsuario'];
+?>
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
@@ -47,7 +51,7 @@ $celular=$usuarior['celular'];
 
 				<!-- LOGIN -->
 
-				<form action="editar.php?id_usuario=<?php echo $id_usuario ?>" method="POST">
+				<form action="editar.php?id_usuario=<?php echo $id_usuario ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST">
                     <div class="mb-1">
 						<label for="username" class="form-label">Nombre de Usuario</label>
 						<input type="text" class="form-control" value="<?php echo $nombre_usuario ?>" name="nombre_usuario" placeholder="" required>	
@@ -78,7 +82,7 @@ $celular=$usuarior['celular'];
 					<div class="d-grid py-2">
 						<div class="row">
 							<div class="col d-grid">
-								<button type="button" onclick="location.href='./usuarios.php'" class="btn btn-primary">Volver</button>
+								<button type="button" onclick="location.href='./usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'" class="btn btn-primary">Volver</button>
 							</div>
 							<div class="col d-grid">
 								<button type="submit" class="btn btn-primary">Editar</button>

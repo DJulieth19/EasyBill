@@ -1,3 +1,7 @@
+<?php
+    $usuario = $_GET['nombre'];
+    $tipo = $_GET['tipoUsuario'];
+?>
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
@@ -7,6 +11,6 @@ $queryRecuperacion = "DELETE FROM recuperacion WHERE id_usuario = '$id_usuario'"
 $borrarRecuperacion = pg_query($conn, $queryRecuperacion);
 $queryUsuarios = "DELETE FROM usuarios WHERE id_usuario = '$id_usuario'";
 $borrarUsuarios = pg_query($conn, $queryUsuarios);
-header("location: ./usuarios.php");
+header("location: ./usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>");
 exit();
 ?>

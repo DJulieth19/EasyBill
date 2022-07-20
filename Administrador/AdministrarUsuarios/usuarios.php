@@ -64,7 +64,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
         </header>
         <div class="row">
             <div class="justify-content-md-center py-4">
-			    <button type="button" class="btn btn-info btn-lg" onclick="location.href='añadirUsuario.php'">Añadir</button>
+			    <button type="button" class="btn btn-info btn-lg" onclick="location.href='añadirUsuario.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_suario=<?php echo $user['id_usuario']?>'">Añadir</button>
 			</div>
         </div>
         <div class="container mt-4">
@@ -90,8 +90,8 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                 <td class="col text-center"><?php echo $user['contrasenia'] ?></td>
                                 <td class="col text-center"><?php echo $user['tipo_usuario'] ?></td>
                                 <td> 
-                                    <button  type="button" class="btn btn-info" onclick="location.href='borrarUsuario.php?id_usuario=<?php echo $user['id_usuario']?>'">Borrar</button>
-                                    <button  type="button" class="btn btn-info" onclick="location.href='editarUsuario.php?id_usuario=<?php echo $user['id_usuario']?>'">Editar</button>
+                                    <button  type="button" class="btn btn-info" onclick="location.href='borrarUsuario.php?id_usuario=<?php echo $user['id_usuario']?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Borrar</button>
+                                    <button  type="button" class="btn btn-info" onclick="location.href='editarUsuario.php?id_usuario=<?php echo $user['id_usuario']?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Editar</button>
                                 </td> 
                             </tr>
                         </tbody>

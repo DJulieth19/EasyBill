@@ -1,3 +1,8 @@
+<?php
+    $usuario = $_GET['nombre'];
+    $tipo = $_GET['tipoUsuario'];
+	$id_usuario=$_GET['id_usuario'];
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,11 +35,7 @@
 
 				<!-- LOGIN -->
 
-				<form action="añadir.php" method="POST">
-                    <div class="mb-1">
-						<label for="user" class="form-label">ID usuario</label>
-						<input type="text" class="form-control" name="id_usuario" placeholder="" required>	
-					</div>
+				<form action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $id_usuario?>'" method="POST">
                     <div class="mb-1">
 						<label for="username" class="form-label">Nombre de Usuario</label>
 						<input type="text" class="form-control" name="nombre_usuario" placeholder="" required>	
@@ -65,7 +66,7 @@
 					<div class="d-grid py-2">
 						<div class="row">
 							<div class="col d-grid">
-								<button type="button" onclick="location.href='./usuarios.php'" class="btn btn-primary">Volver</button>
+								<button type="button" onclick="location.href='./usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'" class="btn btn-primary">Volver</button>
 							</div>
 							<div class="col d-grid">
 								<button type="submit" class="btn btn-primary">Añadir</button>
