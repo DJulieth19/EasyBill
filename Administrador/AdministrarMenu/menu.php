@@ -163,11 +163,11 @@
                                 </div>
                                 <form>
                                     <div class="form-group">
-                                        <input type="file" id="botonAñadir" class="form-control-file">
+                                        <input type="file" id="archivo" name="archivo" class="form-control-file" accept="image/*">
                                     </div>
                                      </form>
                                 <div class="modal-footer">
-                                    <button class="btn rounded-3 btn-success" onclick=btnSave() id="btn-save" name="btn-save" type="submit">Guardar</button>
+                                    <button class="btn rounded-3 btn-success"  id="btn-save" name="btn-save" type="submit">Guardar</button>
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Cerrar</button>
                                 </div>
@@ -179,7 +179,6 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
-    <script src="../../assets/dist/js/inserta.js"></script>
-</body>
+   </body>
 
 </html>
