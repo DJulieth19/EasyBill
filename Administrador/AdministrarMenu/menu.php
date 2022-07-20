@@ -70,12 +70,12 @@
             <div class="container">
                 <div class="row justify-content-md-center">
                     <div class="container marketing">
+                        <!-- Contenedor de platos -->
+                        <div class="row">
                         <?php
                         $cantidadUsers = array(1, 2, 3, 4, 5);
                         foreach ($cantidadUsers as $i ) {
                         ?>
-                        <!-- Contenedor de platos -->
-                        <div class="row">
                             <div class="col-lg-4">
                                 <h6 class="fw-normal">Plato 1</h6>
                                 <a
