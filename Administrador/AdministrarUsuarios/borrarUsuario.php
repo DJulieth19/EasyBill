@@ -1,3 +1,7 @@
+<?php
+    $usuario = $_GET['nombre'];
+    $tipo = $_GET['tipoUsuario'];
+?>
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
