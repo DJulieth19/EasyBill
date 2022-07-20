@@ -92,6 +92,9 @@ body {
     .container-2 {
         display: initial;
     }
+    .container-1 {
+    display: none;
+}
 }
 
 @media screen and (min-width:400px) and (max-width:999px) {
