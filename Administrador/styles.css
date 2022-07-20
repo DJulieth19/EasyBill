@@ -198,3 +198,8 @@ a {
 .dropdown .dropdown-menu{
   margin-right: 40%;
 }
+
+.custom-file-text {
+  en: "Add Image",
+  es: "Añadir Imagen"
+}
