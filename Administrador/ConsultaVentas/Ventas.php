@@ -115,8 +115,8 @@ body {
 <main>
 
     <body>
-        <div class="container-sm container-1">
-            <div class="row justify-content-md-center">
+        <div class="container container-1">
+            <div class="row justify-content-md-center col-md-8">
                 <div class="btn-group" role="group">
                     <h4 class="text-white col-md-3 space">space </h4>
                     <button type="button" class="btn btn-outline-primary">Hoy</button>
