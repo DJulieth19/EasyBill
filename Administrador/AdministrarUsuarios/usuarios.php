@@ -3,7 +3,6 @@ require_once("../../Database.php");
 $conn = conectardb();
 $queryUsuarios = "SELECT * from usuarios where tipo_usuario='Empleado'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
-
 ?>
 <!doctype html>
 <html lang="en">
