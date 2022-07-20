@@ -134,7 +134,7 @@
                             <h2 class="fw-bold mb-0">Añadir plato</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body p-5 pt-0">
+                        <div class="modal-body modal-backdrop p-5 pt-0">
                             <form class="" id="frm_foto">
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control rounded-3" id="Nombre" placeholder="Nombre"
