@@ -8,6 +8,9 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 $nombreProducto=$_GET['nombreproducto'];
 $platos= pg_fetch_array($consultaPlatos);
 
+$queryPlato = "SELECT * from producto WHERE nombreproducto = '$nombreProducto'";
+$consultaPlato = pg_query($conn, $queryPlato);
+
 ?>
 
 <!doctype html>
