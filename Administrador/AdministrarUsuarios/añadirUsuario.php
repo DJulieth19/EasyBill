@@ -1,7 +1,6 @@
 <?php
     $usuario = $_GET['nombre'];
     $tipo = $_GET['tipoUsuario'];
-	$id_usuario=$_GET['id_usuario'];
 ?>
 <!doctype html>
 <html lang="en">
@@ -35,7 +34,7 @@
 
 				<!-- LOGIN -->
 
-				<form action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $id_usuario?>'" method="POST">
+				<form action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST">
                     <div class="mb-1">
 						<label for="username" class="form-label">Nombre de Usuario</label>
 						<input type="text" class="form-control" name="nombre_usuario" placeholder="" required>	

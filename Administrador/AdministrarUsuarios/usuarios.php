@@ -3,6 +3,7 @@ require_once("../../Database.php");
 $conn = conectardb();
 $queryUsuarios = "SELECT * from usuarios where tipo_usuario='Empleado'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -64,7 +65,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
         </header>
         <div class="row">
             <div class="justify-content-md-center py-4">
-			    <button type="button" class="btn btn-info btn-lg" onclick="location.href='añadirUsuario.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_suario=<?php echo $user['id_usuario']?>'">Añadir</button>
+			    <button type="button" class="btn btn-info btn-lg" onclick="location.href='añadirUsuario.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Añadir</button>
 			</div>
         </div>
         <div class="container mt-4">
