@@ -104,7 +104,7 @@ $Precio=$plato['precio'];
                             <h7 class="fw-normal"> <?php echo $cantidadProductos['precio'] ?></h7>
                         </div>
                         <div class="d-flex justify-content-md-center">
-                            <button type="button" class="btn btn-warning btn-sm mr-2" name="editar">
+                            <button type="button" class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#editar" name="editar">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-pencil-square" viewBox="0 0 16 16">
                                     <path
@@ -203,7 +203,7 @@ $Precio=$plato['precio'];
                                         accept="image/*">
                                 </div>
                                 <div class="modal-footer">
-                                    <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
+                                    <button class="btn rounded-3 btn-primary" 
                                         type="submit">Guardar</button>
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Cerrar</button>
