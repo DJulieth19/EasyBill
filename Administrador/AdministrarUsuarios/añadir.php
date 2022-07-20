@@ -15,7 +15,7 @@ $celular = $_POST['celular'];
 $queryUsuarios = "INSERT INTO usuarios (nombre_usuario,contrasenia,tipo_usuario) values ('$nombre_usuario','$contraseña','$tipo_usuario');";
 $insertarUsuarios = pg_query($conn, $queryUsuarios);
 
-$queryUsuarios = "SELECT id_usuario from usuarios WHERE nombre_usuario='$nombre_usuario' and contrasenia='$contraseña' and tipo_usuario='$tipo_usuario';";
+$queryUsuarios = "SELECT id_usuario from usuarios WHERE nombre_usuario='$nombre_usuario' AND contrasenia='$contraseña' AND tipo_usuario='$tipo_usuario';";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $usuario1= pg_fetch_array($consultaUsuarios);
 $id_usuario=$usuario1['id_usuario'];
@@ -23,6 +23,6 @@ $id_usuario=$usuario1['id_usuario'];
 $queryRecuperacion = "INSERT INTO recuperacion (id_usuario,cedula,fexpedicion,celular) values ('$id_usuario','$cedula','$fexpedicion','$celular');";
 $insertarRecuperacion= pg_query($conn, $queryRecuperacion);
 
-header("location: ./usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'");
+header("location:./usuarios.php?nombre=$usuario&tipoUsuario=$tipo");
 exit();
 ?>
