@@ -73,7 +73,7 @@
                 <!-- Contenedor de platos -->
                 <div class="row justify-content-center">
                     <?php
-                        $cantidadUsers = array(1, 2, 3, 4, 5);
+                        $cantidadUsers = array(1, 2, 3, 4, 5, 6);
                         foreach ($cantidadUsers as $i ) {
                         ?>
                     <div class="col-lg-4">
@@ -165,14 +165,6 @@
                                         <input type="file" id="botonAñadir" class="form-control-file">
                                     </div>
                                      </form>
-                                <script type="text/javascript">
-                                function Habilitar(){
-                                    var option2 = document.getElementById("inlineRadio2");
-                                    var botonAñadir= document.getElementById("botonAñadir");
-                                    if(option2.value ==option2){botonAñadir.disabled = true;}
-                                }
-                                </script>
-
                                 <div class="modal-footer">
                                     <button class="btn rounded-3 btn-success" type="submit">Guardar</button>
                                     <button type="button" class="btn btn-secondary"
