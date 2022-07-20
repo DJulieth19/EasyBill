@@ -188,19 +188,14 @@ $Precio=$plato['precio'];
                             <form action="editar.php" method="POST">
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control rounded-3"
-                                        value="<?php echo $nombreProducto ?>" name="nombreProducto" placeholder="Nombre"
-                                        required>
+                                        value="algo" name="nombreProducto" placeholder="Nombre" required>
                                     
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="number" min="50" class="form-control rounded-3"
-                                        value="<?php echo $Precio ?>" name="Precio" placeholder="Precio en pesos"
+                                    <input type="number" min="50" class="form-control rounded-3" 
+                                    value="mas" name="Precio" placeholder="Precio en pesos"
                                         required maxlength="10" minlength="8">
                                     
-                                </div>
-                                <div class="form-group">
-                                    <input disable type="file" id="archivo" name="archivo" class="form-control-file"
-                                        accept="image/*">
                                 </div>
                                 <div class="modal-footer">
                                     <button class="btn rounded-3 btn-primary" 
