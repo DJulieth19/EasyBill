@@ -75,9 +75,14 @@
     body {
         margin-top: 5%;
     }
-@media screen and (max-width:888px) {
+@media screen and (max-width:400px) {
     body {
-        margin-top: 30%;
+        margin-top: 25%;
+    }
+}
+@media screen and (min-width:400px) and (max-width:999px) {
+    body {
+        margin-top: 8%;
     }
 }
 </style>
