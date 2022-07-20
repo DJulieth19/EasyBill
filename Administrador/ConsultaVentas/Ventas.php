@@ -80,6 +80,10 @@ body {
     display: initial;
 }
 
+.container-2 {
+    display:none;
+}
+
 @media screen and (min-width:40px) and  (max-width:400px) {
     body {
         margin-top: 25%;
