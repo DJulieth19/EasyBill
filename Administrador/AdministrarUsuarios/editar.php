@@ -16,6 +16,6 @@ $queryUsuarios = "UPDATE usuarios SET nombre_usuario='$nombre_usuario',contrasen
 $editarUsuarios = pg_query($conn, $queryUsuarios);
 $queryRecuperacion = "UPDATE recuperacion SET cedula='$cedula',fexpedicion='$fexpedicion',celular='$celular' WHERE id_usuario='$id_usuario'";
 $editarRecuperacion= pg_query($conn, $queryRecuperacion);
-header("location: ./usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>");
+header("location:./usuarios.php?nombre=$usuario&tipoUsuario=$tipo");
 exit();
 ?>
