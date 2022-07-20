@@ -75,7 +75,7 @@
     body {
         margin-top: 5%;
     }
-@media screen and (max-width:887px) {
+@media screen and (max-width:888px) {
     body {
         margin-top: 30%;
     }
