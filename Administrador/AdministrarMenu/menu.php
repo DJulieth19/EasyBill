@@ -181,7 +181,7 @@ $Precio=$plato['precio'];
                         <div class="modal-header p-5 pb-4 border-bottom-0">
                             <!-- <h5 class="modal-EDITAR"</h5> -->
                             <h3 class="text-white">espacio</h3>
-                            <h2 class="fw-bold mb-0">Añadir plato</h2>
+                            <h2 class="fw-bold mb-0">Editar plato</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body p-5 pt-0">
@@ -190,16 +190,16 @@ $Precio=$plato['precio'];
                                     <input type="text" class="form-control rounded-3"
                                         value="<?php echo $nombreProducto ?>" name="nombreProducto" placeholder="Nombre"
                                         required>
-                                    <label for="Nombre">Nombre del plato</label>
+                                    
                                 </div>
                                 <div class="form-floating mb-3">
                                     <input type="number" min="50" class="form-control rounded-3"
                                         value="<?php echo $Precio ?>" name="Precio" placeholder="Precio en pesos"
                                         required maxlength="10" minlength="8">
-                                    <label>Precio $ </label>
+                                    
                                 </div>
                                 <div class="form-group">
-                                    <input type="file" id="archivo" name="archivo" class="form-control-file"
+                                    <input disable type="file" id="archivo" name="archivo" class="form-control-file"
                                         accept="image/*">
                                 </div>
                                 <div class="modal-footer">
