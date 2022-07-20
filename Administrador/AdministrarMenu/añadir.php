@@ -9,5 +9,6 @@ $queryPlatos = "INSERT INTO productos (nombreProducto,Precio,imagen)
 values ('$nombreProducto','$Precio','$imagen');";
 $insertarPlatos = pg_query($conn, $queryPlatos);
 
-
+echo $nombreProducto;
+echo $Precio;
 ?>
