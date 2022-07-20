@@ -153,10 +153,7 @@
                                     </div>
                                 </div>
                                 <form>
-                                    <div class="form-group">
-                                        <input type="file" id="archivo" name="archivo" class="form-control-file"
-                                            accept="image/*">
-                                    </div>
+
                                 </form>
 
                             </form>
@@ -186,7 +183,10 @@
                                         placeholder="Precio en pesos" required maxlength="10" minlength="8">
                                     <label>Precio $ </label>
                                 </div>
-
+                                <div class="form-group">
+                                        <input type="file" id="archivo" name="archivo" class="form-control-file"
+                                            accept="image/*">
+                                    </div>
                                 <div class="modal-footer">
                                     <button class="btn rounded-3 btn-success" id="btn-save" name="btn-save"
                                         type="submit">Guardar</button>
