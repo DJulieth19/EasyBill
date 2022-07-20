@@ -25,6 +25,8 @@
 
     <!-- Custom styles for this template -->
     <link href="../styles.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    
 </head>
 <header>
     <?php
@@ -71,47 +73,6 @@
         </div>
     </nav>
 </header>
-<style>
-body {
-    margin-top: 5%;
-}
-
-.container-1 {
-    display: initial;
-}
-
-.container-2 {
-    display:none;
-}
-
-@media screen and (min-width:40px) and  (max-width:400px) {
-    body {
-        margin-top: 25%;
-    }
-
-    .container-2 {
-        display: initial;
-    }
-    .container-1 {
-    display: none;
-}
-}
-
-@media screen and (min-width:400px) and (max-width:999px) {
-    body {
-        margin-top: 8%;
-    }
-
-    .container-2 {
-        display: none;
-    }
-
-    .container-1 {
-        display: initial;
-    }
-}
-</style>
-
 <main>
 
     <body>

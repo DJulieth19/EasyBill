@@ -24,6 +24,7 @@
 
 body {
   flex-wrap: wrap;
+  margin-top: 20px;
 	background: url(../FondoEasyBill.png) no-repeat center top;
 	background-size:cover;
 	font-family: 'Open Sans', sans-serif;
