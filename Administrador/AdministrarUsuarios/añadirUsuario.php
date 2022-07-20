@@ -17,10 +17,8 @@
 </style>
 </head>
   <body>
-    <div class="container w-75 bg-purple mt-5 rounded-lg shadow-lg">
+    <div class="container w-25 bg-purple my-5 rounded-lg shadow-lg">
 		<div class="row aling-items-stretch">
-			<div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-lg">
-			</div>
 			<div class="col bg-white p-5 rounded-end">
 				<div class="text-center d-none d-sm-block rounded-lg w-12">
 					<img src="./img/logo.png" width="250" alt="">
@@ -28,34 +26,49 @@
 				<div class="text-center d-block d-sm-none rounded-lg w-12">
 					<img src="./img/logo.png" width="100" alt="">
 				</div>
-				<h2 class="fw-bold text-center py-2">Bienvenido</h2>
+				<h2 class="fw-bold text-center py-2">Añadir Usuarios</h2>
 
 				<!-- LOGIN -->
 
-				<form action="verificar.php" method="POST">
-					<div class="mb-1">
+				<form action="añadir.php" method="POST">
+                    <div class="mb-1">
+						<label for="user" class="form-label">ID usuario</label>
+						<input type="text" class="form-control" name="id_usuario" placeholder="" required>	
+					</div>
+                    <div class="mb-1">
 						<label for="username" class="form-label">Nombre de Usuario</label>
-						<input type="text" class="form-control" name="usuario" placeholder="" required>	
+						<input type="text" class="form-control" name="nombre_usuario" placeholder="" required>	
+					</div>
+					<div class="mb-1">
+						<label for="username" class="form-label">Contraseña</label>
+						<input type="text" class="form-control" name="contraseña" placeholder="" required>	
+					</div>
+                    <div class="mb-1">
+						<label for="username" class="form-label">Tipo de usuario</label>
+						<select type="text" class="form-control" name="tipo_usuario" placeholder="" required>
+                            <option value="Administrador">Administrador</option>
+							<option value="Empleado">Empleado</option>
+                        </select>	
 					</div>
 					<div class="mb-1">
 						<label for="pregunta" class="form-label">Numero de cedula</label>
-						<input type="number" class="form-control" name="pregunta1" placeholder="" required>						
+						<input type="number" class="form-control" name="cedula" placeholder="" required>						
 					</div>
 					<div class="mb-1">
 						<label for="pregunta" class="form-label">Fecha de expedicion de su cedula</label>
-						<input type="date" class="form-control" name="pregunta2" value="2022-01-01" placeholder="" required>	
+						<input type="date" class="form-control" name="fexpedicion" value="2022-01-01" placeholder="" required>	
 					</div>
 					<div class="mb-3">
 						<label for="pregunta" class="form-label">Numero de celular</label>
-						<input type="number" class="form-control" name="pregunta3" placeholder="" required>	
+						<input type="number" class="form-control" name="celular" placeholder="" required>	
 					</div>
 					<div class="d-grid py-2">
 						<div class="row">
 							<div class="col d-grid">
-								<button type="button" class="btn btn-primary" onclick="location.href='../sesion.php'" >Volver</button>
+								<button type="button" onclick="location.href='./usuarios.php'" class="btn btn-primary">Volver</button>
 							</div>
 							<div class="col d-grid">
-								<button type="submit" class="btn btn-primary">Iniciar sesión</button>
+								<button type="submit" class="btn btn-primary">Añadir</button>
 							</div>
 						</div>
 					</div>
@@ -66,7 +79,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>
-
-
-
-
