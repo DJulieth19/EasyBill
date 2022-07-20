@@ -20,11 +20,11 @@ $tipo= pg_fetch_array($consultaUsuarios);
 $tipoU=$tipo['tipo_usuario'];
 $nombreU=$tipo['nombre_usuario'];
 if($tipoU == "Administrador"){
-	header("location: ./mensaje.php?nombre=$nombreU&contraseña=$contrasenia");
+	header("location: ./enviar.php?nombre=$nombreU&contraseña=$contrasenia");
 	exit();
 }else {
 	if($tipoU == "Empleado"){
-		header("location: ./mensaje.php?nombre=$nombreU&tipoUsuario=$contrasenia");
+		header("location: ./enviar.php?nombre=$nombreU&contraseña=$contrasenia");
 		exit();
 	}
 }
