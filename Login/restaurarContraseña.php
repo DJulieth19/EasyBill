@@ -52,7 +52,7 @@
 					<div class="d-grid py-2">
 						<div class="row">
 							<div class="col d-grid">
-								<button type="button" class="btn btn-primary">Volver</button>
+								<button type="button" class="btn btn-primary" onclick="location.href='../sesion.php'" >Volver</button>
 							</div>
 							<div class="col d-grid">
 								<button type="submit" class="btn btn-primary">Iniciar sesión</button>
