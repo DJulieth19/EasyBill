@@ -80,7 +80,7 @@ body {
     display: initial;
 }
 
-@media screen and (max-width:400px) {
+@media screen and (min-width:40px) and  (max-width:400px) {
     body {
         margin-top: 25%;
     }
