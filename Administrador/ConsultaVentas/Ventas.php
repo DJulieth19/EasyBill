@@ -124,6 +124,16 @@
             <div class="row justify-content-md-center">
                 <div class="table-responsive table-striped table-bordered">
                     <table class="table table-hover">
+                    <?php
+                        require_once("../../Database.php");
+                        $conn = conectardb();
+                        $query = 'SELECT p.nombreProducto,a.cantidad,v.valorVenta from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta';
+                        $consulta = pg_query($conn, $query);
+                        ?>
+                        <div class="container mt-4">
+                            <div class="row justify-content-md-center">
+                                <div class="table-responsive table-striped table-bordered">
+                                    <table class="table table-hover">
                         <thead class="table-primary">
                             <tr>
                                 <th class="col-4 text-center">Producto</th>
@@ -132,21 +142,32 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php
+                              while($row = pg_fetch_array($consulta)){
+                            ?>
                             <tr>
-                                <td class="col-4" scope="row">Arroz con pollo</td>
-                                <td class="col-2 text-center">2</td>
-                                <td class="col-3 text-center">24.000</td>
+                                <td class="col-4" scope="row"><?php echo $row['nombreproducto'] ?></td>
+                                <td class="col-2 text-center"><?php echo $row['cantidad'] ?></td>
+                                <td class="col-3 text-center"><?php echo $row['valorventa'] ?></td>
                             </tr>
+                            <?php
+                              }
+                            ?>
                         </tbody>
                     </table>
                 </div>
             </div>
-
+            <?php
+              $query = 'SELECT sum(v.valorVenta) from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta';
+              $consultaTotal = pg_query($conn, $query);
+              $suma= pg_fetch_array($consultaTotal);
+              $Total = $suma['sum']
+            ?>
             <div class="container">
                 <div class="row justify-content-md-center">
                     <form class="d-flex" role="search">
                         <h5> Total de ventas &nbsp </h5>
-                        <span class="border">Total$$$$$</span>
+                        <span class="border"><?php echo $Total ?></span>
                     </form>
                 </div>
             </div>
