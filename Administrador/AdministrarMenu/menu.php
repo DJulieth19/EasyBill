@@ -152,7 +152,7 @@
                                             accept="image/*">
                                     </div>
                                 <div class="modal-footer">
-                                    <button class="btn rounded-3 btn-success" id="btn-save" name="btn-save"
+                                    <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
                                         type="submit">Guardar</button>
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Cerrar</button>
