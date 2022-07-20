@@ -45,7 +45,7 @@
 					</div>
                     <div class="mb-1">
 						<label for="username" class="form-label">Tipo de usuario</label>
-						<select type="text" class="form-control" name="tipo_usuario" placeholder="" required>
+						<select type="text" class="form-control" value="Empleado"  name="tipo_usuario" placeholder="" required>
                             <option value="Administrador">Administrador</option>
 							<option value="Empleado">Empleado</option>
                         </select>	
