@@ -92,12 +92,12 @@ $Precio=$platos['precio'];
                         while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                         ?>
                     <div class="col-lg-4">
-                        <h6 class="fw-normal d-flex justify-content-md-center"> <?php echo $cantidadProductos['nombreproducto'] ?></h6>
+                        <h6 class="fw-normal d-flex justify-content-md-center">
+                            <?php echo $cantidadProductos['nombreproducto'] ?></h6>
                         <a
                             href="../Administrador/AdministrarMenu/menu.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
-                            <img src="./img/plato.png"
-                                href=class="bd-placeholder-img" width="155" height="160" role="img"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <img src="./img/plato.png" href=class="bd-placeholder-img" width="155" height="160"
+                                role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
                             <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
                                 dy=".3em"></text></svg>
@@ -116,6 +116,7 @@ $Precio=$platos['precio'];
                                 </svg>
                             </button>
                             <h4> &nbsp </h4>
+                            
                             <button type="button" class="btn btn-danger btn-sm" name="borrar">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-trash3" viewBox="0 0 16 16">
@@ -152,7 +153,8 @@ $Precio=$platos['precio'];
                         <div class="modal-body p-5 pt-0">
                             <form action="añadir.php" method="POST">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control rounded-3" name="nombreProducto" placeholder="Nombre" required>
+                                    <input type="text" class="form-control rounded-3" name="nombreProducto"
+                                        placeholder="Nombre" required>
                                     <label for="Nombre">Nombre del plato</label>
                                 </div>
                                 <div class="form-floating mb-3">
@@ -161,9 +163,9 @@ $Precio=$platos['precio'];
                                     <label>Precio $ </label>
                                 </div>
                                 <div class="form-group">
-                                        <input type="file" id="archivo" name="archivo" class="form-control-file"
-                                            accept="image/*">
-                                    </div>
+                                    <input type="file" id="archivo" name="archivo" class="form-control-file"
+                                        accept="image/*">
+                                </div>
                                 <div class="modal-footer">
                                     <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
                                         type="submit">Guardar</button>
@@ -188,18 +190,21 @@ $Precio=$platos['precio'];
                         <div class="modal-body p-5 pt-0">
                             <form action="editar.php" method="POST">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control rounded-3" value="<?php echo $nombreProducto ?>" name="nombreProducto" placeholder="Nombre" required>
+                                    <input type="text" class="form-control rounded-3"
+                                        value="<?php echo $nombreProducto ?>" name="nombreProducto" placeholder="Nombre"
+                                        required>
                                     <label for="Nombre">Nombre del plato</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="number" min="50" class="form-control rounded-3" value="<?php echo $Precio ?>" name="Precio"
-                                        placeholder="Precio en pesos" required maxlength="10" minlength="8">
+                                    <input type="number" min="50" class="form-control rounded-3"
+                                        value="<?php echo $Precio ?>" name="Precio" placeholder="Precio en pesos"
+                                        required maxlength="10" minlength="8">
                                     <label>Precio $ </label>
                                 </div>
                                 <div class="form-group">
-                                        <input type="file" id="archivo" name="archivo" class="form-control-file"
-                                            accept="image/*">
-                                    </div>
+                                    <input type="file" id="archivo" name="archivo" class="form-control-file"
+                                        accept="image/*">
+                                </div>
                                 <div class="modal-footer">
                                     <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
                                         type="submit">Guardar</button>
