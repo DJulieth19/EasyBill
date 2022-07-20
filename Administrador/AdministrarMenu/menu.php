@@ -9,8 +9,8 @@ $nombreProducto=$_GET['nombreproducto'];
 $platos= pg_fetch_array($consultaPlatos);
 $queryPlato = "SELECT * from producto WHERE nombreproducto = '$nombreProducto'";
 $consultaPlato = pg_query($conn, $queryPlato);
-$platos= pg_fetch_array($consultaPlato);
-$Precio=$platos['precio'];
+$plato= pg_fetch_array($consultaPlato);
+$Precio=$plato['precio'];
 ?>
 
 <!doctype html>
@@ -36,7 +36,7 @@ $Precio=$platos['precio'];
     <header>
         <?php
 		$usuario = $_GET['nombre'];
-    $tipo = $_GET['tipoUsuario'];
+        $tipo = $_GET['tipoUsuario'];
 
 	?>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
