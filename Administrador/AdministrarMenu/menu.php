@@ -72,7 +72,7 @@
                     <div class="container marketing">
                         <?php
                         $cantidadUsers = array(1, 2, 3, 4, 5);
-                        foreach ($cantidadUsers) {
+                        foreach ($cantidadUsers as $i ) {
                         ?>
                         <!-- Contenedor de platos -->
                         <div class="row">
