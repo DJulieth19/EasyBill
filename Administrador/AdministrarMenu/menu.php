@@ -88,7 +88,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                         <a
                             href="../Administrador/AdministrarMenu/menu.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
                             <img src="./img/plato.png"
-                                href=class="bd-placeholder-img" width="170" height="160" role="img"
+                                href=class="bd-placeholder-img" width="155" height="160" role="img"
                                 preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
                             <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
@@ -107,7 +107,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                         d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                                 </svg>
                             </button>
-                            <label> s</label>
+                            <h1> &nbsp </h1>
                             <button type="button" class="btn btn-danger btn-sm">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-trash3" viewBox="0 0 16 16">
