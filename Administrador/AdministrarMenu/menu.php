@@ -84,7 +84,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                         while($user=pg_fetch_array($consultaPlatos)){
                         ?>
                     <div class="col-lg-4">
-                        <h6 class="fw-normal d-flex justify-content-md-center">Plato 1</h6>
+                        <h6 class="fw-normal d-flex justify-content-md-center">  <?php echo $user['nombreproducto'] ?></h6>
                         <a
                             href="../Administrador/AdministrarMenu/menu.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
                             <img src="./img/plato.png"
@@ -95,7 +95,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 dy=".3em"></text></svg>
                         </a>
                         <div class="d-flex justify-content-md-center">
-                            <h7 class="fw-normal">Precio</h7>
+                            <h7 class="fw-normal"> <?php echo $user['precio'] ?></h7>
                         </div>
                         <div class="d-flex justify-content-md-center">
                             <button type="button" class="btn btn-warning btn-sm mr-2">
@@ -107,6 +107,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                         d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                                 </svg>
                             </button>
+                            <label> s</label>
                             <button type="button" class="btn btn-danger btn-sm">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-trash3" viewBox="0 0 16 16">
