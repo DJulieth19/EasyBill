@@ -9,6 +9,5 @@ $queryPlatos = "INSERT INTO productos (nombreProducto,Precio,imagen)
 values ('$nombreProducto','$Precio','$imagen');";
 $insertarPlatos = pg_query($conn, $queryPlatos);
 
-header("location: ./menu.php");
-exit();
+
 ?>
