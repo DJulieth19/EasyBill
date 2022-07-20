@@ -45,7 +45,7 @@ mail($correo,"RECUPERACION DE CONTRASEÑA DE USUARIO EASYBILL", $mensaje);
 
 				<form action="./enviar.php?nombre=<?php echo $usuario?>&contraseña=<?php echo $contraseña ?>" method="POST">
 					<div class="mb-1">
-						<label for="email" class="form-label">La informacion solicitada </label>
+						<label for="email" class="form-label">La contraseña de tu usuario en la aplicación es: <?php echo $contraseña ?> </label>
 					</div>
 					<div class="d-grid py-2">
 						<div class="row">
