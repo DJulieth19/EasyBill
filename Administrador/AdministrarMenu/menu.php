@@ -177,7 +177,7 @@
                 </div>
             </div>
     </footer>
-    <script src="../assets/dist/js/inserta.js"></script>
+    <script src="../../assets/dist/js/inserta.js"></script>
 </body>
 
 </html>
