@@ -125,42 +125,6 @@
                 <button type="button" class="btn btn-primary">Añadir plato</button>
             </div>
             <!-- Modals -->
-            <div class="modal-añadir  py-5" tabindex="-1" id="staticBackdrop">
-                <div class="modal-dialog">
-                    <div class="modal-content rounded-4 ">
-                        <div class="modal-header p-5 pb-4 border-bottom-0">
-                            <!-- <h5 class="modal-AÑADIR"</h5> -->
-                            <h3 class="text-white">espacio</h3>
-                            <h2 class="fw-bold mb-0">Añadir plato</h2>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body p-5 pt-0">
-                            <form class="">
-
-                                <div class="form-floating mb-3">
-                                    <h7> ¿Desea añadir imagen? </h7>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="inlineRadio1" value="option1">
-                                        <label class="form-check-label" for="inlineRadio1">Si</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="inlineRadio2" value="option2" onclick="Habilitar()">
-                                        <label class="form-check-label" for="inlineRadio2">No</label>
-                                    </div>
-                                </div>
-                                <form>
-
-                                </form>
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="modal py-5" tabindex="-1" id="añadir">
                 <div class="modal-dialog">
@@ -174,12 +138,12 @@
                         <div class="modal-body p-5 pt-0">
                             <form action="añadir.php" method="POST">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control rounded-3" id="Nombre" placeholder="Nombre"
+                                    <input type="text" class="form-control rounded-3" id="nombrePrecio" placeholder="Nombre"
                                         required>
                                     <label for="Nombre">Nombre del plato</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="number" min="50" class="form-control rounded-3" id="id"
+                                    <input type="number" min="50" class="form-control rounded-3" id="Precio"
                                         placeholder="Precio en pesos" required maxlength="10" minlength="8">
                                     <label>Precio $ </label>
                                 </div>
