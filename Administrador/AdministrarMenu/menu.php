@@ -4,10 +4,8 @@ $conn = conectardb();
 $queryPlatos = "SELECT * from productos";
 $consultaPlatos = pg_query($conn, $queryPlatos);
 
-
 $nombreProducto=$_GET['nombreproducto'];
-$platos= pg_fetch_array($consultaPlatos);
-$queryPlato = "SELECT * from producto WHERE nombreproducto = '$nombreProducto'";
+$queryPlato = "SELECT * from productos WHERE nombreproducto = '$nombreProducto'";
 $consultaPlato = pg_query($conn, $queryPlato);
 $plato= pg_fetch_array($consultaPlato);
 $Precio=$plato['precio'];
