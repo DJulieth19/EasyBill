@@ -76,7 +76,7 @@
                         $cantidadUsers = array(1, 2, 3, 4, 5);
                         foreach ($cantidadUsers as $i ) {
                         ?>
-                            <div class="col-lg-4">
+                            <div class="col-lg-6">
                                 <h6 class="fw-normal">Plato 1</h6>
                                 <a
                                     href="../Administrador/AdministrarUsuarios/Usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
