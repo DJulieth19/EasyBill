@@ -1,4 +1,4 @@
-
+ 
 $(document).ready(function() {
 
     $("#frm_foto").unbind('submit').bind('submit', function(){
@@ -12,10 +12,6 @@ $(document).ready(function() {
                 beforeSend: function(){
                     btnSaveLoad();
                 },
-                success: function(response){
-                    btnSave();
-
-                }
             });  
     });
 

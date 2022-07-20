@@ -167,7 +167,7 @@
                                     </div>
                                      </form>
                                 <div class="modal-footer">
-                                    <button class="btn rounded-3 btn-save btn-success" type="submit">Guardar</button>
+                                    <button class="btn rounded-3 btn-success" id="btn-save" name="btn-save" type="submit">Guardar</button>
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Cerrar</button>
                                 </div>
