@@ -121,7 +121,7 @@
     </main>
     <footer>
         <div class="row justify-content-end">
-            <div class="col-4 functions" data-bs-toggle="modal-añadir2" data-bs-target="#staticBackdrop">
+            <div class="col-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
                 <button type="button" class="btn btn-outline-success">Añadir plato</button>
             </div>
             <!-- Modals -->
@@ -165,7 +165,7 @@
                 </div>
             </div>
 
-            <div class="modal-añadir2  py-5" tabindex="-1" id="staticBackdrop">
+            <div class="modal py-5" tabindex="-1" id="añadir">
                 <div class="modal-dialog">
                     <div class="modal-content rounded-4 ">
                         <div class="modal-header p-5 pb-4 border-bottom-0">
