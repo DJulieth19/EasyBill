@@ -5,7 +5,6 @@
 	$validator = array('success' => false, 'messages' => array());
 
 	if(!empty($_FILES["archivo"]["name"])){
-
 		$fileName = basename($_FILES["archivo"]["name"]);
 		$targetFilePath = '../Imagenes/'.$fileName;
 		$fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
