@@ -138,7 +138,7 @@
                         <div class="modal-body p-5 pt-0">
                             <form action="añadir.php" method="POST">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control rounded-3"  name="nombrePlato" placeholder="Nombre"
+                                    <input type="text" class="form-control rounded-3" name="nombreProducto" placeholder="Nombre"
                                         required>
                                     <label for="Nombre">Nombre del plato</label>
                                 </div>
