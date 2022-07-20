@@ -1,3 +1,10 @@
+<?php 
+require_once("../../Database.php");
+$conn = conectardb();
+$queryPlatos = "SELECT * from productos";
+$consultaPlatos = pg_query($conn, $queryPlatos);
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -74,14 +81,13 @@
                 <!-- Contenedor de platos -->
                 <div class="row justify-content-center">
                     <?php
-                        $cantidadUsers = array(1, 2, 3, 4, 5, 6);
-                        foreach ($cantidadUsers as $i ) {
+                        while($user=pg_fetch_array($consultaPlatos)){
                         ?>
                     <div class="col-lg-4">
                         <h6 class="fw-normal d-flex justify-content-md-center">Plato 1</h6>
                         <a
-                            href="../Administrador/AdministrarUsuarios/Usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
-                            <img src="https://res.cloudinary.com/dongfmggz/image/upload/v1658246974/samples/food/dessert.jpg"
+                            href="../Administrador/AdministrarMenu/menu.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                            <img src="./img/plato.png"
                                 href=class="bd-placeholder-img" width="170" height="160" role="img"
                                 preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
@@ -125,7 +131,6 @@
                 <button type="button" class="btn btn-primary">Añadir plato</button>
             </div>
             <!-- Modals -->
-
             <div class="modal py-5" tabindex="-1" id="añadir">
                 <div class="modal-dialog">
                     <div class="modal-content rounded-4 ">
@@ -138,8 +143,7 @@
                         <div class="modal-body p-5 pt-0">
                             <form action="añadir.php" method="POST">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control rounded-3" name="nombreProducto" placeholder="Nombre"
-                                        required>
+                                    <input type="text" class="form-control rounded-3" name="nombreProducto" placeholder="Nombre" required>
                                     <label for="Nombre">Nombre del plato</label>
                                 </div>
                                 <div class="form-floating mb-3">
@@ -163,8 +167,6 @@
                     </div>
                 </div>
             </div>
-
-
 
 
     </footer>
