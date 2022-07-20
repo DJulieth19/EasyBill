@@ -81,7 +81,7 @@
                                 <a
                                     href="../Administrador/AdministrarUsuarios/Usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
                                     <img src="https://res.cloudinary.com/dongfmggz/image/upload/v1658246974/samples/food/dessert.jpg"
-                                        href=class="bd-placeholder-img" width="160" height="160" role="img"
+                                        href=class="bd-placeholder-img" width="170" height="160" role="img"
                                         preserveAspectRatio="xMidYMid slice" focusable="false">
                                     <title>Placeholder</title>
                                     <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
