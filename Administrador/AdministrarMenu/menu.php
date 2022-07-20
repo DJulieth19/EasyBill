@@ -71,8 +71,8 @@
                 <div class="row justify-content-md-center">
                     <div class="container marketing">
                         <?php
-                        $array = array(1, 2, 3, 4, 5);
-                        foreach ($array) {
+                        $cantidadUsers = array(1, 2, 3, 4, 5);
+                        foreach ($cantidadUsers) {
                         ?>
                         <!-- Contenedor de platos -->
                         <div class="row">
