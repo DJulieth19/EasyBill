@@ -76,7 +76,7 @@
                         $cantidadUsers = array(1, 2, 3, 4, 5);
                         foreach ($cantidadUsers as $i ) {
                         ?>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 d-flex justify-content-md-center">
                                 <h6 class="fw-normal">Plato 1</h6>
                                 <a
                                     href="../Administrador/AdministrarUsuarios/Usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
@@ -87,9 +87,7 @@
                                     <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
                                         dy=".3em"></text></svg>
                                 </a>
-                                <div class="d-flex justify-content-md-center">
-                                    <h7 class="fw-normal">Precio</h7>
-                                </div>
+                                <h7 class="fw-normal">Precio</h7>
                                 <div class="d-flex justify-content-md-center">
                                     <button type="button" class="btn btn-warning btn-sm mr-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
