@@ -3,6 +3,14 @@ require_once("../../Database.php");
 $conn = conectardb();
 $queryPlatos = "SELECT * from productos";
 $consultaPlatos = pg_query($conn, $queryPlatos);
+
+$nombreProducto=$_GET['nombreproducto'];
+$platos= pg_fetch_array($consultaPlatos);
+$queryPlato = "SELECT * from producto WHERE nombreproducto = '$nombreProducto'";
+$consultaPlato = pg_query($conn, $queryPlato);
+$platos= pg_fetch_array($consultaPlato);
+$nombreProducto=$platos['nombreproducto'];
+$Precio=$platos['precio'];
 ?>
 
 <!doctype html>
@@ -81,24 +89,24 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                 <!-- Contenedor de platos -->
                 <div class="row justify-content-center">
                     <?php
-                        while($user=pg_fetch_array($consultaPlatos)){
+                        while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                         ?>
                     <div class="col-lg-4">
-                        <h6 class="fw-normal d-flex justify-content-md-center">  <?php echo $user['nombreproducto'] ?></h6>
+                        <h6 class="fw-normal d-flex justify-content-md-center">
+                            <?php echo $cantidadProductos['nombreproducto'] ?></h6>
                         <a
                             href="../Administrador/AdministrarMenu/menu.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
-                            <img src="./img/plato.png"
-                                href=class="bd-placeholder-img" width="155" height="160" role="img"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <img src="./img/plato.png" href=class="bd-placeholder-img" width="155" height="160"
+                                role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
                             <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
                                 dy=".3em"></text></svg>
                         </a>
                         <div class="d-flex justify-content-md-center">
-                            <h7 class="fw-normal"> <?php echo $user['precio'] ?></h7>
+                            <h7 class="fw-normal"> <?php echo $cantidadProductos['precio'] ?></h7>
                         </div>
                         <div class="d-flex justify-content-md-center">
-                            <button type="button" class="btn btn-warning btn-sm mr-2">
+                            <button type="button" class="btn btn-warning btn-sm mr-2" name="editar">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-pencil-square" viewBox="0 0 16 16">
                                     <path
@@ -107,8 +115,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                         d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                                 </svg>
                             </button>
-                            <h1> &nbsp </h1>
-                            <button type="button" class="btn btn-danger btn-sm">
+                            <h4 class="text-white">ss</h4>
+                            <button type="button" class="btn btn-danger btn-sm" name="borrar">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-trash3" viewBox="0 0 16 16">
                                     <path
@@ -144,7 +152,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                         <div class="modal-body p-5 pt-0">
                             <form action="añadir.php" method="POST">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control rounded-3" name="nombreProducto" placeholder="Nombre" required>
+                                    <input type="text" class="form-control rounded-3" name="nombreProducto"
+                                        placeholder="Nombre" required>
                                     <label for="Nombre">Nombre del plato</label>
                                 </div>
                                 <div class="form-floating mb-3">
@@ -153,9 +162,9 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                     <label>Precio $ </label>
                                 </div>
                                 <div class="form-group">
-                                        <input type="file" id="archivo" name="archivo" class="form-control-file"
-                                            accept="image/*">
-                                    </div>
+                                    <input type="file" id="archivo" name="archivo" class="form-control-file"
+                                        accept="image/*">
+                                </div>
                                 <div class="modal-footer">
                                     <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
                                         type="submit">Guardar</button>
@@ -168,7 +177,45 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                     </div>
                 </div>
             </div>
+            <div class="modal py-5" tabindex="-1" id="editar">
+                <div class="modal-dialog">
+                    <div class="modal-content rounded-4 ">
+                        <div class="modal-header p-5 pb-4 border-bottom-0">
+                            <!-- <h5 class="modal-EDITAR"</h5> -->
+                            <h3 class="text-white">espacio</h3>
+                            <h2 class="fw-bold mb-0">Añadir plato</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-5 pt-0">
+                            <form action="editar.php" method="POST">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control rounded-3"
+                                        value="<?php echo $nombreProducto ?>" name="nombreProducto" placeholder="Nombre"
+                                        required>
+                                    <label for="Nombre">Nombre del plato</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="number" min="50" class="form-control rounded-3"
+                                        value="<?php echo $Precio ?>" name="Precio" placeholder="Precio en pesos"
+                                        required maxlength="10" minlength="8">
+                                    <label>Precio $ </label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="file" id="archivo" name="archivo" class="form-control-file"
+                                        accept="image/*">
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
+                                        type="submit">Guardar</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                </div>
 
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
