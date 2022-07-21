@@ -9,6 +9,6 @@ $precio=$_POST['precio'];
 $queryProductos = "DELETE FROM productos WHERE codproducto = '$codproducto'";
 $borrarProductos = pg_query($conn, $queryProductos);
 
-header("location: ./menu.php");
-exit();
+##header("location: ./menu.php");
+##exit();
 ?>
