@@ -130,7 +130,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <footer>
         <div class="row justify-content-end">
             <div class="col-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
-                <button type="button" class="btn btn-primary">Añadir plato</button>
+                <button type="button" class="btn btn-info">Añadir plato</button>
             </div>
             <!-- Modals -->
             <div class="modal py-5" tabindex="-1" id="añadir">
