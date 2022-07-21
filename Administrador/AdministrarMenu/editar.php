@@ -13,7 +13,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $usuario1= pg_fetch_array($consultaUsuarios);
 $codproducto=$usuario1['codproducto'];
 
-$queryPlatos = "UPDATE productos SET  codproducto='$codproducto',nombreproducto='$nombreproducto',precio='$precio'";
+$queryPlatos = "UPDATE productos SET  nombreproducto='$nombreproducto',precio='$precio' when codproducto='$codproducto'";
 $editarPlatos = pg_query($conn, $queryPlatos);
 
 echo $nombreproducto;
