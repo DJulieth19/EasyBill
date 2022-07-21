@@ -12,10 +12,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.98.0">
     <title>Administrador</title>
+    <link rel="icon" href="logo.png">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
 
     <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">

@@ -7,11 +7,9 @@ require_once("../../Database.php");
 $conn = conectardb();
 $nombreproducto=$_GET['nombreproducto'];
 $precio=$_GET['precio'];
-
 $queryPlatos = "SELECT codproducto from productos WHERE nombreproducto='$nombreproducto' AND precio='$precio';";
 $consultaPlatos = pg_query($conn, $queryPlatos);
 $usuario1= pg_fetch_array($consultaPlatos);
-
 $codproducto=$usuario1['codproducto'];
 ?>
 <!doctype html>
@@ -20,6 +18,7 @@ $codproducto=$usuario1['codproducto'];
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EasyBill</title>
+	<link rel="icon" href="logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <style>
 	body{
