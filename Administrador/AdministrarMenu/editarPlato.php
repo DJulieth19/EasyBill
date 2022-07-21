@@ -9,7 +9,7 @@ $nombreproducto=$_GET['id_usuario'];
 $queryPlatos = "SELECT * from productos WHERE nombreproducto = '$nombreproducto'";
 $consultaPlatos = pg_query($conn, $queryPlatos);
 $plato1= pg_fetch_array($consultaPlatos);
-$nombreproducto=$plato1['nombreproducto'];
+$nombreplato=$plato1['nombreproducto'];
 $precio=$plato1['precio'];
 ?>
 
