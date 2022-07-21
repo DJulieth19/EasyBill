@@ -104,7 +104,7 @@ $Precio=$plato['precio'];
                             <h7 class="fw-normal"> <?php echo $cantidadProductos['precio'] ?></h7>
                         </div>
                         <div class="d-flex justify-content-md-center">
-                            <button type="button" class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#editar" name="editar" onclick="location.href='editarPlato.php?id_usuario=<?php echo $cantidadProductos['codproducto']?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
+                            <button type="button" class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#editar" name="editar" onclick="location.href='editarPlato.php?id_usuario=<?php echo $cantidadProductos['nombreproducto'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-pencil-square" viewBox="0 0 16 16">
                                     <path
@@ -175,40 +175,7 @@ $Precio=$plato['precio'];
                     </div>
                 </div>
             </div>
-            <div class="modal py-5" tabindex="-1" id="editar">
-                <div class="modal-dialog">
-                    <div class="modal-content rounded-4 ">
-                        <div class="modal-header p-5 pb-4 border-bottom-0">
-                            <!-- <h5 class="modal-EDITAR"</h5> -->
-                            <h3 class="text-white">espacio</h3>
-                            <h2 class="fw-bold mb-0">Editar plato</h2>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body p-5 pt-0">
-                            <form action="editar.php" method="POST">
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control rounded-3"
-                                        value="algo" name="nombreProducto" placeholder="Nombre" required>
-                                    
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="number" min="50" class="form-control rounded-3" 
-                                    value="<?php echo $Precio ?>" name="Precio" placeholder="Precio en pesos"
-                                        required maxlength="10" minlength="8">
-                                    
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn rounded-3 btn-primary" 
-                                        type="submit">Guardar</button>
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Cerrar</button>
-                                </div>
 
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
