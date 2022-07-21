@@ -30,15 +30,16 @@
 </head>
 <header>
     <?php
-		$usuario = $_GET['nombre'];
+	$usuario = $_GET['nombre'];
     $tipo = $_GET['tipoUsuario'];
+    $TipoConsulta = $_GET['consulta']; 
 	?>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
             <div class="col-md-4">
                 <h3>&nbsp &nbsp</h3>
             </div>
-            <h2>Consulta de Ventas</h2>
+            <h2>Consulta de Ventas <?php echo $TipoConsulta ?> </h2>
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -80,9 +81,9 @@
             <div class="row justify-content-md-center col-md-10">
                 <div class="btn-group" role="group">
                     <h4 class="text-white col-md-3 space">space </h4>
-                    <button type="button" class="btn btn-outline-primary">Hoy</button>
-                    <button type="button" class="btn btn-outline-primary">Semana</button>
-                    <button type="button" class="btn btn-outline-primary">Mes</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="location.href='Ventas.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Hoy'">Hoy</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="location.href='Ventas.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Semana'">Semana</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="location.href='Ventas.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Mes'">Mes</button>
                     <h4 class="text-white col-md-1">space </h4>
                     <a>
                         <svg xmlns="http://www.w3.org/2000/svg" color="blue" width="25" height="25" fill="currentColor"
@@ -102,9 +103,9 @@
         <div class="container container-2">
             <div class="row justify-content-md-center">
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-primary">Hoy</button>
-                    <button type="button" class="btn btn-outline-primary">Semana</button>
-                    <button type="button" class="btn btn-outline-primary">Mes</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="location.href='Ventas.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Hoy'">Hoy</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="location.href='Ventas.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Semana'">Semana</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="location.href='Ventas.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Mes'">Mes</button>
                     <a>
                         <svg xmlns="http://www.w3.org/2000/svg" color="blue" width="25" height="25" fill="currentColor"
                             class="bi bi-calendar-date ml-2" viewBox="0 0 16 16">
@@ -127,7 +128,23 @@
                     <?php
                         require_once("../../Database.php");
                         $conn = conectardb();
-                        $query = 'SELECT p.nombreProducto,a.cantidad,v.valorVenta from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta';
+                        if($TipoConsulta == "Hoy"){
+                            $inicioDia = date('Y-m-d 00:00:00 ', time());
+                            $finDia = date('Y-m-d 23:59:59 ', time());
+                            $query = "SELECT p.nombreProducto,a.cantidad,v.valorVenta,v.fecha from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta and v.fecha BETWEEN '$inicioDia' AND '$finDia'";
+                        }
+                        if($TipoConsulta == "Semana"){
+                            $inicio = date("Y-m-d");
+                            $SemanaAntes = strtotime('-7 day', strtotime($inicio));
+                            $SemanaAntes = date('Y-m-d', $SemanaAntes);         
+                            $query = "SELECT p.nombreProducto,a.cantidad,v.valorVenta,v.fecha from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta and v.fecha BETWEEN '$SemanaAntes' AND '$inicio'";
+                        }
+                        if($TipoConsulta == "Mes"){
+                            $inicio = date("Y-m-01");
+                            $fin = date("Y-m-t");
+                            $query = "SELECT p.nombreProducto,a.cantidad,v.valorVenta,v.fecha from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta and v.fecha BETWEEN '$inicio' AND '$fin'";
+                        }
+                        
                         $consulta = pg_query($conn, $query);
                         ?>
                         <div class="container mt-4">
@@ -158,7 +175,22 @@
                 </div>
             </div>
             <?php
-              $query = 'SELECT sum(v.valorVenta) from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta';
+                if($TipoConsulta == "Hoy"){
+                    $inicioDia = date('Y-m-d 00:00:00 ', time());
+                    $finDia = date('Y-m-d 23:59:59 ', time());
+                    $query = "SELECT sum(v.valorVenta) from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta and v.fecha BETWEEN '$inicioDia' AND '$finDia'";
+                }
+                if($TipoConsulta == "Semana"){
+                    $inicio = date("Y-m-d");
+                    $SemanaAntes = strtotime('-7 day', strtotime($inicio));
+                    $SemanaAntes = date('Y-m-d', $SemanaAntes);         
+                    $query = "SELECT sum(v.valorVenta) from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta and v.fecha BETWEEN '$SemanaAntes' AND '$inicio'";
+                }
+                if($TipoConsulta == "Mes"){
+                    $inicio = date("Y-m-01");
+                    $fin = date("Y-m-t");
+                    $query = "SELECT sum(v.valorVenta) from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta and v.fecha BETWEEN '$inicio' AND '$fin'";
+                }
               $consultaTotal = pg_query($conn, $query);
               $suma= pg_fetch_array($consultaTotal);
               $Total = $suma['sum']
