@@ -5,8 +5,8 @@
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
-$nombreproducto=$_GET['nombreproducto'];
-$precio=$_GET['precio'];
+$nombreproducto=$_POST['nombreproducto'];
+$precio=$_POST['precio'];
 
 $queryUsuarios = "SELECT codproducto from productos WHERE nombreproducto='$nombreproducto' AND precio='$precio';";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
@@ -16,6 +16,8 @@ $codproducto=$usuario1['codproducto'];
 $queryPlatos = "UPDATE productos SET  nombreproducto='$nombreproducto',precio='$precio' when codproducto='$codproducto'";
 $editarPlatos = pg_query($conn, $queryPlatos);
 
+echo $nombreproducto;
+echo $precio;
 
 header("location:./menu.php?nombre=$usuario&tipoUsuario=$tipo");
 exit();
