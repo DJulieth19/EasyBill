@@ -47,11 +47,11 @@ $precio=$plato1['precio'];
 				<form action="editar.php?nombreproducto=<?php echo $nombreproducto ?>&precio=<?php echo $precio?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST">
                     <div class="mb-1">
 						<label for="username" class="form-label">Nombre de Plato</label>
-						<input type="text" class="form-control" value="<?php echo $nombreproducto ?>" name="nombre_usuario" placeholder="" required>	
+						<input type="text" class="form-control" value="<?php echo $nombreproducto ?>" name="nombreproducto" placeholder="" required>	
 					</div>
 					<div class="mb-1">
 						<label for="username" class="form-label">Precio</label>
-						<input type="text" class="form-control" name="contraseña" value="<?php echo $precio ?>" placeholder="" required>	
+						<input type="text" class="form-control" name="precio" value="<?php echo $precio ?>" placeholder="" required>	
 					</div>
 
 					<div class="d-grid py-2">
