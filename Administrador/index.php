@@ -49,8 +49,8 @@
                                 </svg>
                               </a>
                               <ul class="dropdown-menu dropdown-menu-end">
-                              <li><a class="dropdown-item" href="./FuncionesAdmin/cambioContraseña.php?id_usuario=<?php echo $id_usuario?>'">Cambiar contraseña</a></li>
-                                <li><a class="dropdown-item" href="./FuncionesAdmin/cambioNombre.php?id_usuario=<?php echo $id_usuario?>'">Editar nombre</a></li>
+                                <li><a class="dropdown-item" href="./FuncionesAdmin/cambioContraseña.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Cambiar contraseña</a></li>
+                                <li><a class="dropdown-item" href="./FuncionesAdmin/cambioNombre.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Editar nombre</a></li>
                                 <li><a class="dropdown-item" href="#">Añadir logo empresarial</a></li>
                               </ul>
                             </div>
