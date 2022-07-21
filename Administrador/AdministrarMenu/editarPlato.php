@@ -1,19 +1,4 @@
-<?php
-    $usuario = $_GET['nombre'];
-    $tipo = $_GET['tipoUsuario'];
-?>
-<?php 
-require_once("../../Database.php");
-$conn = conectardb();
-$id_usuario=$_GET['codproducto'];
-$queryUsuarios = "SELECT * from productos WHERE codproducto = '$id_usuario'";
-$consultaUsuarios = pg_query($conn, $queryUsuarios);
-$usuario1= pg_fetch_array($consultaUsuarios);
 
-$nombreproducto=$usuario1['nombreproducto'];
-$precio=$usuarior['precio'];
-
-?>
 <!doctype html>
 <html lang="en">
   <head>
