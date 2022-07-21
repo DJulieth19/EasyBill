@@ -5,11 +5,10 @@
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
-$nombreproducto=$_GET['id_usuario'];
+$nombreproducto=$_GET['nombreproducto'];
 $queryPlatos = "SELECT * from productos WHERE nombreproducto = '$nombreproducto'";
 $consultaPlatos = pg_query($conn, $queryPlatos);
 $plato1= pg_fetch_array($consultaPlatos);
-$nombreplato=$plato1['nombreproducto'];
 $precio=$plato1['precio'];
 ?>
 
