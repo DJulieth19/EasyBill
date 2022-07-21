@@ -30,7 +30,7 @@
 				</div>
 				<h2 class="fw-bold text-center py-2">Bienvenido</h2>
 
-				<!-- LOGIN -->
+				<!--FORMULARIO PARA RECUPERACION DE LA RECUPERACION DE LA CONTRASEÑA-->
 
 				<form action="verificar.php" method="POST">
 					<div class="mb-1">
