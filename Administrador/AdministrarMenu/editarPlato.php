@@ -8,8 +8,6 @@ $conn = conectardb();
 
 $codproducto=$_GET['codproducto'];
 $queryPlatos = "SELECT * from productos WHERE codproducto = '$codproducto'";
-$consultaPlatos = pg_query($conn, $queryPlatos);
-$usuario1= pg_fetch_array($consultaPlatos);
 
 ?>
 <!doctype html>
