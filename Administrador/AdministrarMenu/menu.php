@@ -99,7 +99,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                             <h7 class="fw-normal"> <?php echo $cantidadProductos['precio'] ?></h7>
                         </div>
                         <div class="d-flex justify-content-md-center">
-                            <button type="button" class="btn btn-warning btn-sm mr-2" name="editar" onclick="location.href='editarPlato.php?id_usuario=<?php echo $cantidadProductos['nombreproducto'] ?>'">
+                            <button type="button" class="btn btn-warning btn-sm mr-2" name="editar" onclick="location.href='editarPlato.php?id_usuario=<?php echo $cantidadProductos['nombreproducto'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-pencil-square" viewBox="0 0 16 16">
                                     <path

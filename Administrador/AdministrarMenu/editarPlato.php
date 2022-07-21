@@ -1,4 +1,12 @@
+<?php
+    $usuario = $_GET['nombre'];
+    $tipo = $_GET['tipoUsuario'];
+?>
+<?php 
+require_once("../../Database.php");
+$conn = conectardb();
 
+?>
 <!doctype html>
 <html lang="en">
   <head>
