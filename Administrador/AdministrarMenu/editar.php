@@ -8,7 +8,12 @@ $conn = conectardb();
 $nombreproducto=$_GET['nombreproducto'];
 $precio=$_GET['precio'];
 
-$queryPlatos = "UPDATE productos SET nombreproducto='$nombreproducto',precio='$precio'";
+$queryUsuarios = "SELECT codproducto from productos WHERE nombreproducto='$nombreproducto' AND precio='$precio';";
+$consultaUsuarios = pg_query($conn, $queryUsuarios);
+$usuario1= pg_fetch_array($consultaUsuarios);
+$codproducto=$usuario1['codproducto'];
+
+$queryPlatos = "UPDATE productos SET  codproducto='$codproducto',nombreproducto='$nombreproducto',precio='$precio'";
 $editarPlatos = pg_query($conn, $queryPlatos);
 
 echo $nombreproducto;
