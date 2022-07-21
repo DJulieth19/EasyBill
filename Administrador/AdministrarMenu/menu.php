@@ -109,7 +109,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 </svg>
                             </button>
                             <h4>&nbsp</h4>
-                            <button type="button" class="btn btn-danger btn-sm" name="borrar">
+                            <button type="button" class="btn btn-danger btn-sm" name="borrar" onclick="location.href='borrarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-trash3" viewBox="0 0 16 16">
                                     <path
