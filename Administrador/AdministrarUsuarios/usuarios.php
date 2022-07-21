@@ -104,7 +104,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
         </div>
     </div>
     <div class="row justify-content-end">
-        <button type="button" class="btn btn-info btn-lg"
+        <button type="button" class="btn btn-info col-4" 
             onclick="location.href='añadirUsuario.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Añadir</button>
     </div>
 
