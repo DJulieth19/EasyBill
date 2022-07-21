@@ -6,7 +6,7 @@
 require_once("../../Database.php");
 $conn = conectardb();
 $nombreproducto=$_GET['nombreproducto'];
-$precio=$_POST['precio'];
+$precio=$_GET['precio'];
 
 $queryPlatos = "UPDATE productos SET nombreproducto='$nombreproducto',precio='$precio'";
 
