@@ -42,9 +42,9 @@ $codproducto=$usuario1['codproducto'];
 				<div class="text-center d-block d-sm-none rounded-lg w-12">
 					<img src="./img/logo.png" width="100" alt="">
 				</div>
-				<h2 class="fw-bold text-center py-2">Borrar usuarios</h2>
+				<h2 class="fw-bold text-center py-2">Borrar platos</h2>
                 <div class="mb-1">
-						<label for="email" class="form-label">Seguro que quieres borrar al usuario: <?php echo $nombre_usuario ?> </label>
+						<label for="email" class="form-label">¿Está seguro de eliminar el plato? <?php echo $nombre_usuario ?> </label>
 				</div>
                 <div class="d-grid py-2">
 						<div class="row">
@@ -52,7 +52,7 @@ $codproducto=$usuario1['codproducto'];
 								<button type="button" onclick="location.href='./menu.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'" class="btn btn-primary">Volver</button>
 							</div>
 							<div class="col d-grid">
-								<button type="button" onclick="location.href='./borrar.php?codproducto=<?php echo $codproducto?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" class="btn btn-primary">Borrar</button>
+								<button type="button" onclick="location.href='./borrar.php?codproducto=<?php echo $codproducto?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'" class="btn btn-primary">Borrar</button>
 							</div>
 						</div>
 				</div>
