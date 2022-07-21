@@ -12,6 +12,8 @@ $queryPlatos = "UPDATE productos SET nombreproducto='$nombreproducto',precio='$p
 
 $editarPlatos = pg_query($conn, $queryPlatos);
 
+echo $precio;
+echo $nombreproducto;
 
 ##header("location:./menu.php?nombre=$usuario&tipoUsuario=$tipo");
 ##exit();
