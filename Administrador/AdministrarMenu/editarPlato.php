@@ -5,8 +5,8 @@
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
-$id_usuario=$_GET['id_usuario'];
-$queryUsuarios = "SELECT * from productos WHERE codproductos = '$id_usuario'";
+$id_usuario=$_GET['codproducto'];
+$queryUsuarios = "SELECT * from productos WHERE codproducto = '$id_usuario'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $usuario1= pg_fetch_array($consultaUsuarios);
 
