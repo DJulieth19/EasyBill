@@ -102,11 +102,12 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                 </table>
             </div>
         </div>
+        <div class="row justify-content-end">
+            <button type="button" class="btn btn-info col-2"
+                onclick="location.href='añadirUsuario.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Añadir</button>
+        </div>
     </div>
-    <div class="row justify-content-end">
-        <button type="button" class="btn btn-info col-4" 
-            onclick="location.href='añadirUsuario.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Añadir</button>
-    </div>
+
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
