@@ -44,7 +44,7 @@ $precio=$plato1['precio'];
 
 				<!-- EDITAR -->
 
-				<form action="editar.php?id_usuario=<?php echo $id_usuario ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST">
+				<form action="editar.php?nombreproducto=<?php echo $nombreproducto ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST">
                     <div class="mb-1">
 						<label for="username" class="form-label">Nombre de Plato</label>
 						<input type="text" class="form-control" value="<?php echo $nombreproducto ?>" name="nombre_usuario" placeholder="" required>	
