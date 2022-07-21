@@ -6,6 +6,9 @@
 require_once("../../Database.php");
 $conn = conectardb();
 
+$codproducto=$_GET['codproducto'];
+$queryUsuarios = "SELECT * from productos WHERE codproducto = '$codproducto'";
+
 ?>
 <!doctype html>
 <html lang="en">
