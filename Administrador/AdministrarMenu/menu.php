@@ -104,7 +104,7 @@ $Precio=$plato['precio'];
                             <h7 class="fw-normal"> <?php echo $cantidadProductos['precio'] ?></h7>
                         </div>
                         <div class="d-flex justify-content-md-center">
-                            <button type="button" class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#editar" name="editar">
+                            <button type="button" class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#editar" name="editar" onclick="location.href='editarPlato.php?id_usuario=<?php echo $cantidadProductos['codproducto']?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-pencil-square" viewBox="0 0 16 16">
                                     <path
@@ -193,7 +193,7 @@ $Precio=$plato['precio'];
                                 </div>
                                 <div class="form-floating mb-3">
                                     <input type="number" min="50" class="form-control rounded-3" 
-                                    value="mas" name="Precio" placeholder="Precio en pesos"
+                                    value="<?php echo $Precio ?>" name="Precio" placeholder="Precio en pesos"
                                         required maxlength="10" minlength="8">
                                     
                                 </div>
