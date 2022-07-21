@@ -6,10 +6,15 @@
 require_once("../../Database.php");
 $conn = conectardb();
 $nombreproducto=$_GET['nombreproducto'];
-$queryPlatos = "SELECT * from productos WHERE nombreproducto = '$nombreproducto'";
+$precio=$_GET['precio'];
+
+$queryPlatos = "SELECT codproducto from productos WHERE nombreproducto='$nombreproducto' AND precio='$precio';";
 $consultaPlatos = pg_query($conn, $queryPlatos);
-$plato1= pg_fetch_array($consultaPlatos);
-$precio=$plato1['precio'];
+$usuario1= pg_fetch_array($consultaPlatos);
+
+$codproducto=$usuario1['codproducto'];
+
+
 ?>
 
 <!doctype html>
@@ -44,7 +49,7 @@ $precio=$plato1['precio'];
 
 				<!-- EDITAR -->
 
-				<form action="editar.php?nombreproducto=<?php echo $nombreproducto ?>&precio=<?php echo $precio?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST">
+				<form action="editar.php?codproducto=<?php echo $codproducto?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST">
                     <div class="mb-1">
 						<label for="username" class="form-label">Nombre de Plato</label>
 						<input type="text" class="form-control" value="<?php echo $nombreproducto ?>" name="nombreproducto" placeholder="" required>	
