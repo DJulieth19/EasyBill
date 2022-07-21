@@ -49,10 +49,10 @@ $codproducto=$usuario1['codproducto'];
                 <div class="d-grid py-2">
 						<div class="row">
 							<div class="col d-grid">
-								<button type="button" onclick="location.href='./usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'" class="btn btn-primary">Volver</button>
+								<button type="button" onclick="location.href='./menu.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'" class="btn btn-primary">Volver</button>
 							</div>
 							<div class="col d-grid">
-								<button type="button" onclick="location.href='./borrar.php?id_usuario=<?php echo $id_usuario?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'" class="btn btn-primary">Borrar</button>
+								<button type="button" onclick="location.href='./borrar.php?codproducto=<?php echo $codproducto?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" class="btn btn-primary">Borrar</button>
 							</div>
 						</div>
 				</div>
