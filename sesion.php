@@ -13,7 +13,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $tipo= pg_fetch_array($consultaUsuarios);
 $tipoU=$tipo['tipo_usuario'];
 $nombreU=$tipo['nombre_usuario'];
-//si redirige a home administrador o home empleado segun sea el caso
+//se redirige a home administrador o home empleado segun sea el caso
 if($tipoU == "Administrador"){
 	header("location: ./Administrador/index.php?nombre=$nombreU&tipoUsuario=$tipoU");
 	exit();
