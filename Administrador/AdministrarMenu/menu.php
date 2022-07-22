@@ -13,7 +13,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Administrador</title>
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="/img/logo.png">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
 
     <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
