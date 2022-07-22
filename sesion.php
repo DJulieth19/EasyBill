@@ -1,16 +1,19 @@
+<!--VERIFICACION DE DATOS EN LA BASE DE DATOS-->
 <?php 
 
-require_once("Database.php");
+// Conexion con la base de datos
+require_once("Database.php"); 
 $conn = conectardb();
-
-$usuario = $_POST['usuario'];
+//trae los datos que fueron ingresados en el formulario anterior
+$usuario = $_POST['usuario'];			
 $contraseña = $_POST['contraseña'];
-
+//Se realiza la consulta para verificar que es usuario exista y que tipo de dato es
 $queryUsuarios = "SELECT * from usuarios WHERE nombre_usuario = '$usuario' AND contrasenia = '$contraseña'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $tipo= pg_fetch_array($consultaUsuarios);
 $tipoU=$tipo['tipo_usuario'];
 $nombreU=$tipo['nombre_usuario'];
+//si redirige a home administrador o home empleado segun sea el caso
 if($tipoU == "Administrador"){
 	header("location: ./Administrador/index.php?nombre=$nombreU&tipoUsuario=$tipoU");
 	exit();
@@ -22,7 +25,7 @@ if($tipoU == "Administrador"){
 }
 
 ?>
-
+<!--En caso de que los datos sean incorrectos se despliega el login con la opcion de recuperar contraseña-->
 <!doctype html>
 <html lang="en">
 
@@ -31,7 +34,6 @@ if($tipoU == "Administrador"){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EasyBill</title>
     <link rel="icon" href="./img/icon.png">
-	
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <style>
