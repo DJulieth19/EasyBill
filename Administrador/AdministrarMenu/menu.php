@@ -3,7 +3,6 @@ require_once("../../Database.php");
 $conn = conectardb();
 $queryPlatos = "SELECT * from productos";
 $consultaPlatos = pg_query($conn, $queryPlatos);
-
 ?>
 
 <!doctype html>
@@ -15,7 +14,6 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <title>Administrador</title>
     <link rel="icon" href="../img/icon.png">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
-
     <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -97,7 +95,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                             <h7 class="fw-normal"> <?php echo $cantidadProductos['precio'] ?></h7>
                         </div>
                         <div class="d-flex justify-content-md-center">
-                            <button type="button" class="btn btn-warning btn-sm mr-2" name="editar"  onclick="location.href='editarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
+                            <button type="button" class="btn btn-warning btn-sm mr-2" name="editar"
+                                onclick="location.href='editarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-pencil-square" viewBox="0 0 16 16">
                                     <path
@@ -107,7 +106,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 </svg>
                             </button>
                             <h4>&nbsp</h4>
-                            <button type="button" class="btn btn-danger btn-sm" name="borrar" onclick="location.href='borrarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
+                            <button type="button" class="btn btn-danger btn-sm" name="borrar"
+                                onclick="location.href='borrarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-trash3" viewBox="0 0 16 16">
                                     <path

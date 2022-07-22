@@ -4,11 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.98.0">
     <title>HistorialPedidos</title>
-
+    <link rel="icon" href="../img/icon.png">
     <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -26,7 +23,7 @@
     <!-- Custom styles for this template -->
     <link href="../styles.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
-    
+
 </head>
 <header>
     <?php
@@ -81,9 +78,12 @@
             <div class="row justify-content-md-center col-md-10">
                 <div class="btn-group" role="group">
                     <h4 class="text-white col-md-3 space">space </h4>
-                    <button type="button" class="btn btn-outline-primary" onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Hoy'">Hoy</button>
-                    <button type="button" class="btn btn-outline-primary" onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Semana'">Semana</button>
-                    <button type="button" class="btn btn-outline-primary" onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Mes'">Mes</button>
+                    <button type="button" class="btn btn-outline-primary"
+                        onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Hoy'">Hoy</button>
+                    <button type="button" class="btn btn-outline-primary"
+                        onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Semana'">Semana</button>
+                    <button type="button" class="btn btn-outline-primary"
+                        onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Mes'">Mes</button>
                     <h4 class="text-white col-md-1">space </h4>
                     <a>
                         <svg xmlns="http://www.w3.org/2000/svg" color="blue" width="25" height="25" fill="currentColor"
@@ -103,9 +103,12 @@
         <div class="container container-2">
             <div class="row justify-content-md-center">
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-primary" onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Hoy'">Hoy</button>
-                    <button type="button" class="btn btn-outline-primary" onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Semana'">Semana</button>
-                    <button type="button" class="btn btn-outline-primary" onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Mes'">Mes</button>
+                    <button type="button" class="btn btn-outline-primary"
+                        onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Hoy'">Hoy</button>
+                    <button type="button" class="btn btn-outline-primary"
+                        onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Semana'">Semana</button>
+                    <button type="button" class="btn btn-outline-primary"
+                        onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Mes'">Mes</button>
                     <a>
                         <svg xmlns="http://www.w3.org/2000/svg" color="blue" width="25" height="25" fill="currentColor"
                             class="bi bi-calendar-date ml-2" viewBox="0 0 16 16">
@@ -125,7 +128,7 @@
             <div class="row justify-content-md-center">
                 <div class="table-responsive table-striped table-bordered">
                     <table class="table table-hover">
-                    <?php
+                        <?php
                         require_once("../../Database.php");
                         $conn = conectardb();
                         if($TipoConsulta == "Hoy"){
@@ -150,40 +153,40 @@
                             <div class="row justify-content-md-center">
                                 <div class="table-responsive table-striped table-bordered">
                                     <table class="table table-hover">
-                        <thead class="table-primary">
-                            <tr>
-                                <th class="col-4 text-center">Nombre empleado</th>
-                                <th class="col-1 text-center">Nombre cliente</th>
-                                <th class="col-3 text-center">Total</th>
-                                <th class="col-3 text-center">Fecha</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th class="col-4 text-center">Nombre empleado</th>
+                                                <th class="col-1 text-center">Nombre cliente</th>
+                                                <th class="col-3 text-center">Total</th>
+                                                <th class="col-3 text-center">Fecha</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
                               while($row = pg_fetch_array($consulta)){
                             ?>
-                            <tr>
-                                <td class="col-4" scope="row"><?php echo $row['nombre_usuario'] ?></td>
-                                <td class="col-2 text-center"><?php echo $row['nombrecliente'] ?></td>
-                                <td class="col-3 text-center"><?php echo $row['valorventa'] ?></td>
-                                <td class="col-3 text-center"><?php echo $row['fecha'] ?></td>
-                            </tr>
-                            <?php
+                                            <tr>
+                                                <td class="col-4" scope="row"><?php echo $row['nombre_usuario'] ?></td>
+                                                <td class="col-2 text-center"><?php echo $row['nombrecliente'] ?></td>
+                                                <td class="col-3 text-center"><?php echo $row['valorventa'] ?></td>
+                                                <td class="col-3 text-center"><?php echo $row['fecha'] ?></td>
+                                            </tr>
+                                            <?php
                               }
                             ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <?php
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <?php
               $query = 'SELECT sum(v.valorVenta) from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta';
               $consultaTotal = pg_query($conn, $query);
               $suma= pg_fetch_array($consultaTotal);
               $Total = $suma['sum']
             ?>
-           
 
-            <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+                            <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </main>
 

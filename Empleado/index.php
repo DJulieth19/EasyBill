@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.98.0">
+    <link rel="icon" href="../img/icon.png">
     <?php
 		  $tipoUsuario = $_GET['tipoUsuario']
 	  ?>
@@ -111,10 +109,6 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-
-
-
-
 
   <!-- Funciones
   ================================================== -->

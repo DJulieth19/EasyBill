@@ -8,7 +8,6 @@ $conn = conectardb();
 $codproducto=$_GET['codproducto'];
 $nombreproducto=$_POST['nombreproducto'];
 $precio=$_POST['precio'];
-
 $queryPlatos = "UPDATE productos SET  nombreproducto='$nombreproducto',precio='$precio' WHERE codproducto='$codproducto';";
 $editarPlatos = pg_query($conn, $queryPlatos);
 
