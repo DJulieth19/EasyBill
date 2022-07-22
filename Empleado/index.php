@@ -8,7 +8,7 @@
 		  $tipoUsuario = $_GET['tipoUsuario']
 	  ?>
     <title>Empleado <?php echo $tipoUsuario ?> </title>
-
+    <link rel="icon" href="../img/icon.png">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
 
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
