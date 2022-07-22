@@ -35,7 +35,7 @@
                 <div class="text-center d-block d-sm-none rounded-lg w-12">
                     <img src="./img/logo.png" width="100" alt="">
                 </div>
-                <h2 class="fw-bold text-center py-2">Cambiar contraseña</h2>
+                <h2 class="fw-bold text-center py-2">Cambiar nombre</h2>
 
                 <!-- LOGIN -->
 
