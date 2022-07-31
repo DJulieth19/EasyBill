@@ -16,7 +16,6 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- Custom styles for this template -->
-    <link href="../styles.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -88,7 +87,6 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                             <?php
                                                 while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                                                 ?>
-
                                             <div class="item shadow mb-4">
                                                 <h3 class="item-title">
                                                     <?php echo $cantidadProductos['nombreproducto'] ?></h3>
@@ -96,7 +94,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                 <h4 class="item-price text-center">$
                                                     <?php echo $cantidadProductos['precio'] ?></h4>
                                                 <div class="display-flex">
-                                                    <button class="btn-lg btn-info align-items-center addToCart">Añadir
+                                                    <button class="btn-info align-items-center addToCart">Añadir
                                                         al carrito</button>
                                                 </div>
                                             </div>
