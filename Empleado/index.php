@@ -138,7 +138,7 @@
                     <label for="Nombre">Nombre</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="number" class="form-control rounded-3" id="id" placeholder="Identificación" required maxlength="10" minlength="8">
+                    <input type="number" minlength="5" class="form-control rounded-3" id="id" placeholder="Identificación" required maxlength="10">
                     <label for="id">Identificación</label>
                   </div>
                   <div class="modal-footer">
