@@ -14,7 +14,6 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link href="../styles.css" rel="stylesheet">
     <title>Empleado</title>
 </head>
 
@@ -24,14 +23,13 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
         $tipo = $_GET['tipoUsuario'];
 
 	?>
+
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <div class="col-3">
-                <h3 class="text-dark">space</h3>
+            <div class="col-md-4">
+                <h3>&nbsp &nbsp</h3>
             </div>
-            <h3 class="text-white">Registrar Pedido</h3>
-            <div class="col-3"></div>
-
+            <h2>Consulta de Ventas <?php echo $TipoConsulta ?> </h2>
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -58,7 +56,6 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                 d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z" />
                                         </svg>
                                     </a>
-                                </div>
                             </a>
                         </form>
                     </div>
@@ -83,7 +80,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                     <div class="item shadow mb-4">
                                         <h3 class="item-title"><?php echo $cantidadProductos['nombreproducto'] ?></h3>
                                         <img class="item-image " src="./img/plato.png">
-                                        <h4 class="item-price text-center">$ <?php echo $cantidadProductos['precio'] ?></h4>
+                                        <h4 class="item-price text-center">$ <?php echo $cantidadProductos['precio'] ?>
+                                        </h4>
                                         <div class="display-flex">
                                             <button
                                                 class="item-button btn-lg btn-info align-items-center addToCart">Añadir
