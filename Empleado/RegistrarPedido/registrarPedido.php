@@ -83,10 +83,11 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                             <div class="container">
                                 <div class="items">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <?php
+                                    <?php
                                                 while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                                                 ?>
+                                        <div class="col-6">
+ 
                                             <div class="item shadow mb-4">
                                                 <h3 class="item-title">
                                                     <?php echo $cantidadProductos['nombreproducto'] ?></h3>
@@ -94,7 +95,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                 <h4 class="item-price text-center">$
                                                     <?php echo $cantidadProductos['precio'] ?></h4>
                                                 <div class="display-flex">
-                                                    <button class="btn-info align-items-center addToCart">Añadir
+                                                    <button class="btn-lg btn-info align-items-center addToCart">Añadir
                                                         al carrito</button>
                                                 </div>
                                             </div>
