@@ -26,8 +26,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 	?>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <h3>&nbsp &nbsp</h3>
-            <h3>Registrar Pedido</h3>
+            <div class="text-dark">space</div>
+            <h3 class="text-white">Registrar Pedido</h3>
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -63,18 +63,18 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
         </div>
     </nav>
     <div class="container-fluid">
-    <h1 class="text-white"> espacio</h1>
+        <h1 class="text-white"> espacio</h1>
         <div class="row">
             <div class="col col-md-6 ml-4">
                 <div>
                     <!-- START SECTION STORE -->
                     <section class="store ">
                         <div class="container">
-                            <div class="items">
-                                <div class="row">
-                                    <?php
+                            <?php
                                     while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                                     ?>
+                            <div class="items">
+                                <div class="row">
                                     <div class="col-6 col-md-4">
                                         <div class="item shadow mb-4">
                                             <h3 class="item-title"><?php echo $cantidadProductos['nombreproducto'] ?>
