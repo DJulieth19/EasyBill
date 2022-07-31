@@ -144,6 +144,7 @@
                   <div class="modal-footer">
                     
                     <a class="btn btn-primary" type="submit" href="./RegistrarPedido/registrarPedido.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Continuar</button></a>
+                    <button class="btn btn-primary" type="submit">Submit form</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                  </div>
                 </form>
