@@ -84,7 +84,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                             <div class="container">
                                 <div class="items">
                                     <div class="row">
-                                        <div class="col-6 col-md-2">
+                                        <div class="col-6">
                                             <?php
                                                 while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                                                 ?>
