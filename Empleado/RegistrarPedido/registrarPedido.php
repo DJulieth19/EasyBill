@@ -26,8 +26,10 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 	?>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <h3 class="text-dark">space</h3>
-            <h3 class="text-white">Registrar Pedido</h3>
+            <div class="col-3"> <h3 class="text-dark">space</h3> </div>
+                <h3 class="text-white">Registrar Pedido</h3>
+            <div class="col-3"></div>
+
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
