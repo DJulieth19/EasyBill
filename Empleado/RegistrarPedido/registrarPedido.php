@@ -94,7 +94,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                     <h4 class="item-price text-center">$ <?php echo $cantidadProductos['precio'] ?></h4>
                                                     <div class="display-flex">
                                                         <button
-                                                            class="item-button btn-lg btn-info align-items-center addToCart">Añadir
+                                                            class="btn-lg btn-info align-items-center addToCart">Añadir
                                                             al carrito</button>
                                                     </div>
                                                 </div>
@@ -189,6 +189,13 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="./tienda.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
 
 </body>
 
