@@ -143,7 +143,7 @@
                   </div>
                   <div class="modal-footer">
                     
-                    <a class="btn btn-primary" href="./RegistrarPedido/registrarPedido.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Continuar</button></a>
+                    <a class="btn btn-primary" type="submit" href="./RegistrarPedido/registrarPedido.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Continuar</button></a>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                  </div>
                 </form>
