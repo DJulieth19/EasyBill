@@ -70,10 +70,10 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                     <!-- START SECTION STORE -->
                     <section class="store ">
                         <div class="container">
+                        <div class="items">
                             <?php
                                     while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                                     ?>
-                            <div class="items">
                                 <div class="row">
                                     <div class="col-6 col-md-4">
                                         <div class="item shadow mb-4">
