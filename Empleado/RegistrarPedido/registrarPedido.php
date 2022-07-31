@@ -102,7 +102,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
             </section>
             <!-- END SECTION STORE -->
         </div>
-        <div class="col col-md-3">
+        <div class="col col-md-5">
             <!-- START SECTION SHOPPING CART -->
             <section class="shopping-cart shadow">
                 <div class="container">
