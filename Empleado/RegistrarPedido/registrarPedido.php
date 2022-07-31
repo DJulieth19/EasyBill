@@ -70,35 +70,37 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
         <h1 class="text-white"> espacio</h1>
         <div class="row">
             <div class="col col-md-6 ml-4">
-               
-                    <!-- START SECTION STORE -->
-                    <section class="store ">
-                        <div class="container">
-                            <div class="items">
-                                <!-- Contenedor de platos -->
-                                <div class="row justify-content-center">
-                                    <?php
+
+                <!-- START SECTION STORE -->
+                <section class="store ">
+                    <div class="container">
+                        <div class="items">
+                            <!-- Contenedor de platos -->
+                            <div class="row justify-content-center">
+                                <?php
                                         while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                                         ?>
-                                    <div class="col-lg-4">
+                                <div class="col-lg-4">
                                     <div class="item shadow mb-4">
-                                            <h3 class="item-title">Plato 1</h3>
-                                            <img class="item-image " src="./img/plato.png">
-                                            <h4 class="item-price text-center">$ 10.000</h4>
-                                            <div class="display-flex">
-                                                <button class="item-button btn-lg btn-info align-items-center addToCart">Añadir al carrito</button>
-                                            </div>
+                                        <h3 class="item-title">Plato 1</h3>
+                                        <img class="item-image " src="./img/plato.png">
+                                        <h4 class="item-price text-center">$ 10.000</h4>
+                                        <div class="display-flex">
+                                            <button
+                                                class="item-button btn-lg btn-info align-items-center addToCart">Añadir
+                                                al carrito</button>
                                         </div>
-                                    </div><!-- /.col-lg-4 -->
-                                    <?php
+                                    </div>
+                                </div><!-- /.col-lg-4 -->
+                                <?php
                             }
                             ?>
-                                </div>
                             </div>
                         </div>
-                </div>
-                </section>
-                <!-- END SECTION STORE -->
+                    </div>
+            </div>
+            </section>
+            <!-- END SECTION STORE -->
         </div>
         <div class="col col-md-5">
             <!-- START SECTION SHOPPING CART -->
