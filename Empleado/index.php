@@ -142,7 +142,7 @@
                     <label for="id">Identificación</label>
                   </div>
                   <div class="modal-footer">
-                    <button class="btn rounded-3 btn-primary" type="submit">Continuar</button>
+                    <button class="btn rounded-3 btn-primary" href="/RegistrarPedido/registrarPedido.php" type="submit">Continuar</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                  </div>
                 </form>
