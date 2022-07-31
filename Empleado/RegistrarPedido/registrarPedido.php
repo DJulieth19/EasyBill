@@ -70,7 +70,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
         <h1 class="text-white"> espacio</h1>
         <div class="row">
             <div class="col col-md-6 ml-4">
-                <div>
+               
                     <!-- START SECTION STORE -->
                     <section class="store ">
                         <div class="container">
@@ -81,19 +81,13 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                         while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                                         ?>
                                     <div class="col-lg-4">
-                                        <h6 class="fw-normal d-flex justify-content-md-center">
-                                            <?php echo $cantidadProductos['nombreproducto'] ?></h6>
-                                        <a
-                                            href="../Administrador/AdministrarMenu/menu.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
-                                            <img src="./img/plato.png" href=class="bd-placeholder-img" width="155"
-                                                height="160" role="img" preserveAspectRatio="xMidYMid slice"
-                                                focusable="false">
-                                            <title>Placeholder</title>
-                                            <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%"
-                                                fill="#777" dy=".3em"></text></svg>
-                                        </a>
-                                        <div class="d-flex justify-content-md-center">
-                                            <h7 class="fw-normal"> <?php echo $cantidadProductos['precio'] ?></h7>
+                                    <div class="item shadow mb-4">
+                                            <h3 class="item-title">Plato 1</h3>
+                                            <img class="item-image " src="./img/plato.png">
+                                            <h4 class="item-price text-center">$ 10.000</h4>
+                                            <div class="display-flex">
+                                                <button class="item-button btn-lg btn-info align-items-center addToCart">Añadir al carrito</button>
+                                            </div>
                                         </div>
                                     </div><!-- /.col-lg-4 -->
                                     <?php
@@ -105,7 +99,6 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                 </div>
                 </section>
                 <!-- END SECTION STORE -->
-            </div>
         </div>
         <div class="col col-md-5">
             <!-- START SECTION SHOPPING CART -->
