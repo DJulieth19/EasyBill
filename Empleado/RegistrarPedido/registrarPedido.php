@@ -16,8 +16,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <link rel="stylesheet" href="style.css">
     <title>Empleado</title>
 </head>
-
-<body>
+<header>
     <?php
 		$usuario = $_GET['nombre'];
         $tipo = $_GET['tipoUsuario'];
@@ -63,6 +62,10 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
             </div>
         </div>
     </nav>
+</header>
+
+<body>
+
     <div class="container-fluid">
         <h1 class="text-white"> espacio</h1>
         <div class="row">
