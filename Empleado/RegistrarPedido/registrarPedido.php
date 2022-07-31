@@ -14,9 +14,9 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <title>Empleado</title>
     <link rel="icon" href="../img/icon.png">
     <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Custom styles for this template -->
-    <link href="../styles.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -79,34 +79,35 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                     <div class="col col-md-6 ml-4">
                         <div>
                             <!-- Empieza sección de platos -->
-                           
-                                <div class="container">
-                                    <div class="items">
-                                        <div class="row">
-                                            <div class="col-6 col-md-4">
-                                                <?php
+
+                            <div class="container">
+                                <div class="items">
+                                    <div class="row">
+                                        <div class="col-6 col-md-4">
+                                            <?php
                                                 while($cantidadProductos=pg_fetch_array($consultaPlatos)){
-                                                ?> 
+                                                ?>
 
-                                                <div class="item shadow mb-4">
-                                                    <h3 class="item-title"><?php echo $cantidadProductos['nombreproducto'] ?></h3>
-                                                    <img class="item-image " src="./img/plato.png">
-                                                    <h4 class="item-price text-center">$ <?php echo $cantidadProductos['precio'] ?></h4>
-                                                    <div class="display-flex">
-                                                        <button
-                                                            class="btn-lg btn-info align-items-center addToCart">Añadir
-                                                            al carrito</button>
-                                                    </div>
+                                            <div class="item shadow mb-4">
+                                                <h3 class="item-title">
+                                                    <?php echo $cantidadProductos['nombreproducto'] ?></h3>
+                                                <img class="item-image " src="./img/plato.png">
+                                                <h4 class="item-price text-center">$
+                                                    <?php echo $cantidadProductos['precio'] ?></h4>
+                                                <div class="display-flex">
+                                                    <button class="btn-lg btn-info align-items-center addToCart">Añadir
+                                                        al carrito</button>
                                                 </div>
+                                            </div>
 
-                                                <?php
+                                            <?php
                                                 }
                                                 ?>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                
+                            </div>
+
                             <!-- Termina sección de platos -->
                         </div>
                     </div>
@@ -190,11 +191,11 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="./tienda.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
 
 
 </body>
