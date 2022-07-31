@@ -65,9 +65,9 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 </header>
 
 <body>
-
+    <h1 class="text-white"> espacio</h1>
+    <h1 class="text-white"> espacio</h1>
     <div class="container-fluid">
-        <h1 class="text-white"> espacio</h1>
         <div class="row">
             <div class="col col-md-6 ml-4">
                 <!-- START SECTION STORE -->
@@ -174,7 +174,6 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
         </div>
     </div>
 
-    </div>
     <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
