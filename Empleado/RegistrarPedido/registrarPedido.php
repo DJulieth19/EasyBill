@@ -13,10 +13,10 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Empleado</title>
     <link rel="icon" href="../img/icon.png">
-    <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- Custom styles for this template -->
-
+    <link href="../styles.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -74,6 +74,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 
         <body>
             <h1> &nbsp </h1>
+            <h3>&nbsp &nbsp</h3>
             <div class="container-fluid">
                 <div class="row justify-content-between">
                     <div class="col col-md-6 ml-4">
@@ -83,7 +84,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                             <div class="container">
                                 <div class="items">
                                     <div class="row">
-                                        <div class="col-6 col-md-4">
+                                        <div class="col-6 col-md-2">
                                             <?php
                                                 while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                                                 ?>
