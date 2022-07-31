@@ -44,7 +44,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                     </th>
                                 </thead>
                             </div>
-                            <a class="btn btn-custom "
+                            <a class="btn btn-custom rounded-pill "
                                 href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Volver</a>
                             <a type="button" class="nav-bar-icons">
                                 <div class="dropdown">
