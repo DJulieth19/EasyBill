@@ -17,7 +17,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
