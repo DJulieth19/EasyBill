@@ -60,6 +60,7 @@
 .nav-bar {
   position: relative;
   align-items: right;
+  color: white;
 }
 
 .nav-bar.nav-sticky {
