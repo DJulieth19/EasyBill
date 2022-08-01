@@ -75,8 +75,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
         <h1 class="text-white"> espacio</h1>
         <h1 class="text-white"> espacio</h1>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col col-8 ml-4">
+            <div class="row  ml-4">
+                <div class="col col-8">
                     <!-- Empieza contenedor de platos -->
                     <section class="store ">
                         <div class="container">
@@ -86,7 +86,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                     <?php
                                         while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                                         ?>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-3">
                                         <div class="item shadow mb-4">
                                             <h3 class="item-title">
                                                 <?php echo $cantidadProductos['nombreproducto'] ?></h3>
