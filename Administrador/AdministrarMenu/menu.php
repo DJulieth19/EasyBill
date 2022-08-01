@@ -145,7 +145,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body p-5 pt-0">
-                                        <form action="añadir.php" method="POST">
+                                        <form action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST">
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3" name="nombreProducto"
                                                     placeholder="Nombre" required>
