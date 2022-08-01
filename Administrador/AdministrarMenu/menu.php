@@ -31,7 +31,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
                 <h3>&nbsp &nbsp</h3>
-                <h3>Administrar Menú</h3>
+                <h3 class="text-white">Administrar Menú</h3>
                 <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 <div class="NombreUser">
                                     <thead>
                                         <th>
-                                        <td>
+                                        <td class="text-white">
                                             <?php echo $tipo ?> &nbsp &nbsp <br>&nbsp &nbsp
                                             <?php echo $usuario ?>
                                         </td>
@@ -72,9 +72,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     </header>
 
     <body>
-        <h1 class="text-white"> espacio</h1>
-        <h1 class="text-white"> espacio</h1>
-        <div class="container-fluid">
+        <div class="container-fluid mt-4">
             <div class="row">
                 <div class="col col-8">
                     <!-- Empieza contenedor de platos -->
