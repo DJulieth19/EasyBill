@@ -20,7 +20,6 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <?php
 		$usuario = $_GET['nombre'];
         $tipo = $_GET['tipoUsuario'];
-
 	?>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -44,7 +43,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                     </th>
                                 </thead>
                             </div>
-                            <a class="btn btn-lg btn-custom rounded-pill "
+                            <a class="btn btn- btn-custom rounded-pill "
                                 href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Volver</a>
                             <a type="button" class="nav-bar-icons">
                                 <div class="dropdown">

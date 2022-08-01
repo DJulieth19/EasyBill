@@ -74,13 +74,13 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 
         <body>
             <h1> &nbsp </h1>
-            <div class="container marketing">
+            <div class="container">
                 <!-- Contenedor de platos -->
                 <div class="row justify-content-center">
                     <?php
                         while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                         ?>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 border">
                         <h6 class="fw-normal d-flex justify-content-md-center">
                             <?php echo $cantidadProductos['nombreproducto'] ?></h6>
                         <a
