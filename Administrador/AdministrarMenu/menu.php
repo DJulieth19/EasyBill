@@ -72,99 +72,106 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     </header>
 
     <body>
-        <h1> &nbsp </h1>
-        <!-- Empieza contenedor de platos -->
-        <section class="store ">
-            <div class="container">
-                <div class="items">
-                    <!-- Contenedor de platos -->
-                    <div class="row justify-content-center">
-                        <?php
+        <h1 class="text-white"> espacio</h1>
+        <h1 class="text-white"> espacio</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col col-md-6 ml-4">
+                    <!-- Empieza contenedor de platos -->
+                    <section class="store ">
+                        <div class="container">
+                            <div class="items">
+                                <!-- Contenedor de platos -->
+                                <div class="row justify-content-center">
+                                    <?php
                                         while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                                         ?>
-                        <div class="col-lg-4">
-                            <div class="item shadow mb-4">
-                                <h3 class="item-title">
-                                    <?php echo $cantidadProductos['nombreproducto'] ?></h3>
-                                <img class="item-image " src="./img/plato.png">
-                                <h4 class="item-price text-center">$
-                                    <?php echo $cantidadProductos['precio'] ?>
-                                </h4>
-                                <div class="display-flex">
-                                    <button type="button" class="btn btn-warning btn-sm mr-2" name="editar"
-                                        onclick="location.href='editarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                            <path
-                                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                            <path fill-rule="evenodd"
-                                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div><!-- /.col-lg-4 -->
-                        <?php
+                                    <div class="col-lg-4">
+                                        <div class="item shadow mb-4">
+                                            <h3 class="item-title">
+                                                <?php echo $cantidadProductos['nombreproducto'] ?></h3>
+                                            <img class="item-image " src="./img/plato.png">
+                                            <h4 class="item-price text-center">$
+                                                <?php echo $cantidadProductos['precio'] ?>
+                                            </h4>
+                                            <div class="display-flex">
+                                                <button type="button" class="btn btn-warning btn-sm mr-2" name="editar"
+                                                    onclick="location.href='editarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-pencil-square"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.col-lg-4 -->
+                                    <?php
                             }
                             ?>
-                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
-        </section>
         </div>
+
         <!-- Termina seccion de platos -->
         <div class="col col-md-5">
-            <h1>boton añadir</h1>
-        </div>
-        <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-    </main>
-    <footer>
-        <div class="row justify-content-end">
-            <div class="col-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
-                <button type="button" class="btn btn-info">Añadir plato</button>
-            </div>
-            <!-- Modals -->
-            <div class="modal py-5" tabindex="-1" id="añadir">
-                <div class="modal-dialog">
-                    <div class="modal-content rounded-4 ">
-                        <div class="modal-header p-5 pb-4 border-bottom-0">
-                            <!-- <h5 class="modal-AÑADIR"</h5> -->
-                            <h3 class="text-white">espacio</h3>
-                            <h2 class="fw-bold mb-0">Añadir plato</h2>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body p-5 pt-0">
-                            <form action="añadir.php" method="POST">
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control rounded-3" name="nombreProducto"
-                                        placeholder="Nombre" required>
-                                    <label for="Nombre">Nombre del plato</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="number" min="50" class="form-control rounded-3" name="Precio"
-                                        placeholder="Precio en pesos" required maxlength="10" minlength="8">
-                                    <label>Precio $ </label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="file" id="archivo" name="archivo" class="form-control-file"
-                                        accept="image/*">
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
-                                        type="submit">Guardar</button>
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Cerrar</button>
-                                </div>
+            <div class="row justify-content-end">
+                <div class="col-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
+                    <button type="button" class="btn btn-info">Añadir plato</button>
+                </div>
+                <!-- Modals -->
+                <div class="modal py-5" tabindex="-1" id="añadir">
+                    <div class="modal-dialog">
+                        <div class="modal-content rounded-4 ">
+                            <div class="modal-header p-5 pb-4 border-bottom-0">
+                                <!-- <h5 class="modal-AÑADIR"</h5> -->
+                                <h3 class="text-white">espacio</h3>
+                                <h2 class="fw-bold mb-0">Añadir plato</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body p-5 pt-0">
+                                <form action="añadir.php" method="POST">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control rounded-3" name="nombreProducto"
+                                            placeholder="Nombre" required>
+                                        <label for="Nombre">Nombre del plato</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="number" min="50" class="form-control rounded-3" name="Precio"
+                                            placeholder="Precio en pesos" required maxlength="10" minlength="8">
+                                        <label>Precio $ </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" id="archivo" name="archivo" class="form-control-file"
+                                            accept="image/*">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
+                                            type="submit">Guardar</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
 
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
+
             </div>
+            <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 
-
-    </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
 </body>
