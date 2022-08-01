@@ -126,7 +126,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 
                 </div>
                 <div class="col col-3">
-                    <div class="row justify-content-end">
+                    <div class="row">
                         <div class="col-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
                             <button type="button" class="btn btn-info rounded-circle">
                                 <img src="./img/plato2.png">
