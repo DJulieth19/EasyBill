@@ -91,12 +91,12 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                 <?php echo $cantidadProductos['nombreproducto'] ?></h3>
                                             <img class="item-image " src="./img/plato.png">
                                             <div class="row">
-                                                <div class="col">
+                                                <div class="col-2">
                                                     <h4 class="item-price text-center">$
                                                         <?php echo $cantidadProductos['precio'] ?>
                                                     </h4>
                                                 </div>
-                                                <div class="col">
+                                                <div class="col-1">
                                                     <button type="button" class="btn btn-warning btn-sm mr-2"
                                                         name="editar"
                                                         onclick="location.href='editarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
@@ -130,7 +130,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                         <div class="col-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
                             <button type="button" class="btn btn-info rounded-circle">
                                 <img src="./img/plato2.png">
-                                <h7>Añadir plato</h7>
+                                <h3 class="text-white">Añadir plato</h3>
                             </button>
                         </div>
                         <!-- Modals -->
