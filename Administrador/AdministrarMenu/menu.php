@@ -76,7 +76,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
         <h1 class="text-white"> espacio</h1>
         <div class="container-fluid">
             <div class="row">
-                <div class="col col-md-6 ml-4">
+                <div class="col col-8 ml-4">
                     <!-- Empieza contenedor de platos -->
                     <section class="store ">
                         <div class="container">
@@ -120,7 +120,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                     <!-- Termina seccion de platos -->
 
                 </div>
-                <div class="col col-md-2">
+                <div class="col col-3">
                     <div class="row justify-content-end">
                         <div class="col-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
                             <button type="button" class="btn btn-info">Añadir plato</button>
