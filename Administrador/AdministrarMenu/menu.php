@@ -91,12 +91,12 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                 <?php echo $cantidadProductos['nombreproducto'] ?></h3>
                                             <img class="item-image " src="./img/plato.png">
                                             <div class="row justify-content-end">
-                                                <div class="col-4">
+                                                <div class="col">
                                                     <h4 class="item-price text-center">$
                                                         <?php echo $cantidadProductos['precio'] ?>
                                                     </h4>
                                                 </div>
-                                                <div class="col-2">
+                                                <div class="col">
                                                     <button type="button" class="btn btn-warning btn-sm mr-2"
                                                         name="editar"
                                                         onclick="location.href='editarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
