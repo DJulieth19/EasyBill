@@ -128,7 +128,10 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                 <div class="col col-3">
                     <div class="row justify-content-end">
                         <div class="col-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
-                            <button type="button" class="btn btn-info">Añadir plato</button>
+                            <button type="button" class="btn btn-info">
+                                <img class="item-image " src="./img/plato2.png">
+                                <h3>Añadir plato</h3>
+                            </button>
                         </div>
                         <!-- Modals -->
                         <div class="modal py-5" tabindex="-1" id="añadir">
