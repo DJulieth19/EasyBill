@@ -8,7 +8,7 @@ $conn = conectardb();
 $usuario = $_POST['usuario'];			
 $contraseña = $_POST['contraseña'];
 //Se realiza la consulta para verificar que es usuario exista y que tipo de dato es
-$queryUsuarios = "SELECT * from usuarios WHERE nombre_usuario = '$usuario' AND contrasenia = '$contraseña'";
+$queryUsuarios = "SELECT * from usuarios WHERE nombre_usuario = '$usuario' AND contraseña = '$contraseña'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $tipo= pg_fetch_array($consultaUsuarios);
 $tipoU=$tipo['tipo_usuario'];
