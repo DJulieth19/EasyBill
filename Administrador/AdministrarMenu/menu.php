@@ -39,9 +39,9 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                 <div class="ml-auto">
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="nav-bar">
-                            <form class="d-flex" role="search">
+                            <form class="d-flex">
                                 <div class="NombreUser">
-                                    <thead class="text-white">
+                                    <thead>
                                         <th>
                                         <td>
                                             <?php echo $tipo ?> &nbsp &nbsp <br>&nbsp &nbsp
@@ -90,10 +90,10 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                             <h3 class="item-title">
                                                 <?php echo $cantidadProductos['nombreproducto'] ?></h3>
                                             <img class="item-image " src="./img/plato.png">
-                                            <h4 class="item-price text-center">$
-                                                <?php echo $cantidadProductos['precio'] ?>
-                                            </h4>
                                             <div class="display-flex">
+                                                <h4 class="item-price text-center">$
+                                                    <?php echo $cantidadProductos['precio'] ?>
+                                                </h4>
                                                 <button type="button" class="btn btn-warning btn-sm mr-2" name="editar"
                                                     onclick="location.href='editarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
