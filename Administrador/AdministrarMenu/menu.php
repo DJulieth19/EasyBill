@@ -116,60 +116,59 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                             </div>
                         </div>
                     </section>
-                </div>
-            </div>
-        </div>
 
-        <!-- Termina seccion de platos -->
-        <div class="col col-md-5">
-            <div class="row justify-content-end">
-                <div class="col-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
-                    <button type="button" class="btn btn-info">Añadir plato</button>
-                </div>
-                <!-- Modals -->
-                <div class="modal py-5" tabindex="-1" id="añadir">
-                    <div class="modal-dialog">
-                        <div class="modal-content rounded-4 ">
-                            <div class="modal-header p-5 pb-4 border-bottom-0">
-                                <!-- <h5 class="modal-AÑADIR"</h5> -->
-                                <h3 class="text-white">espacio</h3>
-                                <h2 class="fw-bold mb-0">Añadir plato</h2>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                    <!-- Termina seccion de platos -->
+                    <div class="col col-md-5">
+                        <div class="row justify-content-end">
+                            <div class="col-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
+                                <button type="button" class="btn btn-info">Añadir plato</button>
                             </div>
-                            <div class="modal-body p-5 pt-0">
-                                <form action="añadir.php" method="POST">
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control rounded-3" name="nombreProducto"
-                                            placeholder="Nombre" required>
-                                        <label for="Nombre">Nombre del plato</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="number" min="50" class="form-control rounded-3" name="Precio"
-                                            placeholder="Precio en pesos" required maxlength="10" minlength="8">
-                                        <label>Precio $ </label>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="file" id="archivo" name="archivo" class="form-control-file"
-                                            accept="image/*">
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
-                                            type="submit">Guardar</button>
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cerrar</button>
-                                    </div>
+                            <!-- Modals -->
+                            <div class="modal py-5" tabindex="-1" id="añadir">
+                                <div class="modal-dialog">
+                                    <div class="modal-content rounded-4 ">
+                                        <div class="modal-header p-5 pb-4 border-bottom-0">
+                                            <!-- <h5 class="modal-AÑADIR"</h5> -->
+                                            <h3 class="text-white">espacio</h3>
+                                            <h2 class="fw-bold mb-0">Añadir plato</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body p-5 pt-0">
+                                            <form action="añadir.php" method="POST">
+                                                <div class="form-floating mb-3">
+                                                    <input type="text" class="form-control rounded-3"
+                                                        name="nombreProducto" placeholder="Nombre" required>
+                                                    <label for="Nombre">Nombre del plato</label>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" min="50" class="form-control rounded-3"
+                                                        name="Precio" placeholder="Precio en pesos" required
+                                                        maxlength="10" minlength="8">
+                                                    <label>Precio $ </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="file" id="archivo" name="archivo"
+                                                        class="form-control-file" accept="image/*">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn rounded-3 btn-primary" id="btn-save"
+                                                        name="btn-save" type="submit">Guardar</button>
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Cerrar</button>
+                                                </div>
 
-                                </form>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
-            <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
+        </div>
+        <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
