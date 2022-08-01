@@ -41,9 +41,9 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                         <div class="nav-bar">
                             <form class="d-flex" role="search">
                                 <div class="NombreUser">
-                                    <thead>
+                                    <thead class="text-white">
                                         <th>
-                                        <td class="text-white">
+                                        <td>
                                             <?php echo $tipo ?> &nbsp &nbsp <br>&nbsp &nbsp
                                             <?php echo $usuario ?>
                                         </td>
@@ -72,7 +72,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     </header>
 
     <body>
-        <div class="container-fluid mt-4">
+        <h1 class="text-white">space</h1>
+        <div class="container-fluid mt-5">
             <div class="row">
                 <div class="col col-8">
                     <!-- Empieza contenedor de platos -->
