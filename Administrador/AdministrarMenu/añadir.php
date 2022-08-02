@@ -3,7 +3,7 @@ require_once("../../Database.php");
 $conn = conectardb();
 $nombreProducto =$_POST['nombreProducto'];
 $Precio=$_POST['Precio'];
-$ruta=$_POST['archivo'];
+$ruta=$_FILES['archivo']['tmp_name'];
 $usuario = $_GET['nombre'];
 $tipo = $_GET['tipoUsuario'];
 $queryPlatos = "INSERT INTO productos (nombreproducto,precio,ruta_imagen)  values ('$nombreProducto','$Precio','$ruta');";
