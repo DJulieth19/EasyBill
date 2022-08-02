@@ -74,7 +74,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <body>
         <h1 class="text-white">space</h1>
         <div class="container-fluid mt-5">
-            <div class="row justify-content-between">
+            <div class="row">
                 <div class="col col-8">
                     <!-- Empieza contenedor de platos -->
                     <section class="store ">
@@ -91,12 +91,12 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                 <?php echo $cantidadProductos['nombreproducto'] ?></h3>
                                             <img class="item-image " src="<?php echo $cantidadProductos['ruta_imagen'] ?>">
                                             <div class="row justify-content-end">
-                                                <div class="col-auto">
-                                                    <h5 class="item-price text-center">$
+                                                <div class="col">
+                                                    <h4 class="item-price text-center">$
                                                         <?php echo $cantidadProductos['precio'] ?>
-                                                    </h5>
+                                                    </h4>
                                                 </div>
-                                                <div class="col-auto">
+                                                <div class="col">
                                                     <button type="button" class="btn btn-warning btn-sm mr-2"
                                                         name="editar"
                                                         onclick="location.href='editarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
@@ -128,9 +128,9 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                 <div class="col col-3">
                     <div class="row">
                         <div class="col-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
-                            <button type="button" class="btn btn-info pb-5 rounded-circle justify-content-end">
-                                <img src="./img/AñadirPlato.png">
-                                <h4>Añadir plato</h4>
+                            <button type="button" class="btn btn-info rounded-circle">
+                                <img src="./img/plato2.png">
+                                <h5 class="text-white">Añadir plato</h5>
                             </button>
                         </div>
                         <!-- Modals -->
@@ -145,7 +145,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body p-5 pt-0">
-                                        <form action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST enctype="multipart/form-data">
+                                        <form action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST" enctype="multipart/form-data">
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3" name="nombreProducto"
                                                     placeholder="Nombre" required>
