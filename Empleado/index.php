@@ -155,7 +155,7 @@
       </div><!-- /.col-lg-4 -->
 
       <div class="col-lg-4">
-        <a href="https://example.com/" class="functions">
+        <a href="./HistorialPedidos/Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" class="functions">
           <img  src="../Imagenes/historial1.png" width="180" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
          </a> 
         <h3 class="fw-normal">Historial de pedidos</h3>
