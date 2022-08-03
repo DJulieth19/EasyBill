@@ -129,18 +129,18 @@
                         if($TipoConsulta == "Hoy"){
                             $inicioDia = date('Y-m-d 00:00:00 ', time());
                             $finDia = date('Y-m-d 23:59:59 ', time());
-                            $query = "SELECT p.nombreProducto,sum(a.cantidad) AS Cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY p.nombreProducto";
+                            $query = "SELECT p.nombreProducto,sum(a.cantidad) AS cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY p.nombreProducto";
                         }
                         if($TipoConsulta == "Semana"){
                             $inicio = date("Y-m-d");
                             $SemanaAntes = strtotime('-7 day', strtotime($inicio));
                             $SemanaAntes = date('Y-m-d', $SemanaAntes);         
-                            $query = "SELECT p.nombreProducto,sum(a.cantidad) AS Cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$SemanaAntes' AND '$inicio' GROUP BY p.nombreProducto";
+                            $query = "SELECT p.nombreProducto,sum(a.cantidad) AS cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$SemanaAntes' AND '$inicio' GROUP BY p.nombreProducto";
                         }
                         if($TipoConsulta == "Mes"){
                             $inicio = date("Y-m-01");
                             $fin = date("Y-m-t");
-                            $query = "SELECT p.nombreProducto,sum(a.cantidad) AS Cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$inicio' AND '$fin' GROUP BY p.nombreProducto";
+                            $query = "SELECT p.nombreProducto,sum(a.cantidad) AS cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$inicio' AND '$fin' GROUP BY p.nombreProducto";
                         }
                         
                         $consulta = pg_query($conn, $query);
@@ -162,7 +162,7 @@
                             ?>
                             <tr>
                                 <td class="col-4" scope="row"><?php echo $row['nombreproducto'] ?></td>
-                                <td class="col-2 text-center"><?php echo $row['Cantidad'] ?></td>
+                                <td class="col-2 text-center"><?php echo $row['cantidad'] ?></td>
                                 <td class="col-3 text-center"><?php echo $row['total'] ?></td>
                             </tr>
                             <?php
