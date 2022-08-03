@@ -127,7 +127,7 @@
                         require_once("../../Database.php");
                         $conn = conectardb();
                         if($TipoConsulta == "Hoy"){
-                            $inicioDia = date("Y-m-02 00:00:00");
+                            $inicioDia = date("Y-m-d 00:00:00");
                             $finDia = date("Y-m-d 23:59:59");
                             $query = "SELECT p.nombreProducto,sum(a.cantidad) AS cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY p.nombreProducto";
                         }
