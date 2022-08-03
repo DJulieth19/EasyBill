@@ -163,7 +163,7 @@
                             <tr>
                                 <td class="col-4" scope="row"><?php echo $row['nombreproducto'] ?></td>
                                 <td class="col-2 text-center"><?php echo $row['cantidad'] ?></td>
-                                <td class="col-3 text-center"><?php echo $inicioDia ?></td>
+                                <td class="col-3 text-center"><?php echo $row['total'] ?></td>
                             </tr>
                             <?php
                               }
