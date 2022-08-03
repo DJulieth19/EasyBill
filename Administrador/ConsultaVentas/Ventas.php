@@ -197,7 +197,7 @@
                 <div class="row justify-content-md-center">
                     <form class="d-flex" role="search">
                         <h5> Total de ventas &nbsp </h5>
-                        <span class="border"><?php echo $Total ?></span>
+                        <span class="border"><?php echo $inicioDia ?></span>
                     </form>
                 </div>
             </div>
