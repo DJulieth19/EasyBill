@@ -129,7 +129,7 @@
                         if($TipoConsulta == "Hoy"){
                             $inicioDia = date('Y-m-d 00:00:00 ', time());
                             $finDia = date('Y-m-d 23:59:59 ', time());
-                            $query = "SELECT p.nombreProducto,sum(a.cantidad) AS cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY p.nombreProducto";
+                            $query = "SELECT p.nombreProducto,sum(a.cantidad) AS cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '2022-02-07 00:00:00' AND '2022-02-09 00:00:00' GROUP BY p.nombreProducto";
                         }
                         if($TipoConsulta == "Semana"){
                             $inicio = date("Y-m-d");
