@@ -74,7 +74,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <body>
         <h1 class="text-white">space</h1>
         <div class="container-fluid mt-5">
-            <div class="row">
+            <div class="row  justify-content-between">
                 <div class="col col-8">
                     <!-- Empieza contenedor de platos -->
                     <section class="store ">
