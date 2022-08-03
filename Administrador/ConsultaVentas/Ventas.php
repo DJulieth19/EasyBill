@@ -163,7 +163,7 @@
                             <tr>
                                 <td class="col-4" scope="row"><?php echo $row['nombreproducto'] ?></td>
                                 <td class="col-2 text-center"><?php echo $row['cantidad'] ?></td>
-                                <td class="col-3 text-center"><?php echo $row['total'] ?></td>
+                                <td class="col-3 text-center"><?php echo $inicioDia ?></td>
                             </tr>
                             <?php
                               }
@@ -197,7 +197,7 @@
                 <div class="row justify-content-md-center">
                     <form class="d-flex" role="search">
                         <h5> Total de ventas &nbsp </h5>
-                        <span class="border"><?php echo $inicioDia ?></span>
+                        <span class="border"><?php echo $Total ?></span>
                     </form>
                 </div>
             </div>
