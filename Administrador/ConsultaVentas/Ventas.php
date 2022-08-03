@@ -127,8 +127,8 @@
                         require_once("../../Database.php");
                         $conn = conectardb();
                         if($TipoConsulta == "Hoy"){
-                            $inicioDia = date('Y-m-d 00:00:00 ', time());
-                            $finDia = date('Y-m-d 23:59:59 ', time());
+                            $inicioDia = date('Y-m-d 00:00:00', time());
+                            $finDia = date('Y-m-d 23:59:59', time());
                             $query = "SELECT p.nombreProducto,sum(a.cantidad) AS cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '2022-02-07 00:00:00' AND '2022-02-09 00:00:00' GROUP BY p.nombreProducto";
                         }
                         if($TipoConsulta == "Semana"){
@@ -138,8 +138,8 @@
                             $query = "SELECT p.nombreProducto,sum(a.cantidad) AS cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$SemanaAntes' AND '$inicio' GROUP BY p.nombreProducto";
                         }
                         if($TipoConsulta == "Mes"){
-                            $inicio = date("Y-m-01");
-                            $fin = date("Y-m-t");
+                            $inicio = date('Y-m-01 00:00:00', time());
+                            $fin = date('Y-m-t 23:59:59', time());
                             $query = "SELECT p.nombreProducto,sum(a.cantidad) AS cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$inicio' AND '$fin' GROUP BY p.nombreProducto";
                         }
                         
