@@ -104,8 +104,13 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
         </div>
         <div class="row justify-content-end">
             <button type="button" class="btn btn-info col-2"
-                onclick="location.href='añadirUsuario.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Añadir</button>
+                onclick="location.href='añadirUsuario.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Añadir
+            </button>
+            <button onClick="imprimirPagina();">
+                Imprimir
+            </button>
         </div>
+
     </div>
 
 
@@ -115,6 +120,11 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
+    </script>
+    <script>
+        function imprimirPagina(){
+            window.print();
+        }
     </script>
 </body>
 
