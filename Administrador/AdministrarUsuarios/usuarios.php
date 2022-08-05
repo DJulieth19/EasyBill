@@ -74,7 +74,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                         <tr>
                             <th class="col text-center">ID usuario</th>
                             <th class="col text-center">Nombre de usuario</th>
-                            <th class="col text-center">Contrasenia</th>
+                            <th class="col text-center">contraseña</th>
                             <th class="col text-center">Tipo de usuario</th>
                             <th class="col text-center">Opciones</th>
                         </tr>
@@ -86,7 +86,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                         <tr>
                             <td class="col text-center"><?php echo $user['id_usuario'] ?></td>
                             <td class="col text-center"><?php echo $user['nombre_usuario'] ?></td>
-                            <td class="col text-center"><?php echo $user['contrasenia'] ?></td>
+                            <td class="col text-center"><?php echo $user['contraseña'] ?></td>
                             <td class="col text-center"><?php echo $user['tipo_usuario'] ?></td>
                             <td>
                                 <button type="button" class="btn btn-info"
