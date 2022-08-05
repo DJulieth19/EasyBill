@@ -8,7 +8,7 @@ $conn = conectardb();
 $contraseñaactual=$_POST['contraseñaactual'];
 $nuevonombre=$_POST['nuevonombre'];
 
-$queryUsuarios = "SELECT id_usuario from usuarios WHERE nombre_usuario='$usuario' AND contrasenia='$contraseñaactual' AND tipo_usuario='$tipo';";
+$queryUsuarios = "SELECT id_usuario from usuarios WHERE nombre_usuario='$usuario' AND contraseña='$contraseñaactual' AND tipo_usuario='$tipo';";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $usuario1= pg_fetch_array($consultaUsuarios);
 $id_usuario=$usuario1['id_usuario'];

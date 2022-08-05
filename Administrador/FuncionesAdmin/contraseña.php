@@ -8,12 +8,12 @@ $conn = conectardb();
 $contraseñaactual=$_POST['contraseñaactual'];
 $nuevacontraseña=$_POST['nuevacontraseña'];
 
-$queryUsuarios = "SELECT id_usuario from usuarios WHERE nombre_usuario='$usuario' AND contrasenia='$contraseñaactual' AND tipo_usuario='$tipo';";
+$queryUsuarios = "SELECT id_usuario from usuarios WHERE nombre_usuario='$usuario' AND contraseña='$contraseñaactual' AND tipo_usuario='$tipo';";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $usuario1= pg_fetch_array($consultaUsuarios);
 $id_usuario=$usuario1['id_usuario'];
 
-$queryUsuarios = "UPDATE usuarios SET contrasenia='$nuevacontraseña' WHERE id_usuario='$id_usuario';";
+$queryUsuarios = "UPDATE usuarios SET contraseña='$nuevacontraseña' WHERE id_usuario='$id_usuario';";
 $editarUsuarios = pg_query($conn, $queryUsuarios);
 ?>
 <!doctype html>
