@@ -89,7 +89,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                         <div class="item shadow mb-4">
                                             <h3 class="item-title">
                                                 <?php echo $cantidadProductos['nombreproducto'] ?></h3>
-                                            <img class="item-image" src="<?php echo $cantidadProductos['ruta_imagen'] ?>">
+                                            <img class="item-image"
+                                                src="<?php echo $cantidadProductos['ruta_imagen'] ?>">
                                             <div class="row justify-content-end  p-2">
                                                 <div class="col">
                                                     <h5 class="item-price text-center">$
@@ -128,7 +129,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                 <div class="col col-3">
                     <div class="row">
                         <div class="col-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
-                            <button type="button" class="btn btn-info rounded-circle">
+                            <button type="button" class="btn btn-info">
                                 <img src="./img/plato2.png">
                                 <h5 class="text-white">Añadir plato</h5>
                             </button>
@@ -145,7 +146,9 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body p-5 pt-0">
-                                        <form action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST" enctype="multipart/form-data">
+                                        <form
+                                            action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
+                                            method="POST" enctype="multipart/form-data">
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3" name="nombreProducto"
                                                     placeholder="Nombre" required>
@@ -173,6 +176,20 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 </div>
                             </div>
                         </div>
+                        <table class="table">
+                            <h5>Acceso Rápido</h5>
+                            <tbody>
+                                <tr>
+                                    <th>Consulta de Ventas</th>
+                                </tr>
+                                <tr>
+                                    <th>Administrar Usuarios</th>
+                                </tr>
+                                <tr>
+                                    <th>Reportes</th>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
