@@ -128,10 +128,11 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                 </div>
                 <div class="col col-3">
                     <div class="row">
-                        <div class="col-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
+                        <div class="col functions" data-bs-toggle="modal" data-bs-target="#añadir">
                             <button type="button" class="btn btn-info">
-                                <img src="./img/plato2.png">
                                 <h5 class="text-white">Añadir plato</h5>
+                                <img src="./img/plato2.png">
+
                             </button>
                         </div>
                         <!-- Modals -->
@@ -176,26 +177,29 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 </div>
                             </div>
                         </div>
-                        <table class="table table-hover table-striped table-responsive p-4">
-                            <h5 class="mt-4">Acceso Rápido</h5>
-                            <tbody>
-                                <tr>
-                                    <th>Consulta de Ventas</th>
-                                </tr>
-                                <tr>
-                                    <th>Administrar Usuarios</th>
-                                </tr>
-                                <tr>
-                                    <th>Reportes</th>
-                                </tr>
-                                <tr>
-                                    <th>Consulta de Actividad</th>
-                                </tr>    
-                                <tr>
-                                    <th>Historial de pedidos</th>
-                                </tr>                             
-                            </tbody>
-                        </table>
+                        <div class="col-md-4">
+                            <table class="table table-hover table-striped table-responsive p-4">
+                                <h5 class="mt-4">Acceso Rápido</h5>
+                                <tbody>
+                                    <tr>
+                                        <th>Consulta de Ventas</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Administrar Usuarios</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Reportes</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Consulta de Actividad</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Historial de pedidos</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
                 </div>
             </div>
