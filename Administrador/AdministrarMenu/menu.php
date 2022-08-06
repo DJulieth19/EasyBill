@@ -176,7 +176,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 </div>
                             </div>
                         </div>
-                        <div class="col tablaAcceso">
+                        <div class="col" width=70%>
                             <table class="table table-hover table-striped table-responsive p-4">
                                 <h5 class="mt-4 text-center">Acceso Rápido</h5>
                                 <tbody>
