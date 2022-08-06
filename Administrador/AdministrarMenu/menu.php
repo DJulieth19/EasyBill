@@ -127,7 +127,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 
                 </div>
                 <div class="col col-3">
-                    <div class="row">
+                    <div class="row-cols-2">
                         <div class="col functions" data-bs-toggle="modal" data-bs-target="#añadir">
                             <button type="button" class="btn btn-info">
                                 <h5 class="text-white">Añadir plato</h5>
@@ -177,7 +177,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col">
                             <table class="table table-hover table-striped table-responsive p-4">
                                 <h5 class="mt-4 text-center">Acceso Rápido</h5>
                                 <tbody>
