@@ -176,8 +176,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 </div>
                             </div>
                         </div>
-                        <table class="table">
-                            <h5>Acceso Rápido</h5>
+                        <table class="table table-hover table-striped">
+                            <h5 class="mt-4">Acceso Rápido</h5>
                             <tbody>
                                 <tr>
                                     <th>Consulta de Ventas</th>
