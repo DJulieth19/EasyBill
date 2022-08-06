@@ -176,7 +176,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 </div>
                             </div>
                         </div>
-                        <table class="table table-hover table-striped">
+                        <table class="table table-hover table-striped table-responsive p-4">
                             <h5 class="mt-4">Acceso Rápido</h5>
                             <tbody>
                                 <tr>
@@ -188,6 +188,12 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 <tr>
                                     <th>Reportes</th>
                                 </tr>
+                                <tr>
+                                    <th>Consulta de Actividad</th>
+                                </tr>    
+                                <tr>
+                                    <th>Historial de pedidos</th>
+                                </tr>                             
                             </tbody>
                         </table>
                     </div>
