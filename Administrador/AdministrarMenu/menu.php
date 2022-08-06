@@ -96,7 +96,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                         <?php echo $cantidadProductos['precio'] ?>
                                                     </h5>
                                                 </div>
-                                                <div class="col">
+                                                <div class="col p-2">
                                                     <button type="button" class="btn btn-warning btn-sm mr-2"
                                                         name="editar"
                                                         onclick="location.href='editarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
