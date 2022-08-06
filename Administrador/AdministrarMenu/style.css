@@ -26,6 +26,9 @@
   width: 110px;
   margin-left: 9%;
 }
+.Acceso{
+  width: 70%;
+}
 
 .item-details {
   display: flex;
