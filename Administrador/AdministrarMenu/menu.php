@@ -144,7 +144,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                 </div>
                 <div class="col col-3">
                     <div class="row">
-                        <div class="col functions" data-bs-toggle="modal" data-bs-target="#añadir">
+                        <div class="col ms-4 functions" data-bs-toggle="modal" data-bs-target="#añadir">
                             <button type="button" class="btn btn-info">
                                 <h5 class="text-white">Añadir plato</h5>
                                 <img src="./img/plato2.png">
