@@ -193,11 +193,15 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                             </div>
                         </div>
                         <div class="Acceso">
-                            <table class="table table-hover table-striped table-responsive p-4">
+                            <table class="table table-hover border border-primary table-striped table-responsive p-4 ">
                                 <h5 class="mt-4 text-center">Acceso Rápido</h5>
                                 <tbody>
                                     <tr>
-                                        <th>Consulta de Ventas</th>
+                                        <th>
+                                            <a href="../Administrador/AdministrarUsuarios/usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            Consulta de Ventas
+                                        </a>
+                                        </th>
                                     </tr>
                                     <tr>
                                         <th>Administrar Usuarios</th>
