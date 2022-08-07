@@ -88,12 +88,14 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                                     <div class="col-md-8 ms-3">
                                                         <h5 class="text-center">
                                                                Contraseña: <?php echo $user['contraseña'] ?>
-                                                                Tipo: <?php echo $user['tipo_usuario'] ?>
+                                                        </h5>
+                                                        <h5 class="text-center">
+                                                               Tipo: <?php echo $user['tipo_usuario'] ?>
                                                         </h5>
                                                     </div>
                                                 <div class="d-flex ms-3 justify-content-center">
                                                     <div class="col">
-                                                    <button type="button" class="btn btn-info"
+                                                    <button type="button" class="btn btn-warning"
                                                       onclick="location.href='editarUsuario.php?id_usuario=<?php echo $user['id_usuario']?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
                                                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                                 fill="currentColor" class="bi bi-pencil-square"
