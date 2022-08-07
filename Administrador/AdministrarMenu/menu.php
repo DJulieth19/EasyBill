@@ -98,7 +98,6 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                         </h5>
                                                     </div>
                                                 <div class="d-flex justify-content-center">
-
                                                     <div class="col">
                                                         <button type="button" class="btn btn-warning btn-sm mr-2"
                                                             name="editar"
@@ -114,9 +113,9 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                         </button>
                                                     </div>
                                                     <div class="col">
-                                                        <button type="button" class="btn btn-warning btn-sm mr-2"
+                                                        <button type="button" class="btn btn-danger btn-sm mr-2"
                                                             name="editar"
-                                                            onclick="location.href='editarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
+                                                            onclick="location.href='borrarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                                 fill="currentColor" class="bi bi-pencil-square"
                                                                 viewBox="0 0 16 16">
