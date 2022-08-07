@@ -131,14 +131,14 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
              </div>
              <div class="col col-3">
                     <div class="row">
-                    <button type="button" class="btn btn-info col-md-6 ms-2"
-                        onclick="location.href='añadirUsuario.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
-                        <h5 class="text-white">Añadir usuario</h5>
-                        <img src="./img/addUser.png">
-                    </button>
-                    <button onClick="imprimirPagina();" class="col-md-4">
-                        Imprimir
-                    </button>
+                        <button type="button" class="btn btn-info col-md-6 ms-2"
+                            onclick="location.href='añadirUsuario.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
+                            <h5 class="text-white">Añadir usuario</h5>
+                            <img src="./img/addUser.png">
+                        </button>
+                        <!-- <button onClick="imprimirPagina();" class="col-md-4">
+                            Imprimir
+                        </button>-->
                         <div class="Acceso">
                             <table class="table table-hover border border-primary table-striped table-responsive p-4 ">
                                 <h5 class="mt-4 text-center">Acceso Rápido</h5>
