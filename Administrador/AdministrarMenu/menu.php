@@ -91,8 +91,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                 <?php echo $cantidadProductos['nombreproducto'] ?></h3>
                                             <img class="item-image me-3"
                                                 src="<?php echo $cantidadProductos['ruta_imagen'] ?>">
-                                            <div class="row p-2">
-                                                    <div class="col-md-8 ms-3">
+                                            <div class="p-2">
+                                                    <div class="col-md-8">
                                                         <h5 class="item-price text-center">$
                                                             <?php echo $cantidadProductos['precio'] ?>
                                                         </h5>
@@ -129,6 +129,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div><!-- /.col-lg-4 -->
                                     <?php
                             }
