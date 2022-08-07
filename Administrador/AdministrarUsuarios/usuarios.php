@@ -79,13 +79,13 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                 <?php
                                 while($user=pg_fetch_array($consultaUsuarios)){
                                  ?>
-                                    <div class="col-lg-2">
+                                    <div class="col-lg-3">
                                         <div class="item shadow mb-4">
                                             <h3 class="item-title"><?php echo $user['nombre_usuario'] ?></h3>
-                                            <img class="item-image me-3"
+                                            <img class="item-image me-4"
                                                 src="<?php echo $user['ruta_imagen'] ?>">
                                             <div class="p-2">
-                                                    <div class="col-md-8 ms-3">
+                                                    <div class="col-md-8 ms-4">
                                                         <h5 class="text-center">
                                                                Contraseña: <?php echo $user['contraseña'] ?>
                                                         </h5>
@@ -93,7 +93,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                                                <?php echo $user['tipo_usuario'] ?>
                                                         </h5>
                                                     </div>
-                                                <div class="d-flex ms-3 justify-content-center">
+                                                <div class="d-flex ms-4 justify-content-center">
                                                     <div class="col">
                                                     <button type="button" class="btn btn-warning"
                                                       onclick="location.href='editarUsuario.php?id_usuario=<?php echo $user['id_usuario']?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
