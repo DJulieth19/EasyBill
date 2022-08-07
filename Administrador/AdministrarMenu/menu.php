@@ -198,7 +198,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 <tbody>
                                     <tr>
                                         <th>
-                                            <a href="../Administrador/AdministrarUsuarios/usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            <a href="./Administrador/AdministrarUsuarios/usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
                                             Consulta de Ventas
                                         </a>
                                         </th>
