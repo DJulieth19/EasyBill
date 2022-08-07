@@ -198,7 +198,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 <tbody>
                                     <tr>
                                         <th>
-                                            <a href="../ConsultaVentas/ventas.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            <a href="../ConsultaVentas/Ventas.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
                                             Consulta de Ventas
                                             </a>
                                         </th>
@@ -219,14 +219,14 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                     </tr>
                                     <tr>
                                         <th>
-                                            <a href="../ConsultaActividad/actividad.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            <a href="../ConsultaActividad/Actividad.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
                                             Consulta de Actividad
                                             </a>
                                         </th>
                                     </tr>
                                     <tr>
                                          <th>
-                                            <a href="../HistorialPedidos/pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            <a href="../HistorialPedidos/Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
                                             Historial de pedidos
                                             </a>
                                         </th>
