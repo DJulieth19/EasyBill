@@ -92,12 +92,13 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                             <img class="item-image"
                                                 src="<?php echo $cantidadProductos['ruta_imagen'] ?>">
                                             <div class="row justify-content-end p-2">
-                                                <div class="d-flex justify-content-center">
-                                                    <div class="col-md-8">
+                                            <div class="col-md-8">
                                                         <h5 class="item-price text-center">$
                                                             <?php echo $cantidadProductos['precio'] ?>
                                                         </h5>
                                                     </div>
+                                                <div class="d-flex justify-content-center">
+
                                                     <div class="col">
                                                         <button type="button" class="btn btn-warning btn-sm mr-2"
                                                             name="editar"
