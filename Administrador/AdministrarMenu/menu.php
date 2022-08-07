@@ -198,22 +198,38 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 <tbody>
                                     <tr>
                                         <th>
-                                            <a href="../AdministrarUsuarios/usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            <a href="../ConsultaVentas/ventas.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
                                             Consulta de Ventas
-                                        </a>
+                                            </a>
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th>Administrar Usuarios</th>
+                                        <th>
+                                            <a href="../AdministrarUsuarios/usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            Administrar Usuarios
+                                            </a>
+                                        </th>
                                     </tr>
                                     <tr>
-                                        <th>Reportes</th>
+                                        <th>
+                                            <a href="../AdministrarUsuarios/usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            Reportes Administrativos
+                                            </a>
+                                        </th>
                                     </tr>
                                     <tr>
-                                        <th>Consulta de Actividad</th>
+                                        <th>
+                                            <a href="../ConsultaActividad/actividad.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            Consulta de Actividad
+                                            </a>
+                                        </th>
                                     </tr>
                                     <tr>
-                                        <th>Historial de pedidos</th>
+                                         <th>
+                                            <a href="../HistorialPedidos/pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            Historial de pedidos
+                                            </a>
+                                        </th>
                                     </tr>
                                 </tbody>
                             </table>
