@@ -79,7 +79,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                 <?php
                                 while($user=pg_fetch_array($consultaUsuarios)){
                                  ?>
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-2">
                                         <div class="item shadow mb-4">
                                             <h3 class="item-title"><?php echo $user['nombre_usuario'] ?></h3>
                                             <img class="item-image me-3"
@@ -90,7 +90,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                                                Contraseña: <?php echo $user['contraseña'] ?>
                                                         </h5>
                                                         <h5 class="text-center">
-                                                               Tipo: <?php echo $user['tipo_usuario'] ?>
+                                                               <?php echo $user['tipo_usuario'] ?>
                                                         </h5>
                                                     </div>
                                                 <div class="d-flex ms-3 justify-content-center">
