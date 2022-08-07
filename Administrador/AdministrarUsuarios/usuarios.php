@@ -19,7 +19,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
     <link href="../styles.css" rel="stylesheet">
 </head>
 
-<body>
+
     <header>
         <?php
                 $usuario = $_GET['nombre'];
@@ -66,51 +66,112 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
         </nav>
     </header>
 
-    <div class="container mt-4">
-        <div class="row justify-content-md-center">
-            <div class="table-responsive table-striped table-bordered">
-                <table class="table table-hover">
-                    <thead class="table-primary">
-                        <tr>
-                            <th class="col text-center">ID usuario</th>
-                            <th class="col text-center">Nombre de usuario</th>
-                            <th class="col text-center">contraseña</th>
-                            <th class="col text-center">Tipo de usuario</th>
-                            <th class="col text-center">Opciones</th>
-                        </tr>
-                    </thead>
-                    <?php
-                            while($user=pg_fetch_array($consultaUsuarios)){
-                        ?>
-                    <tbody>
-                        <tr>
-                            <td class="col text-center"><?php echo $user['id_usuario'] ?></td>
-                            <td class="col text-center"><?php echo $user['nombre_usuario'] ?></td>
-                            <td class="col text-center"><?php echo $user['contraseña'] ?></td>
-                            <td class="col text-center"><?php echo $user['tipo_usuario'] ?></td>
-                            <td>
-                                <button type="button" class="btn btn-info"
-                                    onclick="location.href='borrarUsuario.php?id_usuario=<?php echo $user['id_usuario']?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Borrar</button>
-                                <button type="button" class="btn btn-info"
-                                    onclick="location.href='editarUsuario.php?id_usuario=<?php echo $user['id_usuario']?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Editar</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <?php 
-                            }
-                        ?>
-                </table>
+    <body>
+    <h1 class="text-white">space</h1>
+    <div class="container-fluid mt-5">
+        <div class="row  justify-content-between">
+             <div class="col col-8">
+                <!-- Empieza contenedor de usuarios -->
+                     <div class="container">
+                        <div class="items">
+                            <!-- Contenedor usuarios -->
+                            <div class="row justify-content-center">
+                                <?php
+                                while($user=pg_fetch_array($consultaUsuarios)){
+                                 ?>
+                                    <div class="col-lg-3">
+                                        <div class="item shadow mb-4">
+                                            <h3 class="item-title"><?php echo $user['nombre_usuario'] ?></h3>
+                                            <img class="item-image me-3"
+                                                src="<?php echo $user['ruta_imagen'] ?>">
+                                            <div class="p-2">
+                                                    <div class="col-md-8 ms-3">
+                                                        <h5 class="text-center">$
+                                                            <?php echo $user['contraseña'] ?>
+                                                            <?php echo $user['tipo_usuario'] ?>
+                                                        </h5>
+                                                    </div>
+                                                <div class="d-flex ms-3 justify-content-center">
+                                                    <div class="col">
+                                                    <button type="button" class="btn btn-info"
+                                                        onclick="location.href='borrarUsuario.php?id_usuario=<?php echo $user['id_usuario']?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Borrar
+                                                    </button>
+                          
+                                                    </div>
+                                                    <div class="col">
+                                                    <button type="button" class="btn btn-info"
+                                                      onclick="location.href='editarUsuario.php?id_usuario=<?php echo $user['id_usuario']?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Editar
+                                                    </button>
+                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div><!-- /.col-lg-3 -->
+                                    <?php
+                                    }
+                                    ?>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+             <div class="col col-3">
+                    <div class="row">
+                    <button type="button" class="btn btn-info col-2"
+                        onclick="location.href='añadirUsuario.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Añadir
+                    </button>
+                    <button onClick="imprimirPagina();">
+                        Imprimir
+                    </button>
+                        <div class="Acceso">
+                            <table class="table table-hover border border-primary table-striped table-responsive p-4 ">
+                                <h5 class="mt-4 text-center">Acceso Rápido</h5>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <a href="../ConsultaVentas/Ventas.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            Consulta de Ventas
+                                            </a>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <a href="../AdministrarUsuarios/usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            Administrar Usuarios
+                                            </a>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <a href="../AdministrarUsuarios/usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            Reportes Administrativos
+                                            </a>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <a href="../ConsultaActividad/Actividad.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            Consulta de Actividad
+                                            </a>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                         <th>
+                                            <a href="../HistorialPedidos/Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            Historial de pedidos
+                                            </a>
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+        
             </div>
         </div>
-        <div class="row justify-content-end">
-            <button type="button" class="btn btn-info col-2"
-                onclick="location.href='añadirUsuario.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">Añadir
-            </button>
-            <button onClick="imprimirPagina();">
-                Imprimir
-            </button>
-        </div>
-
     </div>
 
 
