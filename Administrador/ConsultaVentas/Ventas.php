@@ -176,18 +176,18 @@
                 if($TipoConsulta == "Hoy"){
                     $inicioDia = date('Y-m-d 00:00:00 ', time());
                     $finDia = date('Y-m-d 23:59:59 ', time());
-                    $query = "SELECT sum(v.valorVenta) from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta and v.fecha BETWEEN '$inicioDia' AND '$finDia'";
+                    $query = "SELECT sum(c.total) from (select p.nombreProducto,sum(a.cantidad) AS Cantidad,sum(a.total_producto) AS total from Productos p,asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY p.nombreProducto) c";
                 }
                 if($TipoConsulta == "Semana"){
                     $inicio = date("Y-m-d");
                     $SemanaAntes = strtotime('-7 day', strtotime($inicio));
                     $SemanaAntes = date('Y-m-d', $SemanaAntes);         
-                    $query = "SELECT sum(v.valorVenta) from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta and v.fecha BETWEEN '$SemanaAntes' AND '$inicio'";
+                    $query = "SELECT sum(c.total) from (select p.nombreProducto,sum(a.cantidad) AS Cantidad,sum(a.total_producto) AS total from Productos p,asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$SemanaAntes' AND '$inicio' GROUP BY p.nombreProducto) c";
                 }
                 if($TipoConsulta == "Mes"){
                     $inicio = date("Y-m-01");
                     $fin = date("Y-m-t");
-                    $query = "SELECT sum(v.valorVenta) from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta and v.fecha BETWEEN '$inicio' AND '$fin'";
+                    $query = "SELECT sum(c.total) from (select p.nombreProducto,sum(a.cantidad) AS Cantidad,sum(a.total_producto) AS total from Productos p,asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$inicio' AND '$fin' GROUP BY p.nombreProducto) c";
                 }
               $consultaTotal = pg_query($conn, $query);
               $suma= pg_fetch_array($consultaTotal);
