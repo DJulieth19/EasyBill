@@ -152,15 +152,29 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                             method="POST" enctype="multipart/form-data">
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3" name="nombreProducto"
-                                                    placeholder="Nombre" required>
+                                                     required>
                                                 <label for="Nombre">Nombre del plato</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input type="number" min="50" class="form-control rounded-3"
-                                                    name="Precio" placeholder="Precio en pesos" required maxlength="10"
-                                                    minlength="8">
-                                                <label>Precio $ </label>
+                                                <input type="text" class="form-control rounded-3"
+                                                    name="contraseña"  required maxlength="10"
+                                                    minlength="4">
+                                                <label>Contraseña </label>
                                             </div>
+                                            <form action="../../form-result.php" target="_blank">
+                                              <p>
+
+                                                Tipo de empleado:
+
+                                                <select name="tipo">
+
+                                                  <option>Administrador</option>
+
+                                                  <option>Empleado</option>
+                                                </select>
+
+                                              </p>
+                                            </form>
                                             <div class="form-group">
                                                 <input type="file" id="archivo" name="archivo" class="form-control-file"
                                                     accept="image/*">
