@@ -36,6 +36,9 @@ if($tipoU == "Administrador"){
 	}elseif($tipoU == "Empleado" && $estado == "Abierto"){
 		header("location: ./Empleado/index.php?nombre=$nombreU&tipoUsuario=$tipoU&id_usuario=$id_usuario");
 		exit();       
+    }else{
+		header("location: ./Empleado/apertura.php?nombre=$nombreU&tipoUsuario=$tipoU&id_usuario=$id_usuario");
+		exit();       
     }
 }
 
