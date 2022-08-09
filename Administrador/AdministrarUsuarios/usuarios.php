@@ -152,12 +152,12 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                             method="POST" enctype="multipart/form-data">
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3" name="nombreProducto"
-                                                     required>
+                                                     required placeholder="Plato">
                                                 <label for="Nombre">Nombre del plato</label>
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3"
-                                                    name="contraseña"  required maxlength="10"
+                                                    name="contraseña" placeholder="contraseña" required maxlength="10"
                                                     minlength="4">
                                                 <label>Contraseña </label>
                                             </div>
