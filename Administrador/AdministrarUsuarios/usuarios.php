@@ -131,11 +131,52 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
              </div>
              <div class="col col-3">
                     <div class="row">
-                        <button type="button" class="btn btn-info col-md-6 ms-4"
-                            onclick="location.href='añadirUsuario.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
+                        <button type="button" class="btn btn-info col-md-6 ms-4" data-bs-toggle="modal" data-bs-target="#añadir">
                             <h5 class="text-white">Añadir usuario</h5>
                             <img src="./img/addUser.png">
                         </button>
+                        <!-- Modals -->
+                        <div class="modal py-5" tabindex="-1" id="añadir">
+                            <div class="modal-dialog">
+                                <div class="modal-content rounded-4 ">
+                                    <div class="modal-header p-5 pb-4 border-bottom-0">
+                                        <!-- <h5 class="modal-AÑADIR"</h5> -->
+                                        <h3 class="text-white">espacio</h3>
+                                        <h2 class="fw-bold mb-0">Añadir plato</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body p-5 pt-0">
+                                        <form
+                                            action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
+                                            method="POST" enctype="multipart/form-data">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" name="nombreProducto"
+                                                    placeholder="Nombre" required>
+                                                <label for="Nombre">Nombre del plato</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="number" min="50" class="form-control rounded-3"
+                                                    name="Precio" placeholder="Precio en pesos" required maxlength="10"
+                                                    minlength="8">
+                                                <label>Precio $ </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="file" id="archivo" name="archivo" class="form-control-file"
+                                                    accept="image/*">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
+                                                    type="submit">Guardar</button>
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Cerrar</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- <button onClick="imprimirPagina();" class="col-md-4">
                             Imprimir
                         </button>-->
