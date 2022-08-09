@@ -77,21 +77,31 @@
             <div class="row justify-content-md-center">
                 <div class="table-responsive table-striped table-bordered">
                     <table class="table table-hover">
+                    <?php
+                        require_once("../../Database.php");
+                        $conn = conectardb();
+                        $query = "SELECT *from eventos";                     
+                        $consulta = pg_query($conn, $query);
+                        ?>
                         <thead class="table-primary">
                             <tr>
-                                <th class="col-4 text-center">Usuario</th>
                                 <th class="col-2 text-center">Campo</th>
                                 <th class="col-3 text-center">Comando</th>
                                 <th class="col-4 text-center">Fecha y hora</th>
                             </tr>
                         </thead>
                         <tbody>
+                        <?php
+                              while($row = pg_fetch_array($consulta)){
+                            ?>
                             <tr>
-                                <td class="col-4" scope="row">user</td>
-                                <td class="col-2">Nissan</td>
-                                <td class="col-3">Qasqai</td>
-                                <td class="col-4">2017</td>
+                                <td class="col-2"><?php echo $row['nomb_tabla'] ?></td>
+                                <td class="col-3"><?php echo $row['comando'] ?></td>
+                                <td class="col-4"><?php echo $row['fechahora'] ?></td>
                             </tr>
+                            <?php
+                              }
+                            ?>
                         </tbody>
                     </table>
                 </div>
