@@ -160,25 +160,25 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                                     name="contraseña" placeholder="contraseña" required maxlength="10"
                                                     minlength="4">
                                                 <label>Contraseña </label>
-                                            </div>
-                                            <label for="username" class="form-label">Tipo de usuario</label>
+                                        <label for="username" class="form-label">Tipo de usuario</label>
                                             <select type="text" class="form-control" value="Empleado"  name="tipo_usuario" placeholder="" required>
                                                 <option value="Empleado">Empleado</option>
-                                                <option value="Administrador">Administrador</option>
                                             </select>	
                                         </div>
-                                        <div class="mb-1">
+                                        <div class="col-md-8">
                                             <label for="pregunta" class="form-label">¿Cuál es la ciudad de nacimiento?</label>
                                             <input type="number" class="form-control" name="ciudad" placeholder="" required>						
                                         </div>
-                                        <div class="mb-1">
+                                        <div class="col-md-8">
                                             <label for="pregunta" class="form-label">Nombre de un familiar</label>
                                             <input type="date" class="form-control" name="nombreFamiliar" value="2022-01-01" placeholder="" required>	
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="col-md-8">
                                             <label for="pregunta" class="form-label">Comida favorita</label>
                                             <input type="number" class="form-control" name="comida" placeholder="" required>	
                                         </div>
+                                            </div>
+
                                             <div class="form-group">
                                                 <input type="file" id="archivo" name="archivo" class="form-control-file"
                                                     accept="image/*">
