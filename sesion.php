@@ -4,6 +4,9 @@
 // Conexion con la base de datos
 require_once("Database.php"); 
 $conn = conectardb();
+//se traen los datos de la fecha actual
+date_default_timezone_set('America/Bogota');
+$fecha=(date('d-m-y'));
 //trae los datos que fueron ingresados en el formulario anterior
 $usuario = $_POST['usuario'];			
 $contraseña = $_POST['contraseña'];
@@ -13,15 +16,27 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $tipo= pg_fetch_array($consultaUsuarios);
 $tipoU=$tipo['tipo_usuario'];
 $nombreU=$tipo['nombre_usuario'];
+$id_usuario=$tipo['id_usuario'];
+
+//se verifica apertura de caja
+
+$queryCaja = "SELECT * from caja WHERE id_usuario = '$id_usuario' AND fecha = '$fecha'";
+$consultaCaja = pg_query($conn, $queryCaja);
+$caja= pg_fetch_array($consultaCaja);
+$estado=$caja['estado'];
+
 //se redirige a home administrador o home empleado segun sea el caso
 if($tipoU == "Administrador"){
 	header("location: ./Administrador/index.php?nombre=$nombreU&tipoUsuario=$tipoU");
 	exit();
 }else {
-	if($tipoU == "Empleado"){
-		header("location: ./Empleado/index.php?nombre=$nombreU&tipoUsuario=$tipoU");
+	if($tipoU == "Empleado" && $estado == "Cerrado"){
+		header("location: ./Empleado/apertura.php?nombre=$nombreU&tipoUsuario=$tipoU&id_usuario=$id_usuario");
 		exit();
-	}
+	}elseif($tipoU == "Empleado" && $estado == "Abierto"){
+		header("location: ./Empleado/index.php?nombre=$nombreU&tipoUsuario=$tipoU&id_usuario=$id_usuario");
+		exit();       
+    }
 }
 
 ?>
