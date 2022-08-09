@@ -161,32 +161,26 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                                     minlength="4">
                                                 <label>Contraseña </label>
                                             </div>
-                                            <div class="form-floating mb-3">
-                                                 <label for="username" class="form-label">Tipo de usuario</label>
-                                                    <select type="hiden" class="form-control" value="Empleado"  name="tipo_usuario" placeholder="" required>
-                                                        <option value="Empleado"> </option>
-                                                    </select>	
-                                                </div>
                                                 <div class="mb-1">
                                                     <label for="pregunta" class="form-label">¿Cuál es la ciudad de nacimiento?</label>
                                                     <input type="text" class="form-control" name="ciudad" placeholder="" required>						
                                                 </div>
                                                 <div class="mb-1">
                                                     <label for="pregunta" class="form-label">Nombre de un familiar</label>
-                                                    <input type="text" class="form-control" name="nombreFamiliar" value="2022-01-01" placeholder="" required>	
+                                                    <input type="text" class="form-control" name="nombreFamiliar" placeholder="" required>	
                                                 </div>
                                                 <div class="mb-1">
                                                     <label for="pregunta" class="form-label">Comida favorita</label>
                                                     <input type="text" class="form-control" name="comida" placeholder="" required>	
                                                 </div>
-                                            </div>
-                                        <div class="form-floating mb-3">
-                                                                                        <div class="form-group">
+                                             <div class="mb-1">
+                                                <div class="form-group">
                                                 <input type="file" id="archivo" name="archivo" class="form-control-file"
                                                     accept="image/*">
+                                                </div>
                                             </div>
                                             </div>
-
+                                        
                                             <div class="modal-footer">
                                                 <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
                                                     type="submit">Guardar</button>
