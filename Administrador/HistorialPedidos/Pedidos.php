@@ -134,18 +134,18 @@
                         if($TipoConsulta == "Hoy"){
                             $inicioDia = date('Y-m-d 00:00:00 ', time());
                             $finDia = date('Y-m-d 23:59:59 ', time());
-                            $query = "SELECT u.nombre_usuario,v.nombreCliente,v.valorVenta,v.fecha from usuarios u, ventas v where v.id_usuario=u.id_usuario and v.fecha BETWEEN '$inicioDia' AND '$finDia'";
+                            $query = "SELECT u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha";
                         }
                         if($TipoConsulta == "Semana"){
                             $inicio = date("Y-m-d");
                             $SemanaAntes = strtotime('-7 day', strtotime($inicio));
                             $SemanaAntes = date('Y-m-d', $SemanaAntes);         
-                            $query = "SELECT u.nombre_usuario,v.nombreCliente,v.valorVenta,v.fecha from usuarios u, ventas v where v.id_usuario=u.id_usuario and v.fecha BETWEEN '$SemanaAntes' AND '$inicio'";
+                            $query = "SELECT u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and v.Fecha BETWEEN '$SemanaAntes' AND '$inicio' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha";
                         }
                         if($TipoConsulta == "Mes"){
                             $inicio = date("Y-m-01");
                             $fin = date("Y-m-t");
-                            $query = "SELECT u.nombre_usuario,v.nombreCliente,v.valorVenta,v.fecha from usuarios u, ventas v where v.id_usuario=u.id_usuario and v.fecha BETWEEN '$inicio' AND '$fin'";
+                            $query = "SELECT u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and v.Fecha BETWEEN '$inicio' AND '$fin' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha";
                         }
                         $consulta = pg_query($conn, $query);
                         ?>
@@ -168,7 +168,7 @@
                                             <tr>
                                                 <td class="col-4" scope="row"><?php echo $row['nombre_usuario'] ?></td>
                                                 <td class="col-2 text-center"><?php echo $row['nombrecliente'] ?></td>
-                                                <td class="col-3 text-center"><?php echo $row['valorventa'] ?></td>
+                                                <td class="col-3 text-center"><?php echo $row['total'] ?></td>
                                                 <td class="col-3 text-center"><?php echo $row['fecha'] ?></td>
                                             </tr>
                                             <?php
@@ -179,12 +179,28 @@
                                 </div>
                             </div>
                             <?php
-              $query = 'SELECT sum(v.valorVenta) from productos p, asigna a, ventas v where p.codProducto=a.codProducto and v.idVenta=a.idVenta';
-              $consultaTotal = pg_query($conn, $query);
-              $suma= pg_fetch_array($consultaTotal);
-              $Total = $suma['sum']
+                            if($TipoConsulta == "Hoy"){
+                                $inicioDia = date('Y-m-d 00:00:00 ', time());
+                                $finDia = date('Y-m-d 23:59:59 ', time());
+                                $query = "SELECT sum(c.total) from (select u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha) c";
+                            }
+                            if($TipoConsulta == "Semana"){
+                                $inicio = date("Y-m-d");
+                                $SemanaAntes = strtotime('-7 day', strtotime($inicio));
+                                $SemanaAntes = date('Y-m-d', $SemanaAntes);         
+                                $query = "SELECT sum(c.total) from (select u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and v.Fecha BETWEEN '$SemanaAntes' AND '$inicio' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha) c";
+                            }
+                            if($TipoConsulta == "Mes"){
+                                $inicio = date("Y-m-01");
+                                $fin = date("Y-m-t");
+                                $query = "SELECT sum(c.total) from (select u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and v.Fecha BETWEEN '$inicio' AND '$fin' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha) c";
+                            }
+                            $consulta = pg_query($conn, $query);          
+                            $consultaTotal = pg_query($conn, $query);
+                            $suma= pg_fetch_array($consultaTotal);
+                            $Total = $suma['sum']
             ?>
-
+            
 
                             <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
     </body>
