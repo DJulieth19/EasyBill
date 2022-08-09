@@ -28,6 +28,7 @@
 </head>
 <header>
     <?php
+    date_default_timezone_set('America/Bogota');
 	$usuario = $_GET['nombre'];
     $tipo = $_GET['tipoUsuario'];
     $TipoConsulta = $_GET['consulta']; 
