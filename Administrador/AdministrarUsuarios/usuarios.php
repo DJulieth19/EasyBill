@@ -163,8 +163,8 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                             </div>
                                             <div class="form-floating mb-3">
                                                  <label for="username" class="form-label">Tipo de usuario</label>
-                                                    <select type="text" class="form-control" value="Empleado"  name="tipo_usuario" placeholder="" required>
-                                                        <option value="Empleado">Empleado</option>
+                                                    <select type="hiden" class="form-control" value="Empleado"  name="tipo_usuario" placeholder="" required>
+                                                        <option value="Empleado"> </option>
                                                     </select>	
                                                 </div>
                                                 <div class="mb-1">
@@ -180,10 +180,13 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                                     <input type="text" class="form-control" name="comida" placeholder="" required>	
                                                 </div>
                                             </div>
-                                            <div class="form-group">
+                                        <div class="form-floating mb-3">
+                                                                                        <div class="form-group">
                                                 <input type="file" id="archivo" name="archivo" class="form-control-file"
                                                     accept="image/*">
                                             </div>
+                                            </div>
+
                                             <div class="modal-footer">
                                                 <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
                                                     type="submit">Guardar</button>
