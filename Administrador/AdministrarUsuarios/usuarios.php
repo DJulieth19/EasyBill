@@ -151,9 +151,9 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                             action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
                                             method="POST" enctype="multipart/form-data">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control rounded-3" name="nombreProducto"
-                                                     required placeholder="Plato">
-                                                <label for="Nombre">Nombre del plato</label>
+                                                <input type="text" class="form-control rounded-3" name="nombre"
+                                                     required placeholder="nombre">
+                                                <label for="Nombre">Nombre del usuario</label>
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3"
@@ -161,20 +161,24 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                                     minlength="4">
                                                 <label>Contraseña </label>
                                             </div>
-                                            <form action="../../form-result.php" target="_blank">
-                                              <p>
-
-                                                Tipo de empleado:
-
-                                                <select name="tipo">
-
-                                                  <option>Administrador</option>
-
-                                                  <option>Empleado</option>
-                                                </select>
-
-                                              </p>
-                                            </form>
+                                            <label for="username" class="form-label">Tipo de usuario</label>
+                                            <select type="text" class="form-control" value="Empleado"  name="tipo_usuario" placeholder="" required>
+                                                <option value="Empleado">Empleado</option>
+                                                <option value="Administrador">Administrador</option>
+                                            </select>	
+                                        </div>
+                                        <div class="mb-1">
+                                            <label for="pregunta" class="form-label">¿Cuál es la ciudad de nacimiento?</label>
+                                            <input type="number" class="form-control" name="ciudad" placeholder="" required>						
+                                        </div>
+                                        <div class="mb-1">
+                                            <label for="pregunta" class="form-label">Nombre de un familiar</label>
+                                            <input type="date" class="form-control" name="nombreFamiliar" value="2022-01-01" placeholder="" required>	
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="pregunta" class="form-label">Comida favorita</label>
+                                            <input type="number" class="form-control" name="comida" placeholder="" required>	
+                                        </div>
                                             <div class="form-group">
                                                 <input type="file" id="archivo" name="archivo" class="form-control-file"
                                                     accept="image/*">
