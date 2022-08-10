@@ -131,7 +131,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
              </div>
              <div class="col col-3">
                     <div class="row">
-                        <button type="button" class="btn btn-info col-md-6 ms-4" data-bs-toggle="modal" data-bs-target="#añadir">
+                        <button type="button" class="btn btn-info col-md-6 ms-4" data-bs-toggle="modal" data-bs-target="#añadir" >
                             <h5 class="text-white">Añadir usuario</h5>
                             <img src="./img/addUser.png">
                         </button>
@@ -149,7 +149,8 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                     <div class="modal-body p-5 pt-0">
                                         <form
                                             action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
-                                            method="POST" enctype="multipart/form-data">
+                                            method="POST" enctype="multipart/form-data" onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false,
+                                                    timer: 1700})">
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3" name="nombre"
                                                      required placeholder="nombre">
@@ -259,6 +260,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
             window.print();
         }
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
