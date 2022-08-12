@@ -51,7 +51,7 @@ $codproducto=$usuario1['codproducto'];
 								<button type="button" onclick="location.href='./menu.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'" class="btn btn-primary">Volver</button>
 							</div>
 							<div class="col d-grid">
-								<button type="button"  onClick="location.href='./borrar.php?codproducto=<?php echo $codproducto?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'" class="btn btn-danger; Swal.fire({
+								<button type="button" class="btn btn-danger"  onclick="location.href='./borrar.php?codproducto=<?php echo $codproducto?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>' ; Swal.fire({
 									title: 'Are you sure?',
 									text: '¡No podrás revertir la eliminación!',
 									icon: 'warning',
