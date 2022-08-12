@@ -61,10 +61,10 @@ $codproducto=$usuario1['codproducto'];
 					<div class="d-grid py-2">
 						<div class="row">
 							<div class="col d-grid">
-								<button type="button" onclick="location.href='./menu.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'" class="btn btn-primary">Volver</button>
+								<button type="button" onclick="location.href='./menu.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'" class="btn btn-secondary">Volver</button>
 							</div>
 							<div class="col d-grid">
-								<button type="submit" class="btn btn-primary" onsubmit="Swal.fire({
+								<button type="submit" class="btn btn-warning" onsubmit="Swal.fire({
 									icon: 'success',
 									title: 'Editado correctamente',
 									showConfirmButton: false,
