@@ -240,7 +240,7 @@
                 </div><!-- /.col-lg-4 -->
 
                 <div class="col-lg-4">
-                    <a href="../Administrador/Reportes/reportes.php?nombre=<?php echo $usuario?>">
+                    <a href="../Administrador/Reportes/reportes.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
                         <img src="../../Imagenes/reportes.png" href=class="bd-placeholder-img rounded-circle"
                             width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
                         <title>Placeholder</title>
