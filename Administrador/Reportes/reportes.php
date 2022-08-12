@@ -77,7 +77,6 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
     <body>
         <h1 class="text-white">space</h1>
         <h1 class="text-white">space</h1>
-        <h1 class="text-white">space</h1>
         <div class="container-fluid mt-5">
             <div class="row justify-content-center">
                 <div class="col col-md-8">
