@@ -20,7 +20,7 @@ $consultaEmpleado = pg_query($conn, $queryEmpleado);
     <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -33,7 +33,7 @@ $consultaEmpleado = pg_query($conn, $queryEmpleado);
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
                 <h3>&nbsp &nbsp</h3>
-                <h3>Administrar Usuarios</h3>
+                <h3>Reportes Administrativos</h3>
                 <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
