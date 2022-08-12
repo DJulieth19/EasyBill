@@ -35,10 +35,7 @@
                 <div class="text-center d-block d-sm-none rounded-lg w-12">
                     <img src="./img/logo.png" width="100" alt="">
                 </div>
-                <h2 class="fw-bold text-center py-2">Cambiar contraseña</h2>
-
-                <!-- LOGIN -->
-
+                <h2 class="fw-bold text-center">Cambiar contraseña</h2>
                 <form action="contraseña.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST">
                     <div class="mb-1">
                         <label for="username" class="form-label">Ingrese su contraseña actual</label>
@@ -56,7 +53,13 @@
                                     class="btn btn-primary">Volver</button>
                             </div>
                             <div class="col d-grid">
-                                <button type="submit" class="btn btn-primary">Cambiar</button>
+                                <button type="submit" class="btn btn-primary" onSubmit="Swal.fire({
+									icon: 'success',
+									title: 'Editado correctamente',
+									showConfirmButton: false,
+									timer: 1500
+									})">
+                                    Cambiar</button>
                             </div>
                         </div>
                     </div>
