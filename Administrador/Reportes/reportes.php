@@ -20,7 +20,7 @@ $consultaEmpleado = pg_query($conn, $queryEmpleado);
     <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
