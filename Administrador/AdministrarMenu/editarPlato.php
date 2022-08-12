@@ -64,7 +64,7 @@ $codproducto=$usuario1['codproducto'];
 								<button type="button" onclick="location.href='./menu.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'" class="btn btn-primary">Volver</button>
 							</div>
 							<div class="col d-grid">
-								<button type="submit" class="btn btn-primary" onSubmit="Swal.fire({
+								<button type="submit" class="btn btn-primary" onsubmit="Swal.fire({
 									icon: 'success',
 									title: 'Editado correctamente',
 									showConfirmButton: false,
