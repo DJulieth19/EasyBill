@@ -1,11 +1,19 @@
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
+
 $queryPlatos = "select  p.nombreproducto, sum(a.total_producto) as total from asigna a, productos p where a.codproducto=p.codproducto group by p.nombreproducto order by total desc limit 1";
 $consultaPlatos = pg_query($conn, $queryPlatos);
 
 $queryUsuarios = "select u.nombre_usuario,c.total from usuarios u,(select u.id_usuario, sum(l.total_producto) as total from usuarios u, Venta v,asigna l where u.id_usuario=v.id_usuario and v.id_venta=l.id_venta group by u.id_usuario) c where u.id_usuario=c.id_usuario order by total desc limit 1";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
+
+$queryfecha = "select fecha,count(*) from venta group by fecha order by count desc limit 1";
+$consultaFecha = pg_query($conn, $queryfecha);
+$fecha=pg_fetch_array($consultaFecha);
+$dia_fecha=$fecha['fecha'];
+$querydia ="select dia_semana('$dia_fecha')";
+$consultaFecha2 = pg_query($conn, $querydia);
 ?>
 
 <!doctype html>
@@ -83,7 +91,8 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                     <div class="row justify-content-center ms-5">
                         <?php
                             $Productos=pg_fetch_array($consultaPlatos);
-                            $users=pg_fetch_array($consultaUsuarios)
+                            $users=pg_fetch_array($consultaUsuarios);
+                            $dia_semana=pg_fetch_array($consultaFecha2)
                         ?>
                         <div class="col">
                             <h5 class="border ms-5 rounded-pill shadow bg-warning border-warning col-md-6 text-center">
@@ -114,7 +123,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                             <div class="col-lg-3 ms-4">
                                 <div class="boton4  btn hover-zoom rounded-circle shadow btn-info mt-2">
                                     <img src="img/mejorDia.png">
-                                    <h3 class=" text-center"><?php echo $Productos['nombreproducto'] ?></h3>
+                                    <h3 class=" text-center"><?php echo $dia_semana['dia_semana'] ?></h3>
                                 </div>
                             </div>
                         </div>
