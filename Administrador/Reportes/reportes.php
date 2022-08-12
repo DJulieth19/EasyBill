@@ -81,7 +81,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                 <div class="col col-md-8">
                     <div class="row justify-content-center ms-5">
                         <?php
-                            $Productos=pg_fetch_array($consultaPlatos)
+                            $Productos=pg_fetch_array($consultaPlatos);
                             $users=pg_fetch_array($consultaUsuarios)
                         ?>
                         <div class="col">
