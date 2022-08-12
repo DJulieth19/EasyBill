@@ -4,40 +4,6 @@
 }
 
 
-/*ESTILOS DE ITEM PARA MENU*/
-
-.item:hover {
-  background-color: rgb(228, 226, 226);
-}
-.item {
-  border: 2px solid #000;
-  padding: 10px;
-  width: fit-content;
-  border-radius: 20px;
-}
-
-.item-title {
-  text-align: center;
-  font-weight: 250;
-}
-
-.item-image {
-  height: 120px;
-  width: 120px;
-  margin-left:20%;
-
-}
-
-.item-details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0px 15px;
-}
-
-.item-details > .item-price {
-  margin: 0;
-}
 
 /*BOTONES DE NAV */
 
@@ -110,3 +76,9 @@
 
 }
 
+
+
+.boton4:hover {
+  color: white;
+  background-color: rgb(24, 165, 235);
+}
