@@ -155,16 +155,16 @@
                     </div>
                     <div class="modal-body p-5 pt-0">
                         <form
-                            action="./FuncionesAdmin/contraseña.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
+                            action="./FuncionesAdmin/nombre.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
                             method="POST" enctype="multipart/form-data"
                             onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false, timer: 1700})">
-                            <p class="text-dark">Ingrese su contraseña actual</p>
+                            <p class="text-dark">Ingrese su nombre actual</p>
                             <div class="mb-3">
-                                <input type="text" class="form-control" name="contraseñaactual" placeholder="" required>
+                                <input type="text" class="form-control" name="nombreActual" placeholder="" required>
                             </div>
                             <p class="text-dark">Ingrese su nuevo nombre de usuario</p>
                             <div class="mb-3">
-                                <input type="text" class="form-control" name="nuevacontraseña" placeholder="" required>
+                                <input type="text" class="form-control" name="nuevoNombre" placeholder="" required>
                             </div>
                             <div class="modal-footer">
                                 <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
