@@ -52,13 +52,20 @@
                                             </svg>
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item"
-                                                    href="./FuncionesAdmin/cambioContraseña.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Cambiar
-                                                    contraseña</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="./FuncionesAdmin/cambioNombre.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Editar
-                                                    nombre</a></li>
-                                            <li><a class="dropdown-item" href="#">Añadir logo empresarial</a></li>
+                                            <li>
+                                                <a class="dropdown-item" data-bs-toggle="modal"
+                                                    data-bs-target="#editar_contraseña">Cambiar
+                                                    contraseña
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" data-bs-toggle="modal"
+                                                    data-bs-target="#editar_nombre">Editar nombre
+                                                </a>
+                                            </li>
+
+                                            <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                    data-bs-target="#añadir">Añadir logo empresarial</a></li>
                                         </ul>
                                     </div>
                                     <a class="btn btn-dark mt-1" href="#" role="button">
@@ -75,6 +82,101 @@
                 </div>
             </div>
         </nav>
+        <!-- Modals -->
+        <div class="modal py-5" tabindex="-1" id="añadir">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-4 ">
+                    <div class="modal-header p-5 pb-4 border-bottom-0">
+                        <!-- <h5 class="modal-AÑADIR"</h5> -->
+                        <h3 class="text-white">espacio</h3>
+                        <h2 class="fw-bold mb-0 text-dark">Añadir logo</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-5 pt-0">
+                        <form method="POST" enctype="multipart/form-data" onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false,
+                                                    timer: 1700})">
+                            <div class="form-group">
+                                <input type="file" id="archivo" name="archivo" class="form-control-file"
+                                    accept="image/*">
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
+                                    type="submit">Guardar</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal py-5" tabindex="-1" id="editar_contraseña">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-4 ">
+                    <div class="modal-header p-5 pb-4 border-bottom-0">
+                        <!-- <h5 class="modal-Editar"</h5> -->
+                        <img width="50px" height="50px" src="./img/icon.png" class="me-4">
+                        <h3 class="fw-bold mb-0 text-dark">Cambiar contraseña</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-5 pt-0">
+                        <form
+                            action="./FuncionesAdmin/contraseña.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
+                            method="POST" enctype="multipart/form-data"
+                            onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false, timer: 1700})">
+                            <p class="text-dark">Ingrese su contraseña actual</p>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="contraseñaactual" placeholder="" required>
+                            </div>
+                            <p class="text-dark">Ingrese su nueva contraseña</p>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="nuevacontraseña" placeholder="" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
+                                    type="submit">Guardar</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal py-5" tabindex="-1" id="editar_nombre">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-4 ">
+                    <div class="modal-header p-5 pb-4 border-bottom-0">
+                        <!-- <h5 class="modal-Editar nombre"</h5> -->
+                        <img width="50px" height="50px" src="./img/icon.png" class="me-4">
+                        <h3 class="fw-bold mb-0 text-center text-dark">Cambiar nombre de usuario</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-5 pt-0">
+                        <form
+                            action="./FuncionesAdmin/nombre.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
+                            method="POST" enctype="multipart/form-data"
+                            onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false, timer: 1700})">
+                            <p class="text-dark">Ingrese su nombre actual</p>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="nombreActual" placeholder="" required>
+                            </div>
+                            <p class="text-dark">Ingrese su nuevo nombre de usuario</p>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="nuevoNombre" placeholder="" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
+                                    type="submit">Guardar</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -148,14 +250,6 @@
             </button>
         </div>
 
-
-
-
-
-        <!-- Marketing messaging and featurettes
-  ================================================== -->
-        <!-- Wrap the rest of the page in another container to center all the content. -->
-
         <div class="container marketing">
 
             <!-- Funciones para administrador -->
@@ -219,7 +313,8 @@
                 </div><!-- /.col-lg-4 -->
 
                 <div class="col-lg-4">
-                    <a href="https://example.com/">
+                    <a
+                        href="../Administrador/Reportes/reportes.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
                         <img src="../../Imagenes/reportes.png" href=class="bd-placeholder-img rounded-circle"
                             width="160" height="160" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
                         <title>Placeholder</title>
@@ -230,7 +325,7 @@
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
             <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

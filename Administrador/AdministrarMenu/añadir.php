@@ -1,6 +1,6 @@
 <?php 
 require_once("../../Database.php");
-require 'vendor/autoload.php';
+require '../../APICloudinary/vendor/autoload.php';
 use Cloudinary\Configuration\Configuration;
 use Cloudinary\Api\Upload\UploadApi;
 

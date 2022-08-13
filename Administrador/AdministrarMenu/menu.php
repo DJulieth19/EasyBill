@@ -92,19 +92,19 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                             <img class="item-image me-3"
                                                 src="<?php echo $cantidadProductos['ruta_imagen'] ?>">
                                             <div class="p-2">
-                                                    <div class="col-md-8 ms-3">
-                                                        <h5 class="item-price text-center">$
-                                                            <?php echo $cantidadProductos['precio'] ?>
-                                                        </h5>
-                                                    </div>
+                                                <div class="col-md-8 ms-3">
+                                                    <h5 class="item-price text-center">$
+                                                        <?php echo $cantidadProductos['precio'] ?>
+                                                    </h5>
+                                                </div>
                                                 <div class="d-flex ms-3 justify-content-center">
                                                     <div class="col">
                                                         <button type="button" class="btn btn-warning btn-sm mr-2"
                                                             name="editar"
                                                             onclick="location.href='editarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                                fill="currentColor" class="bi bi-pencil-square"
-                                                                viewBox="0 0 16 16">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor"
+                                                                class="bi bi-pencil-square" viewBox="0 0 16 16">
                                                                 <path
                                                                     d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
                                                                 <path fill-rule="evenodd"
@@ -116,8 +116,11 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                         <button type="button" class="btn btn-danger btn-sm mr-2"
                                                             name="borrar"
                                                             onclick="location.href='borrarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                                                 <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor"
+                                                                class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
                                                             </svg>
                                                         </button>
                                                     </div>
@@ -159,7 +162,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                     <div class="modal-body p-5 pt-0">
                                         <form
                                             action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
-                                            method="POST" enctype="multipart/form-data">
+                                            method="POST" enctype="multipart/form-data" onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false,
+                                                    timer: 1700})">
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3" name="nombreProducto"
                                                     placeholder="Nombre" required>
@@ -193,36 +197,41 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 <tbody>
                                     <tr>
                                         <th>
-                                            <a href="../ConsultaVentas/Ventas.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
-                                            Consulta de Ventas
+                                            <a
+                                                href="../ConsultaVentas/Ventas.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                                Consulta de Ventas
                                             </a>
                                         </th>
                                     </tr>
                                     <tr>
                                         <th>
-                                            <a href="../AdministrarUsuarios/usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
-                                            Administrar Usuarios
+                                            <a
+                                                href="../AdministrarUsuarios/usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                                Administrar Usuarios
                                             </a>
                                         </th>
                                     </tr>
                                     <tr>
                                         <th>
-                                            <a href="../AdministrarUsuarios/usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
-                                            Reportes Administrativos
+                                            <a
+                                                href="../AdministrarUsuarios/usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                                Reportes Administrativos
                                             </a>
                                         </th>
                                     </tr>
                                     <tr>
                                         <th>
-                                            <a href="../ConsultaActividad/Actividad.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
-                                            Consulta de Actividad
+                                            <a
+                                                href="../ConsultaActividad/Actividad.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                                Consulta de Actividad
                                             </a>
                                         </th>
                                     </tr>
                                     <tr>
-                                         <th>
-                                            <a href="../HistorialPedidos/Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
-                                            Historial de pedidos
+                                        <th>
+                                            <a
+                                                href="../HistorialPedidos/Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                                Historial de pedidos
                                             </a>
                                         </th>
                                     </tr>
@@ -238,6 +247,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     </body>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

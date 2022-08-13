@@ -130,6 +130,7 @@
                     <table class="table table-hover">
                         <?php
                         require_once("../../Database.php");
+                        date_default_timezone_set('America/Bogota');
                         $conn = conectardb();
                         if($TipoConsulta == "Hoy"){
                             $inicioDia = date('Y-m-d 00:00:00 ', time());
