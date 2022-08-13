@@ -16,6 +16,7 @@ $id_usuario=$usuario1['id_usuario'];
 $queryUsuarios = "UPDATE usuarios SET nombre_usuario='$nuevonombre' WHERE id_usuario='$id_usuario';";
 $editarUsuarios = pg_query($conn, $queryUsuarios);
 $usuario = $nuevonombre;
+header("location: ../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?");
 ?>
 <!doctype html>
 <html lang="en">
