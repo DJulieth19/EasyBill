@@ -263,12 +263,12 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                         enctype="multipart/form-data" onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false,
                                                     timer: 1700})">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control rounded-3"  id="nombre" required
+                            <input type="text" class="form-control rounded-3" name="nombre"  id="nombre" required
                                 placeholder="nombre">
                             <label for="Nombre">Nombre del usuario</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control rounded-3" id="contraseña" placeholder="contraseña"
+                            <input type="text" class="form-control rounded-3" name="contraseña" id="contraseña" placeholder="contraseña"
                                 required maxlength="10" minlength="4">
                             <label>Contraseña </label>
                         </div>
