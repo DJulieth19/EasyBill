@@ -89,7 +89,7 @@
                     <div class="modal-header p-5 pb-4 border-bottom-0">
                         <!-- <h5 class="modal-AÑADIR"</h5> -->
                         <h3 class="text-white">espacio</h3>
-                        <h2 class="fw-bold mb-0">Añadir logo</h2>
+                        <h2 class="fw-bold mb-0 text-dark">Añadir logo</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body p-5 pt-0">
@@ -150,7 +150,7 @@
                     <div class="modal-header p-5 pb-4 border-bottom-0">
                         <!-- <h5 class="modal-Editar nombre"</h5> -->
                         <img width="50px" height="50px" src="./img/icon.png" class="me-4">
-                        <h3 class="fw-bold mb-0 text-dark">Cambiar nombre de usuario</h3>
+                        <h3 class="fw-bold mb-0 text-center text-dark">Cambiar nombre de usuario</h3>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body p-5 pt-0">
