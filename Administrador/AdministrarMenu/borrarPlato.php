@@ -43,7 +43,7 @@ $codproducto=$usuario1['codproducto'];
 				</div>
 				<h2 class="fw-bold text-center py-2">Borrar platos</h2>
                 <div class="mb-1">
-						<label for="email" class="form-label">¿Está seguro de eliminar el plato? <?php echo $nombre_usuario ?> </label>
+						<label for="email" class="form-label">¿Está seguro de eliminar el plato? <?php echo $usuario ?> </label>
 				</div>
                 <div class="d-grid py-2">
 						<div class="row">

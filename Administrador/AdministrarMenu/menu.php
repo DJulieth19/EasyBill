@@ -1,7 +1,7 @@
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
-$queryPlatos = "SELECT * from productos";
+$queryPlatos = "SELECT * from productos where producto_activo='true'";
 $consultaPlatos = pg_query($conn, $queryPlatos);
 ?>
 
@@ -205,7 +205,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                     </div>
                                     <div class="modal-body p-5 pt-0">
                                         <form
-                                            action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
+                                            action="editar.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
                                             method="POST" enctype="multipart/form-data" onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false,
                                                     timer: 1700})">
                                             <div class="form-floating mb-3">

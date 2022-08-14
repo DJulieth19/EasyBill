@@ -13,16 +13,23 @@ Configuration::instance([
       'secure' => true]]);
 
       $ruta=$_FILES['archivo']['tmp_name'];
-      $data = (new UploadApi())->upload($ruta);
-      $direccion = $data['secure_url'];
+      
 
 $conn = conectardb();
 $nombreProducto =$_POST['nombreProducto'];
 $Precio=$_POST['Precio'];
 $usuario = $_GET['nombre'];
 $tipo = $_GET['tipoUsuario'];
-$queryPlatos = "INSERT INTO productos (nombreproducto,precio,ruta_imagen)  values ('$nombreProducto','$Precio','$direccion');";
-$insertarPlatos = pg_query($conn, $queryPlatos);
+if($ruta == ""){
+  $queryPlatos = "INSERT INTO productos (nombreproducto,precio,ruta_imagen,producto_activo)  values ('$nombreProducto','$Precio','./img/plato.png','true');";
+  $insertarPlatos = pg_query($conn, $queryPlatos); 
+}else{
+  $data = (new UploadApi())->upload($ruta);
+  $direccion = $data['secure_url'];
+  $queryPlatos = "INSERT INTO productos (nombreproducto,precio,ruta_imagen,producto_activo)  values ('$nombreProducto','$Precio','$direccion','true');";
+  $insertarPlatos = pg_query($conn, $queryPlatos);       
+  }
+
 
 header("location: ./menu.php?nombre=$usuario&tipoUsuario=$tipo");
 exit();
