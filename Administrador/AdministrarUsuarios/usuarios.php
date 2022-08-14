@@ -90,11 +90,15 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                             <h5 class="text-center">
                                                 <?php echo $user['tipo_usuario'] ?>
                                             </h5>
+                                            <!-- Aquí está el cod de usuario oculto -->
+                                            <p hidden><?php echo $user['id_usuario'] ?></p>
+
                                         </div>
                                         <div class="d-flex ms-4 justify-content-center">
                                             <div class="col">
                                                 <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-                                                    data-bs-target="#editar" onClick='getDataRow("<?php echo $user['nombre_usuario'] ?>","<?php echo $user['contraseña'] ?>")'>
+                                                    data-bs-target="#editar"
+                                                    onClick='getDataRow("<?php echo $user['nombre_usuario'] ?>","<?php echo $user['contraseña'] ?>","<?php echo $user['id_usuario'] ?>")'>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-pencil-square"
                                                         viewBox="0 0 16 16">
@@ -263,8 +267,11 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                         enctype="multipart/form-data" onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false,
                                                     timer: 1700})">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control rounded-3"  id="nombre" required
-                                placeholder="nombre">
+                            <input  type="text" class="form-control rounded-3" id="cod_usuario" disable placeholder="codigo">
+                            <label for="cod_usuario">codigo del usuario</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-3" id="nombre" required placeholder="nombre">
                             <label for="Nombre">Nombre del usuario</label>
                         </div>
                         <div class="form-floating mb-3">
@@ -309,18 +316,19 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
         window.print();
     }
     </script>
-        <script>
-		const getDataRow = (nombre,contraseña) => {
-			const usuarios = {
-			    nombre: nombre,
-				contraseña: contraseña
-    
-			}
-            console.table(usuarios)
-			document.getElementById('nombre').value = usuarios.nombre;
-			document.getElementById('contraseña').value = usuarios.contraseña;
-		}
-	</script>
+    <script>
+    const getDataRow = (nombre, contraseña, id) => {
+        const usuarios = {
+            nombre: nombre,
+            contraseña: contraseña,
+            id: id
+        }
+        console.table(usuarios)
+        document.getElementById('nombre').value = usuarios.nombre;
+        document.getElementById('contraseña').value = usuarios.contraseña;
+        document.getElementById('cod_usuario').value = usuarios.id;
+    }
+    </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
