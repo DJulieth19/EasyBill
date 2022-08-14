@@ -1,7 +1,7 @@
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
-$queryUsuarios = "SELECT * from usuarios where tipo_usuario='Empleado'";
+$queryUsuarios = "select u.id_usuario,u.ruta_imagen,u.tipo_usuario,u.nombre_usuario,u.contraseña,r.respuesta1,r.respuesta2,r.respuesta3 from usuarios u,recuperacion r where u.id_usuario=r.id_usuario and tipo_usuario='Empleado';";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 ?>
 <!doctype html>
@@ -98,7 +98,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                             <div class="col">
                                                 <button type="button" class="btn btn-warning" data-bs-toggle="modal"
                                                     data-bs-target="#editar"
-                                                    onClick='getDataRow("<?php echo $user['nombre_usuario'] ?>","<?php echo $user['contraseña'] ?>","<?php echo $user['id_usuario'] ?>")'>
+                                                    onClick='getDataRow("<?php echo $user['nombre_usuario'] ?>","<?php echo $user['contraseña'] ?>","<?php echo $user['id_usuario'] ?>","<?php echo $user['respuesta1'] ?>","<?php echo $user['respuesta2'] ?>","<?php echo $user['respuesta3'] ?>")'>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-pencil-square"
                                                         viewBox="0 0 16 16">
@@ -267,29 +267,32 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                         enctype="multipart/form-data" onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false,
                                                     timer: 1700})">
                         <div class="form-floating mb-3">
-                            <input  type="text" class="form-control rounded-3" id="cod_usuario" disable placeholder="codigo">
+                            <input  type="text" class="form-control rounded-3" id="cod_usuario" name="cod_usuario" disable placeholder="codigo">
                             <label for="cod_usuario">codigo del usuario</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control rounded-3" id="nombre" required placeholder="nombre">
+                            <input type="text" class="form-control rounded-3" id="nombre" name="nombreUsu" required placeholder="nombre">
                             <label for="Nombre">Nombre del usuario</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control rounded-3" id="contraseña" placeholder="contraseña"
+                            <input type="text" class="form-control rounded-3" id="contraseña" name="contraseña" placeholder="contraseña"
                                 required maxlength="10" minlength="4">
                             <label>Contraseña </label>
                         </div>
-                        <div class="mb-1">
-                            <label for="pregunta" class="form-label">Ciudad de nacimiento</label>
-                            <input type="text" class="form-control" name="ciudad" placeholder="" required>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-3" id="ciudad" name="ciudad" placeholder="contraseña"
+                                required maxlength="10" minlength="4">
+                            <label>Ciudad de nacimiento </label>
                         </div>
-                        <div class="mb-1">
-                            <label for="pregunta" class="form-label">Nombre de un familiar</label>
-                            <input type="text" class="form-control" name="nombreFamiliar" placeholder="" required>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-3" id="nombreFamiliar" name="nombreFamiliar" placeholder="contraseña"
+                                required maxlength="10" minlength="3">
+                            <label>Nombre de familiar </label>
                         </div>
-                        <div class="mb-1">
-                            <label for="pregunta" class="form-label">Comida favorita</label>
-                            <input type="text" class="form-control" name="comida" placeholder="" required>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-3" id="comida" name="comida" placeholder="contraseña"
+                                required maxlength="30" minlength="4">
+                            <label>Comida favorita </label>
                         </div>
                 </div>
                 <div class="modal-footer">
@@ -317,16 +320,22 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
     }
     </script>
     <script>
-    const getDataRow = (nombre, contraseña, id) => {
+    const getDataRow = (nombre, contraseña, id, ciudad, nombreFamiliar, comida) => {
         const usuarios = {
             nombre: nombre,
             contraseña: contraseña,
-            id: id
+            id: id,
+            ciudad: ciudad,
+            nombreFamiliar: nombreFamiliar,
+            comida: comida
         }
         console.table(usuarios)
         document.getElementById('nombre').value = usuarios.nombre;
         document.getElementById('contraseña').value = usuarios.contraseña;
         document.getElementById('cod_usuario').value = usuarios.id;
+        document.getElementById('ciudad').value = usuarios.ciudad;
+        document.getElementById('nombreFamiliar').value = usuarios.nombreFamiliar;
+        document.getElementById('comida').value = usuarios.comida;
     }
     </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
