@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('America/Bogota');
-    $fecha=(date('d-m-y'));
+    $fecha=(date('Y-m-d'));
     $usuario = $_GET['usuario'];
     $tipo = $_GET['tipoUsuario'];
     $id_usuario = $_GET['id_usuario']

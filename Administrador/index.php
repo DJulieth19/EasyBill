@@ -93,8 +93,10 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body p-5 pt-0">
-                        <form method="POST" enctype="multipart/form-data" onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false,
+                    <form action="./Logo/añadirLogo.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST"
+                        enctype="multipart/form-data" onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false,
                                                     timer: 1700})">
+                                                    <div class="mb-1">
                             <div class="form-group">
                                 <input type="file" id="archivo" name="archivo" class="form-control-file"
                                     accept="image/*">

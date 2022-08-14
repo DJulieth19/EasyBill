@@ -6,7 +6,7 @@ require_once("Database.php");
 $conn = conectardb();
 //se traen los datos de la fecha actual
 date_default_timezone_set('America/Bogota');
-$fecha=(date('d-m-y'));
+$fecha=(date('Y-m-d'));
 //trae los datos que fueron ingresados en el formulario anterior
 $usuario = $_POST['usuario'];			
 $contraseña = $_POST['contraseña'];
