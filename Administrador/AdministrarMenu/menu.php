@@ -96,12 +96,14 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                                     <h5 class="item-price text-center">$
                                                         <?php echo $cantidadProductos['precio'] ?>
                                                     </h5>
+                                                    <!-- Aquí está el cod de producto oculto -->
+                                                    <p hidden><?php echo $cantidadProductos['codproducto'] ?></p>
                                                 </div>
                                                 <div class="d-flex ms-3 justify-content-center">
                                                     <div class="col">
                                                         <button type="button" class="btn btn-warning btn-sm mr-2"
-                                                            name="editar"
-                                                            onclick="location.href='editarPlato.php?nombreproducto=<?php echo $cantidadProductos['nombreproducto'] ?>&precio=<?php echo $cantidadProductos['precio'] ?>&nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>'">
+                                                            name="editar" data-bs-toggle="modal" data-bs-target="#editar"
+                                                            onClick='getDataRow("<?php echo $cantidadProductos['nombreproducto'] ?>","<?php echo $cantidadProductos['precio'] ?>","<?php echo $cantidadProductos['codproducto'] ?>")'>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                 height="16" fill="currentColor"
                                                                 class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -154,7 +156,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 <div class="modal-content rounded-4 ">
                                     <div class="modal-header p-5 pb-4 border-bottom-0">
                                         <!-- <h5 class="modal-AÑADIR"</h5> -->
-                                        <h3 class="text-white">espacio</h3>
+                                        <img width="50px" height="50px" src="../img/icon.png" class="me-4">
                                         <h2 class="fw-bold mb-0">Añadir plato</h2>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
@@ -178,6 +180,49 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                             <div class="form-group">
                                                 <input type="file" id="archivo" name="archivo" class="form-control-file"
                                                     accept="image/*">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
+                                                    type="submit">Guardar</button>
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Cerrar</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal py-5" tabindex="-1" id="editar">
+                            <div class="modal-dialog">
+                                <div class="modal-content rounded-4 ">
+                                    <div class="modal-header p-5 pb-4 border-bottom-0">
+                                        <!-- <h5 class="modal-Editar"</h5> -->
+                                        <img width="50px" height="50px" src="../img/icon.png" class="me-4">
+                                        <h2 class="fw-bold mb-0">Editar plato</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body p-5 pt-0">
+                                        <form
+                                            action="añadir.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
+                                            method="POST" enctype="multipart/form-data" onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false,
+                                                    timer: 1700})">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" id="codProducto"
+                                                    name="codProducto" placeholder="codigo" required>
+                                                <label for="codigo">codigo del plato</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" id="nombreProducto"
+                                                    name="nombreProducto" placeholder="Nombre" required>
+                                                <label for="Nombre">Nombre del plato</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="number" min="50" class="form-control rounded-3" id="Precio"
+                                                    name="Precio" placeholder="Precio en pesos" required maxlength="10"
+                                                    minlength="8">
+                                                <label>Precio $ </label>
                                             </div>
                                             <div class="modal-footer">
                                                 <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
@@ -248,7 +293,19 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    <script>
+    const getDataRow = (nombre, precio, cod) => {
+        const platos = {
+            nombre: nombre,
+            precio: precio,
+            cod: cod
+        }
+        console.table(platos)
+        document.getElementById('nombreProducto').value = platos.nombre;
+        document.getElementById('Precio').value = platos.precio;
+        document.getElementById('codProducto').value = platos.cod;
+    }
+    </script>
 </body>
 
 </html>
