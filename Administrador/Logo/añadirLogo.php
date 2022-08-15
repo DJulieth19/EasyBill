@@ -13,15 +13,19 @@ Configuration::instance([
       'secure' => true]]);
 
       $ruta=$_FILES['archivo']['tmp_name'];
-      $data = (new UploadApi())->upload($ruta);
-      $direccion = $data['secure_url'];
-
+      
 $conn = conectardb();      
 $usuario = $_GET['nombre'];
 $tipo = $_GET['tipoUsuario'];
-
-$queryUsuarios = "UPDATE logo SET ruta_imagen='$direccion' WHERE id_logo='1'";
-$editarUsuarios = pg_query($conn, $queryUsuarios);
+if($ruta == ""){
+  $queryUsuarios = "UPDATE logo SET ruta_imagen='../img/logo.png' WHERE id_logo='1'";
+  $editarUsuarios = pg_query($conn, $queryUsuarios); 
+}else{
+  $data = (new UploadApi())->upload($ruta);
+  $direccion = $data['secure_url'];
+  $queryUsuarios = "UPDATE logo SET ruta_imagen='$direccion' WHERE id_logo='1'";
+  $editarUsuarios = pg_query($conn, $queryUsuarios);       
+  }
 
 header("location:../index.php?nombre=$usuario&tipoUsuario=$tipo");
 exit();
