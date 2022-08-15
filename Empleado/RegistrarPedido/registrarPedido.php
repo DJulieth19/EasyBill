@@ -1,7 +1,7 @@
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
-$queryPlatos = "SELECT * from productos";
+$queryPlatos = "SELECT * from productos where producto_activo='true'";
 $consultaPlatos = pg_query($conn, $queryPlatos);
 ?>
 

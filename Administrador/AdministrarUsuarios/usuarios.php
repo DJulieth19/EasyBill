@@ -1,7 +1,7 @@
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
-$queryUsuarios = "select u.id_usuario,u.ruta_imagen,u.tipo_usuario,u.nombre_usuario,u.contraseña,r.respuesta1,r.respuesta2,r.respuesta3 from usuarios u,recuperacion r where u.id_usuario=r.id_usuario and tipo_usuario='Empleado';";
+$queryUsuarios = "select u.id_usuario,u.ruta_imagen,u.tipo_usuario,u.nombre_usuario,u.contraseña,r.respuesta1,r.respuesta2,r.respuesta3 from usuarios u,recuperacion r where u.id_usuario=r.id_usuario and tipo_usuario='Empleado' and usuario_activo='true';";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 ?>
 <!doctype html>
