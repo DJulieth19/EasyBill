@@ -68,7 +68,7 @@
                                                     data-bs-target="#añadir">Añadir logo empresarial</a></li>
                                         </ul>
                                     </div>
-                                    <a class="btn btn-dark mt-1" href="#" role="button">
+                                    <a class="btn btn-dark mt-1" href="https://sites.google.com/unillanos.edu.co/wikibill/inicio/administrador" role="button">
                                         <svg xmlns="http://www.w3.org/2000/svg" color="white" width="25" height="25"
                                             fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
                                             <path
