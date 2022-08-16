@@ -46,7 +46,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                             </div>
                             <a class="btn btn-custom "
                                 href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Volver</a>
-                            <a type="button" class="nav-bar-icons">
+                            <a type="button" class="nav-bar-icons" href="https://sites.google.com/unillanos.edu.co/wikibill/inicio/administrador/administrar-usuarios">
                                 <div class="dropdown">
                                     <a class="btn btn-dark" href="#" role="button">
                                         <svg xmlns="http://www.w3.org/2000/svg" color="white" width="25" height="25"
