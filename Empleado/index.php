@@ -72,22 +72,25 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../../Imagenes/first.png" class="d-block w-100" alt="Bienvenida"
+                    <img src="../../Imagenes/first.png" class="d-block w-100" 
                         class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
                         preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
                 </div>
                 <div class="carousel-item">
-                    <img src="../../Imagenes/second.png" class="d-block w-100" alt="Bienvenida"
+                    <img src="../../Imagenes/second.png" class="d-block w-100" 
                         class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
                         preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
                 </div>
+	
                 <div class="carousel-item">
-                    <img src="../../Imagenes/tres.png" class="d-block w-100" alt="Bienvenida" class="bd-placeholder-img"
-                        width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
-                        focusable="false">
-                    <rect width="100%" height="100%" fill="#777" />
+			<a href="https://sites.google.com/unillanos.edu.co/wikibill/inicio">
+			        <img src="../../Imagenes/tres.png" class="d-block w-100"  class="bd-placeholder-img"
+				width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+				focusable="false">
+			       <rect width="100%" height="100%" fill="#777" />
+			</a>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -115,11 +118,14 @@
                         preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
                 </div>
+		    
                 <div class="carousel-item">
-                    <img src="../../Imagenes/2.png" class="d-block w-100 text-center" alt="Bienvenida"
-                        class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="#777" />
+		    <a href="https://sites.google.com/unillanos.edu.co/wikibill/inicio">
+			    <img src="../../Imagenes/2.png" class="d-block w-100 text-center" alt="Bienvenida"
+				class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
+				preserveAspectRatio="xMidYMid slice" focusable="false">
+			    <rect width="100%" height="100%" fill="#777" />
+		    </a>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#Carousel2" data-bs-slide="prev">
