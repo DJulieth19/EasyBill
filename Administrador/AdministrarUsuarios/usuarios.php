@@ -81,7 +81,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                             <div class="col-lg-3">
                                 <div class="item shadow mb-4">
                                     <h3 class="item-title"><?php echo $user['nombre_usuario'] ?></h3>
-                                    <img class="item-image ms-5" src="<?php echo $user['ruta_imagen'] ?>">
+                                    <img class="item-image ms-3" src="<?php echo $user['ruta_imagen'] ?>">
                                     <div class="p-2">
                                         <div class="col-md-8 ms-4">
                                             <h5 class="text-center">
