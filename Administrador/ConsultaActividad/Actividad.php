@@ -80,7 +80,7 @@
                     <?php
                         require_once("../../Database.php");
                         $conn = conectardb();
-                        $query = "SELECT *from eventos";                     
+                        $query = "SELECT *from eventos order by fechahora desc";                     
                         $consulta = pg_query($conn, $query);
                         ?>
                         <thead class="table-primary">
