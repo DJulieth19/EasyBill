@@ -192,13 +192,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../../Imagenes/first.png" class="d-block w-100" alt="Bienvenida"
+                    <img src="../../Imagenes/first.png" class="d-block w-100" 
                         class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
                         preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
                 </div>
                 <div class="carousel-item">
-                    <img src="../../Imagenes/second.png" class="d-block w-100" alt="Bienvenida"
+                    <img src="../../Imagenes/second.png" class="d-block w-100" 
                         class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
                         preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
