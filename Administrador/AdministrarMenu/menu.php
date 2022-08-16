@@ -54,7 +54,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                     href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Volver</a>
                                 <a type="button" class="nav-bar-icons">
                                     <div class="dropdown">
-                                        <a class="btn btn-dark" href="#" role="button">
+                                        <a class="btn btn-dark" href="https://sites.google.com/unillanos.edu.co/wikibill/inicio/administrador/administrar-men%C3%BA" role="button">
                                             <svg xmlns="http://www.w3.org/2000/svg" color="white" width="25" height="25"
                                                 fill="currentColor" class="bi bi-question-circle-fill"
                                                 viewBox="0 0 16 16">
