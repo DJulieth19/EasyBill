@@ -208,7 +208,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                             action="editar.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
                                             method="POST" enctype="multipart/form-data" onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false,
                                                     timer: 1700})">
-                                            <div class="form-floating mb-3">
+                                            <div hidden class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3" id="codProducto"
                                                     name="codProducto" placeholder="codigo" required>
                                                 <label for="codigo">codigo del plato</label>
