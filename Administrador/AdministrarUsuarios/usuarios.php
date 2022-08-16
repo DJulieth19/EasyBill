@@ -266,7 +266,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                     <form action="editar.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>" method="POST"
                         enctype="multipart/form-data" onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false,
                                                     timer: 1700})">
-                        <div class="form-floating mb-3">
+                        <div hidden class="form-floating mb-3">
                             <input  type="text" class="form-control rounded-3" id="cod_usuario" name="cod_usuario" disable placeholder="codigo">
                             <label for="cod_usuario">codigo del usuario</label>
                         </div>
