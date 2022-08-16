@@ -204,10 +204,13 @@
                     <rect width="100%" height="100%" fill="#777" />
                 </div>
                 <div class="carousel-item">
-                    <img src="../../Imagenes/tres.png" class="d-block w-100" href="https://sites.google.com/unillanos.edu.co/wikibill/inicio" class="bd-placeholder-img"
+		     <a href="https://sites.google.com/unillanos.edu.co/wikibill/inicio"> 
+			 <img src="../../Imagenes/tres.png" class="d-block w-100"  class="bd-placeholder-img"
                         width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
                         focusable="false">
-                    <rect width="100%" height="100%" fill="#777" />
+                        <rect width="100%" height="100%" fill="#777" />
+		    </a>
+
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
