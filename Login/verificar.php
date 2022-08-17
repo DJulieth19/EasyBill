@@ -5,16 +5,16 @@ require_once("../Database.php");
 $conn = conectardb();
 //trae los datos que fueron ingresados en el formulario anterior
 $usuario =$_POST['usuario'];
-$cedula=$_POST['pregunta1'];
-$fexpedicion = $_POST['pregunta2'];
-$celular = $_POST['pregunta3'];
+$respuesta1=$_POST['respuesta1'];
+$respuesta2= $_POST['respuesta2'];
+$respuesta3= $_POST['respuesta3'];
 //se hace la consulta con la base de datos para poder encontrar la contraseña
-$queryVerificar = "select u.contrasenia from usuarios u,recuperacion r where u.nombre_usuario='$usuario' and r.cedula='$cedula' and r.fexpedicion='$fexpedicion' and r.celular='$celular' and u.id_usuario=r.id_usuario";
+$queryVerificar = "select u.contraseña from usuarios u,recuperacion r where u.nombre_usuario='$usuario' and r.respuesta1='$respuesta1' and r.respuesta2='$respuesta2' and r.respuesta3='$respuesta3' and u.id_usuario=r.id_usuario";
 $consultaVerificar = pg_query($conn, $queryVerificar);
 $contraseña= pg_fetch_array($consultaVerificar);
-$contrasenia=$contraseña['contrasenia'];
+$contrasenia=$contraseña['contraseña'];
 echo $contrasenia;
-$queryUsuarios = "SELECT * from usuarios WHERE nombre_usuario = '$usuario' AND contrasenia = '$contrasenia'";
+$queryUsuarios = "SELECT * from usuarios WHERE nombre_usuario = '$usuario' AND contraseña = '$contrasenia'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $tipo= pg_fetch_array($consultaUsuarios);
 $tipoU=$tipo['tipo_usuario'];

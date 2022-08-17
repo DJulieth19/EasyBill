@@ -39,16 +39,16 @@
 						<input type="text" class="form-control" name="usuario" placeholder="" required>	
 					</div>
 					<div class="mb-1">
-						<label for="pregunta" class="form-label">Numero de cedula</label>
-						<input type="number" class="form-control" name="pregunta1" placeholder="" required>						
-					</div>
-					<div class="mb-1">
-						<label for="pregunta" class="form-label">Fecha de expedicion de su cedula</label>
-						<input type="date" class="form-control" name="pregunta2" value="2022-01-01" placeholder="" required>	
+						<label for="pregunta" class="form-label">¿Cuál es la ciudad de nacimiento?</label>
+						<input type="text" class="form-control" name="respuesta1" value="" placeholder="" required>	
 					</div>
 					<div class="mb-3">
-						<label for="pregunta" class="form-label">Numero de celular</label>
-						<input type="number" class="form-control" name="pregunta3" placeholder="" required>	
+						<label for="pregunta" class="form-label">Nombre de un familiar</label>
+						<input type="text" class="form-control" name="respuesta2" placeholder="" required>	
+					</div>
+					<div class="mb-3">
+						<label for="pregunta" class="form-label">Comida favorita</label>
+						<input type="text" class="form-control" name="respuesta3" placeholder="" required>	
 					</div>
 					<div class="d-grid py-2">
 						<div class="row">
