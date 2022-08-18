@@ -162,8 +162,8 @@
             <tbody>
                 <?php
                         //recorre los productos vendidos y muestra sus atributos
-                        while($row = pg_fetch_array($consulta)){
-                    ?>
+                    while($row = pg_fetch_array($consultaVenta3)){
+                ?>
                 <tr>
                     <td width='5%'><a class="control removeRow" href="#">x</a> <span>12345</span></td>
                     <td width='60%'><span><?php echo  $row['nombreProducto'];?></span></td>
