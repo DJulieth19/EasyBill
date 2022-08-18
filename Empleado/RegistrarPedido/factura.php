@@ -29,7 +29,7 @@
     <div class="control-bar">
         <div class="container">
             <div class="row">
-                <div class="col-2-4">
+                <div class="col-2">
                     <div class="slogan">Facturación </div>
 
                     <label for="config_tax">IVA:
@@ -55,6 +55,38 @@
         <!--.container-->
     </div>
     <!--.control-bar-->
+
+    <!-- Modal para mostrar cambio que debe devolver al cliente -->
+    <div class="modal py-5" tabindex="-1" id="añadir">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-4 ">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <!-- <h5 class="modal-AÑADIR"</h5> -->
+                    <h3 class="text-white">espacio</h3>
+                    <h2 class="fw-bold mb-0">Cambio</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5 pt-0">
+                    <form 
+                        enctype="multipart/form-data">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-3" name="Efectivo" required
+                                placeholder="Cantidad de efectivo">
+                            <label for="Efectivo">Efectivo entregado por el cliente</label>
+                        </div>
+                        
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 
     <header class="row">
         <div class="logoholder text-center">
