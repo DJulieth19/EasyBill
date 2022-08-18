@@ -83,6 +83,40 @@
             </div>
         </nav>
         <!-- Modals -->
+        
+        <div class="modal py-5" tabindex="-1" id="editar_nombre">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-4 ">
+                    <div class="modal-header p-5 pb-4 border-bottom-0">
+                        <!-- <h5 class="modal-Editar nombre"</h5> -->
+                        <img width="50px" height="50px" src="./img/icon.png" class="me-4">
+                        <h3 class="fw-bold mb-0 text-center text-dark">Cambiar nombre de usuario</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-5 pt-0">
+                        <form
+                            action="./FuncionesAdmin/nombre.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
+                            method="POST" enctype="multipart/form-data"
+                            onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false, timer: 1700})">
+                            <p class="text-dark">Ingrese su nombre actual</p>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="nombreActual" placeholder="" required>
+                            </div>
+                            <p class="text-dark">Ingrese su nuevo nombre de usuario</p>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="nuevoNombre" placeholder="" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
+                                    type="submit">Guardar</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="modal py-5" tabindex="-1" id="editar_contraseña">
             <div class="modal-dialog">
@@ -149,39 +183,6 @@
         </div>
 
         
-        <div class="modal py-5" tabindex="-1" id="editar_nombre">
-            <div class="modal-dialog">
-                <div class="modal-content rounded-4 ">
-                    <div class="modal-header p-5 pb-4 border-bottom-0">
-                        <!-- <h5 class="modal-Editar nombre"</h5> -->
-                        <img width="50px" height="50px" src="./img/icon.png" class="me-4">
-                        <h3 class="fw-bold mb-0 text-center text-dark">Cambiar nombre de usuario</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body p-5 pt-0">
-                        <form
-                            action="./FuncionesAdmin/nombre.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
-                            method="POST" enctype="multipart/form-data"
-                            onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false, timer: 1700})">
-                            <p class="text-dark">Ingrese su nombre actual</p>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" name="nombreActual" placeholder="" required>
-                            </div>
-                            <p class="text-dark">Ingrese su nuevo nombre de usuario</p>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" name="nuevoNombre" placeholder="" required>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
-                                    type="submit">Guardar</button>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
 
     <main>
