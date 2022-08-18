@@ -200,7 +200,7 @@
                     <h3 class="fw-normal">Historial de pedidos</h3>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <a href="./cerrarcaja.php">
+                    <a href="./cerrarcaja.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>">
                         <img src="../../Imagenes/arqueo.png" width="160" height="160" role="img"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                         <title>Placeholder</title>
