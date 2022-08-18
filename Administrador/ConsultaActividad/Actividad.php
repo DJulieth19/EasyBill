@@ -80,6 +80,7 @@
                     <?php
                         require_once("../../Database.php");
                         $conn = conectardb();
+                        //trae todos los cambios realizados en la base de datos
                         $query = "SELECT *from eventos order by fechahora desc";                     
                         $consulta = pg_query($conn, $query);
                         ?>
@@ -92,6 +93,7 @@
                         </thead>
                         <tbody>
                         <?php
+                             //muestra la informacion del tigger
                               while($row = pg_fetch_array($consulta)){
                             ?>
                             <tr>

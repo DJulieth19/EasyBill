@@ -1,4 +1,5 @@
 <?php
+//obtencion de la fecha actual
 date_default_timezone_set('America/Bogota');
     $fecha=(date('Y-m-d'));
     $usuario = $_GET['usuario'];
@@ -9,6 +10,7 @@ date_default_timezone_set('America/Bogota');
 require_once("../Database.php");
 $conn = conectardb();
 $dinero=$_POST['dinero'];
+//insercion de caja del dia actual
 $queryCaja = "INSERT INTO caja (estado,fecha,dinero,id_usuario) values ('Abierto','$fecha','$dinero','$id_usuario');";
 $insertarCaja = pg_query($conn, $queryCaja);
 

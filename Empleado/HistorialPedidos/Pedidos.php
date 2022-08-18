@@ -115,20 +115,27 @@
                         require_once("../../Database.php");
                         date_default_timezone_set('America/Bogota');
                         $conn = conectardb();
+                        //validacion de la fecha a la cual se desea obtner informacion de historial de pedidos
                         if($TipoConsulta == "Hoy"){
+                            //obtencion de la fecha del dia actual
                             $inicioDia = date('Y-m-d 00:00:00 ', time());
                             $finDia = date('Y-m-d 23:59:59 ', time());
+                            //consulta para obtener el historial de pedidos del dia actual
                             $query = "SELECT u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto  and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha and u.nombre_usuario='$usuario'";
                         }
                         if($TipoConsulta == "Semana"){
+                            //obtencion de la fecha de la semana actual
                             $inicio = date("Y-m-d");
                             $SemanaAntes = strtotime('-7 day', strtotime($inicio));
-                            $SemanaAntes = date('Y-m-d', $SemanaAntes);         
+                            $SemanaAntes = date('Y-m-d', $SemanaAntes);
+                            //consulta para obtener el historial de pedidos de la semana actual         
                             $query = "SELECT u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and v.Fecha BETWEEN '$SemanaAntes' AND '$inicio' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha and u.nombre_usuario='$usuario'";
                         }
                         if($TipoConsulta == "Mes"){
+                            //obtencion de la fecha del mes actual
                             $inicio = date("Y-m-01");
                             $fin = date("Y-m-t");
+                            //consulta para obtener el historial de pedidos del mes actual 
                             $query = "SELECT u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and v.Fecha BETWEEN '$inicio' AND '$fin' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha and u.nombre_usuario='$usuario'";
                         }
                         $consulta = pg_query($conn, $query);
@@ -146,6 +153,7 @@
                                         </thead>
                                         <tbody>
                                             <?php
+                                //muestra los datos traidos por la consulta de historial de pedidos
                               while($row = pg_fetch_array($consulta)){
                             ?>
                                             <tr>
@@ -161,20 +169,27 @@
                                 </div>
                             </div>
                             <?php
+                            //validacion de la fecha a la cual se desea obtner informacion del total en historial de pedidos
                             if($TipoConsulta == "Hoy"){
+                                //obtencion de la fecha del dia actual
                                 $inicioDia = date('Y-m-d 00:00:00 ', time());
                                 $finDia = date('Y-m-d 23:59:59 ', time());
+                                //consulta para obtener el total de historial de pedidos del dia actual
                                 $query = "SELECT sum(c.total) from (select u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and u.nombre_usuario='$usuario' and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha) c";
                             }
                             if($TipoConsulta == "Semana"){
+                                //obtencion de la fecha de la semana actual
                                 $inicio = date("Y-m-d");
                                 $SemanaAntes = strtotime('-7 day', strtotime($inicio));
-                                $SemanaAntes = date('Y-m-d', $SemanaAntes);         
+                                $SemanaAntes = date('Y-m-d', $SemanaAntes);
+                                //consulta para obtener el total de historial de pedidos de la semana actual         
                                 $query = "SELECT sum(c.total) from (select u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and u.nombre_usuario='$usuario' and v.Fecha BETWEEN '$SemanaAntes' AND '$inicio' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha) c";
                             }
                             if($TipoConsulta == "Mes"){
+                                //obtencion de la fecha del mes actual
                                 $inicio = date("Y-m-01");
                                 $fin = date("Y-m-t");
+                                //consulta para obtener el total de historial de pedidos del mes actual
                                 $query = "SELECT sum(c.total) from (select u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and u.nombre_usuario='$usuario' and v.Fecha BETWEEN '$inicio' AND '$fin' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha) c";
                             }
                             $consulta = pg_query($conn, $query);          

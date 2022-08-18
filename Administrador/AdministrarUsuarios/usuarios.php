@@ -1,6 +1,7 @@
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
+//consulta que trae los usuairos actualmente activos
 $queryUsuarios = "select u.id_usuario,u.ruta_imagen,u.tipo_usuario,u.nombre_usuario,u.contraseña,r.respuesta1,r.respuesta2,r.respuesta3 from usuarios u,recuperacion r where u.id_usuario=r.id_usuario and tipo_usuario='Empleado' and usuario_activo='true';";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 ?>
@@ -76,6 +77,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                         <!-- Contenedor usuarios -->
                         <div class="row justify-content-center">
                             <?php
+                                //recorre los usuarios activos y muestra sus atributos
                                 while($user=pg_fetch_array($consultaUsuarios)){
                                  ?>
                             <div class="col-lg-3">
@@ -198,7 +200,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
         </div>
     </div>
     </div>
-    <!-- Modals -->
+    <!-- Modal para añadir usuario -->
     <div class="modal py-5" tabindex="-1" id="añadir">
         <div class="modal-dialog">
             <div class="modal-content rounded-4 ">
@@ -253,6 +255,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
         </div>
     </div>
     </div>
+     <!-- Modal para editar usuario -->
     <div class="modal py-5" tabindex="-1" id="editar">
         <div class="modal-dialog">
             <div class="modal-content rounded-4 ">
@@ -320,6 +323,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
     }
     </script>
     <script>
+    //obtiene los datos del usuario con sus respuestas de recuperacion de contraseña
     const getDataRow = (nombre, contraseña, id, ciudad, nombreFamiliar, comida) => {
         const usuarios = {
             nombre: nombre,

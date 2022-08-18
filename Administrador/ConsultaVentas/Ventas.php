@@ -116,20 +116,27 @@
                     <?php
                         require_once("../../Database.php");
                         $conn = conectardb();
+                        //valida que dia se escoge para traer las ventas, ya sea si se quiere consultar las del dia actual, semana actual y mes actual
                         if($TipoConsulta == "Hoy"){
+                            //obtencion de fecha del dia actual
                             $inicioDia = date("Y-m-d 00:00:00");
                             $finDia = date("Y-m-d 23:59:59");
+                            //trae los datos de las ventas del dia actual
                             $query = "SELECT p.nombreProducto,sum(a.cantidad) AS cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY p.nombreProducto";
                         }
                         if($TipoConsulta == "Semana"){
+                            //obtencion de fecha de la semana actual
                             $inicio = date('Y-m-d 00:00:00', time());
                             $SemanaAntes = strtotime('-7 day', strtotime($inicio));
-                            $SemanaAntes = date('Y-m-d 00:00:00', $SemanaAntes);         
+                            $SemanaAntes = date('Y-m-d 00:00:00', $SemanaAntes);
+                            //trae los datos de las ventas de la semana actual         
                             $query = "SELECT p.nombreProducto,sum(a.cantidad) AS cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$SemanaAntes' AND '$inicio' GROUP BY p.nombreProducto";
                         }
                         if($TipoConsulta == "Mes"){
+                            //obtencion de fecha del mes actual
                             $inicio = date('Y-m-01 00:00:00', time());
                             $fin = date('Y-m-t 23:59:59', time());
+                             //trae los datos de las ventas del mes actual 
                             $query = "SELECT p.nombreProducto,sum(a.cantidad) AS cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$inicio' AND '$fin' GROUP BY p.nombreProducto";
                         }
                         

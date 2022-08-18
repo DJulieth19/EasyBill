@@ -2,14 +2,18 @@
 <?php
     require_once("../../Database.php");
     $conn = conectardb();
-
+    //consulta para obtener el usuario que realizo la venta
     $queryVenta = "SELECT u.nombre_usuario from (SELECT * from venta order by Fecha desc limit 1)z, usuarios u where z.id_usuario=u.id_usuario;";
     $consultaVenta = pg_query($conn, $queryVenta);
     $ventaNombreUsuario= pg_fetch_array($consultaVenta);
-    
+    //consulta para traer la ultima venta realizada
     $queryVenta2 = "SELECT * from venta order by Fecha desc limit 1;";
     $consultaVenta2 = pg_query($conn, $queryVenta2);
     $venta= pg_fetch_array($consultaVenta2);
+    //consulta para traer los datos de la venta realizada
+    $queryVenta3 = "SELECT p.nombreProducto, p.Precio, a.cantidad, a.total_producto from asigna a, Productos p where p.codProducto=a.codProducto and a.id_venta='65';";
+    $consultaVenta3 = pg_query($conn, $queryVenta3);
+    $venta= pg_fetch_array($consultaVenta3);
 	?>
 
 

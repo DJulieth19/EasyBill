@@ -7,12 +7,12 @@ require_once("../../Database.php");
 $conn = conectardb();
 $contraseñaactual=$_POST['contraseñaactual'];
 $nuevacontraseña=$_POST['nuevacontraseña'];
-
+//consulta para traer el usuario administrador al cual se le va a modificar la contraseña
 $queryUsuarios = "SELECT id_usuario from usuarios WHERE nombre_usuario='$usuario' AND contraseña='$contraseñaactual' AND tipo_usuario='$tipo';";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $usuario1= pg_fetch_array($consultaUsuarios);
 $id_usuario=$usuario1['id_usuario'];
-
+//actualizacion de la contraseña del usuario administrador
 $queryUsuarios = "UPDATE usuarios SET contraseña='$nuevacontraseña' WHERE id_usuario='$id_usuario';";
 $editarUsuarios = pg_query($conn, $queryUsuarios);
 header("location: ../index.php?nombre=$usuario&tipoUsuario=$tipo");

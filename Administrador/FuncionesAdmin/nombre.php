@@ -7,12 +7,12 @@ require_once("../../Database.php");
 $conn = conectardb();
 $Nombre=$_POST['nombreActual'];
 $nuevonombre=$_POST['nuevoNombre'];
-
+//consulta para traer el usuario al cual se le va a modificar el nombre
 $queryUsuarios = "SELECT id_usuario from usuarios WHERE nombre_usuario='$usuario' AND tipo_usuario='$tipo';";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $usuario1= pg_fetch_array($consultaUsuarios);
 $id_usuario=$usuario1['id_usuario'];
-
+//actualizacion del nombre al usuario administrador
 $queryUsuarios = "UPDATE usuarios SET nombre_usuario='$nuevonombre' WHERE id_usuario='$id_usuario';";
 $editarUsuarios = pg_query($conn, $queryUsuarios);
 $usuario = $nuevonombre;

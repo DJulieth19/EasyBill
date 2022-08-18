@@ -1,6 +1,7 @@
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
+//consulta para traer los productos que esten en estado activo
 $queryPlatos = "SELECT * from productos where producto_activo='true'";
 $consultaPlatos = pg_query($conn, $queryPlatos);
 ?>

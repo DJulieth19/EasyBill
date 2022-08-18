@@ -6,11 +6,13 @@
 require_once("../../Database.php");
 $conn = conectardb();
 $id_usuario=$_GET['id_usuario'];
+//trae el usuario que se selecciono para borrar
 $queryUsuarios = "SELECT * from usuarios WHERE id_usuario = '$id_usuario'";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 $nombre= pg_fetch_array($consultaUsuarios);
 $nombre_usuario=$nombre['nombre_usuario'];
 ?>
+<!-- Formulario para confirmar la eliminacion del usuario -->
 <!doctype html>
 <html lang="en">
   <head>

@@ -1,6 +1,7 @@
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
+//se traen los productos que esten activos 
 $queryPlatos = "SELECT * from productos where producto_activo='true'";
 $consultaPlatos = pg_query($conn, $queryPlatos);
 ?>
@@ -83,6 +84,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 <!-- Contenedor de platos -->
                                 <div class="row justify-content-center">
                                     <?php
+                                        //muestra los productos que estan activos
                                         while($cantidadProductos=pg_fetch_array($consultaPlatos)){
                                         ?>
                                     <div class="col-lg-3">
@@ -294,6 +296,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
+    //obtiene los datos por cada producto activo    
     const getDataRow = (nombre, precio, cod) => {
         const platos = {
             nombre: nombre,

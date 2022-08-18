@@ -9,12 +9,10 @@ $tipo_usuario = $_POST['tipo_usuario'];
 
 require_once("../../Database.php");
 $conn = conectardb();
-
+//obtencion de la fecha del dia actual
 date_default_timezone_set('America/Bogota');
-$fecha1 = date("Y-m-d H:i:00");
-$fecha2 =date('Y-m-d H:i:59');
 $fechaActual =date('Y-m-d H:i:s');
-   
+    //insercion de la venta realizada
     $queryVenta = "INSERT INTO venta (Metodopago,nombreCliente,Fecha,id_usuario,id_cliente) values ('$medioPago','$nombreCliente','$fechaActual','$id_usuario','$identificacion');";
     $insertarPlatos = pg_query($conn, $queryVenta); 
     

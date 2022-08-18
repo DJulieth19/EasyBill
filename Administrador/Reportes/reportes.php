@@ -1,13 +1,14 @@
 <?php 
 require_once("../../Database.php");
 $conn = conectardb();
-
+//consulta para obtener el producto mas vendido
 $queryPlatos = "select  p.nombreproducto, sum(a.total_producto) as total from asigna a, productos p where a.codproducto=p.codproducto group by p.nombreproducto order by total desc limit 1";
 $consultaPlatos = pg_query($conn, $queryPlatos);
-
+//consulta para obtener el usuario con mejores ventas
 $queryUsuarios = "select u.nombre_usuario,c.total from usuarios u,(select u.id_usuario, sum(l.total_producto) as total from usuarios u, Venta v,asigna l where u.id_usuario=v.id_usuario and v.id_venta=l.id_venta group by u.id_usuario) c where u.id_usuario=c.id_usuario order by total desc limit 1";
 $consultaUsuarios = pg_query($conn, $queryUsuarios);
 
+//consulta para traer el mejor dia de la semana
 $queryfecha = "select fecha,count(*) from venta group by fecha order by count desc limit 1";
 $consultaFecha = pg_query($conn, $queryfecha);
 $fecha=pg_fetch_array($consultaFecha);
@@ -90,6 +91,7 @@ $consultaFecha2 = pg_query($conn, $querydia);
                 <div class="col col-md-8">
                     <div class="row justify-content-center ms-5">
                         <?php
+                            //obtencion de las consultas de reportes
                             $Productos=pg_fetch_array($consultaPlatos);
                             $users=pg_fetch_array($consultaUsuarios);
                             $dia_semana=pg_fetch_array($consultaFecha2)
@@ -140,8 +142,7 @@ $consultaFecha2 = pg_query($conn, $querydia);
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-    < /body>
 
-    <
-    /html>
+    </body>
+
+    </html>

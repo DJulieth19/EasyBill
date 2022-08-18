@@ -7,11 +7,13 @@ require_once("../../Database.php");
 $conn = conectardb();
 $nombreproducto=$_GET['nombreproducto'];
 $precio=$_GET['precio'];
+//consulta el producto para mostrar al usuario el producto que va a eliminar
 $queryPlatos = "SELECT codproducto from productos WHERE nombreproducto='$nombreproducto' AND precio='$precio';";
 $consultaPlatos = pg_query($conn, $queryPlatos);
 $usuario1= pg_fetch_array($consultaPlatos);
 $codproducto=$usuario1['codproducto'];
 ?>
+<!-- Formulario para confirmar la decision de borrar -->
 <!doctype html>
 <html lang="en">
   <head>
