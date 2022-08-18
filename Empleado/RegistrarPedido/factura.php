@@ -162,15 +162,15 @@
             <tbody>
                 <?php
                         //recorre los productos vendidos y muestra sus atributos
-                        while($venta2){
+                        while($row = pg_fetch_array($consulta)){
                     ?>
                 <tr>
                     <td width='5%'><a class="control removeRow" href="#">x</a> <span>12345</span></td>
-                    <td width='60%'><span><?php echo  $venta2['nombreProducto'];?></span></td>
-                    <td class="amount"><input type="text"><?php echo  $venta2['cantidad'];?></td>
-                    <td class="rate"><input type="text"> <?php echo  $venta2['Precio'];?></td>
+                    <td width='60%'><span><?php echo  $row['nombreProducto'];?></span></td>
+                    <td class="amount"><input type="text"><?php echo  $row['cantidad'];?></td>
+                    <td class="rate"><input type="text"> <?php echo  $row['Precio'];?></td>
                     <td class="tax taxrelated"></td>
-                    <td class="sum"> <?php echo $venta2['total_producto'];?></td>
+                    <td class="sum"> <?php echo $row['total_producto'];?></td>
                 </tr>
                 <?php
                     }
