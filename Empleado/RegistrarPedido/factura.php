@@ -13,9 +13,8 @@
     //consulta para traer los datos de la venta realizada
     $queryVenta3 = "SELECT p.nombreProducto, p.Precio, a.cantidad, a.total_producto from asigna a, Productos p where p.codProducto=a.codProducto and a.id_venta='65';";
     $consultaVenta3 = pg_query($conn, $queryVenta3);
-    $venta= pg_fetch_array($consultaVenta3);
+    $venta2= pg_fetch_array($consultaVenta3);
 	?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -153,7 +152,7 @@
         <table>
             <thead >
                 <th width="5%">Código</th>
-                <th width="60%">Descripción</th>
+                <th width="60%">Producto</th>
 
                 <th width="10%">Cant.</th>
                 <th width="15%">Precio</th>
@@ -161,17 +160,23 @@
                 <th width="10%">Total</th>
             </thead>
             <tbody>
+                    <?php
+                        //recorre los productos vendidos y muestra sus atributos
+                        while($platos=pg_fetch_array($consultaVenta3)){
+                    ?>
                 <tr>
-                    <td width='5%'><a class="control removeRow" href="#">x</a> <span contenteditable>12345</span></td>
-                    <td width='60%'><span contenteditable>Descripción</span></td>
-                    <td class="amount"><input type="text" value="1" /></td>
-                    <td class="rate"><input type="text" value="99" /></td>
+                    <td width='5%'><a class="control removeRow" href="#">x</a> <span>12345</span></td>
+                    <td width='60%'><span><?php echo  $platos['nombreProducto'];?></span></td>
+                    <td class="amount"><input type="text"><?php echo  $platos['cantidad'];?></td>
+                    <td class="rate"><input type="text"> <?php echo  $platos['Precio'];?></td>
                     <td class="tax taxrelated"></td>
-                    <td class="sum"></td>
+                    <td class="sum"> <?php echo  $platos['total_producto'];?></td>
                 </tr>
+                <?php
+                    }
+                ?>
             </tbody>
         </table>
-        <a class="control newRow" href="#">+ Nueva fila</a>
     </div>
     <!--.invoice-body-->
 
