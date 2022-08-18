@@ -55,34 +55,6 @@
             <!--.row-->
         </div>
         <!--.container-->
-        <!-- Modal para mostrar cambio que debe devolver al cliente -->
-        <div class="modal py-5" tabindex="-1" id="cambio">
-            <div class="modal-dialog">
-                <div class="modal-content rounded-4 ">
-                    <div class="modal-header p-5 pb-4 border-bottom-0">
-                        <!-- <h5 class="modal-Cambio"</h5> -->
-                        <h3 class="text-white">espacio</h3>
-                        <h2 class="fw-bold mb-0">Cambio</h2>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body p-5 pt-0">
-                        <form enctype="multipart/form-data">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control rounded-3" name="Efectivo" required
-                                    placeholder="Cantidad de efectivo">
-                                <label for="Efectivo">Efectivo entregado por el cliente</label>
-                            </div>
-
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
     <!--.control-bar-->
 
@@ -241,17 +213,8 @@
     <script>
         window.jQuery || document.write('<script src="assets/bower_components/jquery/dist/jquery.min.js"><\/script>')
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
     <script src="assets/js/main.js"></script>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
-    </script>
+
 </body>
 
 </html>
