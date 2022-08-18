@@ -16,6 +16,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Empleado</title>
+    <link rel="icon" href="../../img/icon.png">
 </head>
 <header>
     <?php

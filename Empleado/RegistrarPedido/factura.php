@@ -23,6 +23,7 @@
     <title>Facturación
     </title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" href="../../img/icon.png">
 </head>
 
 <body>
