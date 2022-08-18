@@ -1,4 +1,3 @@
-
 <?php
     require_once("../../Database.php");
     $conn = conectardb();
@@ -45,7 +44,7 @@
 
                 </div>
                 <div class="col-4 text-right">
-                <a href="javascript:window.print()">Volver</a>
+                    <a href="javascript:window.print()">Volver</a>
                     <a href="javascript:window.print()">Imprimir</a>
                 </div>
                 <!--.col-->
@@ -63,7 +62,7 @@
         <!--.logoholder-->
 
         <div class="me">
-            <p >
+            <p>
                 <strong>Generado por: Easy bill</strong><br>
                 Colombia<br>
             </p>
@@ -92,7 +91,7 @@
         <div class="col-2 text-right details">
             <p>
                 Fecha: <?php echo  $venta['fecha'];?><br>
-                Factura #: <?php echo  $venta['id_venta'];?><br>           
+                Factura #: <?php echo  $venta['id_venta'];?><br>
             </p>
         </div>
         <!--.col-->
@@ -113,7 +112,7 @@
                 <strong>Empresa</strong><br>
                 Orquídea del llano<br>
                 Restaurante<br>
-                Calle 7 No.45-185, La Esperanza, Villavicencio, Meta<br>   
+                Calle 7 No.45-185, La Esperanza, Villavicencio, Meta<br>
             </p>
         </div>
         <!--.col-->
@@ -126,19 +125,19 @@
     <div class="row section" style="margin-top:-1rem">
         <div class="col-1">
             <table style='width:100%'>
-                <thead >
+                <thead>
                     <tr class="invoice_detail">
                         <th width="25%" style='text-align: center;'>Vendedor</th>
                         <th width="25%">Orden de compra </th>
-                   
+
                         <th width="30%">Medio de pago</th>
                     </tr>
                 </thead>
-                <tbody >
+                <tbody>
                     <tr class="invoice_detail">
                         <td width="25%" style="text-align"><?php echo  $ventaNombreUsuario['nombre_usuario'];?></td>
                         <td width="25%"><?php echo  $venta['id_venta'];?></td>
-                      
+
                         <td width="30%"><?php echo  $venta['metodopago'];?></td>
                     </tr>
                 </tbody>
@@ -150,7 +149,7 @@
 
     <div class="invoicelist-body">
         <table>
-            <thead >
+            <thead>
                 <th width="5%">Código</th>
                 <th width="60%">Producto</th>
 
@@ -159,18 +158,19 @@
                 <th class="taxrelated">IVA</th>
                 <th width="10%">Total</th>
             </thead>
+
             <tbody>
-                    <?php
+                <?php
                         //recorre los productos vendidos y muestra sus atributos
-                        while($platos=pg_fetch_array($consultaVenta3)){
+                        while($venta2){
                     ?>
                 <tr>
                     <td width='5%'><a class="control removeRow" href="#">x</a> <span>12345</span></td>
-                    <td width='60%'><span><?php echo  $platos['nombreProducto'];?></span></td>
-                    <td class="amount"><input type="text"><?php echo  $platos['cantidad'];?></td>
-                    <td class="rate"><input type="text"> <?php echo  $platos['Precio'];?></td>
+                    <td width='60%'><span><?php echo  $venta2['nombreProducto'];?></span></td>
+                    <td class="amount"><input type="text"><?php echo  $venta2['cantidad'];?></td>
+                    <td class="rate"><input type="text"> <?php echo  $venta2['Precio'];?></td>
                     <td class="tax taxrelated"></td>
-                    <td class="sum"> <?php echo  $platos['total_producto'];?></td>
+                    <td class="sum"> <?php echo $venta2['total_producto'];?></td>
                 </tr>
                 <?php
                     }
