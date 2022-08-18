@@ -70,7 +70,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 <body>
     <h1 class="text-white"> espacio</h1>
     <h1 class="text-white"> espacio</h1>
-    <p hiddden id="nombrecliente"> 
+    <p hidden id="nombrecliente"> 
         <?php echo   $cliente;?>
     </p>
     <p hidden id="idcliente">
