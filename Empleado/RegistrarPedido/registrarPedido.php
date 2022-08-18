@@ -70,10 +70,10 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 <body>
     <h1 class="text-white"> espacio</h1>
     <h1 class="text-white"> espacio</h1>
-    <p  id="nombrecliente"> 
+    <p hiddden id="nombrecliente"> 
         <?php echo   $cliente;?>
     </p>
-    <p  id="idcliente">
+    <p hidden id="idcliente">
          <?php  echo  $identificacion; ?>
     </p>
     <div class="container-fluid">
@@ -141,7 +141,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                             </div>
                     </div>
                 </div>
-                <div id="salida" class="salida"></div>
+                <div hidden id="salida" class="salida"></div>
                 <!-- START SECTION SHOPPING CART -->
                 <section class="shopping-cart shadow mt-4">
                     <div class="container">
