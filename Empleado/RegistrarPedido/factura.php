@@ -47,7 +47,7 @@
                 <div class="col-6 text-right">
                     <a
                         href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>">Volver</a>
-                    <a  data-bs-toggle="modal" data-bs-target="#cambio">Mostrar cambio</a>
+                    <a data-bs-toggle="modal" data-bs-target="#cambio">Mostrar cambio</a>
                     <a href="javascript:window.print()">Imprimir</a>
                 </div>
                 <!--.col-->
@@ -85,9 +85,6 @@
         </div>
     </div>
     <!--.control-bar-->
-
-
-
 
 
     <header class="row">
@@ -242,7 +239,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
-    window.jQuery || document.write('<script src="assets/bower_components/jquery/dist/jquery.min.js"><\/script>')
+        window.jQuery || document.write('<script src="assets/bower_components/jquery/dist/jquery.min.js"><\/script>')
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
     <script src="assets/js/main.js"></script>
 </body>
