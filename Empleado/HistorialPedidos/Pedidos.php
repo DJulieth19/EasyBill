@@ -30,6 +30,7 @@
 	$usuario = $_GET['nombre'];
     $tipo = $_GET['tipoUsuario'];
     $TipoConsulta = $_GET['consulta'];
+    $idU = $_GET['id_usuario'];
 	?>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
@@ -53,7 +54,7 @@
                                 </thead>
                             </div>
                             <a class="btn btn-custom "
-                                href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Volver</a>
+                                href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>">Volver</a>
                             <a type="button" class="nav-bar-icons">
                                 <div class="dropdown">
                                     <a class="btn btn-dark" href="#" role="button">
@@ -79,11 +80,11 @@
                 <div class="btn-group" role="group">
                     <h4 class="text-white col-md-3 space">space </h4>
                     <button type="button" class="btn btn-outline-primary"
-                        onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Hoy'">Hoy</button>
+                        onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>&consulta=Hoy'">Hoy</button>
                     <button type="button" class="btn btn-outline-primary"
-                        onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Semana'">Semana</button>
+                        onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>&consulta=Semana'">Semana</button>
                     <button type="button" class="btn btn-outline-primary"
-                        onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&consulta=Mes'">Mes</button>
+                        onclick="location.href='Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>&consulta=Mes'">Mes</button>
                     <h4 class="text-white col-md-1">space </h4>
                     <a>
                         <svg xmlns="http://www.w3.org/2000/svg" color="blue" width="25" height="25" fill="currentColor"

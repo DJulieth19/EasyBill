@@ -20,6 +20,10 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <?php
 		$usuario = $_GET['nombre'];
         $tipo = $_GET['tipoUsuario'];
+        $idU = $_GET['id_usuario'];
+        $cliente = $_POST['nombreCliente'];
+        $identificacion = $_POST['identificacion'];
+
 	?>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -44,7 +48,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 </thead>
                             </div>
                             <a class="btn btn- btn-custom rounded-pill "
-                                href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">Volver</a>
+                                href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>">Volver</a>
                             <a type="button" class="nav-bar-icons">
                                 <div class="dropdown">
                                     <a class="btn btn-dark" href="#" role="button">
@@ -66,6 +70,12 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 <body>
     <h1 class="text-white"> espacio</h1>
     <h1 class="text-white"> espacio</h1>
+    <p  id="nombrecliente"> 
+        <?php echo   $cliente;?>
+    </p>
+    <p  id="idcliente">
+         <?php  echo  $identificacion; ?>
+    </p>
     <div class="container-fluid">
         <div class="row">
             <div class="col col-md-6 ml-4">
@@ -81,6 +91,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                 <div class="col-lg-4">
                                     <div class="item shadow mb-4">
                                         <h3 class="item-title"><?php echo $cantidadProductos['nombreproducto'] ?></h3>
+                                        <h5 hidden class="item-cod"><?php echo $cantidadProductos['codproducto'] ?></h5>
                                         <img class="item-image ms-3" src="<?php echo $cantidadProductos['ruta_imagen'] ?>">
                                         <h4 class="item-price text-center">$ <?php echo $cantidadProductos['precio'] ?>
                                         </h4>
@@ -101,8 +112,38 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
             </div>
             <!-- END SECTION STORE -->
             <div class="col col-md-5">
+            <div class="shopping-cart shadow">
+                    <div class="container">
+                        <h1 class=" text-center">Método de pago</h5>
+                            <div class="container">
+                                <div class="row mediosPago">
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="miElementoCheckbox" checked>
+                                            <label class="form-check-label" for="miElementoCheckbox">
+                                                <img src="./img/efectivo.png" width="45%" height="45%" alt="">
+                                            </label>
+                                            Efectivo
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="miElementoCheckbox2">
+                                            <label class="form-check-label" for="miElementoCheckbox2">
+                                                <img src="./img/tarjeta.png" width="45%" height="45%" alt="">
+                                            </label>
+                                            Tarjeta
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div id="salida" class="salida"></div>
                 <!-- START SECTION SHOPPING CART -->
-                <section class="shopping-cart shadow">
+                <section class="shopping-cart shadow mt-4">
                     <div class="container">
                         <h1 class="text-center">
                             Carrito
@@ -172,11 +213,11 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
             </div>
         </div>
     </div>
-
     <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>

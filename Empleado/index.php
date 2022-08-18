@@ -23,7 +23,8 @@
     <header>
         <?php
 		$usuario = $_GET['nombre'];
-    $tipo = $_GET['tipoUsuario'];
+        $tipo = $_GET['tipoUsuario'];
+        $idU = $_GET['id_usuario'];
 	?>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
@@ -72,25 +73,22 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../../Imagenes/first.png" class="d-block w-100" 
+                    <img src="../../Imagenes/first.png" class="d-block w-100" alt="Bienvenida"
                         class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
                         preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
                 </div>
                 <div class="carousel-item">
-                    <img src="../../Imagenes/second.png" class="d-block w-100" 
+                    <img src="../../Imagenes/second.png" class="d-block w-100" alt="Bienvenida"
                         class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
                         preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
                 </div>
-	
                 <div class="carousel-item">
-			<a href="https://sites.google.com/unillanos.edu.co/wikibill/inicio">
-			        <img src="../../Imagenes/tres.png" class="d-block w-100"  class="bd-placeholder-img"
-				width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
-				focusable="false">
-			       <rect width="100%" height="100%" fill="#777" />
-			</a>
+                    <img src="../../Imagenes/tres.png" class="d-block w-100" alt="Bienvenida" class="bd-placeholder-img"
+                        width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                        focusable="false">
+                    <rect width="100%" height="100%" fill="#777" />
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -118,14 +116,11 @@
                         preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
                 </div>
-		    
                 <div class="carousel-item">
-		    <a href="https://sites.google.com/unillanos.edu.co/wikibill/inicio">
-			    <img src="../../Imagenes/2.png" class="d-block w-100 text-center" alt="Bienvenida"
-				class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
-				preserveAspectRatio="xMidYMid slice" focusable="false">
-			    <rect width="100%" height="100%" fill="#777" />
-		    </a>
+                    <img src="../../Imagenes/2.png" class="d-block w-100 text-center" alt="Bienvenida"
+                        class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" />
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#Carousel2" data-bs-slide="prev">
@@ -165,26 +160,27 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body p-5 pt-0">
-                                    <form action="./RegistrarPedido/registrarPedido.php" onSubmit="Swal.fire({ icon: 'success',title: 'Guardado correctamente',showConfirmButton: false,
-                                                    timer: 1700})">
+                                    <form
+                                        action="./RegistrarPedido/registrarPedido.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>"
+                                        method="POST" enctype="multipart/form-data">
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control rounded-3" id="nombre_cliente"
-                                                placeholder="Nombre" required name="nombre_usuario">
-                                            <label for="Nombre_usuario">Nombre</label>
+                                            <input type="text" class="form-control rounded-3" name="nombreCliente"
+                                                placeholder="Nombre" required>
+                                            <label for="Nombre">Nombre del cliente</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input type="number" minlength="5" class="form-control rounded-3" id="id"
-                                                placeholder="Identificación" required maxlength="10"
-                                                name="identificacion">
-                                            <label for="id_usuario">Identificación</label>
+                                            <input type="number" min="50" class="form-control rounded-3"
+                                                name="identificacion" placeholder="Precio en pesos" required
+                                                maxlength="10" minlength="8">
+                                            <label>Identificación</label>
                                         </div>
                                         <div class="modal-footer">
-                                            <button class="btn btn-primary" type="submit">
-                                                Continuar
-                                            </button>
+                                            <button class="btn rounded-3 btn-primary" id="btn-save" name="btn-save"
+                                                type="submit">Guardar</button>
                                             <button type="button" class="btn btn-secondary"
                                                 data-bs-dismiss="modal">Cerrar</button>
                                         </div>
+
                                     </form>
                                 </div>
                             </div>
@@ -193,7 +189,7 @@
                 </div><!-- /.col-lg-4 -->
 
                 <div class="col-lg-4">
-                    <a href="./HistorialPedidos/Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>"
+                    <a href="./HistorialPedidos/Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>"
                         class="functions">
                         <img src="../Imagenes/historial1.png" width="180" height="160" role="img"
                             preserveAspectRatio="xMidYMid slice" focusable="false">

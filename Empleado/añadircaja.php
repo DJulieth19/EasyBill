@@ -12,6 +12,6 @@ $dinero=$_POST['dinero'];
 $queryCaja = "INSERT INTO caja (estado,fecha,dinero,id_usuario) values ('Abierto','$fecha','$dinero','$id_usuario');";
 $insertarCaja = pg_query($conn, $queryCaja);
 
-header("location:./index.php?nombre=$usuario&tipoUsuario=$tipo");
+header("location:./index.php?nombre=$usuario&tipoUsuario=$tipo&id_usuario=$id_usuario");
 exit();
 ?>
