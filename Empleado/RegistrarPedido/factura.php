@@ -44,7 +44,8 @@
 
                 </div>
                 <div class="col-4 text-right">
-                    <a href="javascript:window.print()">Volver</a>
+                    <a href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>">Volver</a>
+                    <a href="javascript:window.print()">Mostrar cambio</a>
                     <a href="javascript:window.print()">Imprimir</a>
                 </div>
                 <!--.col-->
