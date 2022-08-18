@@ -189,12 +189,9 @@ function comprarButtonClicked() {
       if(miCheckbox.checked){
         medioPago="efectivo";
       }else medioPago="transferencia";
-      alert(id_usuario+medioPago+nombreCliente+identificacion+nombre_usuario+tipo_usuario)
+      //alert(id_usuario+medioPago+nombreCliente+identificacion+nombre_usuario+tipo_usuario)
     add(id_usuario,medioPago,nombreCliente,identificacion,nombre_usuario,tipo_usuario);
       
-
-
-
   shoppingCartItems.forEach((shoppingCartItem) => {
 
     const shoppingCartItemQuantityElement = shoppingCartItem.querySelector(
@@ -225,5 +222,5 @@ function comprarButtonClicked() {
       id_usuario,medioPago,nombreCliente,identificacion,nombre_usuario,tipo_usuario);
       contador=contador+1;
   })
-//window.location.href = "./factura.php";
+window.location.href = "./factura.php";
 }
