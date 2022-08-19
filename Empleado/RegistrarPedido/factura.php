@@ -68,7 +68,7 @@
 
     <header class="row">
         <div class="logoholder text-center">
-            <img width="20%" height="20%" src= "<?php echo  $rutaImagen['ruta_imagen']?>">
+            <img width="99px" src= "<?php echo  $rutaImagen['ruta_imagen']?>">
         </div>
         <!--.logoholder-->
 
