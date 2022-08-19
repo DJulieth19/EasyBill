@@ -121,7 +121,7 @@
                             $inicioDia = date('Y-m-d 00:00:00 ', time());
                             $finDia = date('Y-m-d 23:59:59 ', time());
                             //consulta para obtener el historial de pedidos del dia actual
-                            $query = "SELECT u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto  and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha and u.nombre_usuario='$usuario' order by c.fecha desc";
+                            $query = "SELECT u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto  and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY v.Fecha order by c.fecha desc) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha and u.nombre_usuario='$usuario'";
                         }
                         if($TipoConsulta == "Semana"){
                             //obtencion de la fecha de la semana actual
