@@ -17,6 +17,9 @@
     $queryVenta3 = "SELECT p.nombreProducto, p.Precio, a.cantidad, a.total_producto from asigna a, Productos p where p.codProducto=a.codProducto and a.id_venta= '$id_venta';";
     $consultaVenta3 = pg_query($conn, $queryVenta3);
    
+    $queryImagen = "SELECT * from logo;";
+    $consultaImagen= pg_query($conn, $queryImagen);
+    $rutaImagen= pg_fetch_array($consultaImagen);
 	?>
 
 <!DOCTYPE html>
@@ -65,7 +68,7 @@
 
     <header class="row">
         <div class="logoholder text-center">
-            <img src="assets/img/logo.png">
+            <img src= "<?php echo  $rutaImagen?>">
         </div>
         <!--.logoholder-->
 

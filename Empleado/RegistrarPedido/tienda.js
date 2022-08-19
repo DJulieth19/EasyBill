@@ -172,10 +172,6 @@ function comprarButtonClicked() {
   const elementsCod = shoppingCartItemsContainer.getElementsByClassName(
     'shoppingCartItemCod'
   );
-
-
-
-      
       let params = new URLSearchParams(location.search);
       var nombre_usuario = params.get('nombre');
       var tipo_usuario = params.get('tipoUsuario');
