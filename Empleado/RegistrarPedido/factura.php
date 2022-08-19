@@ -141,7 +141,7 @@
                 <tbody>
                     <tr class="invoice_detail">
                         <td width="25%" style="text-align"><?php echo  $ventaNombreUsuario['nombre_usuario'];?></td>
-                        <td width="25%"><?php echo  $venta['id_venta'];?></td>
+                        <td width="25%"><?php echo $id_venta;?> </td>
 
                         <td width="30%"><?php echo  $venta['metodopago'];?></td>
                     </tr>
