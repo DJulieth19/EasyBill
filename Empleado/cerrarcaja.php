@@ -53,7 +53,7 @@
 					$apertura= pg_fetch_array($consultaTotal);
 					$inicio = $apertura['dinero'];
 
-					$arqueo= $Total-$inicio;
+					$arqueo= $Total+$inicio;
                 ?>
 				<div class="mb-3">
 					<label for="dinero" class="form-label"> El saldo total obtenido del arqueo de caja es de <?php echo $arqueo?> COP</label>
