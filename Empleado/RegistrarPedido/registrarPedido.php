@@ -236,7 +236,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
       };
    </script>
     <script src="./tienda.js"></script>
-    <script src="traerEfectivo.js"></script>
+
 </body>
 
 </html>
