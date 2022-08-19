@@ -178,7 +178,7 @@
                     <td class="amount"><input type="text"><?php echo  $row['cantidad'];?></td>
                     <td class="rate"><input type="text"> <?php echo  $row['precio'];?></td>
                     <td class="tax taxrelated"></td>
-                    <td class="sum"> <?php echo $row['totalproducto'];?></td>
+                    <td class="sum"> <?php echo $row['total_producto'];?></td>
                 </tr>
                 <?php
                     }
