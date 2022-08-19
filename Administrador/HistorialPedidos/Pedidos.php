@@ -124,7 +124,7 @@
                             $SemanaAntes = strtotime('-7 day', strtotime($inicio));
                             $SemanaAntes = date('Y-m-d', $SemanaAntes);  
                             //consulta para obtener los datos de pedidos de la semana actual       
-                            $query = "SELECT u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and v.Fecha BETWEEN '$SemanaAntes' AND '$inicio' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha";
+                            $query = "SELECT u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and v.Fecha BETWEEN '2022-08-12 00:00:00' AND '2022-08-19 23:59:59' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha";
                         }
                         if($TipoConsulta == "Mes"){
                             //obtencion de la fecha del mes actual
@@ -180,7 +180,7 @@
                                 $SemanaAntes = strtotime('-7 day', strtotime($inicio));
                                 $SemanaAntes = date('Y-m-d', $SemanaAntes);
                                  //consulta para obtener el total de pedidos de la semana actual         
-                                $query = "SELECT sum(c.total) from (select u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and v.Fecha BETWEEN '$SemanaAntes' AND '$inicio' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha) c";
+                                $query = "SELECT sum(c.total) from (select u.nombre_usuario,v.nombreCliente,c.total,c.fecha from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto and v.Fecha BETWEEN '2022-08-12 00:00:00' AND '2022-08-19 23:59:59' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha) c";
                             }
                             if($TipoConsulta == "Mes"){
                                 //obtencion de la fecha del mes actual
