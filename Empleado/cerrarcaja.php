@@ -32,7 +32,7 @@
 				<div class="text-center d-block d-sm-none rounded-lg w-12">
 					<img src="./img/logo.png" width="100" alt="">
 				</div>
-				<h2 class="fw-bold text-center py-2">Jornada Finalizada</h2>
+				<h2 class="fw-bold text-center py-2">Arqueo de caja</h2>
 
 				<!-- LOGIN -->
 				<?php
@@ -55,6 +55,12 @@
 
 					$arqueo= $Total+$inicio;
                 ?>
+				<div class="mb-3">
+					<label for="dinero" class="form-label"> El saldo de apertura de la caja es: <?php echo $inicio?> COP</label>
+				</div>
+				<div class="mb-3">
+					<label for="dinero" class="form-label"> El saldo de las ventas del la jornada es: <?php echo $Total?> COP</label>
+				</div>
 				<div class="mb-3">
 					<label for="dinero" class="form-label"> El saldo total obtenido del arqueo de caja es de <?php echo $arqueo?> COP</label>
 				</div>
