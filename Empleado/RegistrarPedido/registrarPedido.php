@@ -143,6 +143,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                             </div>
                     </div>
                 </div>
+                
                 <div hidden id="salida" class="salida"></div>
                 <!-- START SECTION SHOPPING CART -->
                 <section class="shopping-cart shadow mt-4">

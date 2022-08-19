@@ -178,7 +178,6 @@
                 <tr>
                     <td width='5%'><a class="control removeRow" href="#">x</a> <span><?php echo  $venta['id_venta'];?></span></td>
                     <td width='60%'><span><?php echo  $row['nombreproducto'];?></span></td>
-                    
                     <td class="amount"><input type="text" value="<?php echo $row['cantidad'];?>" /></td>
                     <td class="rate"><input type="text" value="<?php echo $row['precio'];?>" /></td>
                     <td class="tax taxrelated"></td>
