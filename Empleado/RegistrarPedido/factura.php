@@ -9,8 +9,9 @@
     $queryVenta2 = "SELECT * from venta order by Fecha desc limit 1;";
     $consultaVenta2 = pg_query($conn, $queryVenta2);
     $venta= pg_fetch_array($consultaVenta2);
+    $id_venta = $venta['id_venta'];
     //consulta para traer los datos de la venta realizada
-    $queryVenta3 = "SELECT p.nombreProducto, p.Precio, a.cantidad, a.total_producto from asigna a, Productos p where p.codProducto=a.codProducto and a.id_venta='65';";
+    $queryVenta3 = "SELECT p.nombreProducto, p.Precio, a.cantidad, a.total_producto from asigna a, Productos p where p.codProducto=a.codProducto and a.id_venta= '$id_venta';";
     $consultaVenta3 = pg_query($conn, $queryVenta3);
     $venta2= pg_fetch_array($consultaVenta3);
 	?>
@@ -47,7 +48,7 @@
                 <div class="col-6 text-right">
                     <a
                         href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>">Volver</a>
-                    <a data-bs-toggle="modal" data-bs-target="#cambio">Mostrar cambio</a>
+                   
                     <a href="javascript:window.print()">Imprimir</a>
                 </div>
                 <!--.col-->
@@ -169,7 +170,7 @@
                     while($row = pg_fetch_array($consultaVenta3)){
                 ?>
                 <tr>
-                    <td width='5%'><a class="control removeRow" href="#">x</a> <span>12345</span></td>
+                    <td width='5%'><a class="control removeRow" href="#">x</a> <span><?php echo  $venta['id_venta'];?></span></td>
                     <td width='60%'><span><?php echo  $row['nombreProducto'];?></span></td>
                     <td class="amount"><input type="text"><?php echo  $row['cantidad'];?></td>
                     <td class="rate"><input type="text"> <?php echo  $row['Precio'];?></td>
