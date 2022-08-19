@@ -72,11 +72,11 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
 <body>
     <h1 class="text-white"> espacio</h1>
     <h1 class="text-white"> espacio</h1>
-    <p hidden id="nombrecliente"> 
+    <p hidden id="nombrecliente">
         <?php echo   $cliente;?>
     </p>
     <p hidden id="idcliente">
-         <?php  echo  $identificacion; ?>
+        <?php  echo  $identificacion; ?>
     </p>
     <div class="container-fluid">
         <div class="row">
@@ -94,7 +94,8 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                     <div class="item shadow mb-4">
                                         <h3 class="item-title"><?php echo $cantidadProductos['nombreproducto'] ?></h3>
                                         <h5 hidden class="item-cod"><?php echo $cantidadProductos['codproducto'] ?></h5>
-                                        <img class="item-image ms-3" src="<?php echo $cantidadProductos['ruta_imagen'] ?>">
+                                        <img class="item-image ms-3"
+                                            src="<?php echo $cantidadProductos['ruta_imagen'] ?>">
                                         <h4 class="item-price text-center">$ <?php echo $cantidadProductos['precio'] ?>
                                         </h4>
                                         <div class="display-flex">
@@ -114,7 +115,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
             </div>
             <!-- END SECTION STORE -->
             <div class="col col-md-5">
-            <div class="shopping-cart shadow">
+                <div class="shopping-cart shadow">
                     <div class="container">
                         <h1 class=" text-center">Método de pago</h5>
                             <div class="container">
@@ -122,7 +123,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                     <div class="col">
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="miElementoCheckbox" checked>
+                                                id="miElementoCheckbox" onclick="visualizar()" checked>
                                             <label class="form-check-label" for="miElementoCheckbox">
                                                 <img src="./img/efectivo.png" width="45%" height="45%" alt="">
                                             </label>
@@ -132,7 +133,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                                     <div class="col">
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="miElementoCheckbox2">
+                                                id="miElementoCheckbox2"  onclick="Novisualizar()">
                                             <label class="form-check-label" for="miElementoCheckbox2">
                                                 <img src="./img/tarjeta.png" width="45%" height="45%" alt="">
                                             </label>
@@ -143,7 +144,7 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
                             </div>
                     </div>
                 </div>
-                
+
                 <div hidden id="salida" class="salida"></div>
                 <!-- START SECTION SHOPPING CART -->
                 <section class="shopping-cart shadow mt-4">
@@ -220,13 +221,22 @@ $consultaPlatos = pg_query($conn, $queryPlatos);
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
-
+    <script >
+      function visualizar() {
+         document.getElementById('entradaEfectivo').style.visibility='visible';
+      };
+   </script>
+    <script >
+      function Novisualizar() {
+         document.getElementById('entradaEfectivo').style.visibility='hidden';
+      };
+   </script>
     <script src="./tienda.js"></script>
-
+    <script src="traerEfectivo.js"></script>
 </body>
 
 </html>

@@ -54,7 +54,7 @@
                 <div class="col-6 text-right">
                     <a
                         href="../index.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>">Volver</a>
-                   
+
                     <a href="javascript:window.print()">Imprimir</a>
                 </div>
                 <!--.col-->
@@ -68,7 +68,7 @@
 
     <header class="row">
         <div class="logoholder text-center">
-            <img width="99px" src= "<?php echo  $rutaImagen['ruta_imagen']?>">
+            <img width="99px" src="<?php echo  $rutaImagen['ruta_imagen']?>">
         </div>
         <!--.logoholder-->
 
@@ -108,12 +108,25 @@
         <!--.col-->
 
         <div class="col-2">
-
-            <p class="client">
+            <p class="client" style="margin: 0">
                 <strong>Facturar a Cliente</strong><br>
                 <?php echo  $venta['nombrecliente'];?><br>
-                <?php echo  $venta['id_cliente'];?><br>
+                <?php echo  $venta['id_cliente'];?>
             </p>
+            <?php if ($venta['metodopago'] =="efectivo"){
+                 ?>
+            <div id="entradaEfectivo" class="input-group col-6">
+                <p>Cantidad Efectivo</p>
+                <input type="number" required min="10000" id="numeroEfectivo" placeholder="$ Cantidad Efectivo"
+                    class="form-control numeroEfectivo" aria-label="Amount (to the nearest dollar)">
+            </div>
+            <?php
+                }else {
+                    ?>
+
+            <?php
+            } ?>
+
         </div>
         <!--.col-->
 
@@ -149,7 +162,7 @@
                         <td width="25%" style="text-align"><?php echo  $ventaNombreUsuario['nombre_usuario'];?></td>
                         <td width="25%"><?php echo $id_venta;?> </td>
 
-                        <td width="30%"><?php echo  $venta['metodopago'];?></td>
+                        <td id="metodPago" width="30%"><?php echo  $venta['metodopago'];?></td>
                     </tr>
                 </tbody>
             </table>
@@ -163,7 +176,6 @@
             <thead>
                 <th width="5%">Código</th>
                 <th width="60%">Producto</th>
-
                 <th width="10%">Cant.</th>
                 <th width="15%">Precio</th>
                 <th class="taxrelated">IVA</th>
@@ -171,12 +183,14 @@
             </thead>
 
             <tbody>
-            <?php
+                <?php
                         //recorre los productos vendidos y muestra sus atributos
                     while($row = pg_fetch_array($consultaVenta3)){
                 ?>
                 <tr>
-                    <td width='5%'><a class="control removeRow" href="#">x</a> <span><?php echo  $venta['id_venta'];?></span></td>
+                    <td width='5%'><a class="control removeRow" href="#">x</a>
+                        <span><?php echo  $venta['id_venta'];?></span>
+                    </td>
                     <td width='60%'><span><?php echo  $row['nombreproducto'];?></span></td>
                     <td class="amount"><input type="text" value="<?php echo $row['cantidad'];?>" /></td>
                     <td class="rate"><input type="text" value="<?php echo $row['precio'];?>" /></td>
@@ -200,6 +214,20 @@
             <tr>
                 <td><strong>Total:</strong></td>
                 <td id="total_price"></td>
+                <td><strong>Devolver:</strong></td>
+                <?php if ($venta['metodopago'] =="efectivo"){
+                 ?>
+                <div id="entradaEfectivo" class="input-group col-4">
+                <td id="vueltas"> <input type="number" id="valorVueltas" value="0"></td>
+                    <td><button id="botonCalcular" onclick="calcular()">calcular</button></td>
+                    
+                </div>
+                <?php
+                    }else {
+                        ?>
+
+                <?php
+                } ?>
             </tr>
         </table>
     </div>
@@ -209,19 +237,42 @@
     </div>
     <!--.note-->
 
+    <button hidden clicked onclick="efectivo()"></button>
     <footer class="row">
         <div class="col-1 text-center">
-            <p class="notaxrelated" contenteditable>El monto de la factura no incluye el impuesto sobre las ventas.</p>
-
+            <p class="notaxrelated">El monto de la factura no incluye el impuesto sobre las ventas.</p>
         </div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
-        window.jQuery || document.write('<script src="assets/bower_components/jquery/dist/jquery.min.js"><\/script>')
+    window.jQuery || document.write('<script src="assets/bower_components/jquery/dist/jquery.min.js"><\/script>')
     </script>
     <script src="assets/js/main.js"></script>
+    <script>
+    function efectivo() {
+        var efectivo = document.getElementById('metodPago').textContent;
+        if (efectivo == "efectivo") {
+            document.getElementById('entradaEfectivo').style.visibility = 'hidden';
+        }
+    }
+    </script>
+    <script>
+    function calcular() {
+        var entradaEfectivo = document.getElementById('numeroEfectivo').value;
+        if(entradaEfectivo>0){
+            var total = Number(
+            document.getElementById('total_price').textContent.replace('$', ''));
+            var totalFinal = entradaEfectivo - total;
+            document.getElementById('botonCalcular').style.visibility = 'hidden';
+            document.getElementById('valorVueltas').value = totalFinal;
+        }else{
+            alert("Debe ingresar un valor en Cantidad de Efectivo");
+        }
 
+    }
+    </script>
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

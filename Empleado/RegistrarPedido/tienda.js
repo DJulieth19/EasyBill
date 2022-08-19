@@ -212,11 +212,14 @@ function comprarButtonClicked() {
       var medioPago="nada";
       if(miCheckbox.checked){
         medioPago="efectivo";
-      }else medioPago="transferencia";
+        
+      }else {
+        medioPago="transferencia";
+      }
     
     add2(itemCod, shoppingCartItemQuantity,shoppingCartItemPrice,
       id_usuario,medioPago,nombreCliente,identificacion,nombre_usuario,tipo_usuario);
       contador=contador+1;
   })
-window.location.href = "./factura.php";
+window.location.href = "./factura.php?entrada=entradaEfectivo";
 }

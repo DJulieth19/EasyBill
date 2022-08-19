@@ -50,6 +50,7 @@ function calculate(){
     
     
     total_price = total_price + sum;
+    
     total_tax = total_tax + tax;
     
     row.find('.sum').text( sum.toFixed(2) );
