@@ -173,9 +173,9 @@
                     <td width='5%'><a class="control removeRow" href="#">x</a> <span><?php echo  $venta['id_venta'];?></span></td>
                     <td width='60%'><span><?php echo  $row['nombreProducto'];?></span></td>
                     <td class="amount"><input type="text"><?php echo  $row['cantidad'];?></td>
-                    <td class="rate"><input type="text"> <?php echo  $row['Precio'];?></td>
+                    <td class="rate"><input type="text"> <?php echo  $row['precio'];?></td>
                     <td class="tax taxrelated"></td>
-                    <td class="sum"> <?php echo $row['total_producto'];?></td>
+                    <td class="sum"> <?php echo $row['totalproducto'];?></td>
                 </tr>
                 <?php
                     }
