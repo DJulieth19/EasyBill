@@ -46,7 +46,7 @@
                                 </div>
                                 <a class="btn btn-custom " href="../index.php">Cerrar sesión</a>
                                 <a type="button" class="nav-bar-icons">
-                                    <a class="btn btn-dark" href="#" role="button">
+                                    <a class="btn btn-dark" href="https://sites.google.com/unillanos.edu.co/wikibill/inicio/empleado" role="button">
                                         <svg xmlns="http://www.w3.org/2000/svg" color="white" width="25" height="25"
                                             fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
                                             <path
