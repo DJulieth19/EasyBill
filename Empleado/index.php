@@ -189,7 +189,7 @@
                 </div><!-- /.col-lg-4 -->
 
                 <div class="col-lg-4">
-                    <a href="./HistorialPedidos/Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>&consulta=hoy"
+                    <a href="./HistorialPedidos/Pedidos.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>&id_usuario=<?php echo $idU?>&consulta=Hoy"
                         class="functions">
                         <img src="../Imagenes/historial1.png" width="180" height="160" role="img"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
