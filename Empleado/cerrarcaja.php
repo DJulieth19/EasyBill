@@ -43,7 +43,7 @@
                     $inicioDia = date('Y-m-d 00:00:00 ', time());
                     $finDia = date('Y-m-d 23:59:59 ', time());
                     //consulta para obtener el historial de pedidos del dia actual
-                    $querytotal = "SELECT sum(c.total) from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto  and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha and u.nombre_usuario='$usuario'";
+                    $querytotal = "SELECT sum(c.total) from Usuarios u, Venta v, (select v.Fecha,sum(a.total_producto) AS total from Usuarios u, Venta v, asigna a, Productos p where u.id_usuario=v.id_usuario and v.id_venta=a.id_venta and p.codProducto=a.codProducto  and v.Fecha BETWEEN '$inicioDia' AND '$finDia' GROUP BY v.Fecha) c where u.id_usuario=v.id_usuario and v.Fecha=c.Fecha and u.nombre_usuario='$usuario' and v.MetodoPago='efectivo'";
 					$consultaTotal = pg_query($conn, $querytotal);
 					$suma= pg_fetch_array($consultaTotal);
 					$Total = $suma['sum'];
