@@ -166,7 +166,7 @@ $consultaUsuarios = pg_query($conn, $queryUsuarios);
                                 <tr>
                                     <th>
                                         <a
-                                            href="../AdministrarUsuarios/usuarios.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
+                                            href="../Reportes/reportes.php?nombre=<?php echo $usuario?>&tipoUsuario=<?php echo $tipo?>">
                                             Reportes Administrativos
                                         </a>
                                     </th>
