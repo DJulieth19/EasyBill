@@ -16,7 +16,7 @@
     //consulta para traer los datos de la venta realizada
     $queryVenta3 = "SELECT p.nombreProducto, p.Precio, a.cantidad, a.total_producto from asigna a, Productos p where p.codProducto=a.codProducto and a.id_venta= '$id_venta';";
     $consultaVenta3 = pg_query($conn, $queryVenta3);
-    $venta2= pg_fetch_array($consultaVenta3);
+   
 	?>
 
 <!DOCTYPE html>
@@ -168,15 +168,16 @@
             </thead>
 
             <tbody>
-                <?php
+            <?php
                         //recorre los productos vendidos y muestra sus atributos
                     while($row = pg_fetch_array($consultaVenta3)){
                 ?>
                 <tr>
                     <td width='5%'><a class="control removeRow" href="#">x</a> <span><?php echo  $venta['id_venta'];?></span></td>
                     <td width='60%'><span><?php echo  $row['nombreproducto'];?></span></td>
-                    <td class="amount"><input type="text"><?php echo  $row['cantidad'];?></td>
-                    <td class="rate"><input type="text"> <?php echo  $row['precio'];?></td>
+                    
+                    <td class="amount"><input type="text" value="<?php echo $row['cantidad'];?>" /></td>
+                    <td class="rate"><input type="text" value="<?php echo $row['precio'];?>" /></td>
                     <td class="tax taxrelated"></td>
                     <td class="sum"> <?php echo $row['total_producto'];?></td>
                 </tr>
