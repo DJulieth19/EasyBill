@@ -127,8 +127,7 @@
                         if($TipoConsulta == "Semana"){
                             //obtencion de fecha de la semana actual
                             $inicio = date('Y-m-d 00:00:00', time());
-                            $SemanaAntes = strtotime('-7 day', strtotime($inicio));
-                            $SemanaAntes = date('Y-m-d 00:00:00', $SemanaAntes);
+                            $SemanaAntes = date("Y-m-d",strtotime($inicio."- 1 week"));
                             //trae los datos de las ventas de la semana actual         
                             $query = "SELECT p.nombreProducto,sum(a.cantidad) AS cantidad,sum(a.total_producto) AS total from Productos p, asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$SemanaAntes' AND '$inicio' GROUP BY p.nombreProducto";
                         }
@@ -177,8 +176,8 @@
                 }
                 if($TipoConsulta == "Semana"){
                     $inicio = date("Y-m-d");
-                    $SemanaAntes = strtotime('-7 day', strtotime($inicio));
-                    $SemanaAntes = date('Y-m-d', $SemanaAntes);         
+                    $inicio = date('Y-m-d 00:00:00', time());
+                    $SemanaAntes = date("Y-m-d",strtotime($inicio."- 1 week"));         
                     $query = "SELECT sum(c.total) from (select p.nombreProducto,sum(a.cantidad) AS Cantidad,sum(a.total_producto) AS total from Productos p,asigna a, Venta v where p.codProducto=a.codProducto and v.id_venta=a.id_venta and v.Fecha BETWEEN '$SemanaAntes' AND '$inicio' GROUP BY p.nombreProducto) c";
                 }
                 if($TipoConsulta == "Mes"){
